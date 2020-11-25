@@ -2,7 +2,7 @@
 title: 6 sommets de plus de 3000m accessibles en randonnée
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi
 category: culture
-img: /grande-sassiere.jpg
+img: /img/grande-sassiere.jpg
 alt: Le Mont Thabor, un 3000 accessible en randonnée
 ---
 
