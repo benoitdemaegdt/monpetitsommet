@@ -1,9 +1,16 @@
 ---
 massif: bauges
-title: Traversée des Bauges
-description: Situé entre Chambéry et Annecy, le massif des Bauges est un massif de moyenne montagne (point culminant à 2217m) encore méconnu du grand public. Faire le traversée des Bauges, c'est s'engager dans une randonnée exigeante, physique mais peu technique. On croisera des forêts, des petits villages, de nombreux alpages, et quelques sommets qui offrent une vue inégalables sur le lac d'Annecy. D'ailleurs, quoi de mieux que de terminer cette randonnée par une baignade dans le lac ...
+title: Traversée des Bauges | Test
+description: Situé entre Chambéry et Annecy, le massif des Bauges est un massif
+  de moyenne montagne (point culminant à 2217m) encore méconnu du grand public.
+  Faire le traversée des Bauges, c'est s'engager dans une randonnée exigeante,
+  physique mais peu technique. On croisera des forêts, des petits villages, de
+  nombreux alpages, et quelques sommets qui offrent une vue inégalables sur le
+  lac d'Annecy. D'ailleurs, quoi de mieux que de terminer cette randonnée par
+  une baignade dans le lac ...
 img: https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
 alt: Vue sur la lac d'Annecy depuis la pointe de la Chaurionde
+date: 2020-12-03T12:55:50.363Z
 ---
 
 ## Approche
