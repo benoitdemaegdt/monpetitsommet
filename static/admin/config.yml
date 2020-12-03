@@ -15,7 +15,21 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Date de publication', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Contenu', name: 'body', widget: 'markdown' }
+  - name: 'randonnees'
+    label: 'Randonnées'
+    folder: 'content/randonnees'
+    path: '{{massif}}/{{slug}}'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Date de publication', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Contenu', name: 'body', widget: 'markdown' }
