@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const trek = await $content('randonnees/bauges', params.slug).fetch()
+    const trek = await $content('massifs/bauges/randonnees', params.slug).fetch()
 
     return {
       trek

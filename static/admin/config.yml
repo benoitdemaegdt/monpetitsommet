@@ -25,8 +25,8 @@ collections:
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
   - name: 'randonnees'
     label: 'Randonnées'
-    folder: 'content/randonnees'
-    path: '{{massif}}/{{slug}}'
+    folder: 'content/massifs'
+    path: '{{massif}}/randonnees/{{slug}}'
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
