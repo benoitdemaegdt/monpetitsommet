@@ -25,7 +25,9 @@ collections:
     path: '{{massif}}/{{slug}}'
     format: 'frontmatter'
     create: true
-    slug: '{{slug}}'
+    slug:
+      encoding: "ascii"
+      clean_accents: true
     editor:
       preview: false
     fields:
