@@ -5,6 +5,10 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -25,9 +29,7 @@ collections:
     path: '{{massif}}/{{slug}}'
     format: 'frontmatter'
     create: true
-    slug:
-      encoding: "ascii"
-      clean_accents: true
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
