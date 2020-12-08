@@ -1,17 +1,17 @@
 <template>
   <div>
-    <h1>test</h1>
-    <nuxt-content :document="trek" />
+    <h1>{{ refuge.title }}</h1>
+    <nuxt-content :document="refuge" />
   </div>
 </template>
 
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const trek = await $content('massifs/vercors/randonnees', params.slug).fetch()
+    const refuge = await $content('massifs/vercors/refuges', params.slug).fetch()
 
     return {
-      trek
+      refuge
     }
   }
 }

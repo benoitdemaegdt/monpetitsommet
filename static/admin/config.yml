@@ -38,3 +38,18 @@ collections:
       - { label: 'Date de publication', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
+  - name: 'refuges'
+    label: 'Refuges'
+    folder: 'content/massifs'
+    path: '{{massif}}/refuges/{{slug}}'
+    format: 'frontmatter'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Massif', name: 'massif', widget: 'string' }
+      - { label: 'Titre', name: 'title', widget: 'string' }
+      - { label: 'Date de publication', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Contenu', name: 'body', widget: 'markdown' }
