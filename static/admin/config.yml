@@ -27,8 +27,6 @@ collections:
     label: 'Randonnées'
     folder: 'content/randonnees'
     path: '{{massif}}/{{slug}}'
-    nested:
-      depth: 100
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
@@ -44,8 +42,6 @@ collections:
     label: 'Refuges'
     folder: 'content/refuges'
     path: '{{massif}}/{{slug}}'
-    nested:
-      depth: 100
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
