@@ -8,7 +8,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const refuge = await $content('massifs/vercors/refuges', params.slug).fetch()
+    const refuge = await $content('refuges/vercors', params.slug).fetch()
 
     return {
       refuge

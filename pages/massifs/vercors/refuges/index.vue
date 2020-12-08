@@ -12,7 +12,7 @@
 <script>
 export default {
   async asyncData ({ $content, params }) {
-    const refuges = await $content('massifs/vercors/refuges', params.slug)
+    const refuges = await $content('refuges/vercors', params.slug)
       .only(['title', 'description', 'category', 'slug', 'createdAt'])
       .fetch()
 
