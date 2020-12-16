@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-12">
     <h1>test</h1>
     <nuxt-content :document="trek" />
   </div>

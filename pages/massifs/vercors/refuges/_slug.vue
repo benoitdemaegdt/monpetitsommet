@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-12">
     <h1>{{ refuge.title }}</h1>
     <nuxt-content :document="refuge" />
   </div>

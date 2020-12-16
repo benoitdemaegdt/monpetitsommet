@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pt-12">
     <h1>Refuges du vercors</h1>
     <div v-for="refuge in refuges" :key="refuge.title">
       <NuxtLink class="text-green-600 hover:text-green-700 inline-flex items-center mt-4" :to="{ name: 'massifs-vercors-refuges-slug', params: { slug: refuge.slug } }">
