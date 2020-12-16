@@ -16,7 +16,9 @@
           <path d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
-      <div>Mon Petit Sommet</div>
+      <NuxtLink to="/">
+        Mon Petit Sommet
+      </NuxtLink>
     </div>
     <div class="flex items-center">
       <div class="hidden md:block md:flex md:justify-between md:bg-transparent">
