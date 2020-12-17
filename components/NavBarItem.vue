@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="px-2 flex flex-wrap justify-between content-center w-full h-10 rounded hover:bg-gray-200 focus:outline-none" @click="toggleList">
+    <button class="px-2 flex items-center justify-between w-full h-10 rounded hover:bg-gray-200 focus:outline-none" @click="toggleList">
       <div>{{ massif.name }}</div>
       <svg
         v-if="!isOpen"
@@ -27,7 +27,7 @@
       <NuxtLink
         v-for="activity in massif.activities"
         :key="activity.link"
-        class="mt-1 pl-4 pr-2 flex flex-wrap justify-between content-center h-10 rounded hover:bg-gray-100"
+        class="mt-1 pl-4 pr-2 flex items-center justify-between h-10 rounded hover:bg-gray-100"
         :to="{ name: activity.link }"
         @click.native="$emit('close-drawer')"
       >
