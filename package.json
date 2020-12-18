@@ -14,7 +14,7 @@
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.8.1",
-    "nuxt": "^2.14.11"
+    "nuxt": "^2.14.12"
   },
   "devDependencies": {
     "@nuxt/image": "0.0.4",
