@@ -21,14 +21,14 @@
       </NuxtLink>
     </div>
     <div class="flex items-center">
-      <div class="hidden md:block md:flex md:justify-between md:bg-transparent">
-        <nuxt-link to="/blog">
+      <div class="hidden md:flex">
+        <nuxt-link to="/blog" class="px-2 py-1 rounded hover:bg-gray-200">
           Blog
         </nuxt-link>
-        <nuxt-link to="/a-propos" class="px-4">
+        <nuxt-link to="/a-propos" class="px-2 py-1 ml-1 rounded hover:bg-gray-200">
           À Propos
         </nuxt-link>
-        <nuxt-link to="/contact">
+        <nuxt-link to="/contact" class="px-2 py-1 ml-1 rounded hover:bg-gray-200">
           Contact
         </nuxt-link>
       </div>
