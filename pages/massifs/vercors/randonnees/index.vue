@@ -1,19 +1,36 @@
 <template>
-  <div class="pt-12">
-    <h1>Rando du vercors</h1>
+  <div class="container px-5 pt-12 mx-auto">
+    <div class="mt-4 flex justify-center">
+      <h1 class="text-3xl md:text-4xl text-gray-900 font-semibold">
+        Randonner dans le Vercors
+      </h1>
+    </div>
+    <div class="mx-auto">
+      <p class="text-base md:text-lg text-gray-700 text-justify">
+        Bien connu pour son accès facile, ses paysages sauvages et sa faune abondante,
+        le Vercors est un massif qui regorge d'aventures à faire.
+        Il y a d'abord le grand classique : la Grande Traversée du Vercors par le GR 91 qui permet
+        en quelques jours de relier Saint-Nizier-du-Moucherotte à Châtillon en-Diois. Mais on trouve également
+        de nombreuses autres aventures, plus sauvages, plus engagées, qui permettent de découvrir l'immensité de
+        la réserve naturelle des hauts plateaux du Vercors. À apprécier en été comme en hiver.
+      </p>
+    </div>
     <div v-for="trek in treks" :key="trek.title">
-      <NuxtLink class="text-green-600 hover:text-green-700 inline-flex items-center mt-4" :to="{ name: 'massifs-vercors-randonnees-slug', params: { slug: trek.slug } }">
-        {{ trek.title }}
-      </NuxtLink>
+      <trek-card massif="vercors" :trek="trek" />
     </div>
   </div>
 </template>
 
 <script>
+import TrekCard from '~/components/TrekCard.vue'
 export default {
+  components: { TrekCard },
   async asyncData ({ $content, params }) {
     const treks = await $content('randonnees/vercors', params.slug)
-      .only(['title', 'description', 'category', 'slug', 'createdAt'])
+      .only([
+        'title', 'description', 'rating', 'distance', 'elevation',
+        'duration', 'difficulty', 'slug', 'createdAt'
+      ])
       .fetch()
 
     return {
