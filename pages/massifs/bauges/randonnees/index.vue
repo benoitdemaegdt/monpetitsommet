@@ -1,10 +1,20 @@
 <template>
-  <div class="pt-12">
-    <h1>Rando des Bauges</h1>
+  <div class="container px-5 pt-12 mx-auto">
+    <div class="mt-4 flex justify-center">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-semibold">
+        Randonner dans les Bauges
+      </h1>
+    </div>
+    <div class="mt-2 mx-auto">
+      <p class="text-base md:text-lg text-gray-700 text-justify">
+        Situé entre Chambéry et Annecy, le massif des Bauges est un massif
+        de moyenne montagne (point culminant à 2217m) encore méconnu du grand public.
+        Sa situation idéale permet pourtant aux randonneurs qui s'y engagent de découvrir de superbes paysages :
+        alpages, Mont Blanc, Chartreuse, Lac du Bourget, Lac d'Annecy ... Fracture de la rétine assurée !
+      </p>
+    </div>
     <div v-for="trek in treks" :key="trek.title">
-      <NuxtLink class="text-green-600 hover:text-green-700 inline-flex items-center mt-4" :to="{ name: 'massifs-bauges-randonnees-slug', params: { slug: trek.slug } }">
-        {{ trek.title }}
-      </NuxtLink>
+      <trek-card massif="bauges" :trek="trek" />
     </div>
   </div>
 </template>
@@ -13,7 +23,10 @@
 export default {
   async asyncData ({ $content, params }) {
     const treks = await $content('randonnees/bauges', params.slug)
-      .only(['title', 'description', 'category', 'slug', 'createdAt'])
+      .only([
+        'title', 'description', 'img', 'rating', 'distance', 'elevation',
+        'duration', 'difficulty', 'from', 'to', 'slug', 'createdAt'
+      ])
       .fetch()
 
     return {

@@ -2,10 +2,10 @@
   <section class="text-gray-700 body-font overflow-hidden">
     <div class="py-12 mx-auto">
       <div class="lg:w-full mx-auto flex flex-wrap">
-        <nuxt-image src="/img/vercors.png" class="lg:w-1/2 w-full h-auto md:h-64 lg:h-auto object-cover object-center rounded" />
+        <nuxt-image :src="trek.img" class="lg:w-1/2 w-full h-auto md:h-64 lg:h-auto object-cover object-center rounded" />
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-          <h2 class="text-sm title-font text-gray-500 tracking-widest">
-            {{ massif.toUpperCase() }}
+          <h2 class="text-sm title-font text-gray-600 tracking-widest">
+            {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
           </h2>
           <h1 class="text-gray-900 text-2xl md:text-3xl title-font font-medium mb-1">
             {{ trek.title }}

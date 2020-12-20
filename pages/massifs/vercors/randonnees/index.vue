@@ -1,18 +1,18 @@
 <template>
   <div class="container px-5 pt-12 mx-auto">
     <div class="mt-4 flex justify-center">
-      <h1 class="text-3xl md:text-4xl text-gray-900 font-semibold">
+      <h1 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-semibold">
         Randonner dans le Vercors
       </h1>
     </div>
-    <div class="mx-auto">
+    <div class="mt-2 mx-auto">
       <p class="text-base md:text-lg text-gray-700 text-justify">
         Bien connu pour son accès facile, ses paysages sauvages et sa faune abondante,
-        le Vercors est un massif qui regorge d'aventures à faire.
+        le Vercors est un massif qui offre de nombreuses possibilités de randonnées.
         Il y a d'abord le grand classique : la Grande Traversée du Vercors par le GR 91 qui permet
         en quelques jours de relier Saint-Nizier-du-Moucherotte à Châtillon en-Diois. Mais on trouve également
-        de nombreuses autres aventures, plus sauvages, plus engagées, qui permettent de découvrir l'immensité de
-        la réserve naturelle des hauts plateaux du Vercors. À apprécier en été comme en hiver.
+        de nombreux autres itinéraires, plus sauvages ou plus engagées, qui permettent de découvrir l'immensité de
+        la réserve naturelle des hauts plateaux du Vercors.
       </p>
     </div>
     <div v-for="trek in treks" :key="trek.title">
@@ -28,8 +28,8 @@ export default {
   async asyncData ({ $content, params }) {
     const treks = await $content('randonnees/vercors', params.slug)
       .only([
-        'title', 'description', 'rating', 'distance', 'elevation',
-        'duration', 'difficulty', 'slug', 'createdAt'
+        'title', 'description', 'img', 'rating', 'distance', 'elevation',
+        'duration', 'difficulty', 'from', 'to', 'slug', 'createdAt'
       ])
       .fetch()
 
