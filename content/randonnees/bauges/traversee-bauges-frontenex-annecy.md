@@ -8,7 +8,7 @@ description:
   lac d'Annecy. D'ailleurs, quel bonheur que de pouvoir terminer cette randonnée par
   une baignade dans ce lac ...
 img: https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
-alt: Vue sur la lac d'Annecy depuis la pointe de la Chaurionde
+caption: Vue sur le lac d'Annecy depuis la pointe de la Chaurionde
 rating: 4
 distance: 66.8
 elevation: 5150.15
