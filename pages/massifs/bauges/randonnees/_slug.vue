@@ -72,8 +72,8 @@
         <nuxt-content :document="trek" />
       </div>
       <div>
-        <div class="w-1/2 h-full fixed top-0 right-0">
-          <trek-map />
+        <div class="pt-12 w-1/2 h-full fixed top-0 right-0">
+          <trek-map :trek="trek" />
         </div>
       </div>
     </div>
