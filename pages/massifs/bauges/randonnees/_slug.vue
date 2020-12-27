@@ -1,8 +1,8 @@
 <template>
   <div class="pt-12 w-full">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mt-2 px-3">
-        <h1 class="text-4xl text-gray-900 font-bold">
+        <h1 class="text-4xl text-gray-900 font-bold leading-tight">
           {{ trek.title }}
         </h1>
         <p class="mt-1 text-2xl text-gray-800 font-semibold">
@@ -13,7 +13,7 @@
         </p>
 
         <figure v-if="trek.img">
-          <nuxt-image :src="trek.img" class="mt-3 w-full h-64 rounded" />
+          <nuxt-image :src="trek.img" class="mt-3 w-full rounded" style="height: 20rem;" />
           <figcaption class="text-sm italic flex justify-center">
             {{ trek.caption }}
           </figcaption>
@@ -22,7 +22,7 @@
         <div class="text-2xl text-gray-900 font-bold">
           <span class="highlight">En Bref</span>
         </div>
-        <div class="mt-2 grid grid-cols-3 gap-4">
+        <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
           <!-- distance -->
           <div class="flex items-center">
             <nuxt-image src="/icons/distance.png" class="h-5 w-5" />
@@ -71,7 +71,7 @@
         </div>
         <nuxt-content :document="trek" />
       </div>
-      <div>
+      <div v-if="!isMobile">
         <div class="pt-12 w-1/2 h-full fixed top-0 right-0">
           <trek-map :trek="trek" />
         </div>
@@ -81,6 +81,7 @@
 </template>
 
 <script>
+import LayoutMixin from '@/mixins/LayoutMixin.js'
 import TrekMap from '@/components/TrekMap.vue'
 
 export default {
@@ -91,6 +92,7 @@ export default {
       return 'oui'
     }
   },
+  mixins: [LayoutMixin],
   async asyncData ({ $content, params }) {
     const trek = await $content('randonnees/bauges', params.slug).fetch()
 
