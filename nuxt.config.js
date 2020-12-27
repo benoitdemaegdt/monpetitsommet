@@ -49,10 +49,22 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
+
+  // Sitemap
   sitemap: {
     hostname: 'https://dev.monpetitsommet.fr', // TO CHANGE
     routes () {
       return getRoutes()
     }
+  },
+
+  // Image
+  image: {
+    providers: {
+      cloudinary: {
+        baseURL: 'https://res.cloudinary.com/monpetitsommet/image/upload/'
+      }
+    }
+  },
   }
 }
