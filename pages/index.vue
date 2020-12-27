@@ -1,7 +1,7 @@
 <template>
   <div class="pt-12 w-full h-screen mx-auto flex flex-col justify-center items-center">
     <div class="w-full relative flex flex-col justify-center" style="height: 90%;">
-      <nuxt-image v-if="!isMobile" src="/img/vercors.png" class="landing-image" />
+      <nuxt-image v-if="!isMobile" :placeholder="true" :src="image" class="landing-image" />
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 backgound" :style="`height: ${isMobile ? 100 : 80}%;`">
         <div v-if="!isMobile" />
         <div class="flex flex-col justify-center px-2 lg:px-0">
@@ -21,7 +21,10 @@
 import LayoutMixin from '@/mixins/LayoutMixin.js'
 
 export default {
-  mixins: [LayoutMixin]
+  mixins: [LayoutMixin],
+  data: () => ({
+    image: 'cloudinary:/w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png'
+  })
 }
 </script>
 

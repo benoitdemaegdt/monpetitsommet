@@ -7,7 +7,7 @@ description:
   nombreux alpages, et quelques sommets qui offrent une vue inégalables sur le
   lac d'Annecy. D'ailleurs, quel bonheur que de pouvoir terminer cette randonnée par
   une baignade dans ce lac ...
-img: https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
+img: cloudinary:/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
 caption: Vue sur le lac d'Annecy depuis la pointe de la Chaurionde
 gpx: https://api.monpetitsommet.fr/massifs/bauges/randonnees/traversee-bauges-frontenex-annecy.json
 rating: 4

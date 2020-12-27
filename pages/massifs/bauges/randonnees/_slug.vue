@@ -13,7 +13,13 @@
         </p>
 
         <figure v-if="trek.img">
-          <nuxt-image :src="trek.img" class="mt-3 w-full rounded" style="height: 20rem;" />
+          <nuxt-image
+            :placeholder="true"
+            :src="trek.img"
+            sizes="640,640:768,768:1024,1024:768"
+            class="mt-3 w-full rounded"
+            style="height: 20rem;"
+          />
           <figcaption class="text-sm italic flex justify-center">
             {{ trek.caption }}
           </figcaption>
