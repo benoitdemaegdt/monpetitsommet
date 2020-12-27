@@ -16,7 +16,7 @@
           <nuxt-image
             :placeholder="true"
             :src="trek.img"
-            sizes="640,640:768,768:1024,1024:768"
+            sizes="768"
             class="mt-3 w-full rounded"
             style="height: 20rem;"
           />
