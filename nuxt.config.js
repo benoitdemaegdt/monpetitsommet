@@ -65,6 +65,5 @@ export default {
         baseURL: 'https://res.cloudinary.com/monpetitsommet/image/upload/'
       }
     }
-  },
   }
 }
