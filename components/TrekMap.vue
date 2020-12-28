@@ -9,12 +9,27 @@ const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
 export default {
   name: 'TrekMap',
   props: {
-    trek: { type: Object, required: true }
+    trek: { type: Object, required: true },
+    zoom: { type: Object, default: () => ({}) }
   },
   data: () => ({
     map: undefined,
     coordinates: []
   }),
+  watch: {
+    zoom: {
+      handler ({ from, to }) {
+        if (from !== undefined && to !== undefined) {
+          const coordinates = this.coordinates.slice(from, to)
+          const bounds = coordinates.reduce((bounds, coord) => {
+            return bounds.extend(coord.slice(0, 2))
+          }, new mapboxgl.LngLatBounds(coordinates[0].slice(0, 2), coordinates[0].slice(0, 2)))
+
+          this.map.fitBounds(bounds, { padding: 20 })
+        }
+      }
+    }
+  },
   async created () {
     this.coordinates = await this.getTrekCoordinates()
   },

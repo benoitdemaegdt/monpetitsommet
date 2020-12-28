@@ -19,6 +19,15 @@ water: true
 tent: true
 from: Frontenex
 to: Annecy
+sections:
+ - { title: "Approche" }
+ - { title: "De Frontenex au chalet d'Orisan", from: 0, to: 419 }
+ - { title: "Du chalet d'Orisan à la pointe de la Chaurionde", from: 419, to: 513 }
+ - { title: "De la pointe de la Chaurionde à la Cabane de la Fontaine du Fayard", from: 513, to: 1013 }
+ - { title: "De la Cabane de la Fontaine du Fayard au Refuge de la Combe", from: 1013, to: 1121 }
+ - { title: "Du Refuge de la Combe aux Chalets du Solliet", from: 1121, to: 1480 }
+ - { title: "Des chalets du Solliet au Semnoz", from: 1480, to: 2001 }
+ - { title: "Du Semnoz à Annecy", from: 2001, to: 2471 }
 ---
 
 ## Approche

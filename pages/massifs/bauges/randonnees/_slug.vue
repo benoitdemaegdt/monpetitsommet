@@ -79,7 +79,7 @@
       </div>
       <div v-if="!isMobile">
         <div class="pt-12 w-1/2 h-full fixed top-0 right-0">
-          <trek-map :trek="trek" />
+          <trek-map :trek="trek" :zoom="zoom" />
         </div>
       </div>
     </div>
@@ -104,6 +104,20 @@ export default {
 
     return {
       trek
+    }
+  },
+  data: () => ({
+    zoom: {}
+  }),
+  mounted () {
+    for (const sectionTitle of this.trek.toc) {
+      const { from, to } = this.trek.sections.find(section => section.title === sectionTitle.text)
+      if (from === undefined || to === undefined) { continue }
+
+      const sectionTitleElement = document.getElementById(sectionTitle.id)
+      sectionTitleElement.addEventListener('click', () => {
+        this.zoom = { from, to }
+      })
     }
   }
 }
