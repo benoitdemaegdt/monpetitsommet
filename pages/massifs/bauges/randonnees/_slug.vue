@@ -129,7 +129,11 @@ export default {
 }
 
 .nuxt-content h2 {
-  @apply mt-2 text-gray-900 text-xl font-bold;
+  @apply mt-2 text-gray-900 text-xl font-bold inline-block cursor-pointer;
+}
+
+.nuxt-content h2:hover {
+  text-decoration: underline;
 }
 
 .nuxt-content p {
