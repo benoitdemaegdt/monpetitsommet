@@ -20,8 +20,6 @@ from: Clelles
 to: Villard-de-Lans
 sections:
   - title: Approche
-    from: 0
-    to: 0
   - title: De la Richardière au Pas de la Selle
     from: 0
     to: 312

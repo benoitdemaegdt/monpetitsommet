@@ -50,8 +50,8 @@ collections:
       - {
           label: 'Sections', name: 'sections', widget: 'list', label_singular: 'section', summary: '{{fields.title}}', fields: [
             { label: 'Titre', name: 'title', widget: 'string' },
-            { label: 'Index début section', name: 'from', widget: 'number', step: 1 },
-            { label: 'Index fin section', name: 'to', widget: 'number', step: 1 }
+            { label: 'Index début section', name: 'from', required: false, widget: 'number', step: 1 },
+            { label: 'Index fin section', name: 'to', required: false, widget: 'number', step: 1 }
           ]
         }
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
