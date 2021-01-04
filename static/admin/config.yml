@@ -37,7 +37,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Image de couverture', name: 'img', widget: 'string', hint: 'lien cloudinary' }
       - { label: 'Légende image de couverture', name: 'caption', widget: 'string' }
-      - { label: 'Lien GPX', name: 'gpx', widget: 'string', hint: 'lien en de api.monpetitsommet.fr' }
+      - { label: 'Lien GPX', name: 'gpx', widget: 'string', hint: 'lien de api.monpetitsommet.fr' }
       - { label: 'Note', name: 'rating', widget: 'number', value_type: 'int', min: 0, max: 5, step: 1 }
       - { label: 'Distance', name: 'distance', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Dénivelé +', name: 'elevation', widget: 'number', value_type: 'float', step: 0.01 }
@@ -48,10 +48,10 @@ collections:
       - { label: 'Ville départ', name: 'from', widget: 'string' }
       - { label: 'Ville arrivée', name: 'to', widget: 'string' }
       - {
-          label: 'Sections', name: 'sections', widget: 'list', label_singular: 'Ajouter une section', summary: '{{fields.label}}', fields: [
+          label: 'Sections', name: 'sections', widget: 'list', label_singular: 'section', summary: '{{fields.title}}', fields: [
             { label: 'Titre', name: 'title', widget: 'string' },
-            { label: 'Nom début section', name: 'from', widget: 'number', step: 1 },
-            { label: 'Nom fin section', name: 'to', widget: 'number', step: 1 }
+            { label: 'Index début section', name: 'from', widget: 'number', step: 1 },
+            { label: 'Index fin section', name: 'to', widget: 'number', step: 1 }
           ]
         }
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
