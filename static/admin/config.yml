@@ -36,22 +36,22 @@ collections:
       - { label: 'Titre', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Image de couverture', name: 'img', widget: 'string', hint: 'lien cloudinary' }
-      - { label: 'Légende de l'image de couverture', name: 'caption', widget: 'string' }
+      - { label: 'Légende image de couverture', name: 'caption', widget: 'string' }
       - { label: 'Lien GPX', name: 'gpx', widget: 'string', hint: 'lien en de api.monpetitsommet.fr' }
       - { label: 'Note', name: 'rating', widget: 'number', value_type: 'int', min: 0, max: 5, step: 1 }
       - { label: 'Distance', name: 'distance', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Dénivelé +', name: 'elevation', widget: 'number', value_type: 'float', step: 0.01 }
       - { label: 'Durée +', name: 'duration', widget: 'string', hint: 'Durée en jours' }
       - { label: 'Difficulté', name: 'difficulty', widget: 'string', hint: 'ex: T1, T2 ...' }
-      - { label: 'Présence d'eau', name: 'water', widget: 'boolean' }
-      - { label: 'Utilisation d'une tente', name: 'tent', widget: 'boolean' }
-      - { label: 'Ville de départ', name: 'from', widget: 'string' }
-      - { label: 'Ville d'arrivée', name: 'to', widget: 'string' }
+      - { label: 'Présence eau', name: 'water', widget: 'boolean' }
+      - { label: 'Utilisation tente', name: 'tent', widget: 'boolean' }
+      - { label: 'Ville départ', name: 'from', widget: 'string' }
+      - { label: 'Ville arrivée', name: 'to', widget: 'string' }
       - {
           label: 'Sections', name: 'sections', widget: 'list', allow_add: true, label_singular: 'Ajouter une section', fields:
             - { label: 'Titre', name: 'title', widget: 'string' }
-            - { label: 'Nom du début de la section', name: 'from', widget: 'number', step: 1 }
-            - { label: 'Nom de la fin de la section', name: 'to', widget: 'number', step: 1 }
+            - { label: 'Nom début section', name: 'from', widget: 'number', step: 1 }
+            - { label: 'Nom fin section', name: 'to', widget: 'number', step: 1 }
         }
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
   - name: 'refuges'
