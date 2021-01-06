@@ -25,9 +25,6 @@
         <nuxt-link to="/blog" class="px-2 py-1 rounded hover:bg-gray-200">
           Blog
         </nuxt-link>
-        <nuxt-link to="/a-propos" class="px-2 py-1 ml-1 rounded hover:bg-gray-200">
-          À Propos
-        </nuxt-link>
         <nuxt-link to="/contact" class="px-2 py-1 ml-1 rounded hover:bg-gray-200">
           Contact
         </nuxt-link>
