@@ -6,14 +6,19 @@
         <h1 class="text-4xl text-gray-900 font-bold leading-tight">
           Refuges du vercors
         </h1>
-        <div v-for="shack in shacks" :key="shack.name">
+        <div
+          v-for="(shack, index) in shacks"
+          :key="shack.name"
+          @mouseenter="onMouseEnter(index)"
+          @mouseleave="onMouseLeave"
+        >
           <NuxtLink :to="{ name: 'massifs-vercors-refuges-slug', params: { slug: shack.slug } }">
             <shack-card class="mt-3" :shack="shack" />
           </NuxtLink>
         </div>
       </div>
       <div class="col-span-5 pt-12 w-5/12 h-full fixed top-0 right-0">
-        <shack-map :shacks="shacks" />
+        <shack-map :shacks="shacks" :hover-shack-index="hoverShackIndex" />
       </div>
     </div>
   </div>
@@ -31,6 +36,17 @@ export default {
 
     return {
       shacks
+    }
+  },
+  data: () => ({
+    hoverShackIndex: undefined
+  }),
+  methods: {
+    onMouseEnter (index) {
+      this.hoverShackIndex = index
+    },
+    onMouseLeave () {
+      this.hoverShackIndex = undefined
     }
   }
 }
