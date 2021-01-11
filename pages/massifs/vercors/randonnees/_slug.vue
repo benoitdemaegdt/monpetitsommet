@@ -87,18 +87,13 @@
 </template>
 
 <script>
+import HelperMixin from '@/mixins/HelperMixin.js'
 import LayoutMixin from '@/mixins/LayoutMixin.js'
 import TrekMap from '@/components/TrekMap.vue'
 
 export default {
   components: { TrekMap },
-  filters: {
-    booleanToFrench (value) {
-      if (!value) { return 'Non' }
-      return 'oui'
-    }
-  },
-  mixins: [LayoutMixin],
+  mixins: [HelperMixin, LayoutMixin],
   async asyncData ({ $content, params }) {
     const trek = await $content('randonnees/vercors', params.slug).fetch()
 
