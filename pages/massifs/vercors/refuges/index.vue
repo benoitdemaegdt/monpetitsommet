@@ -29,7 +29,7 @@ export default {
   async asyncData ({ $content, params }) {
     const shacks = await $content('refuges/vercors', params.slug)
       .only([
-        'name', 'type', 'img', 'altitude', 'beds', 'stove', 'water',
+        'massif', 'name', 'type', 'img', 'altitude', 'beds', 'stove', 'water',
         'longitude', 'latitude', 'slug', 'createdAt'
       ])
       .fetch()

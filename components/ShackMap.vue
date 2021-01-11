@@ -3,13 +3,16 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import ShackMapTooltip from '@/components/ShackMapTooltip.vue'
+
 import 'mapbox-gl/dist/mapbox-gl.css'
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
 
 export default {
   name: 'ShackMap',
   props: {
-    shacks: { type: Array, required: true, default: () => [] },
+    shacks: { type: Array, required: true },
     hoverShackIndex: { type: Number, default: undefined }
   },
   data: () => ({
@@ -59,7 +62,7 @@ export default {
       this.map.touchZoomRotate.disableRotation()
       this.map.addControl(new mapboxgl.NavigationControl({ showCompass: false }))
       this.map.addControl(new mapboxgl.FullscreenControl(), 'top-left')
-      this.map.addControl(new mapboxgl.ScaleControl(), 'bottom-left')
+      this.map.addControl(new mapboxgl.ScaleControl(), 'bottom-right')
       this.map.addControl(new mapboxgl.GeolocateControl({
         positionOptions: { enableHighAccuracy: true },
         trackUserLocation: true
@@ -82,29 +85,29 @@ export default {
         </span>
         `
         // create popup
-        // const MapboxPopup = Vue.extend(Tooltip)
+        const MapboxPopup = Vue.extend(ShackMapTooltip)
 
-        // const popup = new mapboxgl.Popup({ closeButton: false })
-        //   .setLngLat([shack.longitude, shack.latitude])
-        //   .setHTML(`<div id="mapbox-popup-content-${shack.key}"></div>`)
-        //   .addTo(this.map)
+        const popup = new mapboxgl.Popup({ closeButton: false })
+          .setLngLat([shack.longitude, shack.latitude])
+          .setHTML(`<div id="mapbox-popup-content-${shack.key}"></div>`)
+          .addTo(this.map)
 
-        // const MapboxPopupInstance = new MapboxPopup({
-        //   propsData: { cabane: shack, goToShack: this.goToShack }
-        // })
+        const MapboxPopupInstance = new MapboxPopup({
+          propsData: { shack, goToShack: this.goToShack }
+        })
 
-        // MapboxPopupInstance.$mount(`#mapbox-popup-content-${shack.key}`)
-        // popup._update()
+        MapboxPopupInstance.$mount(`#mapbox-popup-content-${shack.key}`)
+        popup._update()
 
         // attach marker and popup to map
         const marker = new mapboxgl.Marker(el)
           .setLngLat([shack.longitude, shack.latitude])
-          // .setPopup(popup)
+          .setPopup(popup)
           .addTo(this.map)
 
         // keep track of markers and popups
         this.markers.push(marker)
-        // this.popups.push(popup)
+        this.popups.push(popup)
 
         // add marker to map bounds
         bounds.extend([shack.longitude, shack.latitude])
@@ -129,6 +132,9 @@ export default {
         this.markers = []
         this.popups = []
       }
+    },
+    goToShack (shack) {
+      this.$router.push({ name: `massifs-${shack.massif}-refuges-slug`, params: { slug: shack.slug } })
     }
   }
 }
@@ -182,5 +188,24 @@ export default {
 
 .mapbox-marker-hover path {
   @apply fill-current;
+}
+
+/**
+ * modify mapbox default css rules
+ */
+.mapboxgl-popup {
+  z-index: 11 !important;
+}
+
+.mapboxgl-popup-content {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.mapboxgl-popup-tip {
+  border-top-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: transparent !important;
+  border-left-color: transparent !important;
 }
 </style>
