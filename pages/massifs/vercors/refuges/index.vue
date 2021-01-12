@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-12 w-full">
+  <div class="pt-12 pb-8 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="col-span-7 mt-5 px-3">
         <p>{{ shacks.length }} refuges, cabanes ou abris référencés dans ce massif</p>
@@ -17,7 +17,7 @@
           </NuxtLink>
         </div>
       </div>
-      <div class="col-span-5 pt-12 w-5/12 h-full fixed top-0 right-0">
+      <div v-if="!isMobile" class="col-span-5 pt-12 w-5/12 h-full fixed top-0 right-0">
         <shack-map :shacks="shacks" :hover-shack-index="hoverShackIndex" />
       </div>
     </div>
@@ -25,7 +25,10 @@
 </template>
 
 <script>
+import LayoutMixin from '@/mixins/LayoutMixin.js'
+
 export default {
+  mixins: [LayoutMixin],
   async asyncData ({ $content, params }) {
     const shacks = await $content('refuges/vercors', params.slug)
       .only([

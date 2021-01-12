@@ -4,7 +4,7 @@
       <div class="md:flex-shrink-0">
         <img class="h-48 w-full object-cover md:w-64" :src="shack.img">
       </div>
-      <div class="px-4">
+      <div class="px-4 pt-2 pb-4">
         <p class="text-sm text-gray-600">
           {{ shack.type }}
         </p>
