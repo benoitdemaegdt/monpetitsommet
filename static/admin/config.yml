@@ -67,7 +67,7 @@ collections:
     fields:
       - { label: 'Massif', name: 'massif', widget: 'select', options: ['vercors', 'bauges', 'chartreuse', 'belledonne', 'ecrins', 'vanoise', 'taillefer', 'queyras', 'devoluy'] }
       - { label: 'Nom', name: 'name', widget: 'string' }
-      - { label: 'Type', name: 'type', widget: 'select', options: ['cabane non gardée', 'gîte d'étape', 'refuge gardé'] }
+      - { label: 'Type', name: 'type', widget: 'select', options: ['cabane non gardée', "gîte d'étape", 'refuge gardé'] }
       - { label: 'Image de couverture', name: 'img', widget: 'string' }
       - { label: 'Nombre de lits', name: 'beds', widget: 'number', value_type: 'int', min: 0, step: 1 }
       - { label: 'Altitude', name: 'altitude', widget: 'number', value_type: 'int' }
@@ -76,7 +76,7 @@ collections:
       - { label: 'Eau à proximité', name: 'water', widget: 'boolean' }
       - { label: 'Présence de toilettes', name: 'toilets', widget: 'boolean' }
       - { label: 'Bois à proximité', name: 'wood', widget: 'boolean' }
-      - { label: 'Présence poêle', name: 'stove', widget: 'boolean' }
+      - { label: "Présence d'un poêle", name: 'stove', widget: 'boolean' }
       - { label: 'Nombre de matelas', name: 'matresses', widget: 'number', value_type: 'int', min: 0, step: 1 }
       - { label: 'Présence de couvertures', name: 'blankets', widget: 'boolean' }
       - { label: 'Contenu', name: 'body', widget: 'markdown' }
