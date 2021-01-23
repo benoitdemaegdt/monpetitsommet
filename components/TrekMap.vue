@@ -4,6 +4,7 @@
 
 <script>
 import 'mapbox-gl/dist/mapbox-gl.css'
+import { ThreeDimensionsControl } from '@/mapbox/ThreeDimensionsControl.js'
 const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
 
 export default {
@@ -67,11 +68,16 @@ export default {
       mapboxgl.accessToken = process.env.NUXT_ENV_MAPBOX_GL_TOKEN
       this.map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/benoitdemaegdt/cka2hsqkq3k5r1iobsq729rh3',
         center: [5.7167, 45.1667],
         zoom: 11,
         attributionControl: false
       })
+      this.map.touchZoomRotate.disableRotation()
+      this.map.addControl(new mapboxgl.NavigationControl({ showCompass: false }))
+      this.map.addControl(new mapboxgl.ScaleControl(), 'bottom-right')
+      this.map.addControl(new mapboxgl.FullscreenControl(), 'top-left')
+      this.map.addControl(new ThreeDimensionsControl(), 'top-left')
     },
     async getTrekCoordinates () {
       const res = await fetch(this.trek.gpx)
@@ -85,31 +91,6 @@ export default {
         .setLngLat(coordinates)
         .addTo(this.map)
     }
-    // createMap () {
-    //   const mapboxgl = require('mapbox-gl/dist/mapbox-gl.js')
-
-    //   mapboxgl.accessToken = process.env.NUXT_ENV_MAPBOX_GL_TOKEN
-    //   this.map = new mapboxgl.Map({
-    //     container: 'map',
-    //     style: 'mapbox://styles/mapbox-map-design/ckhqrf2tz0dt119ny6azh975y',
-    //     center: [5.7167, 45.1667],
-    //     pitch: 85,
-    //     bearing: 80,
-    //     zoom: 11,
-    //     attributionControl: false
-    //   })
-
-    //   this.map.on('load', () => {
-    //     this.map.addSource('mapbox-dem', {
-    //       type: 'raster-dem',
-    //       url: 'mapbox://mapbox.mapbox-terrain-dem-v1',
-    //       tileSize: 512,
-    //       maxzoom: 14
-    //     })
-    //     // add the DEM source as a terrain layer with exaggerated height
-    //     this.map.setTerrain({ source: 'mapbox-dem', exaggeration: 1.5 })
-    //   })
-    // }
   }
 }
 </script>
@@ -136,4 +117,9 @@ export default {
   border-radius: 50%;
 }
 
+.mapboxgl-ctrl-3d {
+  @apply px-1 bg-white text-gray-900 text-base rounded font-semibold flex items-center justify-center;
+  width: 29px;
+  height: 29px;
+}
 </style>

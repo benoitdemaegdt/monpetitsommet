@@ -1,5 +1,13 @@
 # monpetitsommet
 
+## TODO
+### After next release of @nuxt/content
+- [ ] corriger section "Équipements" de content/refuges
+
+### After next release of nuxt
+- [ ] élargir image dans /refuges
+- [ ] Ajouter un focus:outline-none sur le bouton 3D
+
 ## Build Setup
 
 ```bash
