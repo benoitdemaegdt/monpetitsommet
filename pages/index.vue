@@ -1,43 +1,30 @@
 <template>
-  <div class="pt-12 w-full h-screen mx-auto flex flex-col justify-center items-center">
-    <div class="w-full relative flex flex-col justify-center" style="height: 90%;">
-      <nuxt-image v-if="!isMobile" :placeholder="true" :src="image" class="landing-image" />
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 backgound" :style="`height: ${isMobile ? 100 : 80}%;`">
-        <div v-if="!isMobile" />
-        <div class="flex flex-col justify-center px-2 lg:px-0">
-          <h1 class="text-gray-100 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-            Préparez votre prochaine aventure en montagne
-          </h1>
-          <p class="mt-6 w-full lg:w-3/4 text-gray-100 text-base md:text-xl lg:text-2xl font-semibold">
-            Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.
-          </p>
+  <div class="pt-12 w-full h-screen mx-auto">
+    <div class="h-full w-11/12 mx-auto grid grid-cols-2">
+      <div class="w-5/6 mx-auto flex flex-col justify-center">
+        <h1 class="text-gray-800 text-5xl font-semibold leading-tight">
+          Préparez votre prochaine aventure en montagne
+        </h1>
+        <p class="mt-4 text-gray-600 text-xl font-base">
+          Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.
+        </p>
+        <div class="mt-6">
+          <button class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded">
+            VOIR LES TOPOS &rarr;
+          </button>
         </div>
+      </div>
+      <div class="py-8 flex justify-center">
+        <nuxt-image v-if="!isMobile" :placeholder="true" :src="image" class="w-5/6 h-full rounded-lg" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import LayoutMixin from '@/mixins/LayoutMixin.js'
-
 export default {
-  mixins: [LayoutMixin],
   data: () => ({
     image: 'cloudinary:/w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png'
   })
 }
 </script>
-
-<style scoped>
-.backgound {
-  background-color: #1f374c;
-}
-
-.landing-image {
-  position: absolute !important;
-  top: 0;
-  left: 10%;
-  height: 100%;
-  width: 35%;
-}
-</style>
