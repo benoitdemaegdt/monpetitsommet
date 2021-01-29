@@ -15,14 +15,24 @@ matresses: 0
 blankets: false
 ---
 ## Informations
-Ecrire un composant pour cette section
+
+<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+
+___
 
 ## Équipements
-Ecrire un composant pour cette section
+
+<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+
+___
 
 ## Accès
 
-### Rando / Ski de rando / Raquettes
+### Depuis la Richardière
+
+### Depuis le Pas de la Selle
+
+### Depuis la cabane de Pré Peyret
 Beaucoup de gens montent par le pas de l'aiguille a pied, en ski de fond ...
 
 Quand on arrive de la Baraque de Chamousset, on le trouve facilement, en bas de la dernière descente.
