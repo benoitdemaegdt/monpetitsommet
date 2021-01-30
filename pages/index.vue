@@ -1,5 +1,5 @@
 <template>
-  <div class="pb-24">
+  <div>
     <div class="pt-12 w-full h-screen mx-auto">
       <div class="h-full w-11/12 mx-auto grid grid-cols-2">
         <div class="w-5/6 mx-auto flex flex-col justify-center">
@@ -149,6 +149,22 @@
         <a href="https://monpetitsommet.substack.com/" target="_blank" rel="noopener noreferrer" class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded">
           S'INSCRIRE À LA NEWSLETTER &rarr;
         </a>
+      </div>
+    </div>
+    <div class="mt-16 w-full bg-gray-200 divide-y divide-gray-400">
+      <div class="flex justify-center py-4">
+        <nuxt-link to="/cgu" class="p-2 text-gray-700 rounded-full hover:bg-gray-300">
+          CGU
+        </nuxt-link>
+        <nuxt-link to="/blog" class="p-2 text-gray-700 rounded-full hover:bg-gray-300">
+          BLOG
+        </nuxt-link>
+        <nuxt-link to="/contact" class="p-2 text-gray-700 rounded-full hover:bg-gray-300">
+          CONTACT
+        </nuxt-link>
+      </div>
+      <div class="flex justify-center py-4 text-gray-700">
+        <p>{{ new Date().getFullYear() }} - Mon Petit Sommet</p>
       </div>
     </div>
   </div>
