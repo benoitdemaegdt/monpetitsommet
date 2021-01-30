@@ -29,7 +29,7 @@
       >
         <div class="divide-y divide-gray-300 xl:pb-0 xl:col-span-3 xl:row-span-2">
           <div class="prose max-w-none py-8">
-            <nuxt-image :src="article.img" />
+            <nuxt-img :src="article.img" />
             <div class="mt-4">
               <nuxt-content :document="article" />
             </div>

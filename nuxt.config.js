@@ -33,14 +33,14 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
-    '@nuxt/image',
     '@nuxtjs/sitemap'
   ],
 
@@ -60,10 +60,10 @@ export default {
 
   // Image
   image: {
-    providers: {
-      cloudinary: {
-        baseURL: 'https://res.cloudinary.com/monpetitsommet/image/upload/'
-      }
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/monpetitsommet/image/upload/'
     }
+  },
+
   }
 }

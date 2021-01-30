@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane des Aiguillettes
 type: cabane non gardée
-img: https://res.cloudinary.com/monpetitsommet/image/upload/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg
+img: /v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg
 beds: 4
 altitude: 1880
 longitude: 5.52026

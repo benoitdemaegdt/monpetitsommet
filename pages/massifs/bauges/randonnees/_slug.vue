@@ -13,11 +13,11 @@
         </p>
 
         <figure v-if="trek.img">
-          <nuxt-image
-            :placeholder="true"
+          <nuxt-img
+            provider="cloudinary"
             :src="trek.img"
             sizes="768"
-            class="mt-3 w-full rounded"
+            class="mt-3 w-full rounded object-cover"
             style="height: 20rem;"
           />
           <figcaption class="text-sm italic flex justify-center">
@@ -31,42 +31,42 @@
         <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
           <!-- distance -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/distance.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/distance.png" class="h-5 w-5" />
             <div class="ml-2">
               <span class="hidden sm:inline">Distance : </span>{{ trek.distance }} km
             </div>
           </div>
           <!-- duration -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/temps.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/temps.png" class="h-5 w-5" />
             <div class="ml-2">
               <span class="hidden sm:inline">Durée : </span>{{ trek.duration }}
             </div>
           </div>
           <!-- elevation -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/mountain.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/mountain.png" class="h-5 w-5" />
             <div class="ml-2">
               D+ : {{ Math.round(trek.elevation) }} m
             </div>
           </div>
           <!-- rating -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/hook.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/hook.png" class="h-5 w-5" />
             <div class="ml-2">
               Cotation : {{ trek.difficulty }}
             </div>
           </div>
           <!-- water -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/water.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/water.png" class="h-5 w-5" />
             <div class="ml-2">
               Eau : {{ trek.water | booleanToFrench }}
             </div>
           </div>
           <!-- tent -->
           <div class="flex items-center">
-            <nuxt-image src="/icons/tent.png" class="h-5 w-5" />
+            <nuxt-img src="/icons/tent.png" class="h-5 w-5" />
             <div class="ml-2">
               Bivouac : {{ trek.tent | booleanToFrench }}
             </div>

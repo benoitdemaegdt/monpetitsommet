@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane PNRV des Chaumailloux
 type: cabane non gardée
-img: https://res.cloudinary.com/monpetitsommet/image/upload/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg
+img: /v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg
 beds: 19
 altitude: 1665
 longitude: 5.51194

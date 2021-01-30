@@ -1,10 +1,10 @@
 <template>
   <figure class="mt-3">
-    <nuxt-image
-      :placeholder="true"
+    <nuxt-img
+      provider="cloudinary"
       :src="url"
       sizes="768"
-      class="w-full rounded"
+      class="h-full w-full rounded object-cover"
       style="height: 20rem;"
     />
     <figcaption class="text-sm italic flex justify-center">

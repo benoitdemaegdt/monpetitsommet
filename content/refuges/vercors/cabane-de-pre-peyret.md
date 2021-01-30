@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane de Pré Peyret
 type: cabane non gardée
-img: https://res.cloudinary.com/monpetitsommet/image/upload/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg
+img: /v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg
 beds: 15
 altitude: 1600
 longitude: 5.4828
