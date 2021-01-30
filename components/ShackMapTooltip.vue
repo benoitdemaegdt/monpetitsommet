@@ -3,7 +3,7 @@
     class="w-full mx-auto bg-white rounded-xl overflow-hidden cursor-pointer"
     @click="goToShack(shack)"
   >
-    <img class="h-32 w-full object-cover md:w-64" :src="shack.img">
+    <img class="h-32 w-full object-cover md:w-64" :src="`https://res.cloudinary.com/monpetitsommet/image/upload/${shack.img}`">
     <p class="pt-1 px-2 text-gray-800 font-medium">
       {{ shack.name }}
     </p>
@@ -25,14 +25,14 @@
       <div class="flex items-center">
         <img src="/icons/stove.png" class="h-5 w-5">
         <div class="ml-2">
-          {{ shack.stove }}
+          {{ shack.stove | booleanToFrench }}
         </div>
       </div>
 
       <div class="flex items-center">
         <img src="/icons/water.png" class="h-5 w-5">
         <div class="ml-2">
-          {{ shack.water }}
+          {{ shack.water | booleanToFrench }}
         </div>
       </div>
     </div>
