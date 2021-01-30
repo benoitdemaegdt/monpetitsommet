@@ -65,5 +65,8 @@ export default {
     }
   },
 
+  // env
+  env: {
+    NUXT_ENV_MAPBOX_GL_TOKEN: 'pk.eyJ1IjoiYmVub2l0ZGVtYWVnZHQiLCJhIjoiY2s5dnBwaWV5MDFmdjNmazZ1dGFjNDBoYyJ9.0LPj3EUfQdPOQh-S41Sn4A'
   }
 }
