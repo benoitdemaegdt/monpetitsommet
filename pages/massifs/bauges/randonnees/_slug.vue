@@ -2,7 +2,7 @@
   <div class="pt-12 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mt-2 px-3">
-        <h1 class="text-4xl text-gray-900 font-bold leading-tight">
+        <h1 class="text-3xl md:text-4xl text-gray-900 font-bold leading-tight">
           {{ trek.title }}
         </h1>
         <p class="mt-1 text-2xl text-gray-800 font-semibold">

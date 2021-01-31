@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 w-full sm:w-3/4 lg:w-1/2 px-2 mx-auto">
     <nuxt-img provider="cloudinary" :src="shack.img" :placeholder="true" class="mt-4 h-auto w-full rounded-lg" />
-    <h1 class="mt-2 text-4xl text-gray-900 font-bold leading-tight">
+    <h1 class="mt-2 text-3xl md:text-4xl text-gray-900 font-bold leading-tight">
       {{ shack.name }}
     </h1>
     <p class="text-xl text-gray-800">
