@@ -10,7 +10,7 @@
             Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.
           </p>
           <div class="mt-6">
-            <button class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded">
+            <button class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded" @click="scrollToTreks">
               VOIR LES TOPOS &rarr;
             </button>
           </div>
@@ -22,7 +22,7 @@
         </div>
       </div>
     </div>
-    <div class="mt-16 w-3/4 mx-auto">
+    <div id="trekSection" class="mt-16 w-3/4 mx-auto">
       <h2 class="text-gray-800 text-4xl text-center font-semibold">
         Randonnez en autonomie sur plusieurs jours
       </h2>
@@ -207,6 +207,14 @@ export default {
   },
   data: () => ({
     image: 'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png'
-  })
+  }),
+  methods: {
+    scrollToTreks () {
+      const element = document.getElementById('trekSection')
+      const yOffset = -50
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: y, behavior: 'smooth' })
+    }
+  }
 }
 </script>
