@@ -1,36 +1,36 @@
 <template>
   <div>
     <div class="pt-12 w-full h-screen mx-auto">
-      <div class="h-full w-11/12 mx-auto grid grid-cols-2">
-        <div class="w-5/6 mx-auto flex flex-col justify-center">
-          <h1 class="text-gray-800 text-5xl font-semibold leading-tight">
+      <div class="h-full w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2">
+        <div class="flex flex-col justify-center px-0 md:px-12">
+          <h1 class="text-gray-800 text-3xl md:text-5xl font-semibold leading-tight">
             Préparez votre prochaine aventure en montagne
           </h1>
           <p class="mt-4 text-gray-600 text-xl font-base">
             Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.
           </p>
-          <div class="mt-6">
+          <div class="hidden md:inline mt-6">
             <button class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded" @click="scrollToTreks">
               VOIR LES TOPOS &rarr;
             </button>
           </div>
         </div>
-        <div class="py-8 flex justify-center">
-          <div class="w-5/6 h-full">
+        <div class="py-0 md:py-8 flex justify-center">
+          <div class="w-full h-56 md:w-5/6 md:h-full">
             <nuxt-img provider="cloudinary" :src="image" format="webp" class="object-cover h-full w-full rounded-lg shadow-2xl" />
           </div>
         </div>
       </div>
     </div>
-    <div id="trekSection" class="mt-16 w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-4xl text-center font-semibold">
+    <div id="trekSection" class="md:mt-16 w-11/12 md:w-3/4 mx-auto">
+      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
         Randonnez en autonomie sur plusieurs jours
       </h2>
       <p class="mt-4 text-gray-600 text-xl text-justify font-base">
         Des randonnées, il y en a pour tout le monde et pour tous les goûts. On laissera ici de côté les sorties familiales pour ne présenter que des topos détaillés de randonnées exigeantes. Plus de 1500m de dénivelé par jour en moyenne, de la distance, des itinéraires parfois techniques ou accidentés et toujours au moins une nuit en montagne. Car quoi de plus dépaysant que d'installer son bivouac au soleil tombant en attendant les étoiles...
       </p>
-      <div class="mt-8 flex flex-wrap justify-around">
-        <NuxtLink v-for="trek in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1">
+      <div class="mt-4 md:mt-8 flex flex-wrap justify-around">
+        <NuxtLink v-for="(trek, index) in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
             <nuxt-img
               provider="cloudinary"
@@ -86,17 +86,17 @@
         </NuxtLink>
       </div>
     </div>
-    <div class="mt-16 w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-4xl text-center font-semibold">
+    <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
+      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
         Dormez en refuge ou en cabane non gardée
       </h2>
       <p class="mt-4 text-gray-600 text-xl text-justify font-base">
         En plus des refuges, on trouve de nombreuses cabanes non gardées dans les massifs français. Il s'agit la plupart du temps d'abris très sommaires, ouverts été comme hiver afin d'accueillir les randonneurs de passage. Passer une nuit dans l'une de ces cabanes est une occasion unique de vivre une expérience inoubliable en plein coeur de la nature.
       </p>
     </div>
-    <div class="mt-8 w-full px-4">
+    <div class="mt-4 md:mt-8 w-full px-4">
       <div class="flex flex-wrap justify-around">
-        <NuxtLink v-for="refuge in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1">
+        <NuxtLink v-for="(refuge, index) in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
             <nuxt-img
               provider="cloudinary"
@@ -152,15 +152,15 @@
         </NuxtLink>
       </div>
     </div>
-    <div class="mt-16 w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-4xl text-center font-semibold">
+    <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
+      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
         Découvrez vos prochaines aventures
       </h2>
       <p class="mt-4 text-gray-600 text-xl text-justify font-base">
         Randonnées, bivouac, escalade, alpinisme, ski de rando et même snowkite : des aventures en montagne il y en a pour tous les goûts ! Inscrivez vous à la newsletter de Mon Petit Sommet pour recevoir directement dans votre boite mail les dernières sorties publiées sur le site.
       </p>
       <div class="mt-6 flex justify-center ">
-        <a href="https://monpetitsommet.substack.com/" target="_blank" rel="noopener noreferrer" class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded">
+        <a href="https://monpetitsommet.substack.com/" target="_blank" rel="noopener noreferrer" class="text-white text-sm md:text-base font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded">
           S'INSCRIRE À LA NEWSLETTER &rarr;
         </a>
       </div>
