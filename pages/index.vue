@@ -17,7 +17,7 @@
         </div>
         <div class="py-8 flex justify-center">
           <div class="w-5/6 h-full">
-            <nuxt-img provider="cloudinary" :src="image" class="object-cover h-full w-full rounded-lg shadow-2xl" />
+            <nuxt-img provider="cloudinary" :src="image" format="webp" class="object-cover h-full w-full rounded-lg shadow-2xl" />
           </div>
         </div>
       </div>
@@ -32,7 +32,14 @@
       <div class="mt-8 flex flex-wrap justify-around">
         <NuxtLink v-for="trek in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="trek.img" class="w-full h-56 object-cover" />
+            <nuxt-img
+              provider="cloudinary"
+              :src="trek.img"
+              format="webp"
+              loading="lazy"
+              height="400"
+              class="w-full h-56 object-cover"
+            />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
@@ -91,7 +98,14 @@
       <div class="flex flex-wrap justify-around">
         <NuxtLink v-for="refuge in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="refuge.img" class="w-full h-56 object-cover" />
+            <nuxt-img
+              provider="cloudinary"
+              :src="refuge.img"
+              format="webp"
+              loading="lazy"
+              height="400"
+              class="w-full h-56 object-cover"
+            />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ refuge.type.toUpperCase() }}
