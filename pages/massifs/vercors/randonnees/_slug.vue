@@ -16,7 +16,8 @@
           <nuxt-img
             provider="cloudinary"
             :src="trek.img"
-            sizes="768"
+            format="webp"
+            height="600"
             class="mt-3 w-full rounded object-cover"
             style="height: 20rem;"
           />

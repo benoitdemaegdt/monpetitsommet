@@ -3,7 +3,9 @@
     <nuxt-img
       provider="cloudinary"
       :src="url"
-      sizes="768"
+      format="webp"
+      loading="lazy"
+      height="600"
       class="h-full w-full rounded object-cover"
       style="height: 20rem;"
     />
