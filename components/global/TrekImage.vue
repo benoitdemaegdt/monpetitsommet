@@ -1,11 +1,9 @@
 <template>
   <figure class="mt-3">
-    <nuxt-img
+    <nuxt-picture
       provider="cloudinary"
       :src="url"
-      format="webp"
-      loading="lazy"
-      height="600"
+      placeholder
       class="h-full w-full rounded object-cover"
       style="height: 20rem;"
     />

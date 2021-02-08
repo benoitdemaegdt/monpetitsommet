@@ -48,28 +48,28 @@
             <div class="grid grid-cols-2 gap-4">
               <!-- distance -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/distance.png" class="h-5 w-5" />
+                <nuxt-picture src="/icons/distance.png" class="h-5 w-5" />
                 <div class="ml-2">
                   <span class="hidden sm:inline">Distance : </span>{{ trek.distance }} km
                 </div>
               </div>
               <!-- duration -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/temps.png" class="h-5 w-5" />
+                <nuxt-picture src="/icons/temps.png" class="h-5 w-5" />
                 <div class="ml-2">
                   <span class="hidden sm:inline">Durée : </span>{{ trek.duration }}
                 </div>
               </div>
               <!-- elevation -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/mountain.png" class="h-5 w-5" />
+                <nuxt-picture src="/icons/mountain.png" class="h-5 w-5" />
                 <div class="ml-2">
                   D+ : {{ Math.round(trek.elevation) }} m
                 </div>
               </div>
               <!-- rating -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/hook.png" class="h-5 w-5" />
+                <nuxt-picture src="/icons/hook.png" class="h-5 w-5" />
                 <div class="ml-2">
                   Cotation : {{ trek.difficulty }}
                 </div>

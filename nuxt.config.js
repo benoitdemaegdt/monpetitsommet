@@ -60,6 +60,7 @@ export default {
 
   // Image
   image: {
+    sizes: [320, 420, 768, 1024],
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/monpetitsommet/image/upload/'
     }
