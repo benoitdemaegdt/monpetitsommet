@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-12 w-full">
+  <div class="py-12 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mt-2 px-3">
         <h1 class="text-3xl md:text-4xl text-gray-900 font-bold leading-tight">
@@ -13,13 +13,14 @@
         </p>
 
         <figure v-if="trek.img">
-          <nuxt-picture
-            provider="cloudinary"
-            :src="trek.img"
-            placeholder
-            class="mt-3 w-full rounded object-cover"
-            style="height: 20rem;"
-          />
+          <div class="mt-3 w-full rounded overflow-hidden object-cover" style="height: 20rem;">
+            <nuxt-picture
+              provider="cloudinary"
+              :src="trek.img"
+              placeholder
+              class="img-cover"
+            />
+          </div>
           <figcaption class="text-sm italic flex justify-center">
             {{ trek.caption }}
           </figcaption>

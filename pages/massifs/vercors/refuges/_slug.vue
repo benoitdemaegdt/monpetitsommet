@@ -1,13 +1,11 @@
 <template>
   <div class="py-12 w-full sm:w-3/4 lg:w-1/2 px-2 mx-auto">
-    <div class="mt-4 rounded-lg shadow-lg overflow-hidden">
+    <div class="mt-4 w-full rounded overflow-hidden object-cover shadow-lg" style="height: 25rem;">
       <nuxt-picture
         provider="cloudinary"
         :src="shack.img"
         placeholder
-        fit="cover"
-        width="400"
-        height="250"
+        class="img-cover"
       />
     </div>
     <h1 class="mt-2 text-2xl md:text-4xl text-gray-900 font-bold leading-tight">

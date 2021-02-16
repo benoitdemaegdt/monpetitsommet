@@ -2,7 +2,7 @@
   <section class="text-gray-700 body-font overflow-hidden">
     <div class="py-12 mx-auto">
       <div class="lg:w-full mx-auto flex flex-wrap">
-        <nuxt-img provider="cloudinary" :src="trek.img" sizes="768" class="lg:w-1/2 w-full h-auto md:h-64 lg:h-auto object-cover object-center rounded" />
+        <nuxt-picture provider="cloudinary" :src="trek.img" class="lg:w-1/2 w-full rounded overflow-hidden shadow-xl" />
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 class="text-sm title-font text-gray-600 tracking-widest">
             {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}

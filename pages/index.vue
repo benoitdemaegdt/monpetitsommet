@@ -16,8 +16,8 @@
           </div>
         </div>
         <div class="py-0 md:py-8 flex justify-center">
-          <div class="w-full h-56 md:w-5/6 md:h-full">
-            <nuxt-picture provider="cloudinary" :src="image" placeholder class="object-cover h-full w-full rounded-lg shadow-2xl" />
+          <div class="w-full h-56 md:w-5/6 md:h-full rounded-lg overflow-hidden shadow-2xl">
+            <nuxt-picture provider="cloudinary" :src="image" placeholder class="img-cover" />
           </div>
         </div>
       </div>
@@ -29,15 +29,12 @@
       <p class="mt-4 text-gray-600 text-xl text-justify font-base">
         Des randonnées, il y en a pour tout le monde et pour tous les goûts. On laissera ici de côté les sorties familiales pour ne présenter que des topos détaillés de randonnées exigeantes. Plus de 1500m de dénivelé par jour en moyenne, de la distance, des itinéraires parfois techniques ou accidentés et toujours au moins une nuit en montagne. Car quoi de plus dépaysant que d'installer son bivouac au soleil tombant en attendant les étoiles...
       </p>
-      <div class="mt-4 md:mt-8 flex flex-wrap justify-around">
+      <div class="w-full mt-4 md:mt-8 flex flex-wrap justify-around">
         <NuxtLink v-for="(trek, index) in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-picture
-              provider="cloudinary"
-              :src="trek.img"
-              placeholder
-              class="w-full h-56 object-cover"
-            />
+            <div class="w-full h-56">
+              <nuxt-picture provider="cloudinary" :src="trek.img" placeholder class="img-cover" />
+            </div>
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
@@ -96,11 +93,9 @@
       <div class="flex flex-wrap justify-around">
         <NuxtLink v-for="(refuge, index) in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-picture
-              provider="cloudinary"
-              :src="refuge.img"
-              class="w-full h-56 object-cover"
-            />
+            <div class="w-full h-56">
+              <nuxt-picture provider="cloudinary" :src="refuge.img" placeholder class="img-cover" />
+            </div>
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ refuge.type.toUpperCase() }}
@@ -213,3 +208,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.img-cover img {
+  @apply object-cover h-full w-full;
+}
+</style>

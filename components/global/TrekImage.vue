@@ -1,12 +1,13 @@
 <template>
   <figure class="mt-3">
-    <nuxt-picture
-      provider="cloudinary"
-      :src="url"
-      placeholder
-      class="h-full w-full rounded object-cover"
-      style="height: 20rem;"
-    />
+    <div class="mt-3 w-full rounded overflow-hidden object-cover" style="height: 20rem;">
+      <nuxt-picture
+        provider="cloudinary"
+        :src="url"
+        placeholder
+        class="img-cover"
+      />
+    </div>
     <figcaption class="text-sm italic flex justify-center">
       {{ caption }}
     </figcaption>
