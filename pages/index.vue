@@ -30,7 +30,7 @@
       <div class="w-full mt-4 md:mt-8 flex flex-wrap justify-around">
         <NuxtLink v-for="(trek, index) in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="trek.img" class="w-full h-60 object-cover" />
+            <nuxt-img provider="cloudinary" :src="trek.img" loading="lazy" class="w-full h-60 object-cover" />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
@@ -89,7 +89,7 @@
       <div class="flex flex-wrap justify-around">
         <NuxtLink v-for="(refuge, index) in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="refuge.img" class="w-full h-60 object-cover" />
+            <nuxt-img provider="cloudinary" :src="refuge.img" loading="lazy" class="w-full h-60 object-cover" />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ refuge.type.toUpperCase() }}

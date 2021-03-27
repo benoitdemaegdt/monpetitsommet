@@ -1,7 +1,7 @@
 <template>
   <div class="w-full mx-auto bg-white rounded-xl shadow-md overflow-hidden">
     <div class="md:flex">
-      <nuxt-img provider="cloudinary" :src="shack.img" class="md:flex-shrink-0 h-48 w-full md:w-64 object-cover" />
+      <nuxt-img provider="cloudinary" :src="shack.img" loading="lazy" class="md:flex-shrink-0 h-48 w-full md:w-64 object-cover" />
       <div class="px-4 pt-2 pb-4">
         <p class="text-sm text-gray-600">
           {{ shack.type }}
