@@ -1,13 +1,10 @@
 <template>
   <div class="py-12 w-full sm:w-3/4 lg:w-1/2 px-2 mx-auto">
-    <div class="mt-4 w-full rounded overflow-hidden object-cover shadow-lg" style="height: 25rem;">
-      <nuxt-picture
-        provider="cloudinary"
-        :src="shack.img"
-        placeholder
-        class="img-cover"
-      />
-    </div>
+    <nuxt-img
+      provider="cloudinary"
+      :src="shack.img"
+      class="mt-4 w-full h-96 rounded overflow-hidden object-cover shadow-lg"
+    />
     <h1 class="mt-2 text-2xl md:text-4xl text-gray-900 font-bold leading-tight">
       {{ shack.name }}
     </h1>
@@ -31,9 +28,6 @@ export default {
 </script>
 
 <style>
-/* .nuxt-picture > img {
-  @apply mt-4 object-cover h-full w-full rounded-lg shadow-lg !important;
-} */
 .nuxt-content h2 {
   @apply mt-2 text-2xl text-gray-900 font-semibold;
 }
