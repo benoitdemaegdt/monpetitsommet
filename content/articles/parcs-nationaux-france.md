@@ -2,7 +2,7 @@
 title: Quels sont les 11 parcs nationaux français ?
 description: "Un parc national français désigne un espace protégé du fait de sa richesse naturelle exceptionnelle. Depuis novembre 2019 on dénombre très exactement 11 parcs nationaux en France : la Vanoise, Port-Cros, les Pyrénées, les Cévennes, les Écrins, le Mercantour, la Guadeloupe, la Réunion, la Guyane, les Calanques et enfin le tout récent parc national de forêts."
 category: culture
-img: /v1618164513/articles/parcs-nationaux-france/parcs-nationaux_r9gyyv.png
+img: /v1618861709/articles/parcs-nationaux-france/parc-nationaux_fx2kyn.png
 alt: logo des parcs nationaux
 ---
 
@@ -71,7 +71,7 @@ Deuxième île et deuxième parc national d'outremer : celui de l'île de la Ré
 <trek-image url="/v1618171924/articles/parcs-nationaux-france/reunion_lzkozi.jpg"></trek-image>
 
 ## Le parc national de Guyane (2007) 🌴
-C'est en amérique du sud  et dans la forêt amazonienne que se situe le méconnu parc national de Guyane. Il faut dire que cet immense parc n'est pas facile d'accès : on ne peut y accéder que par avion ou par pirogue !
+C'est en amérique du sud  et dans la forêt amazonienne que se situe le méconnu parc national de Guyane. Il faut dire que cet immense parc n'est pas facile d'accès : on ne peut y accéder que par avion ou par pirogue ! Pas grand chose d'autre à dire sur ce parc par manque d'information. À noter qu'il ne semble pas y avoir de randonnée "classique" faisable en autonomie.
 
 <trek-image url="/v1618171502/articles/parcs-nationaux-france/guyane_ylgsfh.jpg"></trek-image>
 

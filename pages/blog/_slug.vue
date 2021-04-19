@@ -11,7 +11,7 @@
               {{ article.description }}
             </p>
             <div class="mt-4 flex justify-center">
-              <nuxt-img provider="cloudinary" :src="article.img" class="h-52" />
+              <nuxt-img provider="cloudinary" :src="article.img" class="h-52 object-cover" />
             </div>
           </div>
         </div>

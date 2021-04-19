@@ -4,9 +4,9 @@
       provider="cloudinary"
       :src="url"
       loading="lazy"
-      class="mt-3 w-full h-80 rounded overflow-hidden object-cover"
+      class="mt-3 w-full h-52 sm:h-80 rounded overflow-hidden object-cover"
     />
-    <figcaption class="text-sm italic flex justify-center">
+    <figcaption v-if="caption" class="text-sm italic flex justify-center">
       {{ caption }}
     </figcaption>
   </figure>
@@ -17,7 +17,7 @@ export default {
   name: 'TrekImage',
   props: {
     url: { type: String, required: true },
-    caption: { type: String, required: true }
+    caption: { type: String, required: false, default: undefined }
   }
 }
 </script>
