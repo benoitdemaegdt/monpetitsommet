@@ -5,7 +5,9 @@ category: culture
 img: /v1618863598/articles/cotation-randonnees/hiking_quuwlv.jpg
 alt: description des cotations des randonnées
 ---
-## Warning
+
+<warning text="Cette échelle de cotation est donnée à titre purement indicatif. La difficulté d'une randonnée peut varier significativement en fonction de la météo, la saison ou les conditions d'enneigment."></warning>
+&nbsp;
 
 ## T1 : Randonnée
 Rien de bien compliqué pour ce premier niveau de cotation. On se parle ici d'un sentier bien tracé (type chemin forestier ou chemin de campagne) avec une faible pente et aucune exposition au vide. Il n'y a pas besoin d'équipement particulier pour s'engager sur ce type de chemin : de simples baskets feront l'affaire.
