@@ -16,7 +16,7 @@
           <nuxt-img
             provider="cloudinary"
             :src="trek.img"
-            class="mt-3 w-full h-80 rounded overflow-hidden object-cover"
+            class="mt-3 w-full h-52 sm:h-80 rounded overflow-hidden object-cover"
           />
           <figcaption class="text-sm italic flex justify-center">
             {{ trek.caption }}

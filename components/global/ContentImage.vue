@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'TrekImage',
+  name: 'ContentImage',
   props: {
     url: { type: String, required: true },
     caption: { type: String, required: false, default: undefined }
