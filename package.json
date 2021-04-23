@@ -26,6 +26,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.24.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "postcss": "^8.2.10"
+    "postcss": "^8.2.12"
   }
 }
