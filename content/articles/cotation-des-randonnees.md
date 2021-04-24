@@ -10,19 +10,23 @@ alt: description des cotations des randonnées
 &nbsp;
 
 ## T1 : Randonnée
-Rien de bien compliqué pour ce premier niveau de cotation. On se parle ici d'un sentier bien tracé (type chemin forestier ou chemin de campagne) avec une faible pente et aucune exposition au vide. Il n'y a pas besoin d'équipement particulier pour s'engager sur ce type de chemin : de simples baskets feront l'affaire.
+Rien de bien compliqué pour ce premier niveau de cotation. On se parle ici d'un sentier bien tracé (type chemin forestier ou chemin de campagne) avec une faible pente et aucune exposition au vide. Il n'y a pas besoin d'équipement particulier pour s'engager sur ce type de chemin : une simple paire de baskets fera l'affaire.
 \
 \
-**En Bref :** Vous pouvez emmener papie et mamie avec vous.
+**En Bref :** Vous pouvez emmener papi et mamie avec vous.
+
+<content-image url="/v1618946098/articles/cotation-randonnees/t1_m48lnl.jpg"></content-image>
 
 ## T2 : Randonnées en montagne
 Ce deuxième niveau de cotation du CAS reste encore très accessible. Il décrit un sentier bien tracé, mais cette fois en terrain pentu voir raide. On va donc naturellement y trouver des terrains plus exigeants avec des rochers et des falaises. Pour s'engager sur ce type de sentier, il est recommandé de laisser les baskets au placard et de sortir les chaussures de montagne, bien plus résistantes et adaptées pour ce type de terrain.
 \
 \
-**En Bref :** Un chemin de petite randonnée (PR). Pas bien difficile, mais on évitera les tongs.
+**En Bref :** Un sentier de rando classique. Pas bien technique, mais on évitera les tongs.
+
+<content-image url="/v1618946286/articles/cotation-randonnees/t2_wjhjme.jpg"></content-image>
 
 ## T3 : Randonnée en montagne exigeante
-Ça commence à devenir bien plus technique à partir de cette cotation de randonnée ! Les sentiers cotés en T3 ne sont pas toujours facilement visibles (moins de passage et de marquage). On peut y trouver des passages ou l'appui des mains est nécessaire pour garder l'équilibre ainsi que des sections exposées équipées de cordes ou chaines. Il devient nécessaire d'avoir de véritables chaussures de trekking pour s'engager sur ce genre de randonnée.
+Ça commence à devenir plus technique à partir de cette cotation de randonnée ! Les tracés des sentiers cotés en T3 ne sont pas toujours facilement visibles (moins de passage et de marquage). On peut y trouver des passages ou l'appui des mains est nécessaire pour garder l'équilibre ainsi que des sections exposées équipées de cordes ou chaines. Il faut avoir de véritables chaussures de trekking pour s'engager sur ce genre de randonnée.
 \
 \
 **En Bref :** Un GR classique.
@@ -34,8 +38,10 @@ il faut parfois "poser les mains" (comme on dit dans le jargon) pour avancer. C'
 \
 **En Bref :** Un GR difficile, type GR 20.
 
+<content-image url="/v1618946463/articles/cotation-randonnees/t4_d7nicv.jpg"></content-image>
+
 ## T5 : Randonnée alpine exigeante
-On passe désormais dans le domaine du sentier très difficile voir du hors sentier. Les randonnées cotées en T5 présentent des pentes raides voir très raides. Le risque de chute y est clairement non négligeable en plus d'être dangereux. Comme on est dans le domaine de la haute montagne, il est fort probable d'y trouver des névés voir même des glaciers. On est donc exposé au risque d'avalanche et de chute dans une crevasse. Des chaussures de trekking rigiges sont obligatoires et des crampons d'alpinisme peuvent être nécessaires.
+On passe désormais dans le domaine du sentier très difficile voir du hors sentier. Les randonnées cotées en T5 présentent des pentes raides voir très raides. Le risque de chute y est clairement non négligeable en plus d'être dangereux. Comme on est dans le domaine de la haute montagne, il est fort probable d'y trouver des névés voir même des glaciers. On est donc exposé au risque d'avalanche et de chute dans une crevasse. Des chaussures de trekking rigides sont obligatoires et des crampons d'alpinisme peuvent être nécessaires.
 \
 \
 **En Bref :** Du hors-piste version randonnée
@@ -45,3 +51,5 @@ Les randonnées cotées en T6 sont à la limite de l'alpinisme. Il n'y a habitue
 \
 \
 **En Bref :** Du costaud. On se demande quelle est la véritable différence avec l'alpinisme.
+
+<content-image url="/v1619285749/articles/cotation-randonnees/t6_u28hgm.jpg"></content-image>
