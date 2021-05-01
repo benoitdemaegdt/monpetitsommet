@@ -70,6 +70,18 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'Contact',
+  head () {
+    return {
+      title: 'Contact',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: "Une question, un problème ou une proposition d'aventure ? Envoyez-nous un email !"
+        }
+      ]
+    }
+  }
 }
 </script>
