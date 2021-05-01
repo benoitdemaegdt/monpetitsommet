@@ -26,6 +26,9 @@ export default {
   //   return {
   //     treks
   //   }
+  // },
+  // head: {
+  //   title: 'Randonner en chartreuse'
   // }
 }
 </script>

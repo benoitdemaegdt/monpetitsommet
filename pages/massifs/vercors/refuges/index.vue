@@ -44,6 +44,18 @@ export default {
   data: () => ({
     hoverShackIndex: undefined
   }),
+  head () {
+    return {
+      title: 'Liste des cabanes du Vercors',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Toutes les infos sur les plus belles cabanes du massif du Vercors. Préparez votre nuit en pleine nature au coeur du Vercors.'
+        }
+      ]
+    }
+  },
   methods: {
     onMouseEnter (index) {
       this.hoverShackIndex = index

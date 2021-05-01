@@ -79,6 +79,18 @@ export default {
       prev,
       next
     }
+  },
+  head () {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.article.description
+        }
+      ]
+    }
   }
 }
 </script>

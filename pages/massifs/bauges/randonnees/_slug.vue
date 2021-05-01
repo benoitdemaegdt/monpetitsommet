@@ -107,6 +107,18 @@ export default {
   data: () => ({
     zoom: {}
   }),
+  head () {
+    return {
+      title: this.trek.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.trek.title}. Itinéraire, distance, dénivelé, trace GPS : découvrez toutes les infos sur cette randonnée et partez plus sereinement.`
+        }
+      ]
+    }
+  },
   mounted () {
     for (const sectionTitle of this.trek.toc) {
       const { from, to } = this.trek.sections.find(section => section.title === sectionTitle.text)

@@ -57,6 +57,18 @@ export default {
       articles
     }
   },
+  head () {
+    return {
+      title: 'le blog de Mon Petit Sommet',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Les derniers articles de blog de Mon Petit Sommet.'
+        }
+      ]
+    }
+  },
   methods: {
     formatDate (date) {
       const options = { year: 'numeric', month: 'short', day: 'numeric' }

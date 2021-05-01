@@ -2,7 +2,7 @@
   <div class="container px-5 pt-12 mx-auto">
     <div class="mt-4 flex justify-center">
       <h1 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-semibold">
-        Randonner dans le Vercors
+        {{ title }}
       </h1>
     </div>
     <div class="mt-2 mx-auto">
@@ -35,6 +35,21 @@ export default {
 
     return {
       treks
+    }
+  },
+  data: () => ({
+    title: 'Randonner dans le Vercors'
+  }),
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Découvrez les plus belles randonnées sportives du massif du Vercors. Parfois engagées. Souvent loin des foules. Toujours mémorables.'
+        }
+      ]
     }
   }
 }

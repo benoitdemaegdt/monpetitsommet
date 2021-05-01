@@ -23,6 +23,18 @@ export default {
     return {
       shack
     }
+  },
+  head () {
+    return {
+      title: this.shack.name,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.shack.name}. Nombre de place, localisation, fréquentation, présence d'eau : découvrez toutes les infos et préparez votre sortie en montagne.`
+        }
+      ]
+    }
   }
 }
 </script>
