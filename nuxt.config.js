@@ -48,7 +48,8 @@ export default {
       }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { hid: 'canonical', rel: 'canonical', href: 'https://monpetitsommet.fr' }
     ]
   },
 
