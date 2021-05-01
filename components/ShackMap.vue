@@ -53,7 +53,7 @@ export default {
       mapboxgl.accessToken = process.env.NUXT_ENV_MAPBOX_GL_TOKEN
       this.map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v11',
+        style: 'mapbox://styles/benoitdemaegdt/cka2hsqkq3k5r1iobsq729rh3',
         center: [5.7167, 45.1667],
         zoom: 11,
         attributionControl: false
