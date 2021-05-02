@@ -7,7 +7,9 @@
     </div>
     <div class="mt-2 mx-auto">
       <p class="text-base md:text-lg text-gray-700 text-justify">
-        todo
+        Un écrin de nature et de vie sauvage à deux pas de la ville. C'est probablement la meilleure manière de décrire le massif de la Chartreuse.
+        Situé entre les villes de Grenoble et Chambéry, ces montagnes sont très facilement accessibles en transport en commun.
+        C'est donc une destination de choix pour un week end prolongé de randonnée et une immersion en pleine nature.
       </p>
     </div>
     <div v-for="trek in treks" :key="trek.title">
