@@ -20,14 +20,16 @@
         </div>
       </div>
     </div>
-    <div id="trekSection" class="md:mt-16 w-11/12 md:w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
-        Randonnez en autonomie sur plusieurs jours
-      </h2>
-      <p class="mt-4 text-gray-600 text-xl text-justify font-base">
-        Des randonnées, il y en a pour tout le monde et pour tous les goûts. On laissera ici de côté les sorties familiales pour ne présenter que des topos détaillés de randonnées exigeantes. Plus de 1500m de dénivelé par jour en moyenne, de la distance, des itinéraires parfois techniques ou accidentés et toujours au moins une nuit en montagne. Car quoi de plus dépaysant que d'installer son bivouac au soleil tombant en attendant les étoiles...
-      </p>
-      <div class="w-full mt-4 md:mt-8 flex flex-wrap justify-around">
+    <div id="trekSection" class="md:mt-16">
+      <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
+        <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
+          Randonnez en autonomie sur plusieurs jours
+        </h2>
+        <p class="mt-4 text-gray-600 text-xl text-justify font-base">
+          Des randonnées, il y en a pour tout le monde et pour tous les goûts. On laissera ici de côté les sorties familiales pour ne présenter que des topos détaillés de randonnées exigeantes. Plus de 1500m de dénivelé par jour en moyenne, de la distance, des itinéraires parfois techniques ou accidentés et toujours au moins une nuit en montagne. Car quoi de plus dépaysant que d'installer son bivouac au soleil tombant en attendant les étoiles...
+        </p>
+      </div>
+      <div class="mt-4 md:mt-8 flex flex-wrap justify-around">
         <NuxtLink v-for="(trek, index) in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
             <nuxt-img provider="cloudinary" :src="trek.img" loading="lazy" class="w-full h-60 object-cover" />
@@ -175,7 +177,7 @@ export default {
   mixins: [HelperMixin],
   async asyncData ({ $content, params }) {
     const treks = await $content('randonnees', { deep: true }, params.slug)
-      .where({ title: { $in: ['Traversée du Vercors (Balcon Est)', 'Traversée des Bauges'] } })
+      .where({ title: { $in: ['Traversée du Vercors (Balcon Est)', 'Traversée des Bauges', 'Petite Traversée de la Chartreuse'] } })
       .only([
         'massif', 'title', 'img', 'distance', 'elevation',
         'duration', 'difficulty', 'from', 'to', 'slug'
