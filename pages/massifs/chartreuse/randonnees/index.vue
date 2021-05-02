@@ -2,33 +2,50 @@
   <div class="container px-5 pt-12 mx-auto">
     <div class="mt-4 flex justify-center">
       <h1 class="text-2xl md:text-3xl lg:text-4xl text-gray-900 font-semibold">
-        Randonner en chartreuse
+        {{ title }}
       </h1>
     </div>
     <div class="mt-2 mx-auto">
       <p class="text-base md:text-lg text-gray-700 text-justify">
-        Coming soon ...
+        todo
       </p>
+    </div>
+    <div v-for="trek in treks" :key="trek.title">
+      <trek-card massif="chartreuse" :trek="trek" />
     </div>
   </div>
 </template>
 
 <script>
+import TrekCard from '~/components/TrekCard.vue'
 export default {
-  // async asyncData ({ $content, params }) {
-  //   const treks = await $content('randonnees/chartreuse', params.slug)
-  //     .only([
-  //       'title', 'description', 'img', 'rating', 'distance', 'elevation',
-  //       'duration', 'difficulty', 'from', 'to', 'slug', 'createdAt'
-  //     ])
-  //     .fetch()
+  components: { TrekCard },
+  async asyncData ({ $content, params }) {
+    const treks = await $content('randonnees/chartreuse', params.slug)
+      .only([
+        'title', 'description', 'img', 'rating', 'distance', 'elevation',
+        'duration', 'difficulty', 'from', 'to', 'slug', 'createdAt'
+      ])
+      .fetch()
 
-  //   return {
-  //     treks
-  //   }
-  // },
-  // head: {
-  //   title: 'Randonner en chartreuse'
-  // }
+    return {
+      treks
+    }
+  },
+  data: () => ({
+    title: 'Randonner en Chartreuse'
+  }),
+  head () {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Découvrez les plus belles randonnées sportives du massif de la Chartreuse. Parfois engagées. Souvent loin des foules. Toujours mémorables.'
+        }
+      ]
+    }
+  }
 }
 </script>
