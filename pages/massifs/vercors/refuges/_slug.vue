@@ -3,6 +3,7 @@
     <nuxt-img
       provider="cloudinary"
       :src="shack.img"
+      :alt="shack.name"
       class="mt-4 w-full h52 sm:h-96 rounded overflow-hidden object-cover shadow-lg"
     />
     <h1 class="mt-2 text-2xl md:text-4xl text-gray-900 font-bold leading-tight">

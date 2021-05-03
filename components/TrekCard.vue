@@ -2,7 +2,7 @@
   <section class="text-gray-700 body-font overflow-hidden">
     <div class="py-12 mx-auto">
       <div class="lg:w-full mx-auto flex flex-wrap">
-        <nuxt-img provider="cloudinary" :src="trek.img" class="lg:w-1/2 w-full rounded overflow-hidden shadow-xl" />
+        <nuxt-img provider="cloudinary" :src="trek.img" :alt="trek.caption" class="lg:w-1/2 w-full rounded overflow-hidden shadow-xl" />
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 class="text-sm title-font text-gray-600 tracking-widest">
             {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
@@ -48,28 +48,28 @@
             <div class="grid grid-cols-2 gap-4">
               <!-- distance -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/distance.png" class="h-5 w-5" />
+                <nuxt-img src="/icons/distance.png" alt="icone distance" class="h-5 w-5" />
                 <div class="ml-2">
                   <span class="hidden sm:inline">Distance : </span>{{ trek.distance }} km
                 </div>
               </div>
               <!-- duration -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/temps.png" class="h-5 w-5" />
+                <nuxt-img src="/icons/temps.png" alt="icone temps" class="h-5 w-5" />
                 <div class="ml-2">
                   <span class="hidden sm:inline">Durée : </span>{{ trek.duration }}
                 </div>
               </div>
               <!-- elevation -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/mountain.png" class="h-5 w-5" />
+                <nuxt-img src="/icons/mountain.png" alt="icone dénivelé" class="h-5 w-5" />
                 <div class="ml-2">
                   D+ : {{ Math.round(trek.elevation) }} m
                 </div>
               </div>
               <!-- rating -->
               <div class="flex items-center">
-                <nuxt-img src="/icons/hook.png" class="h-5 w-5" />
+                <nuxt-img src="/icons/hook.png" alt="icone difficulté" class="h-5 w-5" />
                 <div class="ml-2">
                   Cotation : {{ trek.difficulty }}
                 </div>

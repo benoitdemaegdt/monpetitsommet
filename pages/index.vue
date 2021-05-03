@@ -16,7 +16,7 @@
           </div>
         </div>
         <div class="py-0 md:py-8 flex justify-center">
-          <nuxt-img provider="cloudinary" :src="image" class="w-full h-56 md:w-5/6 md:h-full rounded-lg overflow-hidden shadow-2xl object-cover" />
+          <nuxt-img provider="cloudinary" :src="image.path" :alt="image.alt" class="w-full h-56 md:w-5/6 md:h-full rounded-lg overflow-hidden shadow-2xl object-cover" />
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <div class="mt-4 md:mt-8 flex flex-wrap justify-around">
         <NuxtLink v-for="(trek, index) in treks" :key="trek.title" :to="{ name: `massifs-${trek.massif}-randonnees-slug`, params: { slug: trek.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="trek.img" loading="lazy" class="w-full h-60 object-cover" />
+            <nuxt-img provider="cloudinary" :src="trek.img" :alt="trek.caption" loading="lazy" class="w-full h-60 object-cover" />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
@@ -43,28 +43,28 @@
               <div class="py-3 grid grid-cols-2 gap-4 text-sm text-gray-800">
                 <!-- distance -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/distance.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/distance.png" alt="icone distance" class="h-5 w-5" />
                   <div class="ml-2">
                     <span class="hidden sm:inline">Distance : </span>{{ Math.round(trek.distance) }} km
                   </div>
                 </div>
                 <!-- duration -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/temps.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/temps.png" alt="icone temps" class="h-5 w-5" />
                   <div class="ml-2">
                     <span class="hidden sm:inline">Durée : </span>{{ trek.duration }}
                   </div>
                 </div>
                 <!-- elevation -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/mountain.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/mountain.png" alt="icone montagne" class="h-5 w-5" />
                   <div class="ml-2">
                     D+ : {{ Math.round(trek.elevation) }} m
                   </div>
                 </div>
                 <!-- rating -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/hook.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/hook.png" alt="icone difficulté" class="h-5 w-5" />
                   <div class="ml-2">
                     Cotation : {{ trek.difficulty }}
                   </div>
@@ -91,7 +91,7 @@
       <div class="flex flex-wrap justify-around">
         <NuxtLink v-for="(refuge, index) in refuges" :key="refuge.name" :to="{ name: `massifs-${refuge.massif}-refuges-slug`, params: { slug: refuge.slug } }" class="px-1 md:mt-0" :class="{ 'mt-4': index > 0 }">
           <div class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
-            <nuxt-img provider="cloudinary" :src="refuge.img" loading="lazy" class="w-full h-60 object-cover" />
+            <nuxt-img provider="cloudinary" :src="refuge.img" :alt="refuge.name" loading="lazy" class="w-full h-60 object-cover" />
             <div class="px-4 py-4">
               <div class="text-xs title-font text-gray-600 tracking-widest">
                 {{ refuge.type.toUpperCase() }}
@@ -102,28 +102,28 @@
               <div class="py-3 grid grid-cols-2 gap-4 text-sm text-gray-800">
                 <!-- altitude -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/mountain.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/mountain.png" alt="icone montagne" class="h-5 w-5" />
                   <div class="ml-2">
                     <span class="hidden sm:inline">Altitude : </span>{{ refuge.altitude }}m
                   </div>
                 </div>
                 <!-- beds -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/bed.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/bed.png" alt="icone lit" class="h-5 w-5" />
                   <div class="ml-2">
                     <span class="hidden sm:inline">Capacité : </span>{{ refuge.beds }} pers
                   </div>
                 </div>
                 <!-- stove -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/stove.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/stove.png" alt="icone poêle" class="h-5 w-5" />
                   <div class="ml-2">
                     Poêle : {{ refuge.stove | booleanToFrench }}
                   </div>
                 </div>
                 <!-- water -->
                 <div class="flex items-center">
-                  <nuxt-img src="/icons/water.png" class="h-5 w-5" />
+                  <nuxt-img src="/icons/water.png" alt="icone eau" class="h-5 w-5" />
                   <div class="ml-2">
                     Eau : {{ refuge.water | booleanToFrench }}
                   </div>
@@ -179,7 +179,7 @@ export default {
     const treks = await $content('randonnees', { deep: true }, params.slug)
       .where({ title: { $in: ['Traversée du Vercors (Balcon Est)', 'Traversée des Bauges', 'Petite Traversée de la Chartreuse'] } })
       .only([
-        'massif', 'title', 'img', 'distance', 'elevation',
+        'massif', 'title', 'img', 'caption', 'distance', 'elevation',
         'duration', 'difficulty', 'from', 'to', 'slug'
       ])
       .fetch()
@@ -192,7 +192,10 @@ export default {
     return { treks, refuges }
   },
   data: () => ({
-    image: 'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png'
+    image: {
+      path: 'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
+      alt: 'balcon est du vercors'
+    }
   }),
   methods: {
     scrollToTreks () {

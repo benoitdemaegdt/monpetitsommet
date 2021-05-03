@@ -3,7 +3,7 @@ title: Cotation des randonnées
 description: Plusieurs systèmes de cotation permettent de décrire la difficulté technique d'une randonnée. Le plus utilisé est certainement celui du Club Alpin Suisse (CAS). Il définit 6 niveaux de difficulté permettant au randonneur de déterminer s'il a les compétences et l'expérience pour s'engager sur ce type de sortie.
 category: culture
 img: /v1618863598/articles/cotation-randonnees/hiking_quuwlv.jpg
-alt: description des cotations des randonnées
+alt: randonneur en montagne
 ---
 
 <warning text="Cette échelle de cotation est donnée à titre purement indicatif. La difficulté d'une randonnée peut varier significativement en fonction de la météo, la saison ou les conditions d'enneigment."></warning>

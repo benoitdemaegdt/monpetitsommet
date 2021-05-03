@@ -3,6 +3,7 @@
     <nuxt-img
       provider="cloudinary"
       :src="url"
+      :alt="caption"
       loading="lazy"
       class="mt-3 w-full h-52 sm:h-80 rounded overflow-hidden object-cover"
     />
