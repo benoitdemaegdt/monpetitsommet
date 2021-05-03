@@ -53,6 +53,9 @@ export default {
           name: 'description',
           content: 'Toutes les infos sur les plus belles cabanes du massif du Vercors. Préparez votre nuit en pleine nature au coeur du Vercors.'
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   },

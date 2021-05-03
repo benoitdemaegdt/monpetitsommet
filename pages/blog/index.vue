@@ -66,6 +66,9 @@ export default {
           name: 'description',
           content: 'Les derniers articles de blog de Mon Petit Sommet.'
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   },

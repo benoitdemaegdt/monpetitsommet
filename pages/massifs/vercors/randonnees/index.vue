@@ -49,6 +49,9 @@ export default {
           name: 'description',
           content: 'Découvrez les plus belles randonnées sportives du massif du Vercors. Parfois engagées. Souvent loin des foules. Toujours mémorables.'
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   }

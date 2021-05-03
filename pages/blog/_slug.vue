@@ -89,6 +89,9 @@ export default {
           name: 'description',
           content: this.article.description
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   }

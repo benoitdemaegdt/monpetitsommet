@@ -45,6 +45,9 @@ export default {
           name: 'description',
           content: 'Découvrez les plus belles randonnées sportives du massif des Bauges. Parfois engagées. Souvent loin des foules. Toujours mémorables.'
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   }

@@ -41,6 +41,9 @@ export default {
           name: 'description',
           content: "Les conditions générales d'utilisation de Mon Petit Sommet"
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   }

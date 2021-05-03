@@ -117,6 +117,9 @@ export default {
           name: 'description',
           content: `${this.trek.title}. Itinéraire, distance, dénivelé, trace GPS : découvrez toutes les infos sur cette randonnée et partez plus sereinement.`
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   },

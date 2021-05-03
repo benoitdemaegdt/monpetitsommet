@@ -34,6 +34,9 @@ export default {
           name: 'description',
           content: `${this.shack.name}. Nombre de place, localisation, fréquentation, présence d'eau : découvrez toutes les infos et préparez votre sortie en montagne.`
         }
+      ],
+      link: [
+        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
       ]
     }
   }
