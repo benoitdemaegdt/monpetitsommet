@@ -6,6 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    htmlAttrs: { lang: 'fr' },
     title: 'Mon Petit Sommet',
     meta: [
       { charset: 'utf-8' },
