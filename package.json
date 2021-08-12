@@ -16,7 +16,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.16.1",
     "mapbox-gl": "^2.4.0",
-    "nuxt": "^2.15.7"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "@nuxt/image": "0.4.17",
