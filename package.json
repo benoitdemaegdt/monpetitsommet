@@ -14,7 +14,7 @@
   "dependencies": {
     "@nuxt/content": "^1.14.0",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.16.1",
+    "core-js": "^3.16.2",
     "mapbox-gl": "^2.4.0",
     "nuxt": "^2.15.8"
   },
