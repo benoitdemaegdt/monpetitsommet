@@ -4,14 +4,21 @@
       <header class="pt-6 xl:pb-10">
         <div class="space-y-1 text-center">
           <div>
-            <h1 class="text-3xl font-bold text-gray-900 tracking-tight sm:text-4xl md:text-5xl leading-tight">
+            <h1
+              class="text-3xl font-bold text-gray-900 tracking-tight sm:text-4xl md:text-5xl leading-tight"
+            >
               {{ article.title }}
             </h1>
             <p class="text-gray-800 text-lg mt-4 text-left text-justify">
               {{ article.description }}
             </p>
             <div class="mt-4 flex justify-center">
-              <nuxt-img provider="cloudinary" :src="article.img" :alt="article.alt" class="h-52 sm:h-80 rounded overflow-hidden object-cover" />
+              <nuxt-img
+                provider="cloudinary"
+                :src="article.img"
+                :alt="article.alt"
+                class="h-52 sm:h-80 rounded overflow-hidden object-cover"
+              />
             </div>
           </div>
         </div>
@@ -20,21 +27,27 @@
         class="divide-y xl:divide-y-0 divide-gray-300 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20"
         style="grid-template-rows: auto 1fr;"
       >
-        <div class="divide-y divide-gray-300 xl:pb-0 xl:col-span-3 xl:row-span-2">
+        <div
+          class="divide-y divide-gray-300 xl:pb-0 xl:col-span-3 xl:row-span-2"
+        >
           <div class="prose max-w-none py-6">
             <div class="mt-4">
               <nuxt-content :document="article" />
             </div>
           </div>
         </div>
-        <footer class="pr-4 text-sm font-medium leading-5 divide-y divide-gray-300 xl:col-start-1 xl:row-start-2">
+        <footer
+          class="pr-4 text-sm font-medium leading-5 divide-y divide-gray-300 xl:col-start-1 xl:row-start-2"
+        >
           <div v-if="next || prev" class="space-y-8 py-8">
             <div v-if="next">
               <h2 class="text-xs tracking-wide uppercase text-gray-500">
                 Article suivant
               </h2>
               <div class="text-green-600 hover:text-green-700">
-                <NuxtLink :to="{ name: 'blog-slug', params: { slug: next.slug } }">
+                <NuxtLink
+                  :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+                >
                   {{ next.title }}
                 </NuxtLink>
               </div>
@@ -44,7 +57,9 @@
                 Article précédent
               </h2>
               <div class="text-green-600 hover:text-green-700">
-                <NuxtLink :to="{ name: 'blog-slug', params: { slug: prev.slug } }">
+                <NuxtLink
+                  :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+                >
                   {{ prev.title }}
                 </NuxtLink>
               </div>
@@ -65,7 +80,7 @@
 <script>
 export default {
   layout: 'blog',
-  async asyncData ({ $content, params }) {
+  async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
 
     const [prev, next] = await $content('articles')
@@ -80,7 +95,7 @@ export default {
       next
     }
   },
-  head () {
+  head() {
     return {
       title: this.article.title,
       meta: [
@@ -91,7 +106,11 @@ export default {
         }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://monpetitsommet.fr${this.$route.path}`
+        }
       ]
     }
   }

@@ -30,45 +30,54 @@
         <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-4">
           <!-- distance -->
           <div class="flex items-center">
-            <nuxt-img src="/icons/distance.png" alt="icone distance" class="h-5 w-5" />
+            <nuxt-img
+              src="/icons/distance.png"
+              alt="icone distance"
+              class="h-5 w-5"
+            />
             <div class="ml-2">
-              <span class="hidden sm:inline">Distance : </span>{{ trek.distance }} km
+              <span class="hidden sm:inline">Distance : </span
+              >{{ trek.distance }} km
             </div>
           </div>
           <!-- duration -->
           <div class="flex items-center">
-            <nuxt-img src="/icons/temps.png" alt="icone temps" class="h-5 w-5" />
+            <nuxt-img
+              src="/icons/temps.png"
+              alt="icone temps"
+              class="h-5 w-5"
+            />
             <div class="ml-2">
               <span class="hidden sm:inline">Durée : </span>{{ trek.duration }}
             </div>
           </div>
           <!-- elevation -->
           <div class="flex items-center">
-            <nuxt-img src="/icons/mountain.png" alt="icone montagne" class="h-5 w-5" />
-            <div class="ml-2">
-              D+ : {{ Math.round(trek.elevation) }} m
-            </div>
+            <nuxt-img
+              src="/icons/mountain.png"
+              alt="icone montagne"
+              class="h-5 w-5"
+            />
+            <div class="ml-2">D+ : {{ Math.round(trek.elevation) }} m</div>
           </div>
           <!-- rating -->
           <div class="flex items-center">
-            <nuxt-img src="/icons/hook.png" alt="icone difficulté" class="h-5 w-5" />
-            <div class="ml-2">
-              Cotation : {{ trek.difficulty }}
-            </div>
+            <nuxt-img
+              src="/icons/hook.png"
+              alt="icone difficulté"
+              class="h-5 w-5"
+            />
+            <div class="ml-2">Cotation : {{ trek.difficulty }}</div>
           </div>
           <!-- water -->
           <div class="flex items-center">
             <nuxt-img src="/icons/water.png" alt="icone eau" class="h-5 w-5" />
-            <div class="ml-2">
-              Eau : {{ trek.water | booleanToFrench }}
-            </div>
+            <div class="ml-2">Eau : {{ trek.water | booleanToFrench }}</div>
           </div>
           <!-- tent -->
           <div class="flex items-center">
             <nuxt-img src="/icons/tent.png" alt="icone tente" class="h-5 w-5" />
-            <div class="ml-2">
-              Bivouac : {{ trek.tent | booleanToFrench }}
-            </div>
+            <div class="ml-2">Bivouac : {{ trek.tent | booleanToFrench }}</div>
           </div>
         </div>
         <div class="mt-2 text-2xl text-gray-900 font-bold">
@@ -93,8 +102,8 @@ import TrekMap from '@/components/TrekMap.vue'
 export default {
   components: { TrekMap },
   mixins: [HelperMixin, LayoutMixin],
-  async asyncData ({ $content, params }) {
-    const trek = await $content('randonnees/vercors', params.slug).fetch()
+  async asyncData({ $content, params }) {
+    const trek = await $content('randonnees', params.slug).fetch()
 
     return {
       trek
@@ -103,7 +112,7 @@ export default {
   data: () => ({
     zoom: {}
   }),
-  head () {
+  head() {
     return {
       title: this.trek.title,
       meta: [
@@ -114,19 +123,12 @@ export default {
         }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://monpetitsommet.fr${this.$route.path}`
+        }
       ]
-    }
-  },
-  mounted () {
-    for (const sectionTitle of this.trek.toc) {
-      const { from, to } = this.trek.sections.find(section => section.title === sectionTitle.text)
-      if (from === undefined || to === undefined) { continue }
-
-      const sectionTitleElement = document.getElementById(sectionTitle.id)
-      sectionTitleElement.addEventListener('click', () => {
-        this.zoom = { from, to }
-      })
     }
   }
 }
@@ -134,7 +136,7 @@ export default {
 
 <style>
 .highlight {
-  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #C8E6C9 50%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #c8e6c9 50%);
 }
 
 .nuxt-content h2 {

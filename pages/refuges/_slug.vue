@@ -18,14 +18,11 @@
 
 <script>
 export default {
-  async asyncData ({ $content, params }) {
-    const shack = await $content('refuges/vercors', params.slug).fetch()
-
-    return {
-      shack
-    }
+  async asyncData({ $content, params }) {
+    const shack = await $content('refuges', params.slug).fetch()
+    return { shack }
   },
-  head () {
+  head() {
     return {
       title: this.shack.name,
       meta: [
@@ -36,7 +33,11 @@ export default {
         }
       ],
       link: [
-        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
+        {
+          hid: 'canonical',
+          rel: 'canonical',
+          href: `https://monpetitsommet.fr${this.$route.path}`
+        }
       ]
     }
   }
