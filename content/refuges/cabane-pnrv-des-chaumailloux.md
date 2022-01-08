@@ -18,13 +18,13 @@ Difficile de ne pas tomber sous le charme de la cabane des Chaumailloux et de sa
 
 ## Informations
 
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
 
 ___
 
 ## Équipements
 
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
 
 Il y a deux sources qui coulent (même en plein été !) à proximité de la cabane des chaumailloux. La première est située quelques mètres en contrebas, au ras du sol (sous la neige en hiver). Pour trouver la deuxième, il faut descendre vers le chalet visible en contrebas, puis prendre complètement à droite vers le ruisseau. Un tuyau a été installé pour permettre de remplir les gourdes.
 ___

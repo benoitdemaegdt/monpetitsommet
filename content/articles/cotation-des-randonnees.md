@@ -8,8 +8,8 @@ alt: randonneur en montagne
 
 <!-- <warning text="Cette échelle de cotation est donnée à titre purement indicatif. La difficulté d'une randonnée peut varier significativement en fonction de la météo, la saison ou les conditions d'enneigment."></warning> -->
 
-<test></test>
-&nbsp;
+<!-- <test></test>
+&nbsp; -->
 
 ## T1 : Randonnée
 

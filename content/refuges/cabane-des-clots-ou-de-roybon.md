@@ -18,13 +18,13 @@ Cabane située à proximité immédiate de Villard-de-Lans. Elle est relativemen
 
 ## Informations
 
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
 
 ___
 
 ## Équipements
 
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
 
 Il y a une source d'eau type "abreuvoir" à quelques dizaines de mètres au dessus de la cabane (il faut rentrer dans l'enclos à vache). Elle coule habituellement toute l'année, même en plein été.
 ___

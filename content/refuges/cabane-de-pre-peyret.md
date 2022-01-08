@@ -18,13 +18,13 @@ Grâce à sa grande capacité d'accueil et sa position "à la croisée des chemi
 
 ## Informations
 
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
 
 ___
 
 ## Équipements
 
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
 
 La source d'eau la plus proche, la Fontaine des Endettés, se situe à quelques mètres au sud de la cabane. Attention, la source à tendance à se tarir au milieu de l'été. Comme pour toutes les sources d'eau du Vercors, bien vérifier le débit avant de commencer sa randonnée.
 
