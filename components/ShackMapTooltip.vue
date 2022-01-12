@@ -3,34 +3,33 @@
     class="w-full mx-auto bg-white rounded-xl overflow-hidden cursor-pointer"
     @click="goToShack(shack)"
   >
-    <img class="h-32 w-full object-cover md:w-64" :src="`https://res.cloudinary.com/monpetitsommet/image/upload/${shack.img}`">
+    <img
+      class="h-32 w-full object-cover md:w-64"
+      :src="`https://res.cloudinary.com/monpetitsommet/image/upload/${shack.img}`"
+    />
     <p class="pt-1 px-2 text-gray-800 font-medium">
       {{ shack.name }}
     </p>
     <div class="p-2 grid grid-cols-2 gap-2">
       <div class="flex items-center">
-        <img src="/icons/mountain.png" class="h-5 w-5">
-        <div class="ml-2">
-          {{ shack.altitude }}m
-        </div>
+        <img src="/icons/mountain.png" class="h-5 w-5" />
+        <div class="ml-2">{{ shack.altitude }}m</div>
       </div>
 
       <div class="flex items-center">
-        <img src="/icons/bed.png" class="h-5 w-5">
-        <div class="ml-2">
-          {{ shack.beds }} pers
-        </div>
+        <img src="/icons/bed.png" class="h-5 w-5" />
+        <div class="ml-2">{{ shack.beds }} pers</div>
       </div>
 
       <div class="flex items-center">
-        <img src="/icons/stove.png" class="h-5 w-5">
+        <img src="/icons/stove.png" class="h-5 w-5" />
         <div class="ml-2">
           {{ shack.stove | booleanToFrench }}
         </div>
       </div>
 
       <div class="flex items-center">
-        <img src="/icons/water.png" class="h-5 w-5">
+        <img src="/icons/water.png" class="h-5 w-5" />
         <div class="ml-2">
           {{ shack.water | booleanToFrench }}
         </div>
@@ -47,7 +46,7 @@ export default {
   mixins: [HelperMixin],
   props: {
     shack: { type: Object, required: true },
-    goToShack: { type: Function, required: true }
-  }
+    goToShack: { type: Function, required: true },
+  },
 }
 </script>

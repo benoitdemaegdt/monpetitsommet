@@ -3,9 +3,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-12">
       <div class="col-span-7 mt-5 px-3">
         <p>{{ shacks.length }} refuges, cabanes ou abris référencés</p>
-        <h1 class="text-4xl text-gray-900 font-bold leading-tight">
-          Refuges
-        </h1>
+        <h1 class="text-4xl text-gray-900 font-bold leading-tight">Refuges</h1>
         <div
           v-for="(shack, index) in shacks"
           :key="shack.name"
@@ -15,7 +13,7 @@
           <NuxtLink
             :to="{
               name: 'refuges-slug',
-              params: { slug: shack.slug }
+              params: { slug: shack.slug },
             }"
           >
             <shack-card class="mt-3" :shack="shack" />
@@ -51,16 +49,16 @@ export default {
         'longitude',
         'latitude',
         'slug',
-        'createdAt'
+        'createdAt',
       ])
       .fetch()
 
     return {
-      shacks
+      shacks,
     }
   },
   data: () => ({
-    hoverShackIndex: undefined
+    hoverShackIndex: undefined,
   }),
   head() {
     return {
@@ -70,16 +68,16 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            'Toutes les infos sur les plus belles cabanes. Préparez votre nuit en pleine nature au coeur de la montagne.'
-        }
+            'Toutes les infos sur les plus belles cabanes. Préparez votre nuit en pleine nature au coeur de la montagne.',
+        },
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`
-        }
-      ]
+          href: `https://monpetitsommet.fr${this.$route.path}`,
+        },
+      ],
     }
   },
   methods: {
@@ -88,7 +86,7 @@ export default {
     },
     onMouseLeave() {
       this.hoverShackIndex = undefined
-    }
-  }
+    },
+  },
 }
 </script>

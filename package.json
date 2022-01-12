@@ -1,5 +1,5 @@
 {
-  "name": "monpetitsommet",
+  "name": "monpetitsommet-v2",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -7,27 +7,33 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "analyze": "nuxt build --analyze"
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.20.2",
+    "core-js": "^3.19.3",
     "mapbox-gl": "^2.6.1",
-    "nuxt": "^2.15.8"
+    "nuxt": "^2.15.8",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxt/image": "0.4.17",
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxt/image": "^0.6.0",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/tailwindcss": "^4.0.3",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^8.6.0",
+    "@nuxtjs/tailwindcss": "^4.2.1",
+    "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
-    "postcss": "^8.4.5",
+    "eslint-plugin-vue": "^8.2.0",
+    "postcss": "^8.4.4",
     "prettier": "^2.5.1"
   }
 }

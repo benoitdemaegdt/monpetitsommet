@@ -15,10 +15,9 @@
 
 <script>
 export default {
-  name: 'ContentImage',
   props: {
     url: { type: String, required: true },
-    caption: { type: String, required: false, default: undefined }
-  }
+    caption: { type: String, required: false, default: undefined },
+  },
 }
 </script>

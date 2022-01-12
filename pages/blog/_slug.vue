@@ -25,7 +25,7 @@
       </header>
       <div
         class="divide-y xl:divide-y-0 divide-gray-300 xl:grid xl:grid-cols-4 xl:col-gap-6 pb-16 xl:pb-20"
-        style="grid-template-rows: auto 1fr;"
+        style="grid-template-rows: auto 1fr"
       >
         <div
           class="divide-y divide-gray-300 xl:pb-0 xl:col-span-3 xl:row-span-2"
@@ -67,9 +67,7 @@
           </div>
 
           <div class="pt-8">
-            <NuxtLink to="/blog">
-              &larr; Retour au blog
-            </NuxtLink>
+            <NuxtLink to="/blog"> &larr; Retour au blog </NuxtLink>
           </div>
         </footer>
       </div>
@@ -92,7 +90,7 @@ export default {
     return {
       article,
       prev,
-      next
+      next,
     }
   },
   head() {
@@ -102,18 +100,18 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: this.article.description
-        }
+          content: this.article.description,
+        },
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`
-        }
-      ]
+          href: `https://monpetitsommet.fr${this.$route.path}`,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

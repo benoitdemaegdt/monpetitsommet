@@ -29,18 +29,18 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `${this.shack.name}. Nombre de place, localisation, fréquentation, présence d'eau : découvrez toutes les infos et préparez votre sortie en montagne.`
-        }
+          content: `${this.shack.name}. Nombre de place, localisation, fréquentation, présence d'eau : découvrez toutes les infos et préparez votre sortie en montagne.`,
+        },
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`
-        }
-      ]
+          href: `https://monpetitsommet.fr${this.$route.path}`,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

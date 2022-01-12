@@ -48,92 +48,17 @@
           tombant en attendant les étoiles...
         </p>
       </div>
-      <div class="mt-4 md:mt-8 flex flex-wrap justify-around">
+      <div class="mt-4 md:mt-8 flex flex-wrap justify-evenly">
         <NuxtLink
-          v-for="(trek, index) in treks"
+          v-for="trek in treks"
           :key="trek.title"
           :to="{
             name: `randonnees-slug`,
-            params: { slug: trek.slug }
+            params: { slug: trek.slug },
           }"
-          class="px-1 md:mt-0"
-          :class="{ 'mt-4': index > 0 }"
+          class="p-5 md:mt-0"
         >
-          <div
-            class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
-          >
-            <nuxt-img
-              provider="cloudinary"
-              :src="trek.img"
-              :alt="trek.caption"
-              loading="lazy"
-              class="w-full h-60 object-cover"
-            />
-            <div class="px-4 py-4">
-              <div class="text-xs title-font text-gray-600 tracking-widest">
-                {{ trek.from.toUpperCase() }} &rarr; {{ trek.to.toUpperCase() }}
-              </div>
-              <div class="text-gray-800 font-semibold text-xl mb-2">
-                {{ trek.title }}
-              </div>
-              <div class="py-3 grid grid-cols-2 gap-4 text-sm text-gray-800">
-                <!-- distance -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/distance.png"
-                    alt="icone distance"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    <span class="hidden sm:inline">Distance : </span
-                    >{{ Math.round(trek.distance) }} km
-                  </div>
-                </div>
-                <!-- duration -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/temps.png"
-                    alt="icone temps"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    <span class="hidden sm:inline">Durée : </span
-                    >{{ trek.duration }}
-                  </div>
-                </div>
-                <!-- elevation -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/mountain.png"
-                    alt="icone montagne"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    D+ : {{ Math.round(trek.elevation) }} m
-                  </div>
-                </div>
-                <!-- rating -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/hook.png"
-                    alt="icone difficulté"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">Cotation : {{ trek.difficulty }}</div>
-                </div>
-              </div>
-            </div>
-            <div class="px-6 pb-4">
-              <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-                >#{{ trek.massif }}</span
-              >
-              <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-                >#rando</span
-              >
-            </div>
-          </div>
+          <TrekCard :trek="trek" />
         </NuxtLink>
       </div>
     </div>
@@ -156,7 +81,7 @@
           :key="refuge.name"
           :to="{
             name: `refuges-slug`,
-            params: { slug: refuge.slug }
+            params: { slug: refuge.slug },
           }"
           class="px-1 md:mt-0"
           :class="{ 'mt-4': index > 0 }"
@@ -251,7 +176,7 @@
         vous à la newsletter de Mon Petit Sommet pour recevoir directement dans
         votre boite mail les dernières sorties publiées sur le site.
       </p>
-      <div class="mt-6 flex justify-center ">
+      <div class="mt-6 flex justify-center">
         <a
           href="https://monpetitsommet.substack.com/"
           target="_blank"
@@ -264,6 +189,18 @@
     </div>
     <div class="mt-16 w-full bg-gray-200 divide-y divide-gray-400">
       <div class="flex justify-center py-4">
+        <nuxt-link
+          to="/randonnees"
+          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
+        >
+          RANDO
+        </nuxt-link>
+        <nuxt-link
+          to="/refuges"
+          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
+        >
+          REFUGES
+        </nuxt-link>
         <nuxt-link
           to="/cgu"
           class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
@@ -302,9 +239,9 @@ export default {
           $in: [
             'Traversée du Vercors (Balcon Est)',
             'Traversée des Bauges',
-            'Petite Traversée de la Chartreuse'
-          ]
-        }
+            'Petite Traversée de la Chartreuse',
+          ],
+        },
       })
       .only([
         'massif',
@@ -317,7 +254,7 @@ export default {
         'difficulty',
         'from',
         'to',
-        'slug'
+        'slug',
       ])
       .fetch()
 
@@ -327,9 +264,9 @@ export default {
           $in: [
             'Cabane de Pré Peyret',
             'Cabane des Aiguillettes',
-            'Cabane PNRV des Chaumailloux'
-          ]
-        }
+            'Cabane PNRV des Chaumailloux',
+          ],
+        },
       })
       .only([
         'massif',
@@ -341,7 +278,7 @@ export default {
         'stove',
         'stove',
         'water',
-        'slug'
+        'slug',
       ])
       .fetch()
 
@@ -349,10 +286,9 @@ export default {
   },
   data: () => ({
     image: {
-      path:
-        'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
-      alt: 'balcon est du vercors'
-    }
+      path: 'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
+      alt: 'balcon est du vercors',
+    },
   }),
   methods: {
     scrollToTreks() {
@@ -361,7 +297,7 @@ export default {
       const y =
         element.getBoundingClientRect().top + window.pageYOffset + yOffset
       window.scrollTo({ top: y, behavior: 'smooth' })
-    }
-  }
+    },
+  },
 }
 </script>

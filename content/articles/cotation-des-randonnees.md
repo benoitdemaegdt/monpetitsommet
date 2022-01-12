@@ -6,10 +6,7 @@ img: /v1618863598/articles/cotation-randonnees/hiking_quuwlv.jpg
 alt: randonneur en montagne
 ---
 
-<!-- <warning text="Cette échelle de cotation est donnée à titre purement indicatif. La difficulté d'une randonnée peut varier significativement en fonction de la météo, la saison ou les conditions d'enneigment."></warning> -->
-
-<!-- <test></test>
-&nbsp; -->
+<warning text="Cette échelle de cotation est donnée à titre purement indicatif. La difficulté d'une randonnée peut varier significativement en fonction de la météo, la saison ou les conditions d'enneigment."></warning>
 
 ## T1 : Randonnée
 
@@ -18,7 +15,7 @@ Rien de bien compliqué pour ce premier niveau de cotation. On se parle ici d'un
 \
 **En Bref :** Vous pouvez emmener papi et mamie avec vous.
 
-<!-- <content-image url="/v1618946098/articles/cotation-randonnees/t1_m48lnl.jpg"></content-image> -->
+<content-image url="/v1618946098/articles/cotation-randonnees/t1_m48lnl.jpg"></content-image>
 
 ## T2 : Randonnées en montagne
 
@@ -27,7 +24,7 @@ Ce deuxième niveau de cotation du CAS reste encore très accessible. Il décrit
 \
 **En Bref :** Un sentier de rando classique. Pas bien technique, mais on évitera les tongs.
 
-<!-- <content-image url="/v1618946286/articles/cotation-randonnees/t2_wjhjme.jpg"></content-image> -->
+<content-image url="/v1618946286/articles/cotation-randonnees/t2_wjhjme.jpg"></content-image>
 
 ## T3 : Randonnée en montagne exigeante
 
@@ -44,7 +41,7 @@ il faut parfois "poser les mains" (comme on dit dans le jargon) pour avancer. C'
 \
 **En Bref :** Un GR difficile, type GR 20.
 
-<!-- <content-image url="/v1618946463/articles/cotation-randonnees/t4_d7nicv.jpg"></content-image> -->
+<content-image url="/v1618946463/articles/cotation-randonnees/t4_d7nicv.jpg"></content-image>
 
 ## T5 : Randonnée alpine exigeante
 
@@ -60,4 +57,4 @@ Les randonnées cotées en T6 sont à la limite de l'alpinisme. Il n'y a habitue
 \
 **En Bref :** Du costaud. On se demande quelle est la véritable différence avec l'alpinisme.
 
-<!-- <content-image url="/v1619285749/articles/cotation-randonnees/t6_u28hgm.jpg"></content-image> -->
+<content-image url="/v1619285749/articles/cotation-randonnees/t6_u28hgm.jpg"></content-image>

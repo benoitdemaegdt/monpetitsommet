@@ -4,15 +4,15 @@ export default {
       sm: 640,
       md: 768,
       lg: 1024,
-      xl: 1280
-    }
+      xl: 1280,
+    },
   }),
   computed: {
-    isMobile () {
+    isMobile() {
       if (process.client) {
         return window.innerWidth < this.breakpoints.lg
       }
       return false
-    }
-  }
+    },
+  },
 }

@@ -1,4 +1,7 @@
 <template>
+  <div class="flex flex-col min-h-screen overflow-hidden">
+    <Header />
+
   <div class="py-12 w-full">
     <div class="grid grid-cols-1 lg:grid-cols-2">
       <div class="mt-2 px-3">
@@ -92,6 +95,11 @@
       </div>
     </div>
   </div>
+    </main>
+
+    <Footer />
+  </div>
+
 </template>
 
 <script>
@@ -106,11 +114,11 @@ export default {
     const trek = await $content('randonnees', params.slug).fetch()
 
     return {
-      trek
+      trek,
     }
   },
   data: () => ({
-    zoom: {}
+    zoom: {},
   }),
   head() {
     return {
@@ -119,18 +127,18 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: `${this.trek.title}. Itinéraire, distance, dénivelé, trace GPS : découvrez toutes les infos sur cette randonnée et partez plus sereinement.`
-        }
+          content: `${this.trek.title}. Itinéraire, distance, dénivelé, trace GPS : découvrez toutes les infos sur cette randonnée et partez plus sereinement.`,
+        },
       ],
       link: [
         {
           hid: 'canonical',
           rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`
-        }
-      ]
+          href: `https://monpetitsommet.fr${this.$route.path}`,
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

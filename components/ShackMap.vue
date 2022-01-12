@@ -13,23 +13,23 @@ export default {
   name: 'ShackMap',
   props: {
     shacks: { type: Array, required: true },
-    hoverShackIndex: { type: Number, default: undefined }
+    hoverShackIndex: { type: Number, default: undefined },
   },
   data: () => ({
     map: undefined,
     markers: [],
-    popups: []
+    popups: [],
   }),
   watch: {
     shacks: {
-      handler (newShacks) {
+      handler(newShacks) {
         if (newShacks) {
           this.addMarkers(newShacks)
         }
-      }
+      },
     },
     hoverShackIndex: {
-      handler (newIndex, oldIndex) {
+      handler(newIndex, oldIndex) {
         if (oldIndex !== undefined) {
           const el = this.markers[oldIndex].getElement()
           const content = el.querySelector('.mapbox-marker-content')
@@ -42,34 +42,39 @@ export default {
           el.classList.add('mapbox-marker-hover')
           content.classList.add('mapbox-marker-content-hover')
         }
-      }
-    }
+      },
+    },
   },
-  mounted () {
+  mounted() {
     this.createMap()
   },
   methods: {
-    createMap () {
+    createMap() {
       mapboxgl.accessToken = process.env.NUXT_ENV_MAPBOX_GL_TOKEN
       this.map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/benoitdemaegdt/cka2hsqkq3k5r1iobsq729rh3',
         center: [5.7167, 45.1667],
         zoom: 11,
-        attributionControl: false
+        attributionControl: false,
       })
       this.map.dragRotate.disable()
       this.map.touchZoomRotate.disableRotation()
-      this.map.addControl(new mapboxgl.NavigationControl({ showCompass: false }))
+      this.map.addControl(
+        new mapboxgl.NavigationControl({ showCompass: false })
+      )
       this.map.addControl(new mapboxgl.FullscreenControl(), 'top-left')
       this.map.addControl(new mapboxgl.ScaleControl(), 'bottom-right')
-      this.map.addControl(new mapboxgl.GeolocateControl({
-        positionOptions: { enableHighAccuracy: true },
-        trackUserLocation: true
-      }), 'top-left')
+      this.map.addControl(
+        new mapboxgl.GeolocateControl({
+          positionOptions: { enableHighAccuracy: true },
+          trackUserLocation: true,
+        }),
+        'top-left'
+      )
       this.addMarkers(this.shacks)
     },
-    addMarkers (shacks) {
+    addMarkers(shacks) {
       this.clearMarkers()
       const bounds = new mapboxgl.LngLatBounds()
       shacks.forEach((shack) => {
@@ -93,7 +98,7 @@ export default {
           .addTo(this.map)
 
         const MapboxPopupInstance = new MapboxPopup({
-          propsData: { shack, goToShack: this.goToShack }
+          propsData: { shack, goToShack: this.goToShack },
         })
 
         MapboxPopupInstance.$mount(`#mapbox-popup-content-${shack.key}`)
@@ -119,11 +124,11 @@ export default {
       } else if (shacks.length === 1) {
         this.map.flyTo({
           center: [shacks[0].longitude, shacks[0].latitude],
-          essential: true
+          essential: true,
         })
       }
     },
-    clearMarkers () {
+    clearMarkers() {
       if (this.markers.length > 0) {
         for (let i = 0; i < this.markers.length; i++) {
           this.markers[i].remove()
@@ -133,10 +138,13 @@ export default {
         this.popups = []
       }
     },
-    goToShack (shack) {
-      this.$router.push({ name: `massifs-${shack.massif}-refuges-slug`, params: { slug: shack.slug } })
-    }
-  }
+    goToShack(shack) {
+      this.$router.push({
+        name: `massifs-${shack.massif}-refuges-slug`,
+        params: { slug: shack.slug },
+      })
+    },
+  },
 }
 </script>
 
@@ -149,7 +157,8 @@ export default {
   height: 28px;
   border-radius: 28px;
   padding: 0px 8px;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px, rgba(0, 0, 0, 0.18) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.18) 0px 1px 2px;
   font-size: 13px;
 }
 
