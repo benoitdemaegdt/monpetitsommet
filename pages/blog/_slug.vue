@@ -129,6 +129,9 @@ export default {
 .nuxt-content p {
   @apply text-gray-800 text-lg;
 }
+.nuxt-content li {
+  @apply text-gray-800 text-lg;
+}
 .nuxt-content a {
   @apply text-green-700 underline;
 }

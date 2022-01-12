@@ -5,7 +5,7 @@
       :src="url"
       :alt="caption"
       loading="lazy"
-      class="mt-3 w-full h-52 sm:h-80 rounded overflow-hidden object-cover"
+      class="mt-3 w-full rounded overflow-hidden object-cover"
     />
     <figcaption v-if="caption" class="text-sm italic flex justify-center">
       {{ caption }}
