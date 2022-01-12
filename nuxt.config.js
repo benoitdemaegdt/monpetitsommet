@@ -4,17 +4,69 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'monpetitsommet-v2',
-    htmlAttrs: {
-      lang: 'en',
-    },
+    htmlAttrs: { lang: 'fr' },
+    title: 'Mon Petit Sommet',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          "Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.",
+      },
+      // facebook
+      { property: 'og:site_name', content: 'Mon Petit Sommet' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://monpetitsommet.fr/',
+      },
+      { hid: 'og:title', property: 'og:title', content: 'Mon Petit Sommet' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          "Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.",
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          'https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
+      },
+      { property: 'og:image:width', content: '740' },
+      { property: 'og:image:height', content: '300' },
+      // twitter
+      { name: 'twitter:card', content: 'summary_large_image' },
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: 'https://monpetitsommet.fr/',
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: 'Mon Petit Sommet',
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content:
+          "Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables.",
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content:
+          'https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
+      },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
+      { hid: 'canonical', rel: 'canonical', href: 'https://monpetitsommet.fr' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
