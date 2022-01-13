@@ -1,7 +1,7 @@
 ---
 title: Découvrir le snowkite en 4 questions
 description: Vous avez entendu parler du snowkite et vous vous posez des questions sur ce sport ? Lisez cet article pour tout comprendre, du matériel nécessaire au type d'aile en passant par les meilleurs spots et la météo !
-category: culture
+category: snowkite
 img: /v1642016804/snowkite/snowkite_barrvl.jpg
 alt: snowkite au coucher de soleil
 ---
