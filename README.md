@@ -1,4 +1,4 @@
-# monpetitsommet-v2
+# monpetitsommet
 
 ## Build Setup
 
