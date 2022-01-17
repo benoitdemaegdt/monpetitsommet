@@ -125,6 +125,7 @@ export default {
 .nuxt-content h3 {
   font-weight: bold;
   font-size: 22px;
+  margin-top: 6px;
 }
 .nuxt-content p {
   @apply text-gray-800 text-lg;

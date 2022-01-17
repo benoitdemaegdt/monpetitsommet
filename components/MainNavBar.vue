@@ -7,17 +7,15 @@
       <NuxtLink class="ml-4" to="/"> Mon Petit Sommet </NuxtLink>
     </div>
     <div class="flex items-center">
-      <div class="hidden md:flex">
-        <nuxt-link to="/blog" class="px-2 py-1 rounded hover:bg-gray-200">
-          Blog
-        </nuxt-link>
-        <nuxt-link
-          to="/contact"
-          class="px-2 py-1 ml-1 rounded hover:bg-gray-200"
-        >
-          Contact
-        </nuxt-link>
-      </div>
+      <nuxt-link to="/blog" class="px-2 py-1 rounded hover:bg-gray-200">
+        Blog
+      </nuxt-link>
+      <nuxt-link
+        to="/contact"
+        class="px-2 py-1 ml-1 rounded hover:bg-gray-200 hidden md:flex"
+      >
+        Contact
+      </nuxt-link>
     </div>
   </nav>
 </template>
