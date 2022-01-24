@@ -17,13 +17,13 @@ blankets: true
 
 ## Informations
 
-<!-- <Grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></Grid> -->
+<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
 
 ---
 
 ## Équipements
 
-<!-- <Grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></Grid> -->
+<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
 
 ---
 
