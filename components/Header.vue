@@ -44,7 +44,7 @@
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
           <NuxtLink
-            to="/"
+            to="/contact"
             class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
           >
             Contact

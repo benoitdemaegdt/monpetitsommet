@@ -45,25 +45,5 @@
 <script>
 export default {
   name: 'Contact',
-  head() {
-    return {
-      title: 'Contact',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            "Une question, un problème ou une proposition d'aventure ? Envoyez-nous un email !",
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`,
-        },
-      ],
-    }
-  },
 }
 </script>
