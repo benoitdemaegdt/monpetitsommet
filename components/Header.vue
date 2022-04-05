@@ -5,223 +5,50 @@
         class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
       >
         <div class="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
-            <span class="sr-only">Workflow</span>
+          <NuxtLink to="/">
+            <span class="sr-only">Mon Petit Sommet</span>
             <img
               class="h-8 w-auto sm:h-10"
-              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+              src="~/assets/img/logo.png"
               alt=""
             />
-          </a>
+          </NuxtLink>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
             class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           >
-            <span class="sr-only">Open menu</span>
+            <span class="sr-only">Ouvrir menu</span>
             <MenuIcon class="h-6 w-6" aria-hidden="true" />
           </PopoverButton>
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
-          <Popover class="relative" v-slot="{ open }">
-            <PopoverButton
-              :class="[
-                open ? 'text-gray-900' : 'text-gray-500',
-                'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
-              ]"
-            >
-              <span>Solutions</span>
-              <ChevronDownIcon
-                :class="[
-                  open ? 'text-gray-600' : 'text-gray-400',
-                  'ml-2 h-5 w-5 group-hover:text-gray-500',
-                ]"
-                aria-hidden="true"
-              />
-            </PopoverButton>
-
-            <transition
-              enter-active-class="transition ease-out duration-200"
-              enter-from-class="opacity-0 translate-y-1"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition ease-in duration-150"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 translate-y-1"
-            >
-              <PopoverPanel
-                class="absolute -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2"
-              >
-                <div
-                  class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
-                >
-                  <div
-                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
-                  >
-                    <a
-                      v-for="item in features"
-                      :key="item.name"
-                      :href="item.href"
-                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                    >
-                      <component
-                        :is="item.icon"
-                        class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">
-                          {{ item.name }}
-                        </p>
-                        <p class="mt-1 text-sm text-gray-500">
-                          {{ item.description }}
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div
-                    class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8"
-                  >
-                    <div
-                      v-for="item in callsToAction"
-                      :key="item.name"
-                      class="flow-root"
-                    >
-                      <a
-                        :href="item.href"
-                        class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100"
-                      >
-                        <component
-                          :is="item.icon"
-                          class="flex-shrink-0 h-6 w-6 text-gray-400"
-                          aria-hidden="true"
-                        />
-                        <span class="ml-3">{{ item.name }}</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </PopoverPanel>
-            </transition>
-          </Popover>
-
-          <a
-            href="#"
+          <NuxtLink
+            to="/"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
-            Pricing
-          </a>
-          <a
-            href="#"
+            Randonnées
+          </NuxtLink>
+          <NuxtLink
+            to="/"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
-            Docs
-          </a>
-
-          <Popover class="relative" v-slot="{ open }">
-            <PopoverButton
-              :class="[
-                open ? 'text-gray-900' : 'text-gray-500',
-                'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
-              ]"
-            >
-              <span>More</span>
-              <ChevronDownIcon
-                :class="[
-                  open ? 'text-gray-600' : 'text-gray-400',
-                  'ml-2 h-5 w-5 group-hover:text-gray-500',
-                ]"
-                aria-hidden="true"
-              />
-            </PopoverButton>
-
-            <transition
-              enter-active-class="transition ease-out duration-200"
-              enter-from-class="opacity-0 translate-y-1"
-              enter-to-class="opacity-100 translate-y-0"
-              leave-active-class="transition ease-in duration-150"
-              leave-from-class="opacity-100 translate-y-0"
-              leave-to-class="opacity-0 translate-y-1"
-            >
-              <PopoverPanel
-                class="absolute left-1/2 z-10 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0"
-              >
-                <div
-                  class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden"
-                >
-                  <div
-                    class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8"
-                  >
-                    <a
-                      v-for="item in resources"
-                      :key="item.name"
-                      :href="item.href"
-                      class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50"
-                    >
-                      <component
-                        :is="item.icon"
-                        class="flex-shrink-0 h-6 w-6 text-indigo-600"
-                        aria-hidden="true"
-                      />
-                      <div class="ml-4">
-                        <p class="text-base font-medium text-gray-900">
-                          {{ item.name }}
-                        </p>
-                        <p class="mt-1 text-sm text-gray-500">
-                          {{ item.description }}
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
-                    <div>
-                      <h3
-                        class="text-sm tracking-wide font-medium text-gray-500 uppercase"
-                      >
-                        Recent Posts
-                      </h3>
-                      <ul role="list" class="mt-4 space-y-4">
-                        <li
-                          v-for="item in recentPosts"
-                          :key="item.id"
-                          class="text-base truncate"
-                        >
-                          <a
-                            :href="item.href"
-                            class="font-medium text-gray-900 hover:text-gray-700"
-                          >
-                            {{ item.name }}
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="mt-5 text-sm">
-                      <a
-                        href="#"
-                        class="font-medium text-indigo-600 hover:text-indigo-500"
-                      >
-                        View all posts
-                        <span aria-hidden="true">&rarr;</span></a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </PopoverPanel>
-            </transition>
-          </Popover>
+            Ski de rando
+          </NuxtLink>
+          <NuxtLink
+            to="/"
+            class="text-base font-medium text-gray-500 hover:text-gray-900"
+          >
+            Alpinisme
+          </NuxtLink>
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-          <a
-            href="#"
-            class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          <NuxtLink
+            to="/"
+            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700"
           >
-            Sign in
-          </a>
-          <a
-            href="#"
-            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-          >
-            Sign up
-          </a>
+            Contact
+          </NuxtLink>
         </div>
       </div>
     </div>
