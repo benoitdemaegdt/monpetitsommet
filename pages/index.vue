@@ -1,303 +1,180 @@
 <template>
-  <div>
-    <div class="pt-12 w-full h-screen mx-auto">
-      <div class="h-full w-11/12 mx-auto grid grid-cols-1 md:grid-cols-2">
-        <div class="flex flex-col justify-center px-0 md:px-12">
-          <h1
-            class="text-gray-800 text-3xl md:text-5xl font-semibold leading-tight"
+  <div class="relative bg-white overflow-hidden">
+    <div class="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
+      <svg
+        class="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8"
+        width="640"
+        height="784"
+        fill="none"
+        viewBox="0 0 640 784"
+      >
+        <defs>
+          <pattern
+            id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047"
+            x="118"
+            y="0"
+            width="20"
+            height="20"
+            patternUnits="userSpaceOnUse"
           >
-            Préparez votre prochaine aventure en montagne
-          </h1>
-          <p class="mt-4 text-gray-600 text-xl font-base">
-            Découvrez les topos détaillés d'aventures sportives en montagne.
-            Parfois engagées. Souvent loin des foules. Toujours mémorables.
-          </p>
-          <div class="hidden md:inline mt-6">
-            <button
-              class="text-white font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded"
-              @click="scrollToTreks"
-            >
-              VOIR LES TOPOS &rarr;
-            </button>
-          </div>
-        </div>
-        <div class="py-0 md:py-8 flex justify-center">
-          <nuxt-img
-            provider="cloudinary"
-            :src="image.path"
-            :alt="image.alt"
-            class="w-full h-56 md:w-5/6 md:h-full rounded-lg overflow-hidden shadow-2xl object-cover"
-          />
-        </div>
-      </div>
-    </div>
-    <div id="trekSection" class="md:mt-16">
-      <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
-        <h2
-          class="text-gray-800 text-2xl md:text-4xl text-center font-semibold"
-        >
-          Randonnez en autonomie sur plusieurs jours
-        </h2>
-        <p class="mt-4 text-gray-600 text-xl text-justify font-base">
-          Des randonnées, il y en a pour tout le monde et pour tous les goûts.
-          On laissera ici de côté les sorties familiales pour ne présenter que
-          des topos détaillés de randonnées exigeantes. Plus de 1500m de
-          dénivelé par jour en moyenne, de la distance, des itinéraires parfois
-          techniques ou accidentés et toujours au moins une nuit en montagne.
-          Car quoi de plus dépaysant que d'installer son bivouac au soleil
-          tombant en attendant les étoiles...
-        </p>
-      </div>
-      <div class="mt-4 md:mt-8 flex flex-wrap justify-evenly">
-        <NuxtLink
-          v-for="trek in treks"
-          :key="trek.title"
-          :to="{
-            name: `randonnees-slug`,
-            params: { slug: trek.slug },
-          }"
-          class="p-5 md:mt-0"
-        >
-          <TrekCard :trek="trek" />
-        </NuxtLink>
-      </div>
-    </div>
-    <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
-        Dormez en refuge ou en cabane non gardée
-      </h2>
-      <p class="mt-4 text-gray-600 text-xl text-justify font-base">
-        En plus des refuges, on trouve de nombreuses cabanes non gardées dans
-        les massifs français. Il s'agit la plupart du temps d'abris très
-        sommaires, ouverts été comme hiver afin d'accueillir les randonneurs de
-        passage. Passer une nuit dans l'une de ces cabanes est une occasion
-        unique de vivre une expérience inoubliable en plein coeur de la nature.
-      </p>
-    </div>
-    <div class="mt-4 md:mt-8 w-full px-4">
-      <div class="flex flex-wrap justify-around">
-        <NuxtLink
-          v-for="(refuge, index) in refuges"
-          :key="refuge.name"
-          :to="{
-            name: `refuges-slug`,
-            params: { slug: refuge.slug },
-          }"
-          class="px-1 md:mt-0"
-          :class="{ 'mt-4': index > 0 }"
-        >
-          <div
-            class="max-w-sm bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl"
-          >
-            <nuxt-img
-              provider="cloudinary"
-              :src="refuge.img"
-              :alt="refuge.name"
-              loading="lazy"
-              class="w-full h-60 object-cover"
+            <rect
+              x="0"
+              y="0"
+              width="4"
+              height="4"
+              class="text-gray-200"
+              fill="currentColor"
             />
-            <div class="px-4 py-4">
-              <div class="text-xs title-font text-gray-600 tracking-widest">
-                {{ refuge.type.toUpperCase() }}
-              </div>
-              <div class="text-gray-800 font-semibold text-xl mb-2">
-                {{ refuge.name }}
-              </div>
-              <div class="py-3 grid grid-cols-2 gap-4 text-sm text-gray-800">
-                <!-- altitude -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/mountain.png"
-                    alt="icone montagne"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    <span class="hidden sm:inline">Altitude : </span
-                    >{{ refuge.altitude }}m
-                  </div>
-                </div>
-                <!-- beds -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/bed.png"
-                    alt="icone lit"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    <span class="hidden sm:inline">Capacité : </span
-                    >{{ refuge.beds }} pers
-                  </div>
-                </div>
-                <!-- stove -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/stove.png"
-                    alt="icone poêle"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    Poêle : {{ refuge.stove | booleanToFrench }}
-                  </div>
-                </div>
-                <!-- water -->
-                <div class="flex items-center">
-                  <nuxt-img
-                    src="/icons/water.png"
-                    alt="icone eau"
-                    class="h-5 w-5"
-                  />
-                  <div class="ml-2">
-                    Eau : {{ refuge.water | booleanToFrench }}
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="px-6 pb-4">
+          </pattern>
+        </defs>
+        <rect
+          y="72"
+          width="640"
+          height="640"
+          class="text-gray-50"
+          fill="currentColor"
+        />
+        <rect
+          x="118"
+          width="404"
+          height="784"
+          fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)"
+        />
+      </svg>
+    </div>
+
+    <div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32">
+      <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          <div
+            class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left"
+          >
+            <h1>
               <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-                >#{{ refuge.massif }}</span
+                class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base"
+                >Coming soon</span
               >
               <span
-                class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"
-                >#refuge</span
+                class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl"
               >
+                <span class="block text-gray-900">Data to enrich your</span>
+                <span class="block text-indigo-600">online business</span>
+              </span>
+            </h1>
+            <p
+              class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl"
+            >
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+              fugiat aliqua ad ad non deserunt sunt.
+            </p>
+            <div
+              class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
+            >
+              <p class="text-base font-medium text-gray-900">
+                Sign up to get notified when it’s ready.
+              </p>
+              <form action="#" method="POST" class="mt-3 sm:flex">
+                <label for="email" class="sr-only">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:flex-1 border-gray-300"
+                  placeholder="Enter your email"
+                />
+                <button
+                  type="submit"
+                  class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+                >
+                  Notify me
+                </button>
+              </form>
+              <p class="mt-3 text-sm text-gray-500">
+                We care about the protection of your data. Read our
+                <a href="#" class="font-medium text-gray-900 underline"
+                  >Privacy Policy</a
+                >.
+              </p>
             </div>
           </div>
-        </NuxtLink>
-      </div>
-    </div>
-    <div class="mt-16 w-11/12 md:w-3/4 mx-auto">
-      <h2 class="text-gray-800 text-2xl md:text-4xl text-center font-semibold">
-        Découvrez vos prochaines aventures
-      </h2>
-      <p class="mt-4 text-gray-600 text-xl text-justify font-base">
-        Randonnées, bivouac, escalade, alpinisme, ski de rando et même snowkite
-        : des aventures en montagne il y en a pour tous les goûts ! Inscrivez
-        vous à la newsletter de Mon Petit Sommet pour recevoir directement dans
-        votre boite mail les dernières sorties publiées sur le site.
-      </p>
-      <div class="mt-6 flex justify-center">
-        <a
-          href="https://monpetitsommet.substack.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-white text-sm md:text-base font-semibold bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 rounded"
-        >
-          S'INSCRIRE À LA NEWSLETTER &rarr;
-        </a>
-      </div>
-    </div>
-    <div class="mt-16 w-full bg-gray-200 divide-y divide-gray-400">
-      <div class="flex justify-center py-4">
-        <nuxt-link
-          to="/randonnees"
-          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
-        >
-          RANDO
-        </nuxt-link>
-        <nuxt-link
-          to="/refuges"
-          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
-        >
-          REFUGES
-        </nuxt-link>
-        <nuxt-link
-          to="/cgu"
-          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
-        >
-          CGU
-        </nuxt-link>
-        <nuxt-link
-          to="/blog"
-          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
-        >
-          BLOG
-        </nuxt-link>
-        <nuxt-link
-          to="/contact"
-          class="p-2 text-gray-700 rounded-full hover:bg-gray-300"
-        >
-          CONTACT
-        </nuxt-link>
-      </div>
-      <div class="flex justify-center py-4 text-gray-700">
-        <p>{{ new Date().getFullYear() }} - Mon Petit Sommet</p>
-      </div>
+          <div
+            class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+          >
+            <svg
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden"
+              width="640"
+              height="784"
+              fill="none"
+              viewBox="0 0 640 784"
+              aria-hidden="true"
+            >
+              <defs>
+                <pattern
+                  id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e"
+                  x="118"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <rect
+                    x="0"
+                    y="0"
+                    width="4"
+                    height="4"
+                    class="text-gray-200"
+                    fill="currentColor"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                y="72"
+                width="640"
+                height="640"
+                class="text-gray-50"
+                fill="currentColor"
+              />
+              <rect
+                x="118"
+                width="404"
+                height="784"
+                fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)"
+              />
+            </svg>
+            <div
+              class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md"
+            >
+              <button
+                type="button"
+                class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <span class="sr-only">Watch our video to learn more</span>
+                <img
+                  class="w-full"
+                  src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt=""
+                />
+                <div
+                  class="absolute inset-0 w-full h-full flex items-center justify-center"
+                  aria-hidden="true"
+                >
+                  <svg
+                    class="h-20 w-20 text-indigo-500"
+                    fill="currentColor"
+                    viewBox="0 0 84 84"
+                  >
+                    <circle opacity="0.9" cx="42" cy="42" r="42" fill="white" />
+                    <path
+                      d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   </div>
 </template>
-
-<script>
-import HelperMixin from '@/mixins/HelperMixin.js'
-
-export default {
-  mixins: [HelperMixin],
-  async asyncData({ $content, params }) {
-    const treks = await $content('randonnees', params.slug)
-      .where({
-        title: {
-          $in: [
-            'Traversée du Vercors (Balcon Est)',
-            'Traversée des Bauges',
-            'Petite Traversée de la Chartreuse',
-          ],
-        },
-      })
-      .only([
-        'massif',
-        'title',
-        'img',
-        'caption',
-        'distance',
-        'elevation',
-        'duration',
-        'difficulty',
-        'from',
-        'to',
-        'slug',
-      ])
-      .fetch()
-
-    const refuges = await $content('refuges', params.slug)
-      .where({
-        name: {
-          $in: [
-            'Cabane de Pré Peyret',
-            'Cabane des Aiguillettes',
-            'Cabane PNRV des Chaumailloux',
-          ],
-        },
-      })
-      .only([
-        'massif',
-        'name',
-        'type',
-        'img',
-        'beds',
-        'altitude',
-        'stove',
-        'stove',
-        'water',
-        'slug',
-      ])
-      .fetch()
-
-    return { treks, refuges }
-  },
-  data: () => ({
-    image: {
-      path: 'w_900/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
-      alt: 'balcon est du vercors',
-    },
-  }),
-  methods: {
-    scrollToTreks() {
-      const element = document.getElementById('trekSection')
-      const yOffset = -50
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({ top: y, behavior: 'smooth' })
-    },
-  },
-}
-</script>
