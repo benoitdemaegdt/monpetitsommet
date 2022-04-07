@@ -36,7 +36,7 @@
             Ski de rando
           </NuxtLink>
           <NuxtLink
-            to="/"
+            to="/alpinisme"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
             Alpinisme
