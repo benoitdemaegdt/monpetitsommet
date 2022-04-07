@@ -1,5 +1,5 @@
 <template>
-  <div class="relative py-16 sm:py-24 lg:py-32">
+  <div class="relative py-8 sm:py-12 lg:py-16">
     <div class="relative">
       <div
         class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
@@ -7,17 +7,16 @@
         <h2
           class="text-base font-semibold tracking-wider text-emerald-600 uppercase"
         >
-          Micro-aventures
+          Hiver
         </h2>
         <p
           class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
         >
-          Rando & bivouac
+          Ski de randonnées
         </p>
         <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-          Retrouvez les topos de randonnées sportives en montagne. L'idéal pour
-          s'évader en pleine nature le temps d'un week end de deux ou trois
-          jours.
+          Des articles simples et sans jargon comptable pour enfin tout
+          comprendre sur la fiscalité de ses revenus locatifs.
         </p>
       </div>
       <div
@@ -60,16 +59,16 @@
 <script>
 const hikes = [
   {
-    massif: 'Chartreuse',
-    title: 'Petite Traversée de la Chartreuse',
+    massif: 'Belledonne',
+    title: 'Rocher Blanc par la Combe Madame',
     subtitle: '',
     path: '/randonnees/petite-traversee-chartreuse',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload//v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/intro_xuxv2u.jpg',
   },
   {
-    massif: 'Bauges',
-    title: 'Traversée des Bauges',
+    massif: 'Belledonne',
+    title: 'Col du Merlet et du Moretan en boucle',
     subtitle:
       'Si vous envisagez de louer un appartement en meublé, vous vous demandez sans doute quels sont les meubles que vous allez devoir fournir à votre locataire. La liste de ces meubles indispensables à été fixé par décret le 31 juillet 2015 (n°2015-981) et nous vous la détaillons dans cet article.',
     path: '/blog/liste-meubles-location-meublee',
@@ -77,8 +76,8 @@ const hikes = [
       'https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg',
   },
   {
-    massif: 'Vercors',
-    title: 'Traversée du Vercors (Balcon Est)',
+    massif: 'Belledonne',
+    title: 'Selle du Puy Gris',
     subtitle:
       'L’intérêt fiscal de la location meublée repose principalement sur le système d’amortissement comptable. Il est donc important de comprendre ce système pour optimiser la rentabilité de son bien immobilier.',
     path: '/blog/amortissement-location-meublee',
