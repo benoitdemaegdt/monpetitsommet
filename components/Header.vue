@@ -128,7 +128,7 @@
                 @click="close()"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
-                Cgu
+                CGU
               </NuxtLink>
             </div>
           </div>

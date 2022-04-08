@@ -39,7 +39,7 @@ const navigation = {
   main: [
     { name: 'Contact', path: '/contact' },
     { name: 'Blog', path: '/blog' },
-    { name: 'Cgu', path: '/cgu' },
+    { name: 'CGU', path: '/cgu' },
   ],
   social: [
     {
