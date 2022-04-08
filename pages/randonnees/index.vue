@@ -9,7 +9,7 @@
             Vous êtes en avance.
           </h1>
           <p class="mt-2 text-lg text-gray-500">
-            Des topos d'alpinisme seront ajoutés très prochainement.
+            Des topos de randonnées seront ajoutés très prochainement.
           </p>
         </div>
         <div class="mt-12">
@@ -80,16 +80,16 @@ import { MapIcon, SunIcon, RssIcon } from '@heroicons/vue/outline'
 
 const links = [
   {
-    title: 'Randonnées',
-    description: 'Des topos détaillés de randos de deux ou trois jours.',
-    icon: MapIcon,
-    path: '/randonnees',
-  },
-  {
     title: 'Ski de rando',
     description: 'Des sorties de un ou deux jours. Tout niveau.',
-    icon: SunIcon,
+    icon: MapIcon,
     path: '/ski-de-rando',
+  },
+  {
+    title: 'Alpinisme',
+    description: "L'aventure au bout de la corde.",
+    icon: SunIcon,
+    path: '/alpinisme',
   },
   {
     title: 'Blog',

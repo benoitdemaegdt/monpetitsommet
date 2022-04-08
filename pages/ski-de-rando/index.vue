@@ -9,7 +9,7 @@
             Vous êtes en avance.
           </h1>
           <p class="mt-2 text-lg text-gray-500">
-            Des topos d'alpinisme seront ajoutés très prochainement.
+            Des topos de ski de rando seront ajoutés très prochainement.
           </p>
         </div>
         <div class="mt-12">
@@ -86,10 +86,10 @@ const links = [
     path: '/randonnees',
   },
   {
-    title: 'Ski de rando',
-    description: 'Des sorties de un ou deux jours. Tout niveau.',
+    title: 'Alpinisme',
+    description: "L'aventure au bout de la corde.",
     icon: SunIcon,
-    path: '/ski-de-rando',
+    path: '/alpinisme',
   },
   {
     title: 'Blog',
