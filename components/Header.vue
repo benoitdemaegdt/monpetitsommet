@@ -68,6 +68,7 @@
       leave-to-class="opacity-0 scale-95"
     >
       <PopoverPanel
+        v-slot="{ close }"
         focus
         class="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden"
       >
@@ -98,6 +99,7 @@
                   v-for="navItem in navItems"
                   :key="navItem.name"
                   :to="navItem.path"
+                  @click="close()"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                 >
                   <component
@@ -116,12 +118,14 @@
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
               <NuxtLink
                 to="/contact"
+                @click="close()"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Contact
               </NuxtLink>
               <NuxtLink
                 to="/cgu"
+                @click="close()"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
                 Cgu
