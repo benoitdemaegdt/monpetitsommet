@@ -52,6 +52,7 @@
         </NuxtLink>
       </div>
     </div>
+    <NewsletterSection />
   </div>
 </template>
 
