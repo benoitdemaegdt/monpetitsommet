@@ -16,7 +16,7 @@
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
-            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+            class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
           >
             <span class="sr-only">Ouvrir menu</span>
             <MenuIcon class="h-6 w-6" aria-hidden="true" />
@@ -79,76 +79,53 @@
               <div>
                 <img
                   class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                  src="~/assets/img/logo.png"
                   alt="Workflow"
                 />
               </div>
               <div class="-mr-2">
                 <PopoverButton
-                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                  class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
                 >
-                  <span class="sr-only">Close menu</span>
+                  <span class="sr-only">Fermer menu</span>
                   <XIcon class="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
             </div>
             <div class="mt-6">
               <nav class="grid gap-y-8">
-                <a
-                  v-for="item in features"
-                  :key="item.name"
-                  :href="item.href"
+                <NuxtLink
+                  v-for="navItem in navItems"
+                  :key="navItem.name"
+                  :to="navItem.path"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                 >
                   <component
-                    :is="item.icon"
-                    class="flex-shrink-0 h-6 w-6 text-indigo-600"
+                    :is="navItem.icon"
+                    class="flex-shrink-0 h-6 w-6 text-emerald-600"
                     aria-hidden="true"
                   />
                   <span class="ml-3 text-base font-medium text-gray-900">
-                    {{ item.name }}
+                    {{ navItem.name }}
                   </span>
-                </a>
+                </NuxtLink>
               </nav>
             </div>
           </div>
-          <div class="py-6 px-5 space-y-6">
+          <div class="py-6 px-5 space-y-6 bg-gray-50">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
-              <a
-                href="#"
+              <NuxtLink
+                to="/contact"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
-                Pricing
-              </a>
-
-              <a
-                href="#"
+                Contact
+              </NuxtLink>
+              <NuxtLink
+                to="/cgu"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
               >
-                Docs
-              </a>
-              <a
-                v-for="item in resources"
-                :key="item.name"
-                :href="item.href"
-                class="text-base font-medium text-gray-900 hover:text-gray-700"
-              >
-                {{ item.name }}
-              </a>
-            </div>
-            <div>
-              <a
-                href="#"
-                class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-              >
-                Sign up
-              </a>
-              <p class="mt-6 text-center text-base font-medium text-gray-500">
-                Existing customer?
-                <a href="#" class="text-indigo-600 hover:text-indigo-500">
-                  Sign in
-                </a>
-              </p>
+                Cgu
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -165,96 +142,36 @@ import {
   PopoverPanel,
 } from '@headlessui/vue'
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
-  ChartBarIcon,
-  CursorClickIcon,
+  MapIcon,
+  SunIcon,
+  PhotographIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  RefreshIcon,
-  ShieldCheckIcon,
-  SupportIcon,
-  ViewGridIcon,
+  RssIcon,
   XIcon,
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 
-const features = [
+const navItems = [
   {
-    name: 'Analytics',
-    href: '#',
-    description:
-      'Get a better understanding of where your traffic is coming from.',
-    icon: ChartBarIcon,
+    name: 'Randonnées',
+    path: '/randonnees',
+    icon: MapIcon,
   },
   {
-    name: 'Engagement',
-    href: '#',
-    description: 'Speak directly to your customers in a more meaningful way.',
-    icon: CursorClickIcon,
+    name: 'Ski de rando',
+    path: '/ski-de-rando',
+    icon: SunIcon,
   },
   {
-    name: 'Security',
-    href: '#',
-    description: "Your customers' data will be safe and secure.",
-    icon: ShieldCheckIcon,
+    name: 'Alpinisme',
+    path: '/alpinisme',
+    icon: PhotographIcon,
   },
   {
-    name: 'Integrations',
-    href: '#',
-    description: "Connect with third-party tools that you're already using.",
-    icon: ViewGridIcon,
+    name: 'Blog',
+    path: '/blog',
+    icon: RssIcon,
   },
-  {
-    name: 'Automations',
-    href: '#',
-    description:
-      'Build strategic funnels that will drive your customers to convert',
-    icon: RefreshIcon,
-  },
-]
-const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
-]
-const resources = [
-  {
-    name: 'Help Center',
-    description:
-      'Get all of your questions answered in our forums or contact support.',
-    href: '#',
-    icon: SupportIcon,
-  },
-  {
-    name: 'Guides',
-    description:
-      'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: 'Events',
-    description:
-      'See what meet-ups and other events we might be planning near you.',
-    href: '#',
-    icon: CalendarIcon,
-  },
-  {
-    name: 'Security',
-    description: 'Understand how we take your privacy seriously.',
-    href: '#',
-    icon: ShieldCheckIcon,
-  },
-]
-const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  {
-    id: 2,
-    name: 'How to use search engine optimization to drive traffic to your site',
-    href: '#',
-  },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
 ]
 
 export default {
@@ -273,10 +190,7 @@ export default {
   },
   setup() {
     return {
-      features,
-      callsToAction,
-      resources,
-      recentPosts,
+      navItems,
     }
   },
 }
