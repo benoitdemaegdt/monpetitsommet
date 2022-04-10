@@ -134,6 +134,9 @@
         />
         <h2>Aperçu de la rando</h2>
         <TrekStats />
+        <ClientOnly>
+          <TrekAltitudeChart class="mt-8 rounded-lg shadow" />
+        </ClientOnly>
         <h2>Accès</h2>
         <p>
           Le point de départ de cette randonnée est la Richardière, un tout
@@ -144,118 +147,167 @@
           rejoindre la Richardière : y-aller à pied (environ 1h de marche, peu
           intéressant) ou faire du stop (fonctionne assez bien dans la région).
         </p>
-        <!-- <p>
-          Comme une image vaut mille mots, vous pouvez apprécier cette superbe
-          vidéo pour voir à quoi peut ressembler le snowkite de (très) haut
-          niveau.
-        </p>
-        <h2>Quel est le matériel nécessaire à la pratique du snowkite ?</h2>
+        <h2>De la Richardière au Pas de la Selle</h2>
         <p>
-          La réponse courte : des skis ou un snowboard, un harnais et une aile.
-        </p>
-        <h3>🎿 Skis ou snowboard ?</h3>
-        <p>
-          On peut faire du snowkite avec un ski ou un snowboard. Notons tout de
-          même que c'est plus simple avec des skis (pour installer le matériel).
-          On pourrait avoir l'impression qu'on va être tracté "sur le côté"
-          quand on est en ski, mais en pratique ça se fait très bien.
-        </p>
-        <h3>👖 Harnais de kitesurf ?</h3>
-        <p>
-          Il est tout à fait possible d'utiliser un harnais de kitesurf pour
-          faire du snowkite. Privilégiez les harnais "culotte", parce que les
-          harnais "ceinture" vont glisser sur de la veste et remonter sous les
-          bras. On peut aussi tout à fait utiliser un simple baudrier
-          d'escalade. On s'attache alors à la voile avec un mousqueton à vis.
-          Cette dernière solution à le mérite d'être légère (pratique si besoin
-          de faire une approche en ski de rando !) même si elle est moins
-          confortable en cas de fort vent (le baudrier tire fort).
-        </p>
-        <h3>🪁 Quelle voile ?</h3>
-        <p>il existe 3 types de voiles :</p>
-        <ul role="list">
-          <li>
-            Les voiles à boudin. Vous connaissez, ce sont les voiles
-            "classiques" du kitesurf sur eau.
-          </li>
-          <li>
-            Les voiles à caisson. Ce sont des voiles légères et puissantes
-            souvent utilisées par les "foileurs" (Exemple : la flysurfer soul).
-          </li>
-          <li>
-            Les voiles monopeau. Ce sont des voiles extrêmement légères et
-            compactes puisqu'elles ne sont constituées que d'une couche de tissu
-            (Exemple : la flysurfer peak4 qui doit faire autour de 2kg et prend
-            la place d'un sac de couchage une fois roulée).
-          </li>
-        </ul>
-        <p>
-          Bonne nouvelle : on peut utiliser les 3 types de voiles en snowkite.
-          Comme toujours, il y a des avantages et des inconvénients propres à
-          chacun. Si vous pratiquez déjà le kitesurf et débutez en snowkite,
-          commencez avec votre aile à boudin, ça fera très bien l'affaire. Vous
-          pourrez ensuite vous mettre en quête d'une aile monopeau si vous
-          progressez et souhaitez aller chercher des spots qui nécessitent une
-          approche en ski de rando.
-        </p>
-        <h2>Où pratiquer le snowkite ?</h2>
-        <p>
-          Puisqu'il s'agit de se déplacer sur la neige, le snowkite se pratique
-          en montagne ou sur des plateaux d'altitude. À noter que certains spots
-          sont directement accessibles en voiture, tandis que pour d'autres il
-          sera nécessaire de faire une approche en peaux de phoque (ski de
-          randonnée). C'est alors la garantie d'être quasiment seul(e) à
-          profiter de la neige et du vent !
-        </p>
-        <p>Parmi les spots de snowkite les plus connus, il y a :</p>
-        <ul role="list">
-          <li>Le col du Lautaret, dans le massif des Écrins.</li>
-          <li>Cervière, dans les Hautes-Alpes.</li>
-          <li>Font d'Urle et Autrans, dans le massif du Vercors.</li>
-        </ul>
-        <p>
-          Il y a également tout un tas d'autres spots moins connus dans les
-          monts du Forez, en Ardèche, dans l'Aubrac ...
+          Depuis la Richardière, prendre tout droit (plein ouest, vers les
+          montagnes) sur la piste jusqu'à rejoindre un chalet moderne, le Foyer
+          de Ski de fond. Dépasser ce chalet pour rejoindre un embranchement :
+          on prendra alors la piste du milieu, celle qui monte en biais (un
+          panneau indique Col de l'Aupet), elle fait presque immédiatement une
+          épingle. Continuer tout droit, passer un ruisseau (très souvent à sec)
+          et atteindre une clairière / parking. Traverser cette clairière et
+          prendre juste après à droite un chemin de randonnée qui monte en
+          forêt. C'est le début d'une belle montée jusqu'au col de l'Aupet
+          (1650m). Prendre le chemin à plat qui part sur la gauche, sans oublier
+          de profiter de la vue magnifique sur le Mont Aiguille (tendez
+          l'oreille, on entend souvent les grimpeurs qui l'escalade !). Suivre
+          ce chemin en balcon jusqu'à pouvoir monter dans un gros pierrier
+          (forte probabilité de voir des bouquetins ! Attention aux pierres
+          qu'ils peuvent faire tomber) assez raide permettant de rejoindre le
+          Pas de la Selle (1870m).
         </p>
         <figure>
           <img
             class="w-full rounded-lg"
-            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019505/snowkite/snowkite-lautaret_st0ia9.jpg"
-            alt=""
-            width="1310"
-            height="873"
-          />
-          <figcaption>snowkite au col du lautaret</figcaption>
-        </figure>
-        <h2>Quelles sont les meilleures conditions ?</h2>
-        <p>
-          Le snowkite est un sport exigeant en terme de conditions météos. Il
-          faut en effet réunir 3 éléments :
-        </p>
-        <ul role="list">
-          <li>De la neige (fraiche si possible, c'est plus agréable).</li>
-          <li>
-            Du vent. L'idéal c'est d'avoir entre 12 et 20 noeuds de vent. En
-            dessous c'est trop "mou" et au dessus la neige est vite soufflée.
-          </li>
-          <li>De la visibilité (et idéalement du soleil)</li>
-        </ul>
-        <p>
-          Ces 3 conditions sont rarement réunies, il faut saisir les occasions !
-        </p>
-        <figure>
-          <img
-            class="w-full rounded-lg"
-            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019506/snowkite/snowkite-vercors_hmbpfs.jpg"
-            alt=""
+            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1604995709/vercors/randonnees/traversee-vercors-balcon-est/step_1_qttchl.jpg"
+            alt="Mont Aiguille"
             width="1310"
             height="873"
           />
           <figcaption>
-            15 noeuds, neige fraiche et grand soleil : conditions de rêve pour
-            une session de snowkite dans le Vercors
+            L'imposant Mont Aiguille, une des sept merveilles du Dauphiné.
           </figcaption>
-        </figure> -->
+        </figure>
+
+        <h2>Du Pas de la Selle au sommet du Grand Veymont</h2>
+        <p>
+          Au Pas de la Selle, prendre le chemin montant sur la droite. Il passe
+          à gauche d'une petite cabane puis permet de rejoindre le Pas de
+          Bachassons. Présence d'une source d'eau bien visible en contrebas sur
+          la droite. Ne pas prendre le chemin qui descend sous la source, mais
+          continuer sur le plateau au dessus jusqu'à atteindre le Pas des
+          Chatons. Emprunter les grands Z nettement visible pour rejoindre le
+          sommet du Grand Veymont (2341m), point culminant du massif du Vercors.
+          Vue exceptionnelle sur toute l'immense réserve naturelle des Hauts
+          Plateaux du Vercors, sur le Mont Aiguille, mais aussi sur le massif
+          des Écrins en face.
+        </p>
+        <figure>
+          <img
+            class="w-full rounded-lg"
+            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1604995716/vercors/randonnees/traversee-vercors-balcon-est/step_2_hucpts.jpg"
+            alt="Pas de la Selle"
+            width="1310"
+            height="873"
+          />
+          <figcaption>
+            Depuis le Pas des Bachassons, on voit en face le Grand Veymont et
+            l'aiguillette (ou Petit Veymont) juste à sa droite.
+          </figcaption>
+        </figure>
+
+        <h2>Du Grand Veymont à l'abri de la Peyrouse</h2>
+        <p>
+          Au sommet du Grand Veymont, descendre par la face Nord (opposée à
+          celle par laquelle on est arrivé) pour rejoindre le Pas de la Ville
+          (1925m). Continuer alors la descente en prenant à droite un passage
+          assez raide. Attention à ne pas trop descendre : dès que possible
+          prendre à gauche pour rejoindre le fameux Balcon Est du Vercors. On va
+          suivre ce chemin situé juste sous les magnifiques falaises du Vercors
+          sur plusieurs kilomètres. Impossible de se perdre, il faut juste
+          suivre ce chemin ! Attention à ne pas manquer un des rares points de
+          ravitaillement en eau de ce sentier, au niveau de la Fontaine de
+          Berrièves. Celle ci est indiquée par un panneau et des peintures sur
+          la roche. Continuer sur les balcons Est jusqu'à rejoindre une cabane,
+          l'abris de la Peyrouse. Possibilité d'y dormir : présence d'un lit
+          superposé en bois et d'une table.
+        </p>
+        <figure>
+          <img
+            class="w-full rounded-lg"
+            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1604995719/vercors/randonnees/traversee-vercors-balcon-est/step_3_dkvzm3.jpg"
+            alt="Blacon est du vercors"
+            width="1310"
+            height="873"
+          />
+          <figcaption>
+            Le sentier des Balcons Est longe la majestueuse barre du Vercors,
+            juste sous les falaises.
+          </figcaption>
+        </figure>
+
+        <h2>De l'abri de la Peyrouse à la Grande Moucherolle</h2>
+        <p>
+          Poursuivre sur les Balcons Est après l'abris de la Peyrouse (bien
+          rester sur la gauche et ne pas prendre les sentiers qui descendent à
+          droite vers Saint-Andéol). Après plusieurs kilomètres, on prendra le
+          chemin qui monte en lacet sur la gauche pour rejoindre le Pas de Balme
+          (1839m). Encore une fois, il y a une forte probabilité de pouvoir
+          observer des chamois et des bouquetins sur ce secteur ! À Partir de
+          là, l'itinéraire emprunte un sentier plus technique, moins visible,
+          parfois aérien et surtout beaucoup moins emprunté. Après le Pas de la
+          Balme, il s'agit donc de prendre à droite et de longer la falaise en
+          suivant les cairn (tas de pierre) qui indiquent le chemin. On arrive
+          rapidement au sommet de La Petite Moucherolle (2156m). Descendre vers
+          le Col des Moucherolles (2086m) qu'on voit en contrebas. Attention le
+          passage, une faille assez raide (il faut poser les mains), n'est pas
+          pile au bord de la falaise, mais une trentaine de mètre en arrière.
+          Remonter alors tout droit sur un sentier de rando-escalade (pas
+          d'escalade difficile, mais il faut poser les mains et avoir le pied
+          sûr) vers la Grande Moucherolle (2284m). Vue splendide sur les Hauts
+          Plateaux, toute la barre du Vercors et au loin le Mont Aiguille.
+        </p>
+        <figure>
+          <img
+            class="w-full rounded-lg"
+            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1604995722/vercors/randonnees/traversee-vercors-balcon-est/step_4_sxc2ke.jpg"
+            alt="Pas de la Balme"
+            width="1310"
+            height="873"
+          />
+          <figcaption>
+            Entre le Pas de la Balme et La Grande Moucherolle, le secteur est
+            dense en chamois et bouquetins.
+          </figcaption>
+        </figure>
+
+        <h2>De la Grande Moucherolle à la cabane de Roybon</h2>
+        <p>
+          Traverser le sommet de la Grande Moucherolle sur une crête pas bien
+          large et assez aérienne. La suite du chemin est bien visible en
+          contrebas. Le rejoindre en descendant prudemment dans un pierrier un
+          peu instable. Filer alors jusqu'au Col des Deux Soeurs (2056m). On
+          continue toujours en prenant le sentier cairné au plus près de la
+          falaise. On arrive rapidement au sommet de La Petite Soeur-Sophie
+          (2162m). Belle vue sur toute la vallée de Villard-de-Lans. Continuer
+          alors jusqu'à rejoindre un sentier en balcon beaucoup plus évident et
+          marqué. La randonnée redevient alors facile, le sentier s'éloigne
+          progressivement de la falaise et permet en quelques kilomètres de
+          rejoindre la Cabane de Roybon, sous le Col Vert. Présence d'une source
+          juste avant d'arriver à la Cabane.
+        </p>
+        <figure>
+          <img
+            class="w-full rounded-lg"
+            src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1604995725/vercors/randonnees/traversee-vercors-balcon-est/step_5_rqks9i.jpg"
+            alt="Col des deux soeurs"
+            width="1310"
+            height="873"
+          />
+          <figcaption>
+            Le col des Deux-Soeurs, avec à gauche la Petite soeur Sophie (2162m)
+            et à droite la Grande soeur Agathe (2194m).
+          </figcaption>
+        </figure>
+
+        <h2>De la cabane de Roybon à Villard-de-Lans</h2>
+        <p>
+          Depuis la Cabane de Roybon, continuer la descente sur un chemin large
+          et emprunté. On retrouve très rapidement la civilisation en entrant
+          dans Villard-de-Lans, la destination de cette randonnée. On peut
+          ensuite facilement rejoindre Grenoble en prenant le bus Transisère
+          5100.
+        </p>
       </div>
     </div>
   </div>

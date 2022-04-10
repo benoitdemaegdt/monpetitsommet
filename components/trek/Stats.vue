@@ -21,8 +21,8 @@ const stats = [
   { name: 'Dénivelé +', stat: '4328 m' },
   { name: 'Cotation', stat: 'T3' },
 ]
-
 export default {
+  name: 'TrekStats',
   setup() {
     return {
       stats,
