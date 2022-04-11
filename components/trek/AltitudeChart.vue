@@ -13,7 +13,7 @@ export default {
   name: 'TrekAltitudeChart',
   async setup() {
     const { getTrekData } = useTrekData()
-    const altitudeData = await getTrekData()
+    const { altitudeData, pointsOfInterest } = await getTrekData()
 
     return {
       chartOptions: {
@@ -26,67 +26,24 @@ export default {
         },
         title: { text: 'Profil altimétrique' },
         credits: { enabled: false },
-        // annotations: [
-        //   {
-        //     draggable: '',
-        //     labelOptions: {
-        //       backgroundColor: 'rgba(255,255,255,0.5)',
-        //       verticalAlign: 'top',
-        //       y: 15,
-        //     },
-        //   },
-        //   {
-        //     draggable: '',
-        //     labels: [
-        //       {
-        //         point: {
-        //           xAxis: 0,
-        //           yAxis: 0,
-        //           x: 101.44,
-        //           y: 1026,
-        //         },
-        //         x: -30,
-        //         text: 'Col de la Joux',
-        //       },
-        //       {
-        //         point: {
-        //           xAxis: 0,
-        //           yAxis: 0,
-        //           x: 138.5,
-        //           y: 748,
-        //         },
-        //         text: 'Côte de Viry',
-        //       },
-        //       {
-        //         point: {
-        //           xAxis: 0,
-        //           yAxis: 0,
-        //           x: 176.4,
-        //           y: 1202,
-        //         },
-        //         text: 'Montée de la Combe <br>de Laisia Les Molunes',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     draggable: '',
-        //     labelOptions: {
-        //       shape: 'connector',
-        //       align: 'right',
-        //       justify: false,
-        //       crop: true,
-        //       style: {
-        //         fontSize: '0.8em',
-        //         textOutline: '1px white',
-        //       },
-        //     },
-        //   },
-        // ],
+        annotations: [
+          {
+            draggable: false,
+            labels: pointsOfInterest.map((pointOfInterest) => ({
+              point: {
+                xAxis: 0,
+                yAxis: 0,
+                x: pointOfInterest.distance,
+                y: pointOfInterest.elevation,
+              },
+              text: pointOfInterest.name,
+            })),
+          },
+        ],
         xAxis: {
           labels: { format: '{value} km' },
           minRange: 5,
           title: { text: 'Distance' },
-          accessibility: { rangeDescription: 'Range: 0 to 187.8km.' },
         },
         yAxis: {
           startOnTick: true,
@@ -94,10 +51,6 @@ export default {
           maxPadding: 0.35,
           title: { text: 'Altitude' },
           labels: { format: '{value} m' },
-          accessibility: {
-            description: 'Altitude',
-            rangeDescription: 'Range: 0 to 1,553 meters',
-          },
         },
         tooltip: {
           headerFormat: 'Distance: {point.x:.1f} km<br>',
@@ -108,8 +61,8 @@ export default {
         series: [
           {
             data: altitudeData,
-            lineColor: Highcharts.getOptions().colors[1],
-            color: Highcharts.getOptions().colors[2],
+            lineColor: '#4b5563', // gray-600
+            color: '#34d399', // emerald-400
             fillOpacity: 0.5,
             name: 'Altitude',
             marker: { enabled: false },
