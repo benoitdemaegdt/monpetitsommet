@@ -61,8 +61,8 @@ export default {
         series: [
           {
             data: altitudeData,
-            lineColor: '#4b5563', // gray-600
-            color: '#34d399', // emerald-400
+            lineColor: '#059669', // emerald-600
+            color: '#d1fae5', // emerald-100
             fillOpacity: 0.5,
             name: 'Altitude',
             marker: { enabled: false },
