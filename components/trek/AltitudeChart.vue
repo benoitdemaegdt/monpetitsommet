@@ -34,7 +34,7 @@ export default {
                 xAxis: 0,
                 yAxis: 0,
                 x: pointOfInterest.distance,
-                y: pointOfInterest.elevation,
+                y: pointOfInterest.altitude,
               },
               text: pointOfInterest.name,
             })),
