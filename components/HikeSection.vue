@@ -72,7 +72,7 @@ const hikes = [
     title: 'Traversée des Bauges',
     subtitle:
       'Si vous envisagez de louer un appartement en meublé, vous vous demandez sans doute quels sont les meubles que vous allez devoir fournir à votre locataire. La liste de ces meubles indispensables à été fixé par décret le 31 juillet 2015 (n°2015-981) et nous vous la détaillons dans cet article.',
-    path: '/blog/liste-meubles-location-meublee',
+    path: '/randonnees/traversee-bauges',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg',
   },
@@ -81,7 +81,7 @@ const hikes = [
     title: 'Traversée du Vercors (Balcon Est)',
     subtitle:
       'L’intérêt fiscal de la location meublée repose principalement sur le système d’amortissement comptable. Il est donc important de comprendre ce système pour optimiser la rentabilité de son bien immobilier.',
-    path: '/blog/amortissement-location-meublee',
+    path: '/randonnees/traversee-du-vercors-balcon-est',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
   },
