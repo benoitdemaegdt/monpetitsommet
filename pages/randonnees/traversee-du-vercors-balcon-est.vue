@@ -135,6 +135,7 @@
         <h2>Aperçu de la rando</h2>
         <TrekStats />
         <ClientOnly>
+          <TrekMap class="mt-8 rounded-lg shadow" />
           <TrekAltitudeChart class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

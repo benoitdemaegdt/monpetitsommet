@@ -12,6 +12,7 @@
     "@nuxtjs/tailwindcss": "^5.0.2",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
+    "@vue-leaflet/vue-leaflet": "^0.6.1",
     "nuxt3": "3.0.0-27496606.e43ba6e"
   },
   "dependencies": {

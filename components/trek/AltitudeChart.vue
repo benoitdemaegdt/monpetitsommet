@@ -12,8 +12,9 @@ if (process.client) {
 export default {
   name: 'TrekAltitudeChart',
   async setup() {
-    const { getTrekData } = useTrekData()
-    const { altitudeData, pointsOfInterest } = await getTrekData()
+    const { getGeojson, getTrekData } = useTrekData()
+    const geojson = await getGeojson()
+    const { altitudeData, pointsOfInterest } = getTrekData(geojson)
 
     return {
       chartOptions: {
