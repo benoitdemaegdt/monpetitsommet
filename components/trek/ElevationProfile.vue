@@ -10,11 +10,11 @@ if (process.client) {
 }
 
 export default {
-  name: 'TrekAltitudeChart',
-  async setup() {
-    const { getGeojson, getTrekData } = useTrekData()
-    const geojson = await getGeojson()
-    const { altitudeData, pointsOfInterest } = getTrekData(geojson)
+  name: 'TrekElevationProfile',
+  props: ['geojson'],
+  async setup(props) {
+    const { getTrekData } = useTrekData()
+    const { altitudeData, pointsOfInterest } = getTrekData(props.geojson)
 
     return {
       chartOptions: {
