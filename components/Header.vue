@@ -107,6 +107,13 @@
           <div class="py-6 px-5 space-y-6 bg-gray-50">
             <div class="grid grid-cols-2 gap-y-4 gap-x-8">
               <NuxtLink
+                to="/blog"
+                @click="close()"
+                class="text-base font-medium text-gray-900 hover:text-gray-700"
+              >
+                Blog
+              </NuxtLink>
+              <NuxtLink
                 to="/contact"
                 @click="close()"
                 class="text-base font-medium text-gray-900 hover:text-gray-700"
@@ -141,17 +148,11 @@ import {
   SunIcon,
   PhotographIcon,
   MenuIcon,
-  RssIcon,
   XIcon,
 } from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 
 const navItems = [
-  {
-    name: 'Refuges',
-    path: '/refuges',
-    icon: HomeIcon,
-  },
   {
     name: 'Rando',
     path: '/randonnees',
@@ -168,9 +169,9 @@ const navItems = [
     icon: PhotographIcon,
   },
   {
-    name: 'Blog',
-    path: '/blog',
-    icon: RssIcon,
+    name: 'Refuges',
+    path: '/refuges',
+    icon: HomeIcon,
   },
 ]
 
