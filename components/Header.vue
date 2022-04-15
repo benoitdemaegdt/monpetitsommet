@@ -24,22 +24,12 @@
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
           <NuxtLink
-            to="/randonnees"
+            v-for="navItem in navItems"
+            :key="navItem.name"
+            :to="navItem.path"
             class="text-base font-medium text-gray-500 hover:text-gray-900"
           >
-            Rando
-          </NuxtLink>
-          <NuxtLink
-            to="/ski-de-rando"
-            class="text-base font-medium text-gray-500 hover:text-gray-900"
-          >
-            Ski de rando
-          </NuxtLink>
-          <NuxtLink
-            to="/alpinisme"
-            class="text-base font-medium text-gray-500 hover:text-gray-900"
-          >
-            Alpinisme
+            {{ navItem.name }}
           </NuxtLink>
         </PopoverGroup>
         <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -146,6 +136,7 @@ import {
   PopoverPanel,
 } from '@headlessui/vue'
 import {
+  HomeIcon,
   MapIcon,
   SunIcon,
   PhotographIcon,
@@ -157,7 +148,12 @@ import { ChevronDownIcon } from '@heroicons/vue/solid'
 
 const navItems = [
   {
-    name: 'Randonnées',
+    name: 'Refuges',
+    path: '/refuges',
+    icon: HomeIcon,
+  },
+  {
+    name: 'Rando',
     path: '/randonnees',
     icon: MapIcon,
   },
