@@ -1,7 +1,7 @@
 <template>
   <LMap style="height: 40vh" @ready="onMapReady" :bounds="bounds">
     <LTileLayer :url="url"></LTileLayer>
-    <LGeoJson :geojson="geojson" />
+    <LGeoJson :geojson="geojson" :options="geojsonOptions" />
     <LCircleMarker
       :lat-lng="firstCoordinate"
       :radius="6"
@@ -44,10 +44,33 @@ export default {
     const bounds = ref(null)
     const { getBounds } = useTrekData()
     const { firstCoordinate, lastCoordinate } = getBounds(props.geojson)
+    const geojsonOptions = ref({
+      style: () => ({
+        color: '#D81B60',
+      }),
+      onEachFeature: (feature, layer) => {
+        if (feature.geometry.type === 'Point') {
+          layer.bindPopup(feature.properties.name)
+        }
+      },
+    })
 
     const onMapReady = async () => {
       bounds.value = [firstCoordinate, lastCoordinate]
     }
+
+    onBeforeMount(async () => {
+      // vue-leaflet requires this async import
+      const { icon, marker } = await import('leaflet/dist/leaflet-src.esm')
+      geojsonOptions.value.pointToLayer = (feature, latLng) => {
+        const customIcon = new icon({
+          iconSize: [25, 25],
+          popupAnchor: [1, -24],
+          iconUrl: feature.properties.icon,
+        })
+        return marker(latLng, { icon: customIcon })
+      }
+    })
 
     return {
       onMapReady,
@@ -56,6 +79,7 @@ export default {
       firstCoordinate,
       lastCoordinate,
       bounds,
+      geojsonOptions,
     }
   },
 }
