@@ -4,11 +4,15 @@ const refuges = [
     key: 'cabane-de-pre-peyret',
     coordinates: [5.4828, 44.82698, 1600],
   },
+  {
+    name: 'Cabane des aiguillettes',
+    key: 'cabane-des-aiguillettes',
+    coordinates: [5.52026, 44.85368, 1880],
+  },
 ]
 
 export default defineEventHandler((event) => {
   const refuge = refuges.find(({ key }) => key === event.context.params.name)
-
   return {
     type: 'FeatureCollection',
     features: [

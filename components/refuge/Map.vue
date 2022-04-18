@@ -24,6 +24,7 @@ export default {
         }
       },
     })
+    const { path } = useRoute()
 
     onBeforeMount(async () => {
       // vue-leaflet requires this async import
@@ -40,7 +41,7 @@ export default {
 
     const { getGeojson, getCoordinates } = useRefugeData()
 
-    geojson.value = await getGeojson()
+    geojson.value = await getGeojson(path)
 
     return {
       url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',

@@ -1,8 +1,8 @@
 import { $fetch } from 'ohmyfetch'
 
 export const useRefugeData = () => {
-  async function getGeojson() {
-    const endpoint = '/api/refuges/cabane-de-pre-peyret'
+  async function getGeojson(path) {
+    const endpoint = `/api/${path}`
     return $fetch(endpoint)
   }
 
