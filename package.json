@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/content": "^1.15.1",
     "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.21.1",
+    "core-js": "^3.22.1",
     "lite-youtube-embed": "^0.2.0",
     "mapbox-gl": "^2.7.1",
     "nuxt": "^2.15.8",
