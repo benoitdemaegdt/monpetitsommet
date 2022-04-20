@@ -9,6 +9,11 @@ const refuges = [
     key: 'cabane-des-aiguillettes',
     coordinates: [5.52026, 44.85368, 1880],
   },
+  {
+    name: 'Cabane PNRV des Chaumailloux',
+    key: 'cabane-pnrv-des-chaumailloux',
+    coordinates: [5.51194, 44.80543, 1665],
+  },
 ]
 
 export default defineEventHandler((event) => {
