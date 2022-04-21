@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt'
 
 const TITLE = 'Mon Petit Sommet'
 const BASE_URL = 'https://monpetitsommet.fr'
