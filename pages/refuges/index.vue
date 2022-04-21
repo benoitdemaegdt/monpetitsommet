@@ -1,111 +1,98 @@
 <template>
-  <div class="bg-white">
-    <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-xl mx-auto py-16 sm:py-24">
-        <div class="text-center">
-          <h1
-            class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
+  <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative">
+      <div
+        class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
+      >
+        <h2
+          class="text-base font-semibold tracking-wider text-emerald-600 uppercase"
+        >
+          Dormir en montagne
+        </h2>
+        <p
+          class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
+        >
+          Refuges et cabanes non gardées
+        </p>
+        <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+      </div>
+      <div
+        class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl"
+      >
+        <ClientOnly>
+          <RefugeMap class="rounded-lg shadow" />
+        </ClientOnly>
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <NuxtLink
+            v-for="refuge in refuges"
+            :key="refuge.name"
+            :to="refuge.path"
+            class="flex flex-col rounded-lg shadow-lg overflow-hidden"
           >
-            Vous êtes en avance.
-          </h1>
-          <p class="mt-2 text-lg text-gray-500">
-            Des refuges seront ajoutés très prochainement.
-          </p>
-        </div>
-        <div class="mt-12">
-          <h2
-            class="text-sm font-semibold text-gray-500 tracking-wide uppercase"
-          >
-            Autres catégories
-          </h2>
-          <ul
-            role="list"
-            class="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200"
-          >
-            <li
-              v-for="(link, linkIdx) in links"
-              :key="linkIdx"
-              class="relative py-6 flex items-start space-x-4"
-            >
-              <div class="flex-shrink-0">
-                <span
-                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-50"
-                >
-                  <component
-                    :is="link.icon"
-                    class="h-6 w-6 text-emerald-700"
-                    aria-hidden="true"
-                  />
-                </span>
+            <div class="flex-shrink-0">
+              <img
+                class="h-52 w-full object-cover"
+                :src="refuge.imageUrl"
+                alt="cover image"
+              />
+            </div>
+            <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+              <div class="flex-1">
+                <div class="text-sm font-medium uppercase text-emerald-600">
+                  {{ refuge.massif }}
+                </div>
+                <div class="block mt-2">
+                  <p class="text-xl font-semibold text-gray-900">
+                    {{ refuge.name }}
+                  </p>
+                  <p class="mt-3 text-base text-gray-500">
+                    hey, my name is ben 👋
+                  </p>
+                </div>
               </div>
-              <div class="min-w-0 flex-1">
-                <h3 class="text-base font-medium text-gray-900">
-                  <span
-                    class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-emerald-500"
-                  >
-                    <NuxtLink :to="link.path" class="focus:outline-none">
-                      <span class="absolute inset-0" aria-hidden="true" />
-                      {{ link.title }}
-                    </NuxtLink>
-                  </span>
-                </h3>
-                <p class="text-base text-gray-500">{{ link.description }}</p>
-              </div>
-              <div class="flex-shrink-0 self-center">
-                <ChevronRightIcon
-                  class="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
-              </div>
-            </li>
-          </ul>
-          <div class="mt-8">
-            <NuxtLink
-              to="/"
-              class="text-base font-medium text-emerald-600 hover:text-emerald-500"
-              >Retour à l'accueil<span aria-hidden="true">
-                &rarr;</span
-              ></NuxtLink
-            >
-          </div>
+            </div>
+          </NuxtLink>
         </div>
       </div>
-    </main>
+    </div>
   </div>
 </template>
 
 <script>
-import { ChevronRightIcon } from '@heroicons/vue/solid'
-import { MapIcon, SunIcon, RssIcon } from '@heroicons/vue/outline'
-
-const links = [
+const refuges = [
   {
-    title: 'Randonnées',
-    description: 'Des topos détaillés de randos de deux ou trois jours.',
-    icon: MapIcon,
-    path: '/randonnees',
+    massif: 'Vercors',
+    name: 'Cabane de Pré peyret',
+    path: '/refuges/cabane-de-pre-peyret',
+    imageUrl:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg',
   },
   {
-    title: 'Alpinisme',
-    description: "L'aventure au bout de la corde.",
-    icon: SunIcon,
-    path: '/alpinisme',
+    massif: 'Vercors',
+    name: 'Cabane des aiguillettes',
+    path: '/refuges/cabane-des-aiguillettes',
+    imageUrl:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg',
   },
   {
-    title: 'Blog',
-    description: 'Découverte de sports, test de matos, bons plans.',
-    icon: RssIcon,
-    path: '/blog',
+    massif: 'Vercors',
+    name: 'Cabane PNRV des chaumailloux',
+    path: '/refuges/cabane-pnrv-des-chaumailloux',
+    imageUrl:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg',
   },
 ]
 
 export default {
-  components: {
-    ChevronRightIcon,
-  },
   setup() {
+    // call geojson and add map
     return {
-      links,
+      refuges,
     }
   },
 }
