@@ -10,7 +10,7 @@
             <img
               class="h-8 w-auto sm:h-10"
               src="~/assets/img/logo.png"
-              alt=""
+              alt="logo mon petit sommet"
             />
           </NuxtLink>
         </div>
