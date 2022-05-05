@@ -10,7 +10,6 @@ export default defineEventHandler(() => {
         coordinates: refuge.coordinates,
       },
       properties: {
-        massif: refuge.massif,
         name: refuge.name,
         icon: '/icons/refuge.png',
       },

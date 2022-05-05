@@ -134,9 +134,11 @@
         />
         <h2>Localisation</h2>
         <ClientOnly>
-          <RefugeMap class="rounded-lg shadow" />
+          <RefugeStats :refuge="refuge" />
+          <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
+        <!-- TODO: ajouter section équipement -->
         <p>
           La source d'eau la plus proche, la Fontaine des Endettés, se situe à
           quelques mètres au sud de la cabane. Attention, la source à tendance à
@@ -169,3 +171,27 @@
     </div>
   </div>
 </template>
+
+<script>
+const refuge = {
+  massif: 'Vercors',
+  name: 'Cabane de Pré peyret',
+  path: '/refuges/cabane-de-pre-peyret',
+  altitude: 1600,
+  beds: 15,
+  stove: true,
+  water: true,
+  type: 'cabane non gardée',
+  frequentation: 'forte fréquentation',
+  imageUrl:
+    'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg',
+}
+
+export default {
+  setup() {
+    return {
+      refuge,
+    }
+  },
+}
+</script>

@@ -16,7 +16,9 @@ export default {
     LGeoJson,
   },
   async setup() {
-    const geojson = ref({})
+    const { getGeojson, getCoordinates } = useRefugeData()
+    const { path } = useRoute()
+
     const geojsonOptions = ref({
       onEachFeature: (feature, layer) => {
         if (feature.geometry.type === 'Point') {
@@ -24,7 +26,6 @@ export default {
         }
       },
     })
-    const { path } = useRoute()
 
     onBeforeMount(async () => {
       // vue-leaflet requires this async import
@@ -39,15 +40,13 @@ export default {
       }
     })
 
-    const { getGeojson, getCoordinates } = useRefugeData()
-
-    geojson.value = await getGeojson(path)
+    const geojson = await getGeojson(path)
 
     return {
       url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-      geojson: geojson.value,
+      geojson: geojson,
       geojsonOptions,
-      center: getCoordinates(geojson.value).slice(0, 2).reverse(),
+      center: getCoordinates(geojson).slice(0, 2).reverse(),
       zoom: 11,
     }
   },

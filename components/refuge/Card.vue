@@ -45,6 +45,16 @@
               <div class="ml-2">Eau: {{ water }}</div>
             </div>
           </div>
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-y-2">
+            <span
+              class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+              >{{ type }}</span
+            >
+            <span
+              class="inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800"
+              >{{ frequentation }}</span
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -65,6 +75,8 @@ export default {
       beds: props.refuge.beds,
       stove: props.refuge.stove ? 'Oui' : 'Non',
       water: props.refuge.water ? 'Oui' : 'Non',
+      type: props.refuge.type,
+      frequentation: props.refuge.frequentation,
     }
   },
 }

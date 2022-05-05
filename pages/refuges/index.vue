@@ -45,6 +45,8 @@ const refuges = [
     beds: 15,
     stove: true,
     water: true,
+    type: 'cabane non gardée',
+    frequentation: 'forte fréquentation',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg',
   },
@@ -56,6 +58,8 @@ const refuges = [
     beds: 4,
     stove: false,
     water: true,
+    type: 'cabane non gardée',
+    frequentation: 'forte fréquentation',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg',
   },
@@ -67,6 +71,8 @@ const refuges = [
     beds: 19,
     stove: true,
     water: true,
+    type: 'cabane non gardée',
+    frequentation: 'forte fréquentation',
     imageUrl:
       'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg',
   },

@@ -137,7 +137,8 @@
         />
         <h2>Localisation</h2>
         <ClientOnly>
-          <RefugeMap class="rounded-lg shadow" />
+          <RefugeStats :refuge="refuge" />
+          <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
         <p>
@@ -172,3 +173,27 @@
     </div>
   </div>
 </template>
+
+<script>
+const refuge = {
+  massif: 'Vercors',
+  name: 'Cabane des aiguillettes',
+  path: '/refuges/cabane-des-aiguillettes',
+  altitude: 1880,
+  beds: 4,
+  stove: false,
+  water: true,
+  type: 'cabane non gardée',
+  frequentation: 'forte fréquentation',
+  imageUrl:
+    'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg',
+}
+
+export default {
+  setup() {
+    return {
+      refuge,
+    }
+  },
+}
+</script>

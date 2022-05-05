@@ -136,7 +136,8 @@
         />
         <h2>Localisation</h2>
         <ClientOnly>
-          <RefugeMap class="rounded-lg shadow" />
+          <RefugeStats :refuge="refuge" />
+          <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
         <p>
@@ -170,3 +171,27 @@
     </div>
   </div>
 </template>
+
+<script>
+const refuge = {
+  massif: 'Vercors',
+  name: 'Cabane PNRV des chaumailloux',
+  path: '/refuges/cabane-pnrv-des-chaumailloux',
+  altitude: 1665,
+  beds: 19,
+  stove: true,
+  water: true,
+  type: 'cabane non gardée',
+  frequentation: 'forte fréquentation',
+  imageUrl:
+    'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg',
+}
+
+export default {
+  setup() {
+    return {
+      refuge,
+    }
+  },
+}
+</script>
