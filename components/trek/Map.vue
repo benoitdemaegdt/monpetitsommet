@@ -1,5 +1,10 @@
 <template>
-  <LMap style="height: 40vh" @ready="onMapReady" :bounds="bounds">
+  <LMap
+    style="height: 40vh"
+    @ready="onMapReady"
+    :bounds="bounds"
+    :options="options"
+  >
     <LTileLayer :url="url"></LTileLayer>
     <LGeoJson :geojson="geojson" :options="geojsonOptions" />
     <LCircleMarker
@@ -80,6 +85,7 @@ export default {
       lastCoordinate,
       bounds,
       geojsonOptions,
+      options: { scrollWheelZoom: false },
     }
   },
 }

@@ -1,5 +1,5 @@
 <template>
-  <LMap style="height: 40vh" :zoom="zoom" :center="center">
+  <LMap style="height: 40vh" :zoom="zoom" :center="center" :options="options">
     <LTileLayer :url="url"></LTileLayer>
     <LGeoJson :geojson="geojson" :options="geojsonOptions" />
   </LMap>
@@ -48,6 +48,7 @@ export default {
       geojsonOptions,
       center: getCoordinates(geojson).slice(0, 2).reverse(),
       zoom: 11,
+      options: { scrollWheelZoom: false },
     }
   },
 }
