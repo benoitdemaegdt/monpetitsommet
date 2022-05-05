@@ -80,7 +80,6 @@ const refuges = [
 
 export default {
   setup() {
-    // call geojson and add map
     return {
       refuges,
     }

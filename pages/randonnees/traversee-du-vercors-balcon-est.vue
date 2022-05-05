@@ -133,9 +133,7 @@
           height="873"
         />
         <h2>Aperçu de la rando</h2>
-        <ClientOnly>
-          <TrekOverview />
-        </ClientOnly>
+        <TrekOverview />
         <h2>Accès</h2>
         <p>
           Le point de départ de cette randonnée est la Richardière, un tout

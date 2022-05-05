@@ -133,8 +133,8 @@
           height="873"
         />
         <h2>Localisation</h2>
+        <RefugeStats :refuge="refuge" />
         <ClientOnly>
-          <RefugeStats :refuge="refuge" />
           <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
