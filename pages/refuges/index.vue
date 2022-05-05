@@ -10,10 +10,11 @@
           Refuges et cabanes non gardées
         </h1>
         <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
+          De la simple cabane de berger au refuge moderne, les massifs alpins
+          français regorgent d'abris de montagne. Prévoir d'y passer une nuit
+          est une aventure : on ne sait pas ce qu'on va y trouver ni qui on va
+          rencontrer. Sortez de votre zone de confort et découvrez où vous
+          passerez votre prochaine nuit en montagne !
         </p>
       </div>
       <div
