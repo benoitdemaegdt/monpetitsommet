@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white relative overflow-hidden">
     <HeroSection />
-    <HikeSection />
+    <TrekSection />
     <RefugeSection />
     <NewsletterSection />
   </div>
