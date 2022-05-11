@@ -2,7 +2,7 @@
   <div class="bg-white relative overflow-hidden">
     <HeroSection />
     <HikeSection />
-    <SkiTouringSection />
+    <RefugeSection />
     <NewsletterSection />
   </div>
 </template>

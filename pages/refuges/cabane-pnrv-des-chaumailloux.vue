@@ -140,6 +140,7 @@
           <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
+        <RefugeEquipment :refuge="refuge" />
         <p>
           Il y a deux sources qui coulent (même en plein été !) à proximité de
           la cabane des chaumailloux. La première est située quelques mètres en
@@ -181,6 +182,11 @@ const refuge = {
   beds: 19,
   stove: true,
   water: true,
+  toilets: false,
+  wood: true,
+  stove: true,
+  matresses: 0,
+  blankets: false,
   type: 'cabane non gardée',
   frequentation: 'forte fréquentation',
   imageUrl:

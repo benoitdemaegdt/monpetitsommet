@@ -138,7 +138,7 @@
           <RefugeMap class="mt-8 rounded-lg shadow" />
         </ClientOnly>
         <h2>Équipements</h2>
-        <!-- TODO: ajouter section équipement -->
+        <RefugeEquipment :refuge="refuge" />
         <p>
           La source d'eau la plus proche, la Fontaine des Endettés, se situe à
           quelques mètres au sud de la cabane. Attention, la source à tendance à
@@ -181,6 +181,11 @@ const refuge = {
   beds: 15,
   stove: true,
   water: true,
+  toilets: false,
+  wood: true,
+  stove: true,
+  matresses: 0,
+  blankets: false,
   type: 'cabane non gardée',
   frequentation: 'forte fréquentation',
   imageUrl:
