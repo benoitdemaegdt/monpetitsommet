@@ -2,7 +2,7 @@
   <div>
     <TrekStats />
     <client-only>
-      <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
+      <!-- <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
       <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
     </client-only>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">

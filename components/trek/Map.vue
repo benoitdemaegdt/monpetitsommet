@@ -1,5 +1,6 @@
 <template>
-  <LMap
+  <div>hey</div>
+  <!-- <LMap
     style="height: 40vh"
     @ready="onMapReady"
     :bounds="bounds"
@@ -25,68 +26,68 @@
       fillColor="#ef4444"
       :fillOpacity="0.9"
     />
-  </LMap>
+  </LMap> -->
 </template>
 
 <script>
-import {
-  LMap,
-  LGeoJson,
-  LTileLayer,
-  LCircleMarker,
-} from '@vue-leaflet/vue-leaflet'
+// import {
+//   LMap,
+//   LGeoJson,
+//   LTileLayer,
+//   LCircleMarker,
+// } from '@vue-leaflet/vue-leaflet'
 
-export default {
-  name: 'TrekMap',
-  components: {
-    LMap,
-    LTileLayer,
-    LGeoJson,
-    LCircleMarker,
-  },
-  props: ['geojson'],
-  async setup(props) {
-    const bounds = ref(null)
-    const { getBounds } = useTrekData()
-    const { firstCoordinate, lastCoordinate } = getBounds(props.geojson)
-    const geojsonOptions = ref({
-      style: () => ({
-        color: '#D81B60',
-      }),
-      onEachFeature: (feature, layer) => {
-        if (feature.geometry.type === 'Point') {
-          layer.bindPopup(feature.properties.name)
-        }
-      },
-    })
+// export default {
+//   name: 'TrekMap',
+//   components: {
+//     LMap,
+//     LTileLayer,
+//     LGeoJson,
+//     LCircleMarker,
+//   },
+//   props: ['geojson'],
+//   async setup(props) {
+//     const bounds = ref(null)
+//     const { getBounds } = useTrekData()
+//     const { firstCoordinate, lastCoordinate } = getBounds(props.geojson)
+//     const geojsonOptions = ref({
+//       style: () => ({
+//         color: '#D81B60',
+//       }),
+//       onEachFeature: (feature, layer) => {
+//         if (feature.geometry.type === 'Point') {
+//           layer.bindPopup(feature.properties.name)
+//         }
+//       },
+//     })
 
-    const onMapReady = async () => {
-      bounds.value = [firstCoordinate, lastCoordinate]
-    }
+//     const onMapReady = async () => {
+//       bounds.value = [firstCoordinate, lastCoordinate]
+//     }
 
-    onBeforeMount(async () => {
-      // vue-leaflet requires this async import
-      const { icon, marker } = await import('leaflet/dist/leaflet-src.esm')
-      geojsonOptions.value.pointToLayer = (feature, latLng) => {
-        const customIcon = new icon({
-          iconSize: [25, 25],
-          popupAnchor: [1, -24],
-          iconUrl: feature.properties.icon,
-        })
-        return marker(latLng, { icon: customIcon })
-      }
-    })
+//     onBeforeMount(async () => {
+//       // vue-leaflet requires this async import
+//       const { icon, marker } = await import('leaflet/dist/leaflet-src.esm')
+//       geojsonOptions.value.pointToLayer = (feature, latLng) => {
+//         const customIcon = new icon({
+//           iconSize: [25, 25],
+//           popupAnchor: [1, -24],
+//           iconUrl: feature.properties.icon,
+//         })
+//         return marker(latLng, { icon: customIcon })
+//       }
+//     })
 
-    return {
-      onMapReady,
-      url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-      geojson: props.geojson,
-      firstCoordinate,
-      lastCoordinate,
-      bounds,
-      geojsonOptions,
-      options: { scrollWheelZoom: false },
-    }
-  },
-}
+//     return {
+//       onMapReady,
+//       url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
+//       geojson: props.geojson,
+//       firstCoordinate,
+//       lastCoordinate,
+//       bounds,
+//       geojsonOptions,
+//       options: { scrollWheelZoom: false },
+//     }
+//   },
+// }
 </script>
