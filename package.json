@@ -9,7 +9,7 @@
   "devDependencies": {
     "@headlessui/vue": "^1.5.0",
     "@heroicons/vue": "^1.0.6",
-    "@nuxtjs/tailwindcss": "^5.0.2",
+    "@nuxtjs/tailwindcss": "^5.1.2",
     "@tailwindcss/forms": "^0.5.0",
     "@tailwindcss/typography": "^0.5.2",
     "@vue-leaflet/vue-leaflet": "^0.6.1",
@@ -17,6 +17,5 @@
   },
   "dependencies": {
     "highcharts-vue": "^1.4.0"
-  },
-  "overrides": { "ufo": "^0.8.4" }
+  }
 }

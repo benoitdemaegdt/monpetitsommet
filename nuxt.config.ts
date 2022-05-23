@@ -43,6 +43,7 @@ export default defineNuxtConfig({
   },
   css: ['leaflet/dist/leaflet.css'],
   modules: ['@nuxtjs/tailwindcss'],
+  tailwindcss: { viewer: false },
   build: {
     transpile: [
       '@heroicons/vue', // https://github.com/tailwindlabs/heroicons/issues/564
