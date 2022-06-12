@@ -2,7 +2,7 @@
 massif: vercors
 name: Abri de la Peyrouse
 type: cabane non gardée
-img: /v1619862238/vercors/abris-peyrousse_osdbqk.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1619862238/vercors/abris-peyrousse_osdbqk.jpg
 beds: 2
 altitude: 1575
 longitude: 5.52703
@@ -13,6 +13,7 @@ wood: true
 stove: false
 matresses: 0
 blankets: false
+frequentation: 'faible fréquentation'
 ---
 
 ## Informations

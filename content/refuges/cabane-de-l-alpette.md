@@ -2,7 +2,7 @@
 massif: chartreuse
 name: Cabane de l'Alpette
 type: cabane non gardée
-img: /v1590923291/chartreuse/cabane-de-l-alpette-1_aj09pn.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1590923291/chartreuse/cabane-de-l-alpette-1_aj09pn.jpg
 beds: 20
 altitude: 1497
 longitude: 5.9212124348
@@ -13,6 +13,7 @@ wood: true
 stove: true
 matresses: 3
 blankets: true
+frequentation: 'faible fréquentation'
 ---
 
 ## Informations

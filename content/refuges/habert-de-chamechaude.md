@@ -2,7 +2,7 @@
 massif: chartreuse
 name: Habert de Chamechaude
 type: cabane non gardée
-img: /v1590923270/chartreuse/habert-de-chamechaude-1_usil7h.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1590923270/chartreuse/habert-de-chamechaude-1_usil7h.jpg
 beds: 20
 altitude: 1570
 longitude: 5.79258
@@ -13,6 +13,7 @@ wood: true
 stove: false
 matresses: 5
 blankets: false
+frequentation: 'forte fréquentation'
 ---
 
 ## Informations

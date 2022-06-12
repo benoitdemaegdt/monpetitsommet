@@ -2,7 +2,7 @@
 massif: chartreuse
 name: Le Pleynon
 type: cabane non gardée
-img: /v1590923248/chartreuse/le-pleynon-3_tkgmzy.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1590923248/chartreuse/le-pleynon-3_tkgmzy.jpg
 beds: 5
 altitude: 1252
 longitude: 5.8163
@@ -13,6 +13,7 @@ wood: true
 stove: true
 matresses: 5
 blankets: false
+frequentation: 'faible fréquentation'
 ---
 
 ## Informations

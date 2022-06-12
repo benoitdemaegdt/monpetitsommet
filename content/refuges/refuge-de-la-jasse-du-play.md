@@ -2,7 +2,7 @@
 massif: vercors
 name: Refuge de la Jasse du Play
 type: cabane non gardée
-img: /v1591018140/vercors/refuge-de-la-jasse-du-play-1_gw7gif.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018140/vercors/refuge-de-la-jasse-du-play-1_gw7gif.jpg
 beds: 10
 altitude: 1629
 longitude: 5.5021
@@ -13,6 +13,7 @@ wood: true
 stove: true
 matresses: 0
 blankets: false
+frequentation: 'forte fréquentation'
 ---
 
 ## Informations

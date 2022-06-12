@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane des Aiguillettes
 type: cabane non gardée
-img: /v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg
 beds: 4
 altitude: 1880
 longitude: 5.52026
@@ -13,6 +13,7 @@ wood: false
 stove: false
 matresses: 0
 blankets: false
+frequentation: 'forte fréquentation'
 ---
 
 Cette petite cabane, elle se mérite ! Déjà parce qu'elle se situe au coeur de la réserve naturelle des Hauts Plateaux du Vercors, à plusieurs heures de marche (et beaucoup de dénivelé) de la route la plus proche. Mais aussi parce qu'elle est cachée dans un repli de terrain qui la rend invisible aux randonneurs non avertis. La cabane des aiguillettes, c'est un abris (très) sommaire situé dans un cadre exceptionnel : au pied du Grand Veymont (plus haut sommet du Vercors) et en face du mont Aiguille. On trouve un beau récit d'aventure qui parle de cette cabane sur le site de [Les Others](https://www.lesothers.com/hauts-plateaux-vercors-cabane).

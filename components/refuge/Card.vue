@@ -68,7 +68,7 @@ export default {
   setup(props) {
     return {
       name: props.refuge.name,
-      path: props.refuge.path,
+      path: props.refuge._path,
       imageUrl: props.refuge.imageUrl,
       massif: props.refuge.massif,
       altitude: `${props.refuge.altitude}m`,

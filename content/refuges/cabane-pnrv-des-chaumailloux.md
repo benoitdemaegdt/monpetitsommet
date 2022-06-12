@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane PNRV des Chaumailloux
 type: cabane non gardée
-img: /v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg
 beds: 19
 altitude: 1665
 longitude: 5.51194
@@ -13,6 +13,7 @@ wood: true
 stove: true
 matresses: 0
 blankets: false
+frequentation: 'forte fréquentation'
 ---
 
 Difficile de ne pas tomber sous le charme de la cabane des Chaumailloux et de sa vue splendide sur le Mont Aiguille. Il s'agit d'un simple abris hexagonal en bois (rénové au cours de l'automne 2018) située à quelques dizaines de mètres au dessus du Pas de l'Aiguille (haut lieu de mémoire pour la résistance dans le massif du Vercors). Ne venez pas ici si vous en êtes en quête d'intimité : sa localisation, son superbe cadre et sa facilité d'accès depuis le hameau de la richardière attirent de nombreux randonneurs.

@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     ],
   },
   css: ['leaflet/dist/leaflet.css'],
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
   tailwindcss: { viewer: false },
   build: {
     transpile: [

@@ -2,7 +2,7 @@
 massif: vercors
 name: Cabane de Châtillon
 type: cabane non gardée
-img: /v1591018121/vercors/cabane-de-chatillon-1_eikpkp.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018121/vercors/cabane-de-chatillon-1_eikpkp.jpg
 beds: 10
 altitude: 1774
 longitude: 5.4902
@@ -13,6 +13,7 @@ wood: false
 stove: true
 matresses: 0
 blankets: false
+frequentation: 'faible fréquentation'
 ---
 
 ## Informations
