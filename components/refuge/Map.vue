@@ -15,9 +15,24 @@ export default {
     LTileLayer,
     LGeoJson,
   },
-  async setup() {
-    const { getGeojson, getCoordinates } = useRefugeData()
-    const { path } = useRoute()
+  props: ['refuges'],
+  async setup(props) {
+    const { getCoordinates } = useRefugeData()
+
+    const geojson = {
+      type: 'FeatureCollection',
+      features: props.refuges.map((refuge) => ({
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [refuge.longitude, refuge.latitude],
+        },
+        properties: {
+          name: refuge.name,
+          icon: '/icons/refuge.png',
+        },
+      })),
+    }
 
     const geojsonOptions = ref({
       onEachFeature: (feature, layer) => {
@@ -39,8 +54,6 @@ export default {
         return marker(latLng, { icon: customIcon })
       }
     })
-
-    const geojson = await getGeojson(path)
 
     return {
       url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
