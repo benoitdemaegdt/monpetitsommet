@@ -175,7 +175,7 @@
 <script setup>
 const { path } = useRoute()
 
-const { data: refuge } = await useAsyncData('refuge', () => {
+const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
   return queryContent('/refuges').where({ _path: path }).findOne()
 })
 </script>
