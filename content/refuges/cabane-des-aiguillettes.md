@@ -20,13 +20,13 @@ Cette petite cabane, elle se mérite ! Déjà parce qu'elle se situe au coeur de
 
 ## Informations
 
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
 
 ---
 
 ## Équipements
 
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
 
 La source d'eau la plus proche, la Fontaine du pas des Bachassons, se trouve à quelques centaines de mètres au sud de la cabane. Cette fontaine est l'une des rares sources du Vercors qui coule habituellement tout l'été. Pensez tout de même à vérifier son débit avant de partir.
 

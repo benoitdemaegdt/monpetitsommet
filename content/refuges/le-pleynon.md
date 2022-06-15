@@ -18,13 +18,13 @@ frequentation: 'faible fréquentation'
 
 ## Informations
 
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
+<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
 
 ---
 
 ## Équipements
 
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
 
 ---
 
