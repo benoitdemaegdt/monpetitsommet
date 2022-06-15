@@ -139,6 +139,7 @@
         </client-only>
         <h2>Équipements</h2>
         <RefugeEquipment :refuge="refuge" />
+        <ContentRenderer :value="refuge" />
         <!-- <p>
           La source d'eau la plus proche, la Fontaine des Endettés, se situe à
           quelques mètres au sud de la cabane. Attention, la source à tendance à
