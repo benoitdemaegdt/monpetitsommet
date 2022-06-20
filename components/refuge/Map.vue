@@ -1,5 +1,12 @@
 <template>
-  <LMap style="height: 40vh" :zoom="zoom" :center="center" :options="options">
+  <LMap
+    ref="map"
+    style="height: 40vh"
+    @ready="onMapReady"
+    :center="center"
+    :zoom="zoom"
+    :options="options"
+  >
     <LTileLayer :url="url"></LTileLayer>
     <LGeoJson :geojson="geojson" :options="geojsonOptions" />
   </LMap>
@@ -17,6 +24,7 @@ export default {
   },
   props: ['refuges'],
   async setup(props) {
+    const map = ref(null)
     const { getCoordinates } = useRefugeData()
 
     const geojson = {
@@ -55,7 +63,17 @@ export default {
       }
     })
 
+    const onMapReady = async () => {
+      if (props.refuges.length > 2) {
+        map.value.leafletObject.fitBounds(
+          props.refuges.map((refuge) => [refuge.latitude, refuge.longitude])
+        )
+      }
+    }
+
     return {
+      map,
+      onMapReady,
       url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
       geojson: geojson,
       geojsonOptions,
