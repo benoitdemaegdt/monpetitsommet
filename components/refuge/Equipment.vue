@@ -1,12 +1,24 @@
 <template>
-  <div class="grid grid-cols-2 gap-2 text-base text-gray-500">
+  <div class="not-prose grid grid-cols-2 gap-4 sm:grid-cols-3">
     <div
       v-for="equipment in equipments"
       :key="equipment.name"
-      class="flex items-center"
+      class="relative px-6 py-5 flex items-center space-x-3 bg-white shadow rounded-lg overflow-hidden"
     >
-      <img :src="equipment.icon" :alt="equipment.alt" class="m-0 h-5 w-5" />
-      <div class="ml-2">{{ equipment.name }}: {{ equipment.value }}</div>
+      <div class="flex-shrink-0">
+        <img class="h-7 w-7" :src="equipment.icon" alt="" />
+      </div>
+      <div class="flex-1 min-w-0">
+        <div>
+          <span class="absolute inset-0" aria-hidden="true" />
+          <p class="text-sm font-medium text-gray-900">
+            {{ equipment.name }}
+          </p>
+          <p class="text-sm text-gray-500 truncate">
+            {{ equipment.value }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +30,12 @@ export default {
   setup(props) {
     return {
       equipments: [
+        {
+          name: 'Places',
+          value: props?.refuge?.beds,
+          icon: '/icons/bed.png',
+          alt: 'icone lit',
+        },
         {
           name: 'Matelas',
           value: props?.refuge?.matresses,
@@ -41,12 +59,6 @@ export default {
           value: props?.refuge?.wood ? 'Oui' : 'Non',
           icon: '/icons/wood.png',
           alt: 'icone bois',
-        },
-        {
-          name: 'Eau',
-          value: props?.refuge?.water ? 'Oui' : 'Non',
-          icon: '/icons/water.png',
-          alt: 'icone eau',
         },
         {
           name: 'Toilettes',

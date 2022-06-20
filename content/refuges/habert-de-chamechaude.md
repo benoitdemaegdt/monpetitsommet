@@ -15,16 +15,7 @@ matresses: 5
 blankets: false
 frequentation: 'forte fréquentation'
 ---
-
-## Informations
-
-<!-- <grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid> -->
-
----
-
-## Équipements
-
-<!-- <grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid> -->
+## Eau
 
 Attention : pas d'eau à proximité immédiate du Habert de Chamechaude. La source la plus proche est la source de Pré-Boiteux située sur le sentier qui contourne la Chamechaude par le sud, mais elle ne coule pas en été. Sinon il faut aller au camping du Sappey-en-Chartreuse.
 
