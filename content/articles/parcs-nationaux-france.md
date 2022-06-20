@@ -2,7 +2,7 @@
 title: Quels sont les 11 parcs nationaux français ?
 description: 'Un parc national français désigne un espace protégé du fait de sa richesse naturelle exceptionnelle. Depuis novembre 2019 on dénombre très exactement 11 parcs nationaux en France : la Vanoise, Port-Cros, les Pyrénées, les Cévennes, les Écrins, le Mercantour, la Guadeloupe, la Réunion, la Guyane, les Calanques et enfin le tout récent parc national de forêts.'
 category: culture
-img: /v1618861709/articles/parcs-nationaux-france/parc-nationaux_fx2kyn.png
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto//v1618861709/articles/parcs-nationaux-france/parc-nationaux_fx2kyn.png
 alt: logo des parcs nationaux
 ---
 

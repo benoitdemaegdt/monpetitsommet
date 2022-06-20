@@ -2,7 +2,7 @@
 title: Tout savoir sur le vol de pente en snowkite
 description: Proche du speedriding et du parapente, le vol de pente consiste à utiliser son aile de snowkite pour décoller et se maintenir en l'air le temps d'une descente. On vous explique comment ça fonctionne.
 category: snowkite
-img: /v1642016804/snowkite/snowkite_barrvl.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto//v1642016804/snowkite/snowkite_barrvl.jpg
 alt: snowkite
 ---
 
