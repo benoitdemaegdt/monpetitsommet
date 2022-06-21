@@ -58,6 +58,6 @@
 
 <script setup>
 const { data: articles } = await useAsyncData('articles', () => {
-  return queryContent('/articles').find()
+  return queryContent('/blog').find()
 })
 </script>
