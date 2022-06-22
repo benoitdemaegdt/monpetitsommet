@@ -11,7 +11,7 @@ caption: Vue sur les balcons Est du Vercors depuis la Grande Moucherolle
 gpx: https://api.monpetitsommet.fr/massifs/vercors/randonnees/traversee-du-vercors-balcon-est.json
 rating: 5
 distance: 42.75
-elevation: 4328.35
+elevation: 4328
 duration: 2 à 3 jours
 difficulty: T3
 water: true

@@ -15,18 +15,14 @@
   </dl>
 </template>
 
-<script>
+<script setup>
+const props = defineProps({
+  trek: Object,
+})
+
 const stats = [
-  { name: 'Distance', stat: '42.75 km' },
-  { name: 'Dénivelé +', stat: '4328 m' },
-  { name: 'Cotation', stat: 'T3' },
+  { name: 'Distance', stat: `${props.trek.distance} km` },
+  { name: 'Dénivelé +', stat: `${props.trek.elevation} m` },
+  { name: 'Cotation', stat: `${props.trek.difficulty}` },
 ]
-export default {
-  name: 'TrekStats',
-  setup() {
-    return {
-      stats,
-    }
-  },
-}
 </script>

@@ -7,7 +7,7 @@ caption: Bivouac et coucher de soleil au sommet de la Dent de Crolles
 gpx: https://api.monpetitsommet.fr/massifs/chartreuse/randonnees/petite-traversee-chartreuse.json
 rating: 5
 distance: 44.35
-elevation: 1879.07
+elevation: 1879
 duration: 2 à 3 jours
 difficulty: T3
 water: true

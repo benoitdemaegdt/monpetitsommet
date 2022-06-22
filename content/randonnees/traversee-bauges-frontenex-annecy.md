@@ -12,7 +12,7 @@ caption: Vue sur le lac d'Annecy depuis la pointe de la Chaurionde
 gpx: https://api.monpetitsommet.fr/massifs/bauges/randonnees/traversee-bauges-frontenex-annecy.json
 rating: 4
 distance: 66.8
-elevation: 5150.15
+elevation: 5150
 duration: 3 à 4 jours
 difficulty: T2
 water: true

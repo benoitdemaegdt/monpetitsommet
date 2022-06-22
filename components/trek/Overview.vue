@@ -1,9 +1,9 @@
 <template>
   <div>
-    <TrekStats />
+    <TrekStats :trek="trek" />
     <client-only>
-      <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
-      <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
+      <!-- <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
+      <!-- <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
     </client-only>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <a
@@ -25,21 +25,15 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
 
-export default {
-  name: 'TrekOverview',
-  components: {
-    DownloadIcon,
-    MapIcon,
-  },
-  async setup() {
-    const { getGeojson } = useTrekData()
-    const geojson = await getGeojson()
-    return {
-      geojson,
-    }
-  },
-}
+const props = defineProps({
+  trek: Object,
+})
+
+const trek = props.trek
+
+const { getGeojson } = useTrekData()
+const geojson = await getGeojson()
 </script>

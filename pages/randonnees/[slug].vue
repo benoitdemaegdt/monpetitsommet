@@ -128,7 +128,7 @@
           height="873"
         />
         <h2>Aperçu de la rando</h2>
-        <!-- <TrekOverview /> -->
+        <TrekOverview :trek="trek" />
         <ContentRenderer :value="trek" />
       </div>
     </div>
