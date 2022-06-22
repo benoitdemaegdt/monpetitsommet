@@ -1,12 +1,12 @@
 ---
 massif: vercors
-title: Traversée du Vercors (Balcon Est)
+name: Traversée du Vercors (Balcon Est)
 description: "La traversée du Vercors (Balcon Est) est certainement l'une des
   plus belles et majestueuses randonnées de ce massif. L'itinéraire est varié et
   sportif : une bonne distance, deux sommets (le Grand Veymont et la Grande
   Moucherolle), des passages techniques et exposés, des secteurs denses en
   animaux sauvages. Le tout pour une inoubliable aventure en montagne."
-img: /v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png
 caption: Vue sur les balcons Est du Vercors depuis la Grande Moucherolle
 gpx: https://api.monpetitsommet.fr/massifs/vercors/randonnees/traversee-du-vercors-balcon-est.json
 rating: 5
