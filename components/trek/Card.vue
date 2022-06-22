@@ -66,7 +66,7 @@ export default {
     return {
       name: props.trek.name,
       massif: props.trek.massif,
-      path: props.trek.path,
+      path: props.trek._path,
       imageUrl: props.trek.imageUrl,
       distance: `${props.trek.distance}m`,
       duration: props.trek.duration,
