@@ -28,6 +28,6 @@
 
 <script setup>
 const { data: treks } = await useAsyncData('treks', () => {
-  return queryContent('/randonnees').find()
+  return queryContent('/randonnees').where({ _type: 'markdown' }).find()
 })
 </script>

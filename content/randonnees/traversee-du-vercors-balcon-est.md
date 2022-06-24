@@ -8,7 +8,6 @@ description: "La traversée du Vercors (Balcon Est) est certainement l'une des
   animaux sauvages. Le tout pour une inoubliable aventure en montagne."
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png
 caption: Vue sur les balcons Est du Vercors depuis la Grande Moucherolle
-gpx: https://api.monpetitsommet.fr/massifs/vercors/randonnees/traversee-du-vercors-balcon-est.json
 rating: 5
 distance: 42.75
 elevation: 4328

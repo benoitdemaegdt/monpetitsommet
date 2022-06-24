@@ -1,11 +1,4 @@
-import { $fetch } from 'ohmyfetch'
-
 export const useTrekData = () => {
-  async function getGeojson() {
-    const endpoint = '/api/randonnees/traversee-du-vercors-balcon-est'
-    return $fetch(endpoint)
-  }
-
   function getBounds(geojson) {
     const { features } = geojson
     const lineString = features.find(
@@ -41,5 +34,5 @@ export const useTrekData = () => {
     }
   }
 
-  return { getGeojson, getBounds, getTrekData }
+  return { getBounds, getTrekData }
 }

@@ -122,8 +122,8 @@
       <div class="mt-6 prose prose-emerald prose-lg text-gray-500 mx-auto">
         <img
           class="w-full rounded-lg"
-          src="https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642016804/snowkite/snowkite_barrvl.jpg"
-          alt="snowkite"
+          :src="article.imageUrl"
+          :alt="article.alt"
           width="1310"
           height="873"
         />

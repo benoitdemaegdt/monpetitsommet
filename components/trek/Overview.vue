@@ -3,7 +3,7 @@
     <TrekStats :trek="trek" />
     <client-only>
       <!-- <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
-      <!-- <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
+      <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
     </client-only>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <a
@@ -28,12 +28,13 @@
 <script setup>
 import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
 
-const props = defineProps({
-  trek: Object,
-})
-
+const props = defineProps({ trek: Object })
 const trek = props.trek
 
-const { getGeojson } = useTrekData()
-const geojson = await getGeojson()
+const { path } = useRoute()
+const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
+  return queryContent('/randonnees')
+    .where({ _path: path, _type: 'json' })
+    .findOne()
+})
 </script>
