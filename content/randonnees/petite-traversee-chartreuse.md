@@ -4,7 +4,6 @@ name: Petite Traversée de la Chartreuse
 description: Traverser la chartreuse par ses plus beaux endroits en 2 ou 3 jours ? C'est l'objectif de cet itinéraire ! Il suit globalement le tracé du GR 9 qui permet de relier Grenoble à Chambéry, mais en évitant la très longue montée initiale depuis Grenoble ainsi que l'interminable descente finale vers Chambéry. Un concentré de ce qu'il y a de mieux en Chartreuse, à vivre le temps d'un (long) week end.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/intro_xuxv2u.jpg
 caption: Bivouac et coucher de soleil au sommet de la Dent de Crolles
-gpx: https://api.monpetitsommet.fr/massifs/chartreuse/randonnees/petite-traversee-chartreuse.json
 rating: 5
 distance: 44.35
 elevation: 1879
