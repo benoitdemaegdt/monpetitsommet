@@ -27,6 +27,7 @@ export default {
         },
         title: { text: 'Profil altimétrique' },
         credits: { enabled: false },
+        accessibility: { enabled: false },
         annotations: [
           {
             draggable: false,
