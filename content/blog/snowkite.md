@@ -12,7 +12,7 @@ En deux mots, le snowkite c'est pareil que le kitesurf, mais sur la neige ! Le p
 \
 \
 Comme une image vaut mille mots, vous pouvez apprécier cette superbe vidéo pour voir à quoi peut ressembler le snowkite de (très) haut niveau.
-<content-youtube class="mt-4" video-id="cMXo-mrxC1k" label="snowkite en haute montagne"></content-youtube>
+<!-- <content-youtube class="mt-4" video-id="cMXo-mrxC1k" label="snowkite en haute montagne"></content-youtube> -->
 
 ## Quel est le matériel nécessaire à la pratique du snowkite ?
 
@@ -53,7 +53,13 @@ Parmi les spots de snowkite les plus connus, il y a :
 
 Il y a également tout un tas d'autres spots moins connus dans les monts du Forez, en Ardèche, dans l'Aubrac ...
 
-<content-image url="/v1642019505/snowkite/snowkite-lautaret_st0ia9.jpg" caption="Snowkite au col du Lautaret, le plus beau spot des Alpes ?"></content-image>
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019505/snowkite/snowkite-lautaret_st0ia9.jpg
+alt: Snowkite au col du Lautaret
+caption: Snowkite au col du Lautaret, le plus beau spot des Alpes ?
+---
+::
 
 ## Quelles sont les meilleures conditions ?
 
@@ -67,4 +73,10 @@ Le snowkite est un sport exigeant en terme de conditions météos. Il faut en ef
 
 Ces 3 conditions sont rarement réunies, il faut saisir les occasions !
 
-<content-image url="/v1642019506/snowkite/snowkite-vercors_hmbpfs.jpg" caption="15 noeuds, neige fraiche et grand soleil : conditions de rêve pour une session de snowkite dans le Vercors"></content-image>
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019506/snowkite/snowkite-vercors_hmbpfs.jpg
+alt: "15 noeuds, neige fraiche et grand soleil : conditions de rêve pour une session de snowkite dans le Vercors"
+caption: "15 noeuds, neige fraiche et grand soleil : conditions de rêve pour une session de snowkite dans le Vercors"
+---
+::
