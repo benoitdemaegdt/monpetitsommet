@@ -29,53 +29,19 @@
   </div>
 </template>
 
-<script>
-const treks = [
-  {
-    name: 'Petite Traversée de la Chartreuse',
-    massif: 'Chartreuse',
-    path: '/randonnees/petite-traversee-chartreuse',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload//v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/intro_xuxv2u.jpg',
-    distance: 44.35,
-    duration: '2 à 3 jours',
-    elevation: 1879.07,
-    difficulty: 'T3',
-    from: 'Sappey-en-Chartreuse',
-    to: 'Pontcharra',
-  },
-  {
-    name: 'Traversée des Bauges',
-    massif: 'Bauges',
-    path: '/randonnees/traversee-bauges-frontenex-annecy',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg',
-    distance: 66.8,
-    duration: '3 à 4 jours',
-    elevation: 5150.15,
-    difficulty: 'T2',
-    from: 'Frontenex',
-    to: 'Annecy',
-  },
-  {
-    name: 'Traversée du Vercors (Balcon Est)',
-    massif: 'Vercors',
-    path: '/randonnees/traversee-du-vercors-balcon-est',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png',
-    distance: 42.75,
-    duration: '2 à 3 jours',
-    elevation: 4328.35,
-    difficulty: 'T3',
-    from: 'Clelles',
-    to: 'Villard-de-Lans',
-  },
-]
-
-export default {
-  name: 'TrekSection',
-  setup: () => ({
-    treks,
-  }),
-}
+<script setup>
+const { data: treks } = await useAsyncData('treks', () => {
+  return queryContent('/randonnees')
+    .where({
+      _type: 'markdown',
+      name: {
+        $in: [
+          'Traversée des Bauges',
+          'Traversée du Vercors (Balcon Est)',
+          'Petite Traversée de la Chartreuse',
+        ],
+      },
+    })
+    .find()
+})
 </script>

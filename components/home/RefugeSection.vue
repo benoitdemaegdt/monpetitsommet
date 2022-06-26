@@ -35,53 +35,18 @@
   </div>
 </template>
 
-<script>
-const refuges = [
-  {
-    massif: 'Vercors',
-    name: 'Cabane de Pré peyret',
-    path: '/refuges/cabane-de-pre-peyret',
-    altitude: 1600,
-    beds: 15,
-    stove: true,
-    water: true,
-    type: 'cabane non gardée',
-    frequentation: 'forte fréquentation',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg',
-  },
-  {
-    massif: 'Vercors',
-    name: 'Cabane des aiguillettes',
-    path: '/refuges/cabane-des-aiguillettes',
-    altitude: 1880,
-    beds: 4,
-    stove: false,
-    water: true,
-    type: 'cabane non gardée',
-    frequentation: 'forte fréquentation',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018111/vercors/cabane-des-aiguillettes-1_i9komu.jpg',
-  },
-  {
-    massif: 'Vercors',
-    name: 'Cabane PNRV des chaumailloux',
-    path: '/refuges/cabane-pnrv-des-chaumailloux',
-    altitude: 1665,
-    beds: 19,
-    stove: true,
-    water: true,
-    type: 'cabane non gardée',
-    frequentation: 'forte fréquentation',
-    imageUrl:
-      'https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018146/vercors/cabane-pnrv-des-chaumailloux-1_ujyt32.jpg',
-  },
-]
-
-export default {
-  name: 'RefugeSection',
-  setup: () => ({
-    refuges,
-  }),
-}
+<script setup>
+const { data: refuges } = await useAsyncData('refuges', () => {
+  return queryContent('/refuges')
+    .where({
+      name: {
+        $in: [
+          'Cabane de Pré Peyret',
+          'Cabane des Aiguillettes',
+          'Cabane PNRV des Chaumailloux',
+        ],
+      },
+    })
+    .find()
+})
 </script>
