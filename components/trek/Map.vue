@@ -1,5 +1,5 @@
 <template>
-  <div id="mapId" style="height: 40vh"></div>
+  <div id="trekMap" style="height: 40vh"></div>
 </template>
 
 <script setup>
@@ -12,22 +12,26 @@ const { geojson } = defineProps({
 const { getBounds } = useTrekData()
 const { firstCoordinate, lastCoordinate } = getBounds(geojson)
 
+let myMap
+
 onMounted(async () => {
   if (process.client) {
     const { map, tileLayer, geoJSON, icon, marker, circleMarker } =
       await import('leaflet/dist/leaflet-src.esm')
 
     // create map
-    const mymap = map('mapId', { scrollWheelZoom: false })
+    // const mapContainer = DomUtil.get('mapId')
+    // if (mapContainer != null) mapContainer._leaflet_id = null
+    myMap = map('trekMap', { scrollWheelZoom: false })
     tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(
-      mymap
+      myMap
     )
 
     // zoom map to zone of interest
-    mymap.on('load', () => {
-      mymap.fitBounds([firstCoordinate, lastCoordinate], { padding: [40, 40] })
+    myMap.on('load', () => {
+      myMap.fitBounds([firstCoordinate, lastCoordinate], { padding: [40, 40] })
     })
-    mymap.setView(firstCoordinate, 11)
+    myMap.setView(firstCoordinate, 11)
 
     // add geojson line (path)
     geoJSON(geojson, {
@@ -45,7 +49,7 @@ onMounted(async () => {
         })
         return marker(latLng, { icon: customIcon })
       },
-    }).addTo(mymap)
+    }).addTo(myMap)
 
     // add circle marker for start and end of trek
     circleMarker(firstCoordinate, {
@@ -55,7 +59,7 @@ onMounted(async () => {
       fill: true,
       fillColor: '#10b981',
       fillOpacity: 0.9,
-    }).addTo(mymap)
+    }).addTo(myMap)
 
     circleMarker(lastCoordinate, {
       radius: 6,
@@ -64,7 +68,11 @@ onMounted(async () => {
       fill: true,
       fillColor: '#ef4444',
       fillOpacity: 0.9,
-    }).addTo(mymap)
+    }).addTo(myMap)
   }
+})
+
+onUnmounted(() => {
+  myMap.remove()
 })
 </script>

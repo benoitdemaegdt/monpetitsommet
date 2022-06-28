@@ -1,5 +1,5 @@
 <template>
-  <div id="mapId" style="height: 40vh"></div>
+  <div id="refugeMap" style="height: 40vh"></div>
 </template>
 
 <script setup>
@@ -26,6 +26,8 @@ const geojson = {
   })),
 }
 
+let myMap
+
 onMounted(async () => {
   if (process.client) {
     const { map, tileLayer, geoJSON, icon, marker } = await import(
@@ -33,20 +35,21 @@ onMounted(async () => {
     )
 
     // create map
-    const mymap = map('mapId', { scrollWheelZoom: false })
+    if (myMap != undefined) myMap.remove()
+    myMap = map('refugeMap', { scrollWheelZoom: false })
     tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(
-      mymap
+      myMap
     )
 
     // zoom map to zone of interest
-    mymap.on('load', () => {
+    myMap.on('load', () => {
       if (refuges.length > 2) {
-        mymap.fitBounds(
+        myMap.fitBounds(
           refuges.map((refuge) => [refuge.latitude, refuge.longitude])
         )
       }
     })
-    mymap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+    myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
 
     // add geojson layer
     geoJSON(geojson, {
@@ -63,7 +66,11 @@ onMounted(async () => {
         })
         return marker(latLng, { icon: customIcon })
       },
-    }).addTo(mymap)
+    }).addTo(myMap)
   }
+})
+
+onUnmounted(() => {
+  myMap.remove()
 })
 </script>
