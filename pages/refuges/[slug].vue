@@ -129,9 +129,7 @@
         />
         <h2>Localisation</h2>
         <RefugeStats :refuge="refuge" />
-        <client-only>
-          <RefugeMap :refuges="[refuge]" class="mt-8 rounded-lg shadow" />
-        </client-only>
+        <RefugeMap :refuges="[refuge]" class="mt-8 rounded-lg shadow" />
         <h2>Équipements</h2>
         <RefugeEquipment :refuge="refuge" />
         <ContentRenderer :value="refuge" />

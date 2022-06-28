@@ -41,7 +41,6 @@ export default defineNuxtConfig({
       { hid: 'canonical', rel: 'canonical', href: BASE_URL },
     ],
   },
-  css: ['leaflet/dist/leaflet.css'],
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
   tailwindcss: { viewer: false },
   build: {
