@@ -41,7 +41,8 @@ export default defineNuxtConfig({
       { hid: 'canonical', rel: 'canonical', href: BASE_URL },
     ],
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
+  sitemap: { hostname: 'https://monpetitsommet.fr' },
   tailwindcss: { viewer: false },
   build: {
     transpile: [
