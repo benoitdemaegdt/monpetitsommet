@@ -1,92 +1,70 @@
 <template>
-  <LMap
-    style="height: 40vh"
-    @ready="onMapReady"
-    :bounds="bounds"
-    :options="options"
-  >
-    <LTileLayer :url="url"></LTileLayer>
-    <LGeoJson :geojson="geojson" :options="geojsonOptions" />
-    <LCircleMarker
-      :lat-lng="firstCoordinate"
-      :radius="6"
-      color="#334155"
-      :weight="1"
-      :fill="true"
-      fillColor="#10b981"
-      :fillOpacity="0.9"
-    />
-    <LCircleMarker
-      :lat-lng="lastCoordinate"
-      :radius="6"
-      color="#334155"
-      :weight="1"
-      :fill="true"
-      fillColor="#ef4444"
-      :fillOpacity="0.9"
-    />
-  </LMap>
+  <div id="mapId" style="height: 40vh"></div>
 </template>
 
-<script>
-import {
-  LMap,
-  LGeoJson,
-  LTileLayer,
-  LCircleMarker,
-} from '@vue-leaflet/vue-leaflet'
+<script setup>
+import 'leaflet/dist/leaflet.css'
 
-export default {
-  name: 'TrekMap',
-  components: {
-    LMap,
-    LTileLayer,
-    LGeoJson,
-    LCircleMarker,
-  },
-  props: ['geojson'],
-  async setup(props) {
-    const bounds = ref(null)
-    const { getBounds } = useTrekData()
-    const { firstCoordinate, lastCoordinate } = getBounds(props.geojson)
-    const geojsonOptions = ref({
-      style: () => ({
-        color: '#D81B60',
-      }),
+const { geojson } = defineProps({
+  geojson: { type: Object, required: true },
+})
+
+const { getBounds } = useTrekData()
+const { firstCoordinate, lastCoordinate } = getBounds(geojson)
+
+onMounted(async () => {
+  if (process.client) {
+    const { map, tileLayer, geoJSON, icon, marker, circleMarker } =
+      await import('leaflet/dist/leaflet-src.esm')
+
+    // create map
+    const mymap = map('mapId', { scrollWheelZoom: false })
+    tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(
+      mymap
+    )
+
+    // zoom map to zone of interest
+    mymap.on('load', () => {
+      mymap.fitBounds([firstCoordinate, lastCoordinate], { padding: [40, 40] })
+    })
+    mymap.setView(firstCoordinate, 11)
+
+    // add geojson line (path)
+    geoJSON(geojson, {
+      style: () => ({ color: '#D81B60' }),
       onEachFeature: (feature, layer) => {
         if (feature.geometry.type === 'Point') {
           layer.bindPopup(feature.properties.name)
         }
       },
-    })
-
-    const onMapReady = async () => {
-      bounds.value = [firstCoordinate, lastCoordinate]
-    }
-
-    onBeforeMount(async () => {
-      // vue-leaflet requires this async import
-      const { icon, marker } = await import('leaflet/dist/leaflet-src.esm')
-      geojsonOptions.value.pointToLayer = (feature, latLng) => {
+      pointToLayer: (feature, latLng) => {
         const customIcon = new icon({
           iconSize: [25, 25],
           popupAnchor: [1, -24],
           iconUrl: feature.properties.icon,
         })
         return marker(latLng, { icon: customIcon })
-      }
-    })
+      },
+    }).addTo(mymap)
 
-    return {
-      onMapReady,
-      url: 'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',
-      geojson: props.geojson,
-      firstCoordinate,
-      lastCoordinate,
-      bounds,
-      geojsonOptions,
-      options: { scrollWheelZoom: false },
-    }
-  },
-}
+    // add circle marker for start and end of trek
+    circleMarker(firstCoordinate, {
+      radius: 6,
+      weight: 1,
+      color: '#334155',
+      fill: true,
+      fillColor: '#10b981',
+      fillOpacity: 0.9,
+    }).addTo(mymap)
+
+    circleMarker(lastCoordinate, {
+      radius: 6,
+      weight: 1,
+      color: '#334155',
+      fill: true,
+      fillColor: '#ef4444',
+      fillOpacity: 0.9,
+    }).addTo(mymap)
+  }
+})
 </script>
