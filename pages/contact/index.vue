@@ -80,9 +80,11 @@
       </div>
       <div class="mt-12">
         <form
-          action="#"
+          name="contact"
           method="POST"
+          netlify
           class="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+          @submit.prevent="handleSubmit()"
         >
           <div>
             <label
@@ -92,10 +94,12 @@
             >
             <div class="mt-1">
               <input
+                v-model="firstName"
                 type="text"
                 name="first-name"
                 id="first-name"
                 autocomplete="given-name"
+                required
                 class="py-3 px-4 block w-full shadow-sm focus:ring-emerald-500 focus:border-emerald-500 border-gray-300 rounded-md"
               />
             </div>
@@ -108,10 +112,12 @@
             >
             <div class="mt-1">
               <input
+                v-model="lastName"
                 type="text"
                 name="last-name"
                 id="last-name"
                 autocomplete="family-name"
+                required
                 class="py-3 px-4 block w-full shadow-sm focus:ring-emerald-500 focus:border-emerald-500 border-gray-300 rounded-md"
               />
             </div>
@@ -122,10 +128,12 @@
             >
             <div class="mt-1">
               <input
+                v-model="email"
                 id="email"
                 name="email"
                 type="email"
                 autocomplete="email"
+                required
                 class="py-3 px-4 block w-full shadow-sm focus:ring-emerald-500 focus:border-emerald-500 border-gray-300 rounded-md"
               />
             </div>
@@ -136,9 +144,11 @@
             >
             <div class="mt-1">
               <textarea
+                v-model="message"
                 id="message"
                 name="message"
                 rows="4"
+                required
                 class="py-3 px-4 block w-full shadow-sm focus:ring-emerald-500 focus:border-emerald-500 border border-gray-300 rounded-md"
               />
             </div>
@@ -157,8 +167,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Contact',
-}
+<script setup>
+const { firstName, lastName, email, message, handleSubmit } = useContact()
 </script>

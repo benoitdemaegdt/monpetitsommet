@@ -78,12 +78,20 @@
                 y en a pour tous les goûts !
               </p>
             </div>
-            <form action="#" class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
+            <form
+              name="newsletter"
+              method="POST"
+              netlify
+              class="mt-12 sm:mx-auto sm:max-w-lg sm:flex"
+              @submit.prevent="handleSubmit()"
+            >
               <div class="min-w-0 flex-1">
                 <label for="cta-email" class="sr-only">Email</label>
                 <input
+                  v-model="email"
                   id="cta-email"
                   type="email"
+                  required
                   class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
                   placeholder="Entrez votre email"
                 />
@@ -104,8 +112,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'NewsletterSection',
-}
+<script setup>
+const { email, handleSubmit } = useNewsletter()
 </script>
