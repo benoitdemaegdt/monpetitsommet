@@ -8,6 +8,7 @@ description:
   lac d'Annecy. D'ailleurs, quel bonheur que de pouvoir terminer cette randonnée par
   une baignade dans ce lac ...
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
+ignUrl: https://livre.fnac.com/a10237519/Collectif-Massif-des-Bauges-Resistante
 caption: Vue sur le lac d'Annecy depuis la pointe de la Chaurionde
 rating: 4
 distance: 66.8

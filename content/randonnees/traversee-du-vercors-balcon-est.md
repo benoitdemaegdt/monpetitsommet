@@ -7,6 +7,7 @@ description: "La traversée du Vercors (Balcon Est) est certainement l'une des
   Moucherolle), des passages techniques et exposés, des secteurs denses en
   animaux sauvages. Le tout pour une inoubliable aventure en montagne."
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png
+ignUrl: https://livre.fnac.com/a10415495/Collectif-Villard-de-Lans-MT-Aiguille-PNR-du-Vercors-Resistante
 caption: Vue sur les balcons Est du Vercors depuis la Grande Moucherolle
 rating: 5
 distance: 42.75
