@@ -48,6 +48,14 @@ export default defineNuxtConfig({
     transpile: [
       '@heroicons/vue', // https://github.com/tailwindlabs/heroicons/issues/564
       '@headlessui/vue', // https://github.com/tailwindlabs/headlessui/issues/982
+      'lite-youtube-embed',
     ],
   },
+  plugins: ['~/plugins/youtube.client.js'],
+  css: ['~/node_modules/lite-youtube-embed/src/lite-yt-embed.css'],
+  vue: {
+    compilerOptions: {
+      isCustomElement: tag => ['lite-youtube'].includes(tag)
+    }
+  }
 })

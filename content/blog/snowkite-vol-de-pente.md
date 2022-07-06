@@ -19,7 +19,13 @@ Il faut dire que c'est assez impressionnant à voir. Certains pratiquants décol
 \
 \
 L'un des pratiquants les plus connus, c'est <a href="https://www.youtube.com/c/loloBSD" target="_blank">lolo BSD</a>. Il poste régulièrement des vidéos impressionnantes de ses sessions et de ses vols sur youtube. Ça semble presque simple, mais il y a un gros gros level et une sacré maitrise derrière 💪.
-<!-- <content-youtube class="mt-4" video-id="JftU_LB_3wk" label="vol de pente en snowkite"></content-youtube> -->
+
+::youtube
+---
+videoid: JftU_LB_3wk
+label: vol de pente en snowkite
+---
+::
 
 ## Comment est-ce que le vol de pente fonctionne ?
 
@@ -66,7 +72,14 @@ Dans la vidéo de Lolo BSD un peu plus haut dans l'article, on remarque qu'il vo
 \
 \
 C'est un peu différent avec des skis. Grâce au poids des skis il est possible de faire faire un demi tour à la barre et de se retrouver face à la pente et donc dans le même sens que le bord d'attaque de l'aile. C'est assez contre-intuitif quand on vient du kitesurf, mais ce n'est finalement pas si compliqué. Cette vidéo de <a href="https://www.youtube.com/channel/UCttOqQR39IpZgtyKbmpMW9w" target="_blank">Alex Robin</a> montre bien la phase de transition et décollage pour un pratiquant en skis.
-<!-- <content-youtube class="mt-4 mb-4" video-id="r2XAN29NV7Y" label="vol de pente en snowkite"></content-youtube> -->
+
+::youtube
+---
+videoid: r2XAN29NV7Y
+label: vol de pente en snowkite
+---
+::
+
 La partie de cette vidéo qui nous intéresse le plus se situe entre la 10ème et la 15ème seconde. Il termine de monter, engage un demi tour, décolle et commence un vol de pente.
 Quand il est en train de monter, il tient la partie orange de la barre dans sa main gauche. Au moment où la voile passe à midi au dessus de lui et que le bord d'attaque pointe dans le sens de la descente, il commence à "changer de main" et à passer la partie orange de sa barre dans sa main droite. Une fois qu'il a pleinement changé de main et qu'il a pris un peu de vitesse, il tire sur la barre pour décoller.
 ::image

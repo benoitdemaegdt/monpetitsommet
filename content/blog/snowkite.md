@@ -12,7 +12,13 @@ En deux mots, le snowkite c'est pareil que le kitesurf, mais sur la neige ! Le p
 \
 \
 Comme une image vaut mille mots, vous pouvez apprécier cette superbe vidéo pour voir à quoi peut ressembler le snowkite de (très) haut niveau.
-<!-- <content-youtube class="mt-4" video-id="cMXo-mrxC1k" label="snowkite en haute montagne"></content-youtube> -->
+
+::youtube
+---
+videoid: cMXo-mrxC1k
+label: snowkite en haute montagne
+---
+::
 
 ## Quel est le matériel nécessaire à la pratique du snowkite ?
 
