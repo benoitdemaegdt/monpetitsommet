@@ -69,9 +69,16 @@
             <p class="text-base font-medium text-gray-900">
               Inscrivez-vous pour recevoir nos prochaines aventures
             </p>
-            <form action="#" method="POST" class="mt-3 sm:flex">
+            <form 
+              name="newsletter"
+              method="POST"
+              netlify
+              class="mt-3 sm:flex"
+              @submit.prevent="handleSubmit()"
+            >
               <label for="email" class="sr-only">Email</label>
               <input
+                v-model="email"
                 type="email"
                 name="email"
                 id="email"
@@ -106,12 +113,7 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HeroSection',
-  setup() {
-    const { topography } = usePattern()
-    return { topography }
-  },
-}
+<script setup>
+  const { topography } = usePattern()
+  const { email, handleSubmit } = useNewsletter()
 </script>
