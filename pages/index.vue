@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white relative overflow-hidden">
+  <div>
     <HomeHeroSection />
     <HomeTrekSection />
     <HomeRefugeSection />
