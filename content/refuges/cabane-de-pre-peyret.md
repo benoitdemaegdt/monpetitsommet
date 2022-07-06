@@ -2,7 +2,8 @@
 massif: vercors
 name: Cabane de Pré Peyret
 type: cabane non gardée
-img: /v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg
+description: "Grâce à sa grande capacité d'accueil et sa position à la croisée des chemins, la cabane de Pré Peyret est certainement l'une des cabanes les plus connues des Hauts Plateaux du Vercors. On y trouve toujours des randonneurs de passage pour une pause ou une nuit. La cabane en elle même est chaleureuse : présence d'un poêle pour les nuits froides, et d'un étage pour dormir."
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1591018135/vercors/cabane-de-pre-peyret-hiver-1_b9munz.jpg
 beds: 15
 altitude: 1600
 longitude: 5.4828
@@ -13,19 +14,10 @@ wood: true
 stove: true
 matresses: 0
 blankets: false
+frequentation: 'forte fréquentation'
 ---
 
-Grâce à sa grande capacité d'accueil et sa position "à la croisée des chemins", la cabane de Pré Peyret est certainement l'une des cabanes les plus connues des Hauts Plateaux du Vercors. On y trouve toujours des randonneurs de passage pour une pause ou une nuit. La cabane en elle même est chaleureuse : présence d'un poêle pour les nuits froides, et d'un étage pour dormir.
-
-## Informations
-
-<grid :altitude="altitude" :beds="beds" :longitude="longitude" :latitude="longitude"></grid>
-
----
-
-## Équipements
-
-<grid :matresses="matresses" :blankets="blankets" :stove="stove" :wood="wood" :water="water" :toilets="toilets"></grid>
+## Eau
 
 La source d'eau la plus proche, la Fontaine des Endettés, se situe à quelques mètres au sud de la cabane. Attention, la source à tendance à se tarir au milieu de l'été. Comme pour toutes les sources d'eau du Vercors, bien vérifier le débit avant de commencer sa randonnée.
 

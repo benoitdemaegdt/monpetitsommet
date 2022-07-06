@@ -1,61 +1,33 @@
 <template>
-  <div class="pt-12 pb-8 w-full">
-    <h1 class="text-center uppercase text-4xl xl:text-5xl">Randonnees</h1>
-
-    <div class="mt-4 md:mt-8 flex flex-wrap justify-evenly">
-      <NuxtLink
-        v-for="trek in treks"
-        :key="trek.title"
-        :to="{
-          name: `randonnees-slug`,
-          params: { slug: trek.slug },
-        }"
-        class="p-5 md:mt-0"
+  <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative">
+      <div
+        class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
       >
-        <TrekCard :trek="trek" />
-      </NuxtLink>
-    </div>
-
-    <!-- <h1>Randonnees</h1>
-    <ul>
-      <li v-for="randonnee in randonnees" :key="randonnee.slug">
-        <NuxtLink
-          :to="{ name: 'randonnees-slug', params: { slug: randonnee.slug } }"
+        <h1
+          class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
         >
-          <img :src="randonnee.img" />
-          <div>
-            <h2>{{ randonnee.title }}</h2>
-            <p>{{ randonnee.description }}</p>
-          </div>
-        </NuxtLink>
-      </li>
-    </ul> -->
+          Randonnées & bivouac
+        </h1>
+        <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
+          Retrouvez les topos de randonnées sportives en montagne. L'idéal pour
+          s'évader en pleine nature le temps d'un week end de deux ou trois
+          jours.
+        </p>
+      </div>
+      <div
+        class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl"
+      >
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <TrekCard v-for="trek in treks" :key="trek.name" :trek="trek" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content }) {
-    const treks = await $content('randonnees')
-      .only([
-        'massif',
-        'title',
-        'img',
-        'caption',
-        'distance',
-        'elevation',
-        'duration',
-        'difficulty',
-        'from',
-        'to',
-        'slug',
-      ])
-      .sortBy('createdAt', 'asc')
-      .fetch()
-
-    return {
-      treks,
-    }
-  },
-}
+<script setup>
+const { data: treks } = await useAsyncData('treks', () => {
+  return queryContent('/randonnees').where({ _type: 'markdown' }).find()
+})
 </script>

@@ -1,51 +1,163 @@
 <template>
-  <div class="py-16 px-2 md:py-24 md:px-12 mx-auto">
-    <h1 class="sm:text-3xl text-2xl font-bold title-font text-gray-900">
-      Mentions légales
-    </h1>
-    <h2 class="mt-2 sm:text-2xl text-xl font-semibold title-font text-gray-800">
-      Hébergement
-    </h2>
-    <p class="mt-2 text-gray-800">
-      Ce site web est hébergé par <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer" class="text-green-700 hover:underline">Netlify</a>
-    </p>
-    <h2 class="mt-2 sm:text-2xl text-xl font-semibold title-font text-gray-800">
-      Protection des données à caractère personnel
-    </h2>
-    <p class="mt-2 text-gray-800">
-      Le présent site web respecte les règles suivantes :
-      <ul class="list-disc list-inside">
-        <li>Pas de collecte de données à l'insu de l'internaute.</li>
-        <li>Limitation au minimum de la collecte des données.</li>
-        <li>Pas d’usage des informations collectées au-delà du traitement de la demande.</li>
-      </ul>
-    </p>
-    <h2 class="mt-2 sm:text-2xl text-xl font-semibold title-font text-gray-800">
-      Limitation de responsabilité
-    </h2>
-    <p class="mt-2 text-gray-800">
-      Mon Petit Sommet fait son maximum pour fournir les informations les plus exactes, complètes et récentes possibles. Cependant, le site et toute information, textes, noms, images, photos, logos, liens, etc. sont fournis « en l’état » et sans garantie expresse ou implicite. En particulier, Mon Petit Sommet ne garantit pas l'exactitude ou l'état complet des informations présentées sur ce site web ni ne garantit que l'accès à ce site web sera ininterrompue et sans erreur. En aucun cas Mon Petit Sommet ne pourra être tenu responsable pour tout dommage ou perte résultant de l'utilisation de toute information contenue sur le site web, y compris, sans limitation, les dommages indirects ou tout autre dommage suite ou en rapport avec l'utilisation du site web.
-    </p>
+  <div class="relative py-16 bg-white overflow-hidden">
+    <div class="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
+      <div
+        class="relative h-full text-lg max-w-prose mx-auto"
+        aria-hidden="true"
+      >
+        <svg
+          class="absolute top-12 left-full transform translate-x-32"
+          width="404"
+          height="384"
+          fill="none"
+          viewBox="0 0 404 384"
+        >
+          <defs>
+            <pattern
+              id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
+              x="0"
+              y="0"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="4"
+                height="4"
+                class="text-gray-200"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="404"
+            height="384"
+            fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)"
+          />
+        </svg>
+        <svg
+          class="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
+          width="404"
+          height="384"
+          fill="none"
+          viewBox="0 0 404 384"
+        >
+          <defs>
+            <pattern
+              id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+              x="0"
+              y="0"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="4"
+                height="4"
+                class="text-gray-200"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="404"
+            height="384"
+            fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)"
+          />
+        </svg>
+        <svg
+          class="absolute bottom-12 left-full transform translate-x-32"
+          width="404"
+          height="384"
+          fill="none"
+          viewBox="0 0 404 384"
+        >
+          <defs>
+            <pattern
+              id="d3eb07ae-5182-43e6-857d-35c643af9034"
+              x="0"
+              y="0"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
+              <rect
+                x="0"
+                y="0"
+                width="4"
+                height="4"
+                class="text-gray-200"
+                fill="currentColor"
+              />
+            </pattern>
+          </defs>
+          <rect
+            width="404"
+            height="384"
+            fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="relative px-4 sm:px-6 lg:px-8">
+      <div class="text-lg max-w-prose mx-auto">
+        <h1>
+          <span
+            class="block text-base text-center text-emerald-600 font-semibold tracking-wide uppercase"
+            >CGU</span
+          >
+          <span
+            class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            >Mentions légales</span
+          >
+        </h1>
+      </div>
+      <div class="mt-6 prose prose-emerald prose-lg text-gray-500 mx-auto">
+        <h2>Hébergement</h2>
+        <p>
+          Ce site web est hébergé par
+          <a
+            href="https://www.netlify.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Netlify</a
+          >
+        </p>
+        <h2>Protection des données à caractère personnel</h2>
+        <p>Le présent site web respecte les règles suivantes :</p>
+        <ul>
+          <li>Pas de collecte de données à l'insu de l'internaute.</li>
+          <li>Limitation au minimum de la collecte des données.</li>
+          <li>
+            Pas d’usage des informations collectées au-delà du traitement de la
+            demande.
+          </li>
+        </ul>
+        <h2>Limitation de responsabilité</h2>
+        <p>
+          Mon Petit Sommet fait son maximum pour fournir les informations les
+          plus exactes, complètes et récentes possibles. Cependant, le site et
+          toute information, textes, noms, images, photos, logos, liens, etc.
+          sont fournis « en l’état » et sans garantie expresse ou implicite. En
+          particulier, Mon Petit Sommet ne garantit pas l'exactitude ou l'état
+          complet des informations présentées sur ce site web ni ne garantit que
+          l'accès à ce site web sera ininterrompue et sans erreur. En aucun cas
+          Mon Petit Sommet ne pourra être tenu responsable pour tout dommage ou
+          perte résultant de l'utilisation de toute information contenue sur le
+          site web, y compris, sans limitation, les dommages indirects ou tout
+          autre dommage suite ou en rapport avec l'utilisation du site web.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Cgu',
-  head () {
-    return {
-      title: 'CGU',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: "Les conditions générales d'utilisation de Mon Petit Sommet"
-        }
-      ],
-      link: [
-        { hid: 'canonical', rel: 'canonical', href: `https://monpetitsommet.fr${this.$route.path}` }
-      ]
-    }
-  }
 }
 </script>

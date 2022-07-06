@@ -1,92 +1,40 @@
 <template>
-  <div class="pt-12 pb-8 w-full">
-    <div class="grid grid-cols-1 lg:grid-cols-12">
-      <div class="col-span-7 mt-5 px-3">
-        <p>{{ shacks.length }} refuges, cabanes ou abris référencés</p>
-        <h1 class="text-4xl text-gray-900 font-bold leading-tight">Refuges</h1>
-        <div
-          v-for="(shack, index) in shacks"
-          :key="shack.name"
-          @mouseenter="onMouseEnter(index)"
-          @mouseleave="onMouseLeave"
+  <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative">
+      <div
+        class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
+      >
+        <h1
+          class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
         >
-          <NuxtLink
-            :to="{
-              name: 'refuges-slug',
-              params: { slug: shack.slug },
-            }"
-          >
-            <shack-card class="mt-3" :shack="shack" />
-          </NuxtLink>
-        </div>
+          Refuges et cabanes non gardées
+        </h1>
+        <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
+          De la simple cabane de berger au refuge moderne, les massifs alpins
+          français regorgent d'abris de montagne. Prévoir d'y passer une nuit
+          est une aventure : on ne sait pas ce qu'on va y trouver ni qui on va
+          rencontrer. Sortez de votre zone de confort et découvrez où vous
+          passerez votre prochaine nuit en montagne !
+        </p>
       </div>
       <div
-        v-if="!isMobile"
-        class="col-span-5 pt-12 w-5/12 h-full fixed top-0 right-0"
+        class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl"
       >
-        <shack-map :shacks="shacks" :hover-shack-index="hoverShackIndex" />
+        <RefugeMap :refuges="refuges" class="rounded-lg shadow" />
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <RefugeCard
+            v-for="refuge in refuges"
+            :key="refuge.name"
+            :refuge="refuge"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import LayoutMixin from '@/mixins/LayoutMixin.js'
-
-export default {
-  mixins: [LayoutMixin],
-  async asyncData({ $content, params }) {
-    const shacks = await $content('refuges', params.slug)
-      .only([
-        'massif',
-        'name',
-        'type',
-        'img',
-        'altitude',
-        'beds',
-        'stove',
-        'water',
-        'longitude',
-        'latitude',
-        'slug',
-        'createdAt',
-      ])
-      .fetch()
-
-    return {
-      shacks,
-    }
-  },
-  data: () => ({
-    hoverShackIndex: undefined,
-  }),
-  head() {
-    return {
-      title: 'Liste des cabanes',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'Toutes les infos sur les plus belles cabanes. Préparez votre nuit en pleine nature au coeur de la montagne.',
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`,
-        },
-      ],
-    }
-  },
-  methods: {
-    onMouseEnter(index) {
-      this.hoverShackIndex = index
-    },
-    onMouseLeave() {
-      this.hoverShackIndex = undefined
-    },
-  },
-}
+<script setup>
+const { data: refuges } = await useAsyncData('refuges', () => {
+  return queryContent('/refuges').find()
+})
 </script>

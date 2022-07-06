@@ -1,100 +1,63 @@
 <template>
-  <div class="pt-12 text-gray-700 body-font overflow-hidden">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-6xl xl:px-0">
-      <div class="mt-16 pb-8 space-y-2 md:space-y-5">
-        <h1
-          class="text-3xl leading-9 font-extrabold text-gray-900 tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+  <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative">
+      <div
+        class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
+      >
+        <h2
+          class="text-base font-semibold tracking-wider text-emerald-600 uppercase"
+        >
+          Blog
+        </h2>
+        <p
+          class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
         >
           Derniers articles
-        </h1>
-        <p class="text-lg leading-7 text-gray-600">
+        </p>
+        <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
           Les articles 100% aventure de Mon Petit Sommet
         </p>
-        <div class="h-1 w-32 bg-green-600 rounded" />
       </div>
-      <div>
-        <div
-          v-for="article of articles"
-          :key="article.slug"
-          class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap"
+      <div
+        class="mt-12 mx-auto max-w-md px-4 grid gap-8 sm:max-w-lg sm:px-6 lg:px-8 lg:grid-cols-3 lg:max-w-7xl"
+      >
+        <NuxtLink
+          v-for="article in articles"
+          :key="article.title"
+          :to="article._path"
+          class="flex flex-col rounded-lg shadow-lg overflow-hidden"
         >
-          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-            <span
-              class="tracking-widest font-medium title-font text-gray-900 uppercase"
-              >{{ article.category }}</span
-            >
-            <span class="mt-1 text-gray-500 text-sm">{{
-              formatDate(article.createdAt)
-            }}</span>
+          <div class="flex-shrink-0">
+            <img
+              class="h-52 w-full object-cover"
+              :src="article.imageUrl"
+              alt="cover image"
+            />
           </div>
-          <div class="md:flex-grow">
-            <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
-              {{ article.title }}
-            </h2>
-            <p class="leading-relaxed">
-              {{ article.description }}
-            </p>
-            <NuxtLink
-              class="text-green-600 font-semibold hover:text-green-700 inline-flex items-center mt-4"
-              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
-            >
-              Lire l'article
-              <svg
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="2"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14" />
-                <path d="M12 5l7 7-7 7" />
-              </svg>
-            </NuxtLink>
+          <div class="flex-1 bg-white p-6 flex flex-col justify-between">
+            <div class="flex-1">
+              <div class="text-sm font-medium uppercase text-emerald-600">
+                {{ article.category }}
+              </div>
+              <div class="block mt-2">
+                <p class="text-xl font-semibold text-gray-900">
+                  {{ article.title }}
+                </p>
+                <p class="mt-3 text-base text-gray-500">
+                  {{ article.description }}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </NuxtLink>
       </div>
     </div>
+    <HomeNewsletterSection />
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content }) {
-    const articles = await $content('articles')
-      .only(['title', 'description', 'category', 'slug', 'createdAt'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
-
-    return {
-      articles,
-    }
-  },
-  head() {
-    return {
-      title: 'le blog de Mon Petit Sommet',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Les derniers articles de blog de Mon Petit Sommet.',
-        },
-      ],
-      link: [
-        {
-          hid: 'canonical',
-          rel: 'canonical',
-          href: `https://monpetitsommet.fr${this.$route.path}`,
-        },
-      ],
-    }
-  },
-  methods: {
-    formatDate(date) {
-      const options = { year: 'numeric', month: 'short', day: 'numeric' }
-      return new Date(date).toLocaleDateString('fr', options)
-    },
-  },
-}
+<script setup>
+const { data: articles } = await useAsyncData('articles', () => {
+  return queryContent('/blog').find()
+})
 </script>

@@ -1,49 +1,24 @@
 ---
 massif: bauges
-title: Traversée des Bauges
+name: Traversée des Bauges
 description:
   Faire le traversée des Bauges, c'est s'engager dans une randonnée exigeante,
   physique mais peu technique. On croisera des forêts, des petits villages, de
   nombreux alpages, et quelques sommets qui offrent une vue inégalables sur le
   lac d'Annecy. D'ailleurs, quel bonheur que de pouvoir terminer cette randonnée par
   une baignade dans ce lac ...
-img: /v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1603218138/bauges/randonnees/traversee-bauges-frontenex-annecy/intro_ppjy7g.jpg
+ignUrl: https://livre.fnac.com/a10237519/Collectif-Massif-des-Bauges-Resistante
 caption: Vue sur le lac d'Annecy depuis la pointe de la Chaurionde
-gpx: https://api.monpetitsommet.fr/massifs/bauges/randonnees/traversee-bauges-frontenex-annecy.json
 rating: 4
 distance: 66.8
-elevation: 5150.15
+elevation: 5150
 duration: 3 à 4 jours
 difficulty: T2
 water: true
 tent: true
 from: Frontenex
 to: Annecy
-sections:
-  - { title: 'Approche' }
-  - { title: "De Frontenex au chalet d'Orisan", from: 0, to: 419 }
-  - {
-      title: "Du chalet d'Orisan à la pointe de la Chaurionde",
-      from: 419,
-      to: 513,
-    }
-  - {
-      title: 'De la pointe de la Chaurionde à la Cabane de la Fontaine du Fayard',
-      from: 513,
-      to: 1013,
-    }
-  - {
-      title: 'De la Cabane de la Fontaine du Fayard au Refuge de la Combe',
-      from: 1013,
-      to: 1121,
-    }
-  - {
-      title: 'Du Refuge de la Combe aux Chalets du Solliet',
-      from: 1121,
-      to: 1480,
-    }
-  - { title: 'Des chalets du Solliet au Semnoz', from: 1480, to: 2001 }
-  - { title: 'Du Semnoz à Annecy', from: 2001, to: 2471 }
 ---
 
 ## Approche
@@ -58,7 +33,13 @@ Autant s'y préparer : cette randonnée attaque directement dans le dur avec une
 
 Prendre à gauche juste après le chalet d'Orisan pour monter vers Le Grand Roc (1804m). Vue saisissante sur la Réserve nationale de chasse et de faune sauvage des Bauges, l'Arcalod, le Mont de la Coche, la pointe de la Chaurionde... Tourner ensuite à droite pour suivre la crête (bivouac possible sur la crête qui est très large) jusqu'au Col du Haut du Four (1520m). Continuer tout droit en empruntant un chemin en balcon qui monte doucement vers le Col des Drizons (1762m). Ravitaillement en eau possible en faisant un aller/retour au refuge des Drizons (1640m) en contrebas du col. Poursuivre sur la crête, par un chemin qui devient de plus en plus raide, pour finalement atteindre la pointe de la Chaurionde (2173m). Depuis ce sommet, point culminant de la randonnée, on profite d'un panorama à 360° sur la réserve des Bauges avec au loin le lac d'Annecy.
 
-<content-image url="/v1603218021/bauges/randonnees/traversee-bauges-frontenex-annecy/step_2_oossdd.jpg" caption="la crête au dessus du chalet d'Orisan. Au fond à gauche l'Arcalod, à droite la pointe de la chaurionde"></content-image>
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218021/bauges/randonnees/traversee-bauges-frontenex-annecy/step_2_oossdd.jpg
+alt: La crête au dessus du chalet d'Orisan. Au fond à gauche l'Arcalod, à droite la pointe de la chaurionde
+caption: La crête au dessus du chalet d'Orisan. Au fond à gauche l'Arcalod, à droite la pointe de la chaurionde
+---
+::
 
 ## De la pointe de la Chaurionde à la Cabane de la Fontaine du Fayard
 
@@ -68,7 +49,13 @@ Enfin un peu de descente ! Continuer sur la crête par un sentier bien marqué q
 
 Remonter le chemin forestier vers la droite. Il fait de grands lacets avant de croiser un sentier de randonnée que l'on empruntera vers la droite. On débouche rapidement sur un alpage (troupeau de vaches) que l'on va traverser par un sentier en balcon. Poursuivre jusqu'au chalet du Charbon (1650m). Ravitaillement possible en eau à la source au dessus du chalet. Détour possible à la Croix du Roy (1740m) en suivant le sentier qui part à droite du charbon pour découvrir un point de vue exceptionnel sur le lac d'Annecy. Sinon, prendre à gauche vers Les Platières (1700m) puis descendre le large sentier vers le Refuge de la Combe (1573m).
 
-<content-image url="/v1603218024/bauges/randonnees/traversee-bauges-frontenex-annecy/step_4_ojbgbh.jpg" caption="Vue sur le lac d'Annecy depuis la croix du Roy"></content-image>
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218024/bauges/randonnees/traversee-bauges-frontenex-annecy/step_4_ojbgbh.jpg
+alt: Vue sur le lac d'Annecy depuis la croix du Roy
+caption: Vue sur le lac d'Annecy depuis la croix du Roy
+---
+::
 
 ## Du Refuge de la Combe aux Chalets du Solliet
 
@@ -82,4 +69,10 @@ Traverser la ferme et descendre tout droit sur le chemin de tracteur vers le vil
 
 Dernière étape de la randonnée : rejoindre Annecy. Pour cela, descendre du Crêt du Chatillon et prendre le chemin qui passe à gauche du restaurant en contrebas (ravitaillement possible en eau en demandant gentiment à un serveur). Traverser la route et s'engager dans la forêt sur un sentier que l'on suivra jusqu'à la destination finale. Bien suivre les panneaux d'indication car il y a plein de chemins différents qui se croisent. Rejoindre le sentier de la crête qui offre régulièrement de splendides panoramas sur le lac d'Annecy et les montagnes environnantes. Ce sentier se termine au niveau de la plage des marquisats à Annecy. On peut alors profiter d'une baignade bien méritée avant de rejoindre la gare d'Annecy située un peu plus loin dans le centre de la ville.
 
-<content-image url="/v1603218023/bauges/randonnees/traversee-bauges-frontenex-annecy/step_7_iostyt.jpg" caption="le lac d'Annecy, depuis le sentier de la crête"></content-image>
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218023/bauges/randonnees/traversee-bauges-frontenex-annecy/step_7_iostyt.jpg
+alt: Le lac d'Annecy, depuis le sentier de la crête
+caption: Le lac d'Annecy, depuis le sentier de la crête
+---
+::
