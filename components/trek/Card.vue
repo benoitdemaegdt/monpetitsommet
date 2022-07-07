@@ -68,7 +68,7 @@ export default {
       massif: props.trek.massif,
       path: props.trek._path,
       imageUrl: props.trek.imageUrl,
-      distance: `${props.trek.distance}m`,
+      distance: `${props.trek.distance}km`,
       duration: props.trek.duration,
       elevation: `${props.trek.elevation}m`,
       difficulty: props.trek.difficulty,
