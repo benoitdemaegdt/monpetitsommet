@@ -40,6 +40,18 @@ export default defineNuxtConfig({
       { rel: 'icon', type: 'image/ico', href: '/favicon.ico' },
       { hid: 'canonical', rel: 'canonical', href: BASE_URL },
     ],
+    script: [
+      // GTM
+      {
+        hid: 'gtm',
+        children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K948G5R');`,
+        type: 'text/javascript',
+      },
+    ],
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
   sitemap: { hostname: 'https://monpetitsommet.fr' },
@@ -55,7 +67,7 @@ export default defineNuxtConfig({
   css: ['~/node_modules/lite-youtube-embed/src/lite-yt-embed.css'],
   vue: {
     compilerOptions: {
-      isCustomElement: tag => ['lite-youtube'].includes(tag)
-    }
-  }
+      isCustomElement: (tag) => ['lite-youtube'].includes(tag),
+    },
+  },
 })
