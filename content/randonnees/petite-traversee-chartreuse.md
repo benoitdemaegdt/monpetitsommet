@@ -5,7 +5,6 @@ description: Traverser la chartreuse par ses plus beaux endroits en 2 ou 3 jours
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/intro_xuxv2u.jpg
 ignUrl: https://livre.fnac.com/a10390027/Collectif-Massif-de-la-Chartreuse-Sud
 caption: Bivouac et coucher de soleil au sommet de la Dent de Crolles
-rating: 5
 distance: 44.35
 elevation: 1879
 duration: 2 à 3 jours
