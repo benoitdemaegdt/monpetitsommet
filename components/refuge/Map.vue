@@ -35,7 +35,6 @@ onMounted(async () => {
     )
 
     // create map
-    if (myMap != undefined) myMap.remove()
     myMap = map('refugeMap', { scrollWheelZoom: false })
     tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(
       myMap

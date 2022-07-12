@@ -20,8 +20,6 @@ onMounted(async () => {
       await import('leaflet/dist/leaflet-src.esm')
 
     // create map
-    // const mapContainer = DomUtil.get('mapId')
-    // if (mapContainer != null) mapContainer._leaflet_id = null
     myMap = map('trekMap', { scrollWheelZoom: false })
     tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(
       myMap
