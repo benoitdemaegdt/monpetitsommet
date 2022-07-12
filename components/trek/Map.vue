@@ -72,7 +72,7 @@ onMounted(async () => {
   }
 })
 
-onUnmounted(() => {
+onBeforeUnmount(() => {
   myMap.remove()
 })
 </script>
