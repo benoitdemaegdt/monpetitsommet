@@ -25,7 +25,7 @@
       <div
         class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl"
       >
-        <RefugeMap :refuges="refuges" class="rounded-lg shadow" />
+        <!-- <RefugeMap :refuges="refuges" class="rounded-lg shadow" /> -->
         <div class="mt-12 grid gap-8 lg:grid-cols-3">
           <RefugeCard
             v-for="refuge in refuges"
@@ -42,9 +42,4 @@
 const { data: refuges } = await useAsyncData('refuges', () => {
   return queryContent('/refuges').find()
 })
-console.log(' ')
-console.log(' ')
-console.log('index refuges >>', refuges)
-console.log(' ')
-console.log(' ')
 </script>

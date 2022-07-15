@@ -6,9 +6,6 @@
 const { refuges } = defineProps({
   refuges: { type: Array, required: true },
 })
-console.log(' ')
-console.log('refuges >>', refuges)
-console.log(' ')
 
 const { getCoordinates } = useRefugeData()
 
@@ -30,10 +27,6 @@ const geojson = {
 let myMap
 
 onMounted(async () => {
-  console.log(' ')
-  console.log('<< IN onMounted HOOK >>')
-  console.log('myMap >>', myMap)
-  console.log(' ')
   const { map, tileLayer, geoJSON, icon, marker } = await import(
     'leaflet/dist/leaflet-src.esm'
   )
@@ -42,32 +35,17 @@ onMounted(async () => {
   myMap = map('refugeMap', {
     layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
     scrollWheelZoom: false,
-  })
+  }).setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
 
-  console.log(' ')
-  console.log(' ')
-  console.log('myMap >>', myMap)
-  console.log(' ')
-  console.log(' ')
-  if (refuges.length > 2) {
-    myMap.fitBounds(
-      refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-    )
-  } else {
-    myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
-  }
   // zoom map to zone of interest
   // myMap.on('load', () => {
-  //   console.log(' ')
-  //   console.log('<< MAP loaded >>')
-  //   console.log(' ')
-  //   if (refuges.length > 2) {
-  //     myMap.fitBounds(
-  //       refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-  //     )
-  //   } else {
-  //     myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
-  //   }
+  // if (refuges.length > 2) {
+  //   myMap.fitBounds(
+  //     refuges.map((refuge) => [refuge.latitude, refuge.longitude])
+  //   )
+  // } else {
+  // myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  // }
   // })
 
   // add geojson layer
