@@ -85,27 +85,23 @@
               class="mt-12 sm:mx-auto sm:max-w-lg sm:flex"
               @submit.prevent="handleSubmit()"
             >
-              <div class="min-w-0 flex-1">
-                <label for="email" class="sr-only">Email</label>
-                <input
-                  v-model="email"
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
-                  placeholder="Entrez votre email"
-                />
-              </div>
-              <div class="mt-4 sm:mt-0 sm:ml-3">
-                <button
-                  type="submit"
-                  class="block w-full rounded-md border border-transparent px-5 py-3 bg-emerald-500 text-base font-medium text-white shadow hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600 sm:px-10"
-                >
-                  M'inscrire
-                </button>
-              </div>
+              <label for="email" class="sr-only">Email</label>
+              <input
+                v-model="email"
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
+                placeholder="Entrez votre email"
+              />
+              <button
+                type="submit"
+                class="mt-4 sm:mt-0 sm:ml-3 block w-full rounded-md border border-transparent px-5 py-3 bg-emerald-500 text-base font-medium text-white shadow hover:bg-emerald-400 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600 sm:px-10"
+              >
+                M'inscrire
+              </button>
             </form>
           </div>
         </div>
