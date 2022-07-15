@@ -53,8 +53,8 @@ export default defineNuxtConfig({
       },
     ],
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
-  sitemap: { hostname: 'https://monpetitsommet.fr' },
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
+  // sitemap: { hostname: 'https://monpetitsommet.fr' },
   tailwindcss: { viewer: false },
   build: {
     transpile: [
