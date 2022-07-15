@@ -86,11 +86,13 @@
               @submit.prevent="handleSubmit()"
             >
               <div class="min-w-0 flex-1">
-                <label for="cta-email" class="sr-only">Email</label>
+                <label for="email" class="sr-only">Email</label>
                 <input
                   v-model="email"
-                  id="cta-email"
+                  id="email"
+                  name="email"
                   type="email"
+                  autocomplete="email"
                   required
                   class="block w-full border border-transparent rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-600"
                   placeholder="Entrez votre email"
