@@ -39,26 +39,36 @@ onMounted(async () => {
   )
 
   // create map
-  myMap = map('refugeMap', { scrollWheelZoom: false })
-  tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(myMap)
+  myMap = map('refugeMap', {
+    layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
+    scrollWheelZoom: false,
+  })
+
   console.log(' ')
   console.log(' ')
   console.log('myMap >>', myMap)
   console.log(' ')
   console.log(' ')
-
+  if (refuges.length > 2) {
+    myMap.fitBounds(
+      refuges.map((refuge) => [refuge.latitude, refuge.longitude])
+    )
+  } else {
+    myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  }
   // zoom map to zone of interest
-  myMap.on('load', () => {
-    console.log(' ')
-    console.log('<< MAP loaded >>')
-    console.log(' ')
-    if (refuges.length > 2) {
-      myMap.fitBounds(
-        refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-      )
-    }
-  })
-  myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  // myMap.on('load', () => {
+  //   console.log(' ')
+  //   console.log('<< MAP loaded >>')
+  //   console.log(' ')
+  //   if (refuges.length > 2) {
+  //     myMap.fitBounds(
+  //       refuges.map((refuge) => [refuge.latitude, refuge.longitude])
+  //     )
+  //   } else {
+  //     myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  //   }
+  // })
 
   // add geojson layer
   geoJSON(geojson, {
