@@ -32,6 +32,7 @@ let myMap
 onMounted(async () => {
   console.log(' ')
   console.log('<< IN onMounted HOOK >>')
+  console.log('myMap >>', myMap)
   console.log(' ')
   const { map, tileLayer, geoJSON, icon, marker } = await import(
     'leaflet/dist/leaflet-src.esm'
@@ -40,6 +41,11 @@ onMounted(async () => {
   // create map
   myMap = map('refugeMap', { scrollWheelZoom: false })
   tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}).addTo(myMap)
+  console.log(' ')
+  console.log(' ')
+  console.log('myMap >>', myMap)
+  console.log(' ')
+  console.log(' ')
 
   // zoom map to zone of interest
   myMap.on('load', () => {

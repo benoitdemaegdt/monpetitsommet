@@ -42,4 +42,9 @@
 const { data: refuges } = await useAsyncData('refuges', () => {
   return queryContent('/refuges').find()
 })
+console.log(' ')
+console.log(' ')
+console.log('index refuges >>', refuges)
+console.log(' ')
+console.log(' ')
 </script>
