@@ -16,33 +16,68 @@
             {{ name }}
           </p>
           <div class="mt-3 grid grid-cols-2 gap-4 text-base text-gray-500">
-            <div class="flex items-center">
-              <img
-                src="/icons/mountain.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">Altitude: {{ altitude }}</div>
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-6"
+                  src="/icons/mountain.png"
+                  alt="icone montagne"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Altitude</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ altitude }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img src="/icons/bed.png" alt="icone montagne" class="h-5 w-5" />
-              <div class="ml-2">Capacité: {{ beds }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img class="h-6 w-6" src="/icons/bed.png" alt="icone lit" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Capacité</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ beds }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img
-                src="/icons/stove.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">Poêle: {{ stove }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img class="h-6 w-6" src="/icons/stove.png" alt="icone poêle" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Poêle</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ stove }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img
-                src="/icons/water.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">Eau: {{ water }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img class="h-6 w-6" src="/icons/water.png" alt="icone eau" />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Eau</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ water }}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center justify-between gap-y-2">
