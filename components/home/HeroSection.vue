@@ -81,9 +81,11 @@
                 <label for="email" class="sr-only">Email</label>
                 <input
                   v-model="email"
-                  type="email"
-                  name="email"
                   id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
                   class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:flex-1 border-gray-300"
                   placeholder="Entrez votre email"
                 />
