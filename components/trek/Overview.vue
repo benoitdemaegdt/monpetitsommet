@@ -36,7 +36,7 @@ import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
 const { trek } = defineProps({ trek: Object })
 
 const { path } = useRoute()
-const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
+const { data: geojson } = await useAsyncData(() => {
   return queryContent('/randonnees')
     .where({ _path: path, _type: 'json' })
     .findOne()
