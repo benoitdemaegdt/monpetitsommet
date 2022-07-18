@@ -1,11 +1,12 @@
 <template>
-  <div id="refugeMap" style="height: 40vh"></div>
+  <div ref="mapId" style="height: 40vh"></div>
 </template>
 
 <script setup>
 const { refuges } = defineProps({
   refuges: { type: Array, required: true },
 })
+const mapId = ref(null)
 
 const { getCoordinates } = useRefugeData()
 
@@ -32,7 +33,7 @@ onMounted(async () => {
   )
 
   // create map
-  myMap = map('refugeMap', {
+  myMap = map(mapId.value, {
     layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
     scrollWheelZoom: false,
   }).setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
