@@ -135,7 +135,7 @@
 
 <script setup>
 const { path } = useRoute()
-const { data: article } = await useAsyncData(() => {
+const { data: article } = await useAsyncData(`article-${path}`, () => {
   return queryContent('/blog').where({ _path: path }).findOne()
 })
 </script>
