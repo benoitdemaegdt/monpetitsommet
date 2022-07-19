@@ -38,6 +38,9 @@ onMounted(async () => {
     scrollWheelZoom: false,
   }).setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
 
+  await nextTick()
+  myMap.invalidateSize()
+
   // zoom map to zone of interest
   // myMap.on('load', () => {
   // if (refuges.length > 2) {
