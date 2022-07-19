@@ -38,9 +38,6 @@ onMounted(async () => {
     scrollWheelZoom: false,
   }).setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
 
-  await nextTick()
-  myMap.invalidateSize()
-
   // zoom map to zone of interest
   // myMap.on('load', () => {
   // if (refuges.length > 2) {
@@ -48,7 +45,7 @@ onMounted(async () => {
   //     refuges.map((refuge) => [refuge.latitude, refuge.longitude])
   //   )
   // } else {
-  // myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  //   myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
   // }
   // })
 
@@ -68,6 +65,8 @@ onMounted(async () => {
       return marker(latLng, { icon: customIcon })
     },
   }).addTo(myMap)
+
+  setTimeout(() => myMap.invalidateSize(), 100)
 })
 
 onBeforeUnmount(() => {
