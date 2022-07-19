@@ -64,7 +64,7 @@ onMounted(async () => {
     },
   }).addTo(myMap)
 
-  // fix problem hapening when changing page
+  // fix problem happening when changing page
   setTimeout(() => myMap.invalidateSize(), 100)
 })
 
