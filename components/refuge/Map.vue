@@ -36,18 +36,16 @@ onMounted(async () => {
   myMap = map(mapId.value, {
     layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
     scrollWheelZoom: false,
-  }).setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  })
 
   // zoom map to zone of interest
-  // myMap.on('load', () => {
-  // if (refuges.length > 2) {
-  //   myMap.fitBounds(
-  //     refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-  //   )
-  // } else {
-  //   myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
-  // }
-  // })
+  if (refuges.length > 2) {
+    myMap.fitBounds(
+      refuges.map((refuge) => [refuge.latitude, refuge.longitude])
+    )
+  } else {
+    myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
+  }
 
   // add geojson layer
   geoJSON(geojson, {
@@ -66,6 +64,7 @@ onMounted(async () => {
     },
   }).addTo(myMap)
 
+  // fix problem hapening when changing page
   setTimeout(() => myMap.invalidateSize(), 100)
 })
 
