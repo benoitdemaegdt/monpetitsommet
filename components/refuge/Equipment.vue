@@ -31,8 +31,8 @@ export default {
     return {
       equipments: [
         {
-          name: 'Places',
-          value: props?.refuge?.beds,
+          name: 'Capacité',
+          value: `${props?.refuge?.beds} pers`,
           icon: '/icons/bed.png',
           alt: 'icone lit',
         },
