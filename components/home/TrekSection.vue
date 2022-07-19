@@ -30,7 +30,7 @@
 </template>
 
 <script setup>
-const { data: treks } = await useAsyncData('treks', () => {
+const { data: treks } = await useAsyncData(() => {
   return queryContent('/randonnees')
     .where({
       _type: 'markdown',

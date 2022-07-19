@@ -16,33 +16,80 @@
             {{ name }}
           </p>
           <div class="mt-3 grid grid-cols-2 gap-4 text-base text-gray-500">
-            <div class="flex items-center">
-              <img
-                src="/icons/distance.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">Distance: {{ distance }}</div>
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-6"
+                  src="/icons/distance.png"
+                  alt="icone regle"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Distance</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ distance }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img
-                src="/icons/temps.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">Durée: {{ duration }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-6"
+                  src="/icons/temps.png"
+                  alt="icone montre"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Durée</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ duration }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img
-                src="/icons/mountain.png"
-                alt="icone montagne"
-                class="h-5 w-5"
-              />
-              <div class="ml-2">D+: {{ elevation }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-6"
+                  src="/icons/mountain.png"
+                  alt="icone montagne"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Dénivelé +</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ elevation }}
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center">
-              <img src="/icons/hook.png" alt="icone montagne" class="h-5 w-5" />
-              <div class="ml-2">Cotation: {{ difficulty }}</div>
+
+            <div class="relative flex items-center space-x-3">
+              <div class="flex-shrink-0">
+                <img
+                  class="h-6 w-6"
+                  src="/icons/hook.png"
+                  alt="icone mousqueton"
+                />
+              </div>
+              <div class="flex-1 min-w-0">
+                <div>
+                  <span class="absolute inset-0" aria-hidden="true" />
+                  <p class="text-sm font-medium text-gray-900">Cotation</p>
+                  <p class="text-sm text-gray-500 truncate">
+                    {{ difficulty }}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           <div class="mt-6 flex flex-wrap items-center justify-between gap-y-2">

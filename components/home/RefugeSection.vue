@@ -36,7 +36,7 @@
 </template>
 
 <script setup>
-const { data: refuges } = await useAsyncData('refuges', () => {
+const { data: refuges } = await useAsyncData(() => {
   return queryContent('/refuges')
     .where({
       name: {

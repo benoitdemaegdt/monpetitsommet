@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-const { data: articles } = await useAsyncData('articles', () => {
+const { data: articles } = await useAsyncData(() => {
   return queryContent('/blog').find()
 })
 </script>

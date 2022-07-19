@@ -107,7 +107,7 @@ export default {
       imageUrl: props.refuge.imageUrl,
       massif: props.refuge.massif,
       altitude: `${props.refuge.altitude}m`,
-      beds: props.refuge.beds,
+      beds: `${props.refuge.beds} pers`,
       stove: props.refuge.stove ? 'Oui' : 'Non',
       water: props.refuge.water ? 'Oui' : 'Non',
       type: props.refuge.type,

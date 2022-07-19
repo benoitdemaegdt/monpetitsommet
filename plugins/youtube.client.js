@@ -1,2 +1,2 @@
 import 'lite-youtube-embed'
-export default () => {}
+export default defineNuxtPlugin(() => {})
