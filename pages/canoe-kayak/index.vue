@@ -4,6 +4,11 @@
       <div
         class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl"
       >
+        <h2
+          class="text-base font-semibold tracking-wider text-emerald-600 uppercase"
+        >
+          Se la couler douce
+        </h2>
         <h1
           class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl"
         >
@@ -31,7 +36,7 @@
 </template>
 
 <script setup>
-const { data: canoeTreks } = await useAsyncData('canoeTreks', () => {
+const { data: canoeTreks } = await useAsyncData(() => {
   return queryContent('/canoe-kayak').where({ _type: 'markdown' }).find()
 })
 </script>

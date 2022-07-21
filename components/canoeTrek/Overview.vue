@@ -1,7 +1,7 @@
 <template>
   <div>
     <CanoeTrekStats :canoe-trek="canoeTrek" />
-    <!-- <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" /> -->
+    <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
     <div class="mt-8">
       <button
         type="button"

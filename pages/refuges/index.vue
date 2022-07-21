@@ -40,6 +40,6 @@
 
 <script setup>
 const { data: refuges } = await useAsyncData(() => {
-  return queryContent('/refuges').find()
+  return queryContent('/refuges').where({ _type: 'markdown' }).find()
 })
 </script>
