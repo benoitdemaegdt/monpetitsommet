@@ -63,8 +63,12 @@ export default defineNuxtConfig({
       'lite-youtube-embed',
     ],
   },
-  plugins: ['~/plugins/youtube.client.js'],
-  css: ['~/node_modules/lite-youtube-embed/src/lite-yt-embed.css', 'leaflet/dist/leaflet.css'],
+  plugins: ['~/plugins/youtube.client.js', '~/plugins/fullscreen.client.js'],
+  css: [
+    'lite-youtube-embed/src/lite-yt-embed.css',
+    'leaflet/dist/leaflet.css',
+    'leaflet-fullscreen/dist/leaflet.fullscreen.css',
+  ],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['lite-youtube'].includes(tag),

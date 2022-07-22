@@ -28,7 +28,7 @@ const geojson = {
 let myMap
 
 onMounted(async () => {
-  const { map, tileLayer, geoJSON, icon, marker } = await import(
+  const { map, tileLayer, geoJSON, icon, marker, control } = await import(
     'leaflet/dist/leaflet-src.esm'
   )
 
@@ -38,11 +38,16 @@ onMounted(async () => {
     scrollWheelZoom: false,
   })
 
+  // add fullscreen button
+  myMap.addControl(
+    new control.Fullscreen({
+      position: 'topright',
+    })
+  )
+
   // zoom map to zone of interest
   if (refuges.length > 2) {
-    myMap.fitBounds(
-      refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-    )
+    myMap.fitBounds(refuges.map((refuge) => [refuge.latitude, refuge.longitude]))
   } else {
     myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
   }
