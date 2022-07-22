@@ -53,8 +53,8 @@ export default defineNuxtConfig({
       },
     ],
   },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content'],
-  // sitemap: { hostname: 'https://monpetitsommet.fr' },
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
+  sitemap: { hostname: 'https://monpetitsommet.fr' },
   tailwindcss: { viewer: false },
   build: {
     transpile: [
@@ -64,10 +64,7 @@ export default defineNuxtConfig({
     ],
   },
   plugins: ['~/plugins/youtube.client.js'],
-  css: [
-    '~/node_modules/lite-youtube-embed/src/lite-yt-embed.css',
-    'leaflet/dist/leaflet.css',
-  ],
+  css: ['~/node_modules/lite-youtube-embed/src/lite-yt-embed.css', 'leaflet/dist/leaflet.css'],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['lite-youtube'].includes(tag),
