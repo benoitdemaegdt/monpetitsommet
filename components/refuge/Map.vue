@@ -1,5 +1,6 @@
 <template>
   <div ref="mapId" style="height: 40vh"></div>
+  <button @click="toggleFullscreen">click me</button>
 </template>
 
 <script setup>
@@ -27,10 +28,36 @@ const geojson = {
 
 let myMap
 
+function toggleFullscreen() {
+  if (myMap._isFullscreen || false) {
+    myMap._isFullscreen = false
+    if (document.exitFullscreen) {
+      document.exitFullscreen()
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen()
+    } else if (document.webkitCancelFullScreen) {
+      document.webkitCancelFullScreen()
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen()
+    }
+  } else {
+    let container = myMap.getContainer()
+    myMap._isFullscreen = true
+    if (container.requestFullscreen) {
+      container.requestFullscreen()
+    } else if (container.mozRequestFullScreen) {
+      container.mozRequestFullScreen()
+    } else if (container.webkitRequestFullscreen) {
+      container.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)
+    } else if (container.msRequestFullscreen) {
+      container.msRequestFullscreen()
+    }
+  }
+}
+
 onMounted(async () => {
-  const { map, tileLayer, geoJSON, icon, marker, control } = await import(
-    'leaflet/dist/leaflet-src.esm'
-  )
+  const { map, tileLayer, geoJSON, icon, marker, control, Control, DomUtil, DomEvent } =
+    await import('leaflet/dist/leaflet-src.esm')
 
   // create map
   myMap = map(mapId.value, {
@@ -39,11 +66,29 @@ onMounted(async () => {
   })
 
   // add fullscreen button
-  myMap.addControl(
-    new control.Fullscreen({
-      position: 'topright',
-    })
-  )
+  Control.Fullscreen = Control.extend({
+    onAdd: function (map) {
+      var div = DomUtil.create('div')
+
+      div.style.width = '30px'
+      div.style.height = '30px'
+      div.style.backgroundColor = 'white'
+      div.style.borderRadius = '2px'
+
+      DomEvent.on(div, 'click', this._click, this)
+
+      return div
+    },
+    _click: function (map) {
+      toggleFullscreen()
+    },
+  })
+
+  control.fullscreen = function (opts) {
+    return new Control.Fullscreen(opts)
+  }
+
+  control.fullscreen({ position: 'topright' }).addTo(myMap)
 
   // zoom map to zone of interest
   if (refuges.length > 2) {
