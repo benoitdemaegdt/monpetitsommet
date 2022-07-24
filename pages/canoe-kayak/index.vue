@@ -18,6 +18,7 @@
           <Card
             v-for="canoeTrek in canoeTreks"
             :key="canoeTrek.name"
+            :path="canoeTrek._path"
             :imageUrl="canoeTrek.imageUrl"
             :header="canoeTrek.river"
             :name="canoeTrek.name"

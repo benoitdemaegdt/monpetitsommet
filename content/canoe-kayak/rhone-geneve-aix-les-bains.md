@@ -1,7 +1,7 @@
 ---
 river: Rhône
 name: Descente du Rhône
-description:
+description: Lorem Ipsum
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258758/canoe-kayak/rhone-geneve-aix-les-bains/cover_rooh02.png
 caption:
 distance: 100
