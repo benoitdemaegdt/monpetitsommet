@@ -25,5 +25,14 @@ export const useCard = () => {
     return [`${trek.from} → ${trek.to}`]
   }
 
-  return { getRefugeItems, getRefugeTags, getTrekItems, getTrekTags }
+  function getCanoeTrekItems(canoeTrek) {
+    return [
+      { key: 'Départ', value: `${canoeTrek.from}`, iconUrl: '/icons/pin.png' },
+      { key: 'Arrivée', value: `${canoeTrek.to}`, iconUrl: '/icons/flag.png' },
+      { key: 'Distance', value: `${canoeTrek.distance}km`, iconUrl: '/icons/distance.png' },
+      { key: 'Durée', value: `${canoeTrek.duration}`, iconUrl: '/icons/temps.png' },
+    ]
+  }
+
+  return { getRefugeItems, getRefugeTags, getTrekItems, getTrekTags, getCanoeTrekItems }
 }
