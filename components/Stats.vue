@@ -1,5 +1,5 @@
 <template>
-  <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+  <dl class="mt-5 grid grid-cols-1 gap-5" :class="`sm:grid-cols-${stats.length}`">
     <div
       v-for="item in stats"
       :key="item.name"
@@ -16,13 +16,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
-  canoeTrek: Object,
+defineProps({
+  stats: { type: Array, required: true },
 })
-
-const stats = [
-  { name: 'Distance', stat: `${props.canoeTrek.distance} km` },
-  { name: 'Durée', stat: `${props.canoeTrek.duration}` },
-  { name: 'Cotation', stat: `${props.canoeTrek.difficulty}` },
-]
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TrekStats :trek="trek" />
+    <Stats :stats="getTrekStats(trek)" />
     <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
     <ClientOnly>
       <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
@@ -37,10 +37,10 @@ const { trek } = defineProps({ trek: Object })
 
 const { path } = useRoute()
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/randonnees')
-    .where({ _path: path, _type: 'json' })
-    .findOne()
+  return queryContent('/randonnees').where({ _path: path, _type: 'json' }).findOne()
 })
+
+const { getTrekStats } = useStats()
 
 const alert = (msg) => window.alert(msg)
 </script>

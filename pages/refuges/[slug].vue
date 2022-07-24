@@ -6,7 +6,7 @@
     :imageUrl="refuge.imageUrl"
   >
     <h2>Localisation</h2>
-    <RefugeStats :refuge="refuge" />
+    <Stats :stats="getRefugeStats(refuge)" />
     <RefugeMap :refuges="[refuge]" class="mt-8 rounded-lg shadow" />
     <h2>Équipements</h2>
     <RefugeEquipment :refuge="refuge" />
@@ -20,4 +20,6 @@ const { path } = useRoute()
 const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
   return queryContent('/refuges').where({ _path: path }).findOne()
 })
+
+const { getRefugeStats } = useStats()
 </script>

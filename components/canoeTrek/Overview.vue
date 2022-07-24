@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CanoeTrekStats :canoe-trek="canoeTrek" />
+    <Stats :stats="getCanoeTrekStats(canoeTrek)" />
     <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
     <div class="mt-8">
       <button
@@ -20,16 +20,16 @@
 </template>
 
 <script setup>
-import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
+import { DownloadIcon } from '@heroicons/vue/outline'
 
 const { canoeTrek } = defineProps({ canoeTrek: Object })
 
 const { path } = useRoute()
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/canoe-kayak')
-    .where({ _path: path, _type: 'json' })
-    .findOne()
+  return queryContent('/canoe-kayak').where({ _path: path, _type: 'json' }).findOne()
 })
+
+const { getCanoeTrekStats } = useStats()
 
 const alert = (msg) => window.alert(msg)
 </script>
