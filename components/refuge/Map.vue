@@ -28,21 +28,20 @@ const geojson = {
 let myMap
 
 onMounted(async () => {
-  const { map, tileLayer, geoJSON, icon, marker } = await import(
-    'leaflet/dist/leaflet-src.esm'
-  )
+  const { map, tileLayer, geoJSON, icon, marker } = await import('leaflet/dist/leaflet-src.esm')
+  const { enableFullcreenFeature } = useMap()
+  await enableFullcreenFeature()
 
   // create map
   myMap = map(mapId.value, {
     layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
+    fullscreenControl: true,
     scrollWheelZoom: false,
   })
 
   // zoom map to zone of interest
   if (refuges.length > 2) {
-    myMap.fitBounds(
-      refuges.map((refuge) => [refuge.latitude, refuge.longitude])
-    )
+    myMap.fitBounds(refuges.map((refuge) => [refuge.latitude, refuge.longitude]))
   } else {
     myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
   }
