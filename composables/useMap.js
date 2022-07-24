@@ -6,7 +6,7 @@ export const useMap = () => {
 
     Control.Fullscreen = Control.extend({
       options: {
-        position: 'topleft',
+        position: 'topright',
         title: {
           false: 'View fullscreen',
           true: 'Exit fullscreen',
@@ -110,8 +110,10 @@ export const useMap = () => {
 
     Map.addInitHook(function () {
       if (this.options.fullscreenControl) {
-        this.fullscreenControl = new Control.Fullscreen(this.options.fullscreenControl)
-        this.addControl(this.fullscreenControl)
+        if (!this.fullscreenControl) {
+          this.fullscreenControl = new Control.Fullscreen(this.options.fullscreenControl)
+          this.addControl(this.fullscreenControl)
+        }
       }
 
       var fullscreenchange

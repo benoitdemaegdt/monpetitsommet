@@ -27,33 +27,6 @@ const geojson = {
 
 let myMap
 
-function toggleFullscreen() {
-  if (myMap._isFullscreen || false) {
-    myMap._isFullscreen = false
-    if (document.exitFullscreen) {
-      document.exitFullscreen()
-    } else if (document.mozCancelFullScreen) {
-      document.mozCancelFullScreen()
-    } else if (document.webkitCancelFullScreen) {
-      document.webkitCancelFullScreen()
-    } else if (document.msExitFullscreen) {
-      document.msExitFullscreen()
-    }
-  } else {
-    let container = myMap.getContainer()
-    myMap._isFullscreen = true
-    if (container.requestFullscreen) {
-      container.requestFullscreen()
-    } else if (container.mozRequestFullScreen) {
-      container.mozRequestFullScreen()
-    } else if (container.webkitRequestFullscreen) {
-      container.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT)
-    } else if (container.msRequestFullscreen) {
-      container.msRequestFullscreen()
-    }
-  }
-}
-
 onMounted(async () => {
   const { map, tileLayer, geoJSON, icon, marker } = await import('leaflet/dist/leaflet-src.esm')
   const { enableFullcreenFeature } = useMap()
