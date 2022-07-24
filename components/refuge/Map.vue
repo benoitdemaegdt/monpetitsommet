@@ -55,37 +55,16 @@ function toggleFullscreen() {
 }
 
 onMounted(async () => {
-  const { map, tileLayer, geoJSON, icon, marker, control, Control, DomUtil, DomEvent } =
-    await import('leaflet/dist/leaflet-src.esm')
+  const { map, tileLayer, geoJSON, icon, marker } = await import('leaflet/dist/leaflet-src.esm')
+  const { enableFullcreenFeature } = useMap()
+  await enableFullcreenFeature()
 
   // create map
   myMap = map(mapId.value, {
     layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
+    fullscreenControl: true,
     scrollWheelZoom: false,
   })
-
-  // add fullscreen button
-  Control.Fullscreen = Control.extend({
-    onAdd: function (map) {
-      var div = DomUtil.create('div')
-
-      div.style.width = '30px'
-      div.style.height = '30px'
-      div.style.backgroundColor = 'white'
-      div.style.borderRadius = '2px'
-
-      DomEvent.on(div, 'click', this._click, this)
-
-      return div
-    },
-    _click: function (map) {
-      toggleFullscreen()
-    },
-  })
-
-  control.fullscreen = (opts) => new Control.Fullscreen(opts)
-
-  control.fullscreen({ position: 'topright' }).addTo(myMap)
 
   // zoom map to zone of interest
   if (refuges.length > 2) {

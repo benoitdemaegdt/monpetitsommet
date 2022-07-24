@@ -67,7 +67,7 @@ export default defineNuxtConfig({
   css: [
     'lite-youtube-embed/src/lite-yt-embed.css',
     'leaflet/dist/leaflet.css',
-    'leaflet-fullscreen/dist/leaflet.fullscreen.css', // TODO: export this inside custom css file to get rid of the plugin ?
+    '~/assets/fullscreen/leaflet.fullscreen.css',
   ],
   vue: {
     compilerOptions: {
