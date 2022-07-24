@@ -1,6 +1,5 @@
 <template>
   <div ref="mapId" style="height: 40vh"></div>
-  <button @click="toggleFullscreen">click me</button>
 </template>
 
 <script setup>
@@ -84,9 +83,7 @@ onMounted(async () => {
     },
   })
 
-  control.fullscreen = function (opts) {
-    return new Control.Fullscreen(opts)
-  }
+  control.fullscreen = (opts) => new Control.Fullscreen(opts)
 
   control.fullscreen({ position: 'topright' }).addTo(myMap)
 
