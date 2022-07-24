@@ -23,51 +23,47 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'RefugeEquipment',
-  props: ['refuge'],
-  setup(props) {
-    return {
-      equipments: [
-        {
-          name: 'Capacité',
-          value: `${props?.refuge?.beds} pers`,
-          icon: '/icons/bed.png',
-          alt: 'icone lit',
-        },
-        {
-          name: 'Matelas',
-          value: props?.refuge?.matresses,
-          icon: '/icons/mattress.png',
-          alt: 'icone matelas',
-        },
-        {
-          name: 'Couverture',
-          value: props?.refuge?.blankets ? 'Oui' : 'Non',
-          icon: '/icons/blanket.png',
-          alt: 'icone couverture',
-        },
-        {
-          name: 'Poêle',
-          value: props?.refuge?.stove ? 'Oui' : 'Non',
-          icon: '/icons/stove.png',
-          alt: 'icone poêle',
-        },
-        {
-          name: 'Bois',
-          value: props?.refuge?.wood ? 'Oui' : 'Non',
-          icon: '/icons/wood.png',
-          alt: 'icone bois',
-        },
-        {
-          name: 'Toilettes',
-          value: props?.refuge?.toilets ? 'Oui' : 'Non',
-          icon: '/icons/toilet.png',
-          alt: 'icone toilette',
-        },
-      ],
-    }
+<script setup>
+const { refuge } = defineProps({
+  refuge: { type: Object, required: true },
+})
+
+const equipments = [
+  {
+    name: 'Capacité',
+    value: `${refuge?.beds} pers`,
+    icon: '/icons/bed.png',
+    alt: 'icone lit',
   },
-}
+  {
+    name: 'Matelas',
+    value: refuge?.matresses,
+    icon: '/icons/mattress.png',
+    alt: 'icone matelas',
+  },
+  {
+    name: 'Couverture',
+    value: refuge?.blankets ? 'Oui' : 'Non',
+    icon: '/icons/blanket.png',
+    alt: 'icone couverture',
+  },
+  {
+    name: 'Poêle',
+    value: refuge?.stove ? 'Oui' : 'Non',
+    icon: '/icons/stove.png',
+    alt: 'icone poêle',
+  },
+  {
+    name: 'Bois',
+    value: refuge?.wood ? 'Oui' : 'Non',
+    icon: '/icons/wood.png',
+    alt: 'icone bois',
+  },
+  {
+    name: 'Toilettes',
+    value: refuge?.toilets ? 'Oui' : 'Non',
+    icon: '/icons/toilet.png',
+    alt: 'icone toilette',
+  },
+]
 </script>
