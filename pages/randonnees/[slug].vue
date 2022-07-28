@@ -13,8 +13,10 @@
 
 <script setup>
 const { path } = useRoute()
+console.log('path >>', path)
 
 const { data: trek } = await useAsyncData(`trek-${path}`, () => {
   return queryContent('/randonnees').where({ _path: path, _type: 'markdown' }).findOne()
 })
+console.log('trek >>', trek)
 </script>
