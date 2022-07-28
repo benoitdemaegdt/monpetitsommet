@@ -53,6 +53,11 @@ export default defineNuxtConfig({
       },
     ],
   },
+  runtimeConfig: {
+    public: {
+      ignApiKey: process.env.NUXT_IGN_API_KEY,
+    },
+  },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
   sitemap: { hostname: 'https://monpetitsommet.fr' },
   tailwindcss: { viewer: false },

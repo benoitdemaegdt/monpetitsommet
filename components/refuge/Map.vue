@@ -3,6 +3,8 @@
 </template>
 
 <script setup>
+const config = useRuntimeConfig()
+
 const { refuges } = defineProps({
   refuges: { type: Array, required: true },
 })
@@ -31,10 +33,24 @@ onMounted(async () => {
   const { map, tileLayer, geoJSON, icon, marker } = await import('leaflet/dist/leaflet-src.esm')
   const { enableFullcreenFeature } = useMap()
   await enableFullcreenFeature()
-
   // create map
   myMap = map(mapId.value, {
-    layers: [tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})],
+    layers: [
+      // tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})
+      tileLayer(
+        'https://wxs.ign.fr/{ignApiKey}/geoportail/wmts?' +
+          '&REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&TILEMATRIXSET=PM' +
+          '&LAYER={ignLayer}&STYLE={style}&FORMAT={format}' +
+          '&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}',
+        {
+          ignApiKey: config.public.ignApiKey,
+          ignLayer: 'GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR',
+          style: 'normal',
+          format: 'image/jpeg',
+          service: 'WMTS',
+        }
+      ),
+    ],
     fullscreenControl: true,
     scrollWheelZoom: false,
   })
