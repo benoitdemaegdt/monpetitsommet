@@ -1,7 +1,7 @@
 ---
 river: Rhône
 name: Descente du Rhône
-description: Lorem Ipsum
+description: Aller à Genève en train et revenir en canoë kayak gonflable sur le Rhône. Un projet qui peut sembler farfelu mais qui est finalement facilement réalisable. Bref, une belle micro-aventure pour partir 3 jours à la découverte d'un des principaux fleuves français.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258758/canoe-kayak/rhone-geneve-aix-les-bains/cover_rooh02.png
 caption:
 distance: 100
@@ -12,27 +12,32 @@ to: Aix-les-Bains
 ---
 
 ## Le projet
-Le Rhône fait partie de mon quotidien de Lyonnais. Je peux l'observer parfois aussi calme qu'un lac ou au contraire remuant comme un torrent de montagne. Parfois presque transparent, d'autre fois boueux. Secoué par le vent du sud ou apaisé par le soleil. Il pousse l'imaginaire. Tant et si bien que je me suis un jour demandé : "tiens, et si je le descendait en kayak ? Je pourrais partir de Genève et arriver à Lyon en kayak. Ce serait un beau projet". Je suis habituellement plutôt adepte des micro-aventures à pied et en montagne. Mais après tout pourquoi pas ?
+Aller à Genève en train et revenir à Lyon en canoë kayak gonflable ? En voila une belle idée de micro-aventure ! Un peu trop ambitieuse pour 3 jours peut-être. Genève - Lyon en suivant le Rhône, ça représente tout de même près de 200km. Rejoindre Aix-les-bains semble finalement plus approprié. Il n'y a plus "que" 100km et l'itinéraire permet d'emprunter le canal de Savières et de traverser le lac du Bourget, 2 endroits qui valent largement le détour. Une fois à Aix-les-bains, une liaison direct en TER permet de rejoindre Lyon.
 
-## L'organisation
-(origine du projet et organisation)
-Après quelques recherches, je me rends vite compte que ça semble jouable. Je ne suis pas le seul à avoir eu cette idée, loin de là. Par contre ça n'a pas l'air si simple.
+## Organisation et matériel
 
-Déjà c'est long, très long. Environ 250km pour faire la liaison Genève - Lyon. Je n'y connais rien en kayak, mais ça me semble difficilement jouable d'aller à plus de 5km/h en moyenne. En pagayant 8h par jour il faudrait donc plus de 6 jours. On va donc décider avec les autres participants de raccourcir le trajet. La destination n'est finalement pas Lyon mais à Aix-les-Bains. Ce qui fait 100km à parcourir. C'est faisable en 3 jours, et en plus ça doit être sympa de pagayer sur le lac du bourget.
+### Les canoë kayak
 
-Ensuite il y a l'aspect logistique. On part de Genève et on arrive à Aix-les-Bains, ça d'accord. Mais comment gèrer les canoë-kayak ? Une fois encore c'est Decathlon qui a la solution. On va utiliser un canoë-kayak gonflable de la gamme itiwit. Il se présente sous la forme d'un gros sac de 17kg. On prendra donc un train Lyon -> Genève avec ce sac, on gonflera le canoë-kayak à Genève, puis on le dégonflera à Aix-les-Bains pour reprendre un train vers Lyon.
+::image
+---
+imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658785523/canoe-kayak/rhone-geneve-aix-les-bains/Capture_d_e%CC%81cran_2022-07-25_a%CC%80_23_40_21_fszbdh.png
+alt: Location d'un canoë kayak chez Decathlon
+caption: Location d'un canoë kayak chez Decathlon
+---
+::
 
-Dernier point de complexité, les barrages. Le Rhône est un fleuve qui est très exploité par l'industrie hydroélectrique. Il y a très précisemment 5 barrages sur notre trajet. Apparemment il est possible de les contourner en portant l'embarcation. On verra bien !
-
-## point matos
-### Matos de bivouac
-### Les canoê-kayak
 ### Sacs étanches
-### Ravitaillement en eau
+
+
+### Gestion de l'eau
+Malgré le fait qu'on soit tout le temps sur un fleuve, il n'est pas évident de se ravitailler en eau potable.
+
+### Les barrages
+
 
 ## Récit de la descente du Rhône
 ### Premier jour
-Deux ans plus tard, c'est le grand jour. Départ un samedi matin de juillet à 6h35 de la gare de Lyon Part-Dieu direction Genève. Une aventure comme ça, ça représente mine de rien beaucoup d'équipement : un sac de 17kg contennat le canoë-kayak, 2 paires de pagaies, 2 gilets de sauvetage, une tente, des sacs de couchage, de la nourriture pour être autonome sur 3 jours ... Bref on est bien chargés et on a un sacré look de touristes en arrivant à Genève 8h35. On attend une trentaine de minutes nos 2 compères d'aventure, puis on se dirige vers le [départ de la descente du rhône](https://www.google.com/maps/place/D%C3%A9part+descente+du+Rh%C3%B4ne/@46.2032674,6.133147,16z/data=!4m9!1m2!2m1!1sdescente+rhone+geneve!3m5!1s0x478c650dddf2857b:0x4ad45d10d8971388!8m2!3d46.2034917!4d6.132766!15sChVkZXNjZW50ZSByaG9uZSBnZW5ldmWSARBhZHZlbnR1cmVfc3BvcnRz). L'endroit est particulièrement spacieux et bien aménagé pour pouvoir gonfler son kayak et préparer tout le matériel. 20 minutes plus tard nous voilà enfin sur l'eau !
+Départ un samedi matin de juillet à 6h35 de la gare de Lyon Part-Dieu direction Genève. Une aventure comme ça, ça représente mine de rien beaucoup d'équipement : un sac de 17kg contennat le canoë-kayak, 2 paires de pagaies, 2 gilets de sauvetage, une tente, des sacs de couchage, de la nourriture pour être autonome sur 3 jours ... Bref on est bien chargés et on a un sacré look de touristes en arrivant à Genève 8h35. On attend une trentaine de minutes nos 2 compères d'aventure, puis on se dirige vers le [départ de la descente du rhône](https://www.google.com/maps/place/D%C3%A9part+descente+du+Rh%C3%B4ne/@46.2034917,6.132766,15z/data=!4m5!3m4!1s0x0:0x4ad45d10d8971388!8m2!3d46.2034917!4d6.132766). L'endroit est particulièrement spacieux et bien aménagé pour pouvoir gonfler son kayak et préparer tout le matériel. 20 minutes plus tard nous voilà enfin sur l'eau !
 
 ::image
 ---
