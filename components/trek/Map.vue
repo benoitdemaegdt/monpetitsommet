@@ -19,6 +19,8 @@ onMounted(async () => {
   const { map, tileLayer, geoJSON, icon, marker, circleMarker } = await import(
     'leaflet/dist/leaflet-src.esm'
   )
+  const { enableFullcreenFeature } = useMap()
+  await enableFullcreenFeature()
 
   // create map
   myMap = map(mapId.value, {
@@ -38,6 +40,7 @@ onMounted(async () => {
         }
       ),
     ],
+    fullscreenControl: true,
     scrollWheelZoom: false,
   })
 
