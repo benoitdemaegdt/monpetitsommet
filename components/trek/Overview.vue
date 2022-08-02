@@ -37,9 +37,7 @@ const { trek } = defineProps({ trek: Object })
 
 const { path } = useRoute()
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/randonnees')
-    .where({ _path: path, _type: 'json' })
-    .findOne()
+  return queryContent('/randonnees').where({ _path: path, _type: 'json' }).findOne()
 })
 
 const alert = (msg) => window.alert(msg)
