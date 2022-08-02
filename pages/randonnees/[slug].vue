@@ -13,12 +13,14 @@
 
 <script setup>
 const { path } = useRoute()
-const pathForQuery = path.endsWith('/') ? path.slice(0, -1) : path
+const { withoutTrailingSlash } = useContent()
 console.log('path >>', path)
-console.log('pathForQuery >>', pathForQuery)
+console.log('pathForQuery >>', withoutTrailingSlash(path))
 
 const { data: trek } = await useAsyncData(`trek-${path}`, () => {
-  return queryContent('/randonnees').where({ _path: pathForQuery, _type: 'markdown' }).findOne()
+  return queryContent('/randonnees')
+    .where({ _path: withoutTrailingSlash(path), _type: 'markdown' })
+    .findOne()
 })
 console.log('trek >>', trek)
 </script>

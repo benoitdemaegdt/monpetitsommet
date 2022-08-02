@@ -11,7 +11,11 @@
 
 <script setup>
 const { path } = useRoute()
+const { withoutTrailingSlash } = useContent()
+
 const { data: article } = await useAsyncData(`article-${path}`, () => {
-  return queryContent('/blog').where({ _path: path }).findOne()
+  return queryContent('/blog')
+    .where({ _path: withoutTrailingSlash(path) })
+    .findOne()
 })
 </script>

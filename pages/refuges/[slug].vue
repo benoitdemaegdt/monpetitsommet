@@ -15,9 +15,12 @@
 </template>
 
 <script setup>
+const { withoutTrailingSlash } = useContent()
 const { path } = useRoute()
 
 const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
-  return queryContent('/refuges').where({ _path: path }).findOne()
+  return queryContent('/refuges')
+    .where({ _path: withoutTrailingSlash(path) })
+    .findOne()
 })
 </script>
