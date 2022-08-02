@@ -7,6 +7,8 @@ const DESCRIPTION =
 const COVER_IMAGE_URL = `${BASE_URL}/social.jpg`
 
 export default defineNuxtConfig({
+  ssr: true,
+  target: 'static',
   meta: {
     htmlAttrs: { lang: 'fr' },
     title: TITLE,
