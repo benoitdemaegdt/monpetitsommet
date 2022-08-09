@@ -30,27 +30,32 @@ const geojson = {
 let myMap
 
 onMounted(async () => {
-  const { map, tileLayer, geoJSON, icon, marker } = await import('leaflet/dist/leaflet-src.esm')
+  const { map, tileLayer, geoJSON, icon, marker, control } = await import(
+    'leaflet/dist/leaflet-src.esm'
+  )
   const { enableFullcreenFeature } = useMap()
   await enableFullcreenFeature()
+
+  const layers = {
+    'Open topo map': tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {}),
+    ign: tileLayer(
+      'https://wxs.ign.fr/{ignApiKey}/geoportail/wmts?' +
+        '&REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&TILEMATRIXSET=PM' +
+        '&LAYER={ignLayer}&STYLE={style}&FORMAT={format}' +
+        '&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}',
+      {
+        ignApiKey: config.public.ignApiKey,
+        ignLayer: 'GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR',
+        style: 'normal',
+        format: 'image/jpeg',
+        service: 'WMTS',
+      }
+    ),
+  }
+
   // create map
   myMap = map(mapId.value, {
-    layers: [
-      // tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {})
-      tileLayer(
-        'https://wxs.ign.fr/{ignApiKey}/geoportail/wmts?' +
-          '&REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&TILEMATRIXSET=PM' +
-          '&LAYER={ignLayer}&STYLE={style}&FORMAT={format}' +
-          '&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}',
-        {
-          ignApiKey: config.public.ignApiKey,
-          ignLayer: 'GEOGRAPHICALGRIDSYSTEMS.MAPS.SCAN25TOUR',
-          style: 'normal',
-          format: 'image/jpeg',
-          service: 'WMTS',
-        }
-      ),
-    ],
+    layers: Object.values(layers),
     fullscreenControl: true,
     scrollWheelZoom: false,
   })
@@ -61,6 +66,9 @@ onMounted(async () => {
   } else {
     myMap.setView(getCoordinates(geojson).slice(0, 2).reverse(), 11)
   }
+
+  // add control layer
+  control.layers(layers).addTo(myMap)
 
   // add geojson layer
   geoJSON(geojson, {

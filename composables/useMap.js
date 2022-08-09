@@ -6,7 +6,7 @@ export const useMap = () => {
 
     Control.Fullscreen = Control.extend({
       options: {
-        position: 'topright',
+        position: 'topleft',
         title: {
           false: 'View fullscreen',
           true: 'Exit fullscreen',
