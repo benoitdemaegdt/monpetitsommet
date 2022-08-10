@@ -4,6 +4,7 @@
 
 <script setup>
 const config = useRuntimeConfig()
+const { refugeIcon } = useIcons()
 
 const { refuges } = defineProps({
   refuges: { type: Array, required: true },
@@ -22,7 +23,7 @@ const geojson = {
     },
     properties: {
       name: refuge.name,
-      icon: '/icons/refuge.png',
+      icon: refugeIcon,
     },
   })),
 }
