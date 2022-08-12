@@ -1,7 +1,7 @@
 <template>
   <div>
     <TrekStats :trek="trek" />
-    <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
+    <Map class="mt-8 rounded-lg shadow" :geojson="geojson" />
     <ClientOnly>
       <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
     </ClientOnly>

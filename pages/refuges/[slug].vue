@@ -7,7 +7,7 @@
   >
     <h2>Localisation</h2>
     <RefugeStats :refuge="refuge" />
-    <RefugeMap :refuges="[refuge]" class="mt-8 rounded-lg shadow" />
+    <Map :geojson="geojson" class="mt-8 rounded-lg shadow" />
     <h2>Équipements</h2>
     <RefugeEquipment :refuge="refuge" />
     <ContentRenderer :value="refuge" />
@@ -17,10 +17,28 @@
 <script setup>
 const { withoutTrailingSlash } = useContent()
 const { path } = useRoute()
+const { refugeIcon } = useIcons()
 
 const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
   return queryContent('/refuges')
     .where({ _path: withoutTrailingSlash(path) })
     .findOne()
 })
+
+const geojson = {
+  type: 'FeatureCollection',
+  features: [
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [refuge.value.longitude, refuge.value.latitude],
+      },
+      properties: {
+        name: refuge.value.name,
+        icon: refugeIcon,
+      },
+    },
+  ],
+}
 </script>

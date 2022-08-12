@@ -4,17 +4,14 @@
 
 <script setup>
 const config = useRuntimeConfig()
+const { zoomToZoneOfInterest } = useGeojson()
 
 const { geojson } = defineProps({
   geojson: { type: Object, required: true },
 })
+
 const mapId = ref(null)
-
-const { getBounds } = useTrekData()
-const { firstCoordinate, lastCoordinate } = getBounds(geojson)
-
 let myMap
-
 onMounted(async () => {
   const { map, tileLayer, geoJSON, icon, marker, circleMarker, control } = await import(
     'leaflet/dist/leaflet-src.esm'
@@ -47,46 +44,42 @@ onMounted(async () => {
   })
 
   // zoom map to zone of interest
-  myMap.fitBounds([firstCoordinate, lastCoordinate], { padding: [40, 40] })
+  zoomToZoneOfInterest(myMap, geojson)
 
   // add control layer
   control.layers(layers).addTo(myMap)
 
-  // add geojson line (path)
+  // add geojson layer
   geoJSON(geojson, {
-    style: () => ({ color: '#D81B60' }),
+    style: function (feature) {
+      if (feature.geometry.type === 'LineString') {
+        return { color: '#D81B60' }
+      }
+    },
     onEachFeature: (feature, layer) => {
       if (feature.geometry.type === 'Point') {
         layer.bindPopup(feature.properties.name)
       }
     },
     pointToLayer: (feature, latLng) => {
-      const customIcon = new icon({
-        iconSize: [25, 25],
-        popupAnchor: [1, -24],
-        iconUrl: feature.properties.icon,
-      })
-      return marker(latLng, { icon: customIcon })
+      if (!!feature.properties.icon) {
+        const customIcon = new icon({
+          iconSize: [25, 25],
+          popupAnchor: [1, -24],
+          iconUrl: feature.properties.icon,
+        })
+        return marker(latLng, { icon: customIcon })
+      } else if (feature.properties.marker === 'circle') {
+        return circleMarker(latLng, {
+          radius: 6,
+          weight: 1,
+          color: feature.properties.color,
+          fill: true,
+          fillColor: feature.properties.fillColor,
+          fillOpacity: 0.9,
+        })
+      }
     },
-  }).addTo(myMap)
-
-  // add circle marker for start and end of trek
-  circleMarker(firstCoordinate, {
-    radius: 6,
-    weight: 1,
-    color: '#334155',
-    fill: true,
-    fillColor: '#10b981',
-    fillOpacity: 0.9,
-  }).addTo(myMap)
-
-  circleMarker(lastCoordinate, {
-    radius: 6,
-    weight: 1,
-    color: '#334155',
-    fill: true,
-    fillColor: '#ef4444',
-    fillOpacity: 0.9,
   }).addTo(myMap)
 
   // fix problem happening when changing page
