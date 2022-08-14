@@ -7,6 +7,8 @@ const DESCRIPTION =
 const COVER_IMAGE_URL = `${BASE_URL}/social.jpg`
 
 export default defineNuxtConfig({
+  ssr: true,
+  target: 'static',
   meta: {
     htmlAttrs: { lang: 'fr' },
     title: TITLE,
@@ -52,6 +54,20 @@ export default defineNuxtConfig({
         type: 'text/javascript',
       },
     ],
+  },
+  runtimeConfig: {
+    public: {
+      ignApiKey: process.env.NUXT_IGN_API_KEY,
+    },
+  },
+  hooks: {
+    'vite:extendConfig'(config, { isServer }) {
+      if (isServer) {
+        // Workaround for netlify issue
+        // https://github.com/nuxt/framework/issues/6204
+        config.build.rollupOptions.output.inlineDynamicImports = true
+      }
+    },
   },
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
   sitemap: { hostname: 'https://monpetitsommet.fr' },

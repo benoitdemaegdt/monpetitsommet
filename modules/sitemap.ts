@@ -20,8 +20,8 @@ export default defineNuxtModule({
 
       // https://github.com/ekalinin/sitemap.js#generate-a-one-time-sitemap-from-a-list-of-urls
       const stream = new SitemapStream({ hostname: options.hostname })
-      return streamToPromise(Readable.from(sitemapRoutes).pipe(stream)).then(
-        (data) => data.toString()
+      return streamToPromise(Readable.from(sitemapRoutes).pipe(stream)).then((data) =>
+        data.toString()
       )
     }
 
@@ -51,8 +51,10 @@ export default defineNuxtModule({
         }
       })
       nitro.hooks.hook('close', async () => {
+        console.log('generating sitemap.xml ...')
         const sitemap = await generateSitemap(paths)
         createSitemapFile(sitemap, filePath)
+        console.log('sitemap.xml created')
       })
     })
   },

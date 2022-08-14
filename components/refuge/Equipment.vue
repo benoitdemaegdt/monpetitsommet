@@ -24,6 +24,8 @@
 </template>
 
 <script setup>
+const { bedIcon, mattressIcon, blanketIcon, stoveIcon, woodIcon, toiletIcon } = useIcons()
+
 const { refuge } = defineProps({
   refuge: { type: Object, required: true },
 })
@@ -32,37 +34,37 @@ const equipments = [
   {
     name: 'Capacité',
     value: `${refuge?.beds} pers`,
-    icon: '/icons/bed.png',
+    icon: bedIcon,
     alt: 'icone lit',
   },
   {
     name: 'Matelas',
     value: refuge?.matresses,
-    icon: '/icons/mattress.png',
+    icon: mattressIcon,
     alt: 'icone matelas',
   },
   {
     name: 'Couverture',
     value: refuge?.blankets ? 'Oui' : 'Non',
-    icon: '/icons/blanket.png',
+    icon: blanketIcon,
     alt: 'icone couverture',
   },
   {
     name: 'Poêle',
     value: refuge?.stove ? 'Oui' : 'Non',
-    icon: '/icons/stove.png',
+    icon: stoveIcon,
     alt: 'icone poêle',
   },
   {
     name: 'Bois',
     value: refuge?.wood ? 'Oui' : 'Non',
-    icon: '/icons/wood.png',
+    icon: woodIcon,
     alt: 'icone bois',
   },
   {
     name: 'Toilettes',
     value: refuge?.toilets ? 'Oui' : 'Non',
-    icon: '/icons/toilet.png',
+    icon: toiletIcon,
     alt: 'icone toilette',
   },
 ]

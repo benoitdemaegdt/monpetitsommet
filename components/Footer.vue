@@ -21,7 +21,7 @@
         </a>
       </div>
       <p class="mt-8 text-center text-base text-gray-400">
-        &copy; 2022 Ma Petite Location. Tout droit réservé.
+        &copy; 2022 Mon Petit Sommet. Tout droit réservé.
       </p>
     </div>
   </footer>

@@ -16,7 +16,7 @@
         </p>
       </div>
       <div class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl">
-        <RefugeMap :refuges="refuges" class="rounded-lg shadow" />
+        <Map :geojson="geojson" class="rounded-lg shadow" />
         <div class="mt-12 grid gap-8 lg:grid-cols-3">
           <Card
             v-for="refuge in refuges"
@@ -35,9 +35,25 @@
 </template>
 
 <script setup>
+const { getRefugeItems, getRefugeTags } = useCard()
+const { refugeIcon } = useIcons()
+
 const { data: refuges } = await useAsyncData(() => {
   return queryContent('/refuges').where({ _type: 'markdown' }).find()
 })
 
-const { getRefugeItems, getRefugeTags } = useCard()
+const geojson = {
+  type: 'FeatureCollection',
+  features: refuges.value.map((refuge) => ({
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [refuge.longitude, refuge.latitude],
+    },
+    properties: {
+      name: refuge.name,
+      icon: refugeIcon,
+    },
+  })),
+}
 </script>

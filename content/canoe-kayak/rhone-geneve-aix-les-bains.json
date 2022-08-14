@@ -6,13 +6,29 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          6.125907646492124,
+          46.20268626138568
+        ]
+      },
+      "properties": {
+        "name": "Départ",
+        "marker": "circle",
+        "color": "#334155",
+        "fillColor": "#10b981"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           6.0288728,
           46.1930452
         ]
       },
       "properties": {
         "name": "Barrage de Verbois",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
       }
     },
     {
@@ -26,7 +42,7 @@
       },
       "properties": {
         "name": "Barrage de Chancy",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
       }
     },
     {
@@ -40,7 +56,7 @@
       },
       "properties": {
         "name": "Bivouac 1",
-        "icon": "/icons/tent.png"
+        "icon": "/assets/icons/tent.png"
       }
     },
     {
@@ -54,7 +70,7 @@
       },
       "properties": {
         "name": "Barrage de Génissiat",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
       }
     },
     {
@@ -68,7 +84,7 @@
       },
       "properties": {
         "name": "Barrage de Seyssel",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
       }
     },
     {
@@ -82,7 +98,7 @@
       },
       "properties": {
         "name": "Barrage de Chautagne",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
       }
     },
     {
@@ -96,7 +112,7 @@
       },
       "properties": {
         "name": "Bivouac 2",
-        "icon": "/icons/tent.png"
+        "icon": "/assets/icons/tent.png"
       }
     },
     {
@@ -110,7 +126,23 @@
       },
       "properties": {
         "name": "Écluse de Chanaz",
-        "icon": "/icons/barrage.png"
+        "icon": "/assets/icons/barrage.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.891401274129748,
+          45.69131280295551
+        ]
+      },
+      "properties": {
+        "name": "Arrivée",
+        "marker": "circle",
+        "color": "#334155",
+        "fillColor": "#ef4444"
       }
     },
     {

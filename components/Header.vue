@@ -1,9 +1,7 @@
 <template>
   <Popover class="relative z-50 bg-white shadow">
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <div
-        class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
-      >
+      <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <NuxtLink to="/">
             <span class="sr-only">Mon Petit Sommet</span>
@@ -68,11 +66,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <div>
-                <img
-                  class="h-8 w-auto"
-                  src="~/assets/img/logo.png"
-                  alt="Workflow"
-                />
+                <img class="h-8 w-auto" src="~/assets/img/logo.png" alt="Workflow" />
               </div>
               <div class="-mr-2">
                 <PopoverButton
@@ -136,12 +130,7 @@
 </template>
 
 <script>
-import {
-  Popover,
-  PopoverButton,
-  PopoverGroup,
-  PopoverPanel,
-} from '@headlessui/vue'
+import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
 import {
   HomeIcon,
   MapIcon,

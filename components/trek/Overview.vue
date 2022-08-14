@@ -1,7 +1,7 @@
 <template>
   <div>
     <Stats :stats="getTrekStats(trek)" />
-    <TrekMap class="mt-8 rounded-lg shadow" :geojson="geojson" />
+    <Map class="mt-8 rounded-lg shadow" :geojson="geojson" />
     <ClientOnly>
       <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
     </ClientOnly>
@@ -32,12 +32,15 @@
 
 <script setup>
 import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
+const { path } = useRoute()
+const { withoutTrailingSlash } = useContent()
 
 const { trek } = defineProps({ trek: Object })
 
-const { path } = useRoute()
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/randonnees').where({ _path: path, _type: 'json' }).findOne()
+  return queryContent('/randonnees')
+    .where({ _path: withoutTrailingSlash(path), _type: 'json' })
+    .findOne()
 })
 
 const { getTrekStats } = useStats()
