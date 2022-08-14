@@ -131,7 +131,15 @@
 
 <script>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
-import { HomeIcon, MapIcon, SunIcon, PhotographIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
+import {
+  HomeIcon,
+  MapIcon,
+  SunIcon,
+  PhotographIcon,
+  ChevronDoubleDownIcon,
+  MenuIcon,
+  XIcon,
+} from '@heroicons/vue/outline'
 import { ChevronDownIcon } from '@heroicons/vue/solid'
 
 const navItems = [
@@ -155,6 +163,11 @@ const navItems = [
     path: '/refuges',
     icon: HomeIcon,
   },
+  {
+    name: 'Canoë Kayak',
+    path: '/canoe-kayak',
+    icon: ChevronDoubleDownIcon,
+  },
 ]
 
 export default {
@@ -168,6 +181,7 @@ export default {
     MenuIcon,
     XIcon,
     ChevronDownIcon,
+    ChevronDoubleDownIcon,
     MenuIcon,
     XIcon,
   },

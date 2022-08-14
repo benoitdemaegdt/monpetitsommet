@@ -39,7 +39,7 @@ const { getRefugeItems, getRefugeTags } = useCard()
 const { refugeIcon } = useIcons()
 
 const { data: refuges } = await useAsyncData(() => {
-  return queryContent('/refuges').find()
+  return queryContent('/refuges').where({ _type: 'markdown' }).find()
 })
 
 const geojson = {

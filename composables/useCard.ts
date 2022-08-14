@@ -1,6 +1,15 @@
 import { useIcons } from '~/composables/useIcons'
-const { mountainIcon, bedIcon, stoveIcon, waterIcon, distanceIcon, tempsIcon, hookIcon } =
-  useIcons()
+const {
+  mountainIcon,
+  bedIcon,
+  stoveIcon,
+  waterIcon,
+  distanceIcon,
+  tempsIcon,
+  hookIcon,
+  flagIcon,
+  pinIcon,
+} = useIcons()
 
 export const useCard = () => {
   function getRefugeItems(refuge) {
@@ -29,5 +38,14 @@ export const useCard = () => {
     return [`${trek.from} → ${trek.to}`]
   }
 
-  return { getRefugeItems, getRefugeTags, getTrekItems, getTrekTags }
+  function getCanoeTrekItems(canoeTrek) {
+    return [
+      { key: 'Départ', value: `${canoeTrek.from}`, iconUrl: pinIcon },
+      { key: 'Arrivée', value: `${canoeTrek.to}`, iconUrl: flagIcon },
+      { key: 'Distance', value: `${canoeTrek.distance}km`, iconUrl: distanceIcon },
+      { key: 'Durée', value: `${canoeTrek.duration}`, iconUrl: tempsIcon },
+    ]
+  }
+
+  return { getRefugeItems, getRefugeTags, getTrekItems, getTrekTags, getCanoeTrekItems }
 }

@@ -14,6 +14,7 @@ import tentIcon from 'assets/icons/tent.png'
 import toiletIcon from 'assets/icons/toilet.png'
 import waterIcon from 'assets/icons/water.png'
 import woodIcon from 'assets/icons/wood.png'
+import flagIcon from 'assets/icons/flag.png'
 
 export const useIcons = () => {
   return {
@@ -33,5 +34,6 @@ export const useIcons = () => {
     toiletIcon,
     waterIcon,
     woodIcon,
+    flagIcon,
   }
 }

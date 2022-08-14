@@ -6,7 +6,7 @@
     :imageUrl="refuge.imageUrl"
   >
     <h2>Localisation</h2>
-    <RefugeStats :refuge="refuge" />
+    <Stats :stats="getRefugeStats(refuge)" />
     <Map :geojson="geojson" class="mt-8 rounded-lg shadow" />
     <h2>Équipements</h2>
     <RefugeEquipment :refuge="refuge" />
@@ -17,6 +17,7 @@
 <script setup>
 const { withoutTrailingSlash } = useContent()
 const { path } = useRoute()
+const { getRefugeStats } = useStats()
 const { refugeIcon } = useIcons()
 
 const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
