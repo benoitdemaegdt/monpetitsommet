@@ -5,7 +5,6 @@
 <script setup>
 const config = useRuntimeConfig()
 const { zoomToZoneOfInterest } = useGeojson()
-const { tentIcon } = useIcons()
 
 const { geojson } = defineProps({
   geojson: { type: Object, required: true },
