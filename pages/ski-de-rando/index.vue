@@ -3,9 +3,7 @@
     <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-xl mx-auto py-16 sm:py-24">
         <div class="text-center">
-          <h1
-            class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl"
-          >
+          <h1 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
             Vous êtes en avance.
           </h1>
           <p class="mt-2 text-lg text-gray-500">
@@ -13,29 +11,18 @@
           </p>
         </div>
         <div class="mt-12">
-          <h2
-            class="text-sm font-semibold text-gray-500 tracking-wide uppercase"
-          >
+          <h2 class="text-sm font-semibold text-gray-500 tracking-wide uppercase">
             Autres catégories
           </h2>
-          <ul
-            role="list"
-            class="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200"
-          >
+          <ul role="list" class="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
             <li
               v-for="(link, linkIdx) in links"
               :key="linkIdx"
               class="relative py-6 flex items-start space-x-4"
             >
               <div class="flex-shrink-0">
-                <span
-                  class="flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-50"
-                >
-                  <component
-                    :is="link.icon"
-                    class="h-6 w-6 text-emerald-700"
-                    aria-hidden="true"
-                  />
+                <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-50">
+                  <component :is="link.icon" class="h-6 w-6 text-emerald-700" aria-hidden="true" />
                 </span>
               </div>
               <div class="min-w-0 flex-1">
@@ -52,20 +39,13 @@
                 <p class="text-base text-gray-500">{{ link.description }}</p>
               </div>
               <div class="flex-shrink-0 self-center">
-                <ChevronRightIcon
-                  class="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                />
+                <ChevronRightIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
               </div>
             </li>
           </ul>
           <div class="mt-8">
-            <NuxtLink
-              to="/"
-              class="text-base font-medium text-emerald-600 hover:text-emerald-500"
-              >Retour à l'accueil<span aria-hidden="true">
-                &rarr;</span
-              ></NuxtLink
+            <NuxtLink to="/" class="text-base font-medium text-emerald-600 hover:text-emerald-500"
+              >Retour à l'accueil<span aria-hidden="true"> &rarr;</span></NuxtLink
             >
           </div>
         </div>
@@ -75,8 +55,8 @@
 </template>
 
 <script>
-import { ChevronRightIcon } from '@heroicons/vue/solid'
-import { MapIcon, SunIcon, RssIcon } from '@heroicons/vue/outline'
+import { ChevronRightIcon } from '@heroicons/vue/24/solid'
+import { MapIcon, SunIcon, RssIcon } from '@heroicons/vue/24/outline'
 
 const links = [
   {

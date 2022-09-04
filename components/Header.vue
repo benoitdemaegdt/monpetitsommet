@@ -17,7 +17,7 @@
             class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
           >
             <span class="sr-only">Ouvrir menu</span>
-            <MenuIcon class="h-6 w-6" aria-hidden="true" />
+            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
           </PopoverButton>
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
@@ -73,7 +73,7 @@
                   class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
                 >
                   <span class="sr-only">Fermer menu</span>
-                  <XIcon class="h-6 w-6" aria-hidden="true" />
+                  <XMarkIcon class="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
             </div>
@@ -86,11 +86,7 @@
                   @click="close()"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                 >
-                  <component
-                    :is="navItem.icon"
-                    class="flex-shrink-0 h-6 w-6 text-emerald-600"
-                    aria-hidden="true"
-                  />
+                  <component :is="navItem.icon" class="flex-shrink-0 h-6 w-6" aria-hidden="true" />
                   <span class="ml-3 text-base font-medium text-gray-900">
                     {{ navItem.name }}
                   </span>
@@ -135,12 +131,12 @@ import {
   HomeIcon,
   MapIcon,
   SunIcon,
-  PhotographIcon,
+  PhotoIcon,
   ChevronDoubleDownIcon,
-  MenuIcon,
-  XIcon,
-} from '@heroicons/vue/outline'
-import { ChevronDownIcon } from '@heroicons/vue/solid'
+  Bars3Icon,
+  XMarkIcon,
+} from '@heroicons/vue/24/outline'
+import { ChevronDownIcon } from '@heroicons/vue/24/solid'
 
 const navItems = [
   {
@@ -156,7 +152,7 @@ const navItems = [
   {
     name: 'Alpinisme',
     path: '/alpinisme',
-    icon: PhotographIcon,
+    icon: PhotoIcon,
   },
   {
     name: 'Refuges',
@@ -178,12 +174,10 @@ export default {
     PopoverGroup,
     PopoverPanel,
     ChevronDownIcon,
-    MenuIcon,
-    XIcon,
+    Bars3Icon,
+    XMarkIcon,
     ChevronDownIcon,
     ChevronDoubleDownIcon,
-    MenuIcon,
-    XIcon,
   },
   setup() {
     return {

@@ -23,7 +23,7 @@
           )
         "
       >
-        <DownloadIcon class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
+        <ArrowDownTrayIcon class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
         Télécharger GPX
       </button>
     </div>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { DownloadIcon, MapIcon } from '@heroicons/vue/outline'
+import { ArrowDownTrayIcon, MapIcon } from '@heroicons/vue/24/outline'
 const { path } = useRoute()
 const { withoutTrailingSlash } = useContent()
 
