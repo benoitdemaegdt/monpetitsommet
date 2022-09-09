@@ -66,7 +66,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="~/assets/img/logo.png" alt="Workflow" />
+                <img class="h-8 w-auto" src="~/assets/img/logo.png" alt="logo mon petit sommet" />
               </div>
               <div class="-mr-2">
                 <PopoverButton
