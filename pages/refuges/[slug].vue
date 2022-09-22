@@ -15,13 +15,13 @@
 </template>
 
 <script setup>
-const { withoutTrailingSlash } = useContent()
+const { withoutTrailingSlash } = useUrl()
 const { path } = useRoute()
 const { getRefugeStats } = useStats()
 const { refugeIcon } = useIcons()
 
 const { data: refuge } = await useAsyncData(`refuge-${path}`, () => {
-  return queryContent('/refuges')
+  return queryContent()
     .where({ _path: withoutTrailingSlash(path) })
     .findOne()
 })

@@ -1,5 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
-
 const TITLE = 'Mon Petit Sommet'
 const BASE_URL = 'https://monpetitsommet.fr'
 const DESCRIPTION =
@@ -60,16 +58,7 @@ export default defineNuxtConfig({
       ignApiKey: process.env.NUXT_IGN_API_KEY,
     },
   },
-  hooks: {
-    'vite:extendConfig'(config, { isServer }) {
-      if (isServer) {
-        // Workaround for netlify issue
-        // https://github.com/nuxt/framework/issues/6204
-        config.build.rollupOptions.output.inlineDynamicImports = true
-      }
-    },
-  },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', '~/modules/sitemap'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/content', 'nuxt-icon', '~/modules/sitemap'],
   sitemap: { hostname: 'https://monpetitsommet.fr' },
   content: {
     markdown: {
@@ -78,11 +67,7 @@ export default defineNuxtConfig({
   },
   tailwindcss: { viewer: false },
   build: {
-    transpile: [
-      '@heroicons/vue', // https://github.com/tailwindlabs/heroicons/issues/564
-      '@headlessui/vue', // https://github.com/tailwindlabs/headlessui/issues/982
-      'lite-youtube-embed',
-    ],
+    transpile: ['lite-youtube-embed', '@headlessui/vue'],
   },
   plugins: ['~/plugins/youtube.client.js'],
   css: [

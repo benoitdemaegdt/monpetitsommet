@@ -8,12 +8,12 @@
   },
   "devDependencies": {
     "@headlessui/vue": "^1.7.0",
-    "@heroicons/vue": "^2.0.10",
-    "@nuxt/content": "^2.0.1",
+    "@nuxt/content": "^2.1.1",
     "@nuxtjs/tailwindcss": "^5.3.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.7",
-    "nuxt": "^3.0.0-rc.9",
+    "nuxt": "^3.0.0-rc.11",
+    "nuxt-icon": "^0.1.5",
     "sitemap": "^7.1.1"
   },
   "dependencies": {
