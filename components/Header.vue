@@ -17,7 +17,7 @@
             class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
           >
             <span class="sr-only">Ouvrir menu</span>
-            <Bars3Icon class="h-6 w-6" aria-hidden="true" />
+            <Icon name="mdi:menu" class="h-6 w-6" aria-hidden="true" />
           </PopoverButton>
         </div>
         <PopoverGroup as="nav" class="hidden md:flex space-x-10">
@@ -73,7 +73,7 @@
                   class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-emerald-500"
                 >
                   <span class="sr-only">Fermer menu</span>
-                  <XMarkIcon class="h-6 w-6" aria-hidden="true" />
+                  <Icon name="mdi:close" class="h-6 w-6" aria-hidden="true" />
                 </PopoverButton>
               </div>
             </div>
@@ -86,7 +86,7 @@
                   @click="close()"
                   class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                 >
-                  <component :is="navItem.icon" class="flex-shrink-0 h-6 w-6" aria-hidden="true" />
+                  <Icon :name="navItem.icon" class="flex-shrink-0 h-6 w-6" aria-hidden="true" />
                   <span class="ml-3 text-base font-medium text-gray-900">
                     {{ navItem.name }}
                   </span>
@@ -125,64 +125,14 @@
   </Popover>
 </template>
 
-<script>
+<script setup>
 import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/vue'
-import {
-  HomeIcon,
-  MapIcon,
-  SunIcon,
-  PhotoIcon,
-  ChevronDoubleDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from '@heroicons/vue/24/outline'
-import { ChevronDownIcon } from '@heroicons/vue/24/solid'
 
 const navItems = [
-  {
-    name: 'Rando',
-    path: '/randonnees',
-    icon: MapIcon,
-  },
-  {
-    name: 'Ski de rando',
-    path: '/ski-de-rando',
-    icon: SunIcon,
-  },
-  {
-    name: 'Alpinisme',
-    path: '/alpinisme',
-    icon: PhotoIcon,
-  },
-  {
-    name: 'Refuges',
-    path: '/refuges',
-    icon: HomeIcon,
-  },
-  {
-    name: 'Canoë Kayak',
-    path: '/canoe-kayak',
-    icon: ChevronDoubleDownIcon,
-  },
+  { name: 'Rando', path: '/randonnees', icon: 'mdi:map-outline' },
+  { name: 'Ski de rando', path: '/ski-de-rando', icon: 'mdi:weather-sunny' },
+  { name: 'Alpinisme', path: '/alpinisme', icon: 'mdi:image-outline' },
+  { name: 'Refuges', path: '/refuges', icon: 'mdi:home-outline' },
+  { name: 'Canoë Kayak', path: '/canoe-kayak', icon: 'mdi:kayaking' },
 ]
-
-export default {
-  name: 'Header',
-  components: {
-    Popover,
-    PopoverButton,
-    PopoverGroup,
-    PopoverPanel,
-    ChevronDownIcon,
-    Bars3Icon,
-    XMarkIcon,
-    ChevronDownIcon,
-    ChevronDoubleDownIcon,
-  },
-  setup() {
-    return {
-      navItems,
-    }
-  },
-}
 </script>

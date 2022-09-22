@@ -13,11 +13,11 @@
 
 <script setup>
 const { path } = useRoute()
-const { withoutTrailingSlash } = useContent()
+const { withoutTrailingSlash } = useUrl()
 
 const { data: trek } = await useAsyncData(`trek-${path}`, () => {
-  return queryContent('/randonnees')
-    .where({ _path: withoutTrailingSlash(path), _type: 'markdown' })
+  return queryContent()
+    .where({ _path: `${withoutTrailingSlash(path)}`, _type: 'markdown' })
     .findOne()
 })
 </script>

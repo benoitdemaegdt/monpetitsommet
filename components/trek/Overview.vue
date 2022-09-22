@@ -11,7 +11,7 @@
         target="_blank"
         class="w-full inline-flex items-center justify-center px-6 py-3 no-underline border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
       >
-        <MapIcon class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
+        <Icon name="mdi:map-outline" class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
         Acheter la carte
       </a>
       <button
@@ -23,7 +23,11 @@
           )
         "
       >
-        <ArrowDownTrayIcon class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
+        <Icon
+          name="mdi:cloud-download-outline"
+          class="-ml-1 mr-3 h-5 w-5"
+          aria-hidden="true"
+        ></Icon>
         Télécharger GPX
       </button>
     </div>
@@ -31,15 +35,14 @@
 </template>
 
 <script setup>
-import { ArrowDownTrayIcon, MapIcon } from '@heroicons/vue/24/outline'
 const { path } = useRoute()
-const { withoutTrailingSlash } = useContent()
+const { withoutTrailingSlash } = useUrl()
 
 const { trek } = defineProps({ trek: Object })
 
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/randonnees')
-    .where({ _path: withoutTrailingSlash(path), _type: 'json' })
+  return queryContent()
+    .where({ _type: 'json', _path: { $contains: withoutTrailingSlash(path) } })
     .findOne()
 })
 

@@ -12,7 +12,11 @@
           )
         "
       >
-        <ArrowDownTrayIcon class="-ml-1 mr-3 h-5 w-5" aria-hidden="true" />
+        <Icon
+          name="mdi:cloud-download-outline"
+          class="-ml-1 mr-3 h-5 w-5"
+          aria-hidden="true"
+        ></Icon>
         Télécharger GPX
       </button>
     </div>
@@ -20,13 +24,14 @@
 </template>
 
 <script setup>
-import { ArrowDownTrayIcon } from '@heroicons/vue/24/outline'
-
+const { withoutTrailingSlash } = useUrl()
 const { canoeTrek } = defineProps({ canoeTrek: Object })
 
 const { path } = useRoute()
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
-  return queryContent('/canoe-kayak').where({ _path: path, _type: 'json' }).findOne()
+  return queryContent()
+    .where({ _type: 'json', _path: { $contains: withoutTrailingSlash(path) } })
+    .findOne()
 })
 
 const { getCanoeTrekStats } = useStats()

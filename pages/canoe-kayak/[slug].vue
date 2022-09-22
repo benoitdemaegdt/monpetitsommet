@@ -15,6 +15,6 @@
 const { path } = useRoute()
 
 const { data: canoeTrek } = await useAsyncData(`canoe-trek-${path}`, () => {
-  return queryContent('/canoe-kayak').where({ _path: path, _type: 'markdown' }).findOne()
+  return queryContent().where({ _type: 'markdown', _path: path }).findOne()
 })
 </script>

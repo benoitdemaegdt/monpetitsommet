@@ -22,7 +22,11 @@
             >
               <div class="flex-shrink-0">
                 <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-50">
-                  <component :is="link.icon" class="h-6 w-6 text-emerald-700" aria-hidden="true" />
+                  <Icon
+                    :name="link.icon"
+                    class="h-6 w-6 text-emerald-700"
+                    aria-hidden="true"
+                  ></Icon>
                 </span>
               </div>
               <div class="min-w-0 flex-1">
@@ -39,7 +43,11 @@
                 <p class="text-base text-gray-500">{{ link.description }}</p>
               </div>
               <div class="flex-shrink-0 self-center">
-                <ChevronRightIcon class="h-5 w-5 text-gray-400" aria-hidden="true" />
+                <Icon
+                  name="mdi:chevron-right"
+                  class="h-5 w-5 text-gray-400"
+                  aria-hidden="true"
+                ></Icon>
               </div>
             </li>
           </ul>
@@ -54,39 +62,25 @@
   </div>
 </template>
 
-<script>
-import { ChevronRightIcon } from '@heroicons/vue/24/solid'
-import { MapIcon, SunIcon, RssIcon } from '@heroicons/vue/24/outline'
-
+<script setup>
 const links = [
   {
     title: 'Randonnées',
     description: 'Des topos détaillés de randos de deux ou trois jours.',
-    icon: MapIcon,
+    icon: 'mdi:map-outline',
     path: '/randonnees',
   },
   {
     title: 'Alpinisme',
     description: "L'aventure au bout de la corde.",
-    icon: SunIcon,
+    icon: 'mdi:weather-sunny',
     path: '/alpinisme',
   },
   {
     title: 'Blog',
     description: 'Découverte de sports, test de matos, bons plans.',
-    icon: RssIcon,
+    icon: 'mdi:rss',
     path: '/blog',
   },
 ]
-
-export default {
-  components: {
-    ChevronRightIcon,
-  },
-  setup() {
-    return {
-      links,
-    }
-  },
-}
 </script>
