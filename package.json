@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "highcharts-vue": "^1.4.0",
-    "leaflet": "^1.8.0",
+    "leaflet": "^1.9.2",
     "lite-youtube-embed": "^0.2.0"
   }
 }
