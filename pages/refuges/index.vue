@@ -38,6 +38,9 @@
 const { getRefugeItems, getRefugeTags } = useCard()
 const { refugeIcon } = useIcons()
 
+// https://github.com/nuxt/framework/issues/3587
+definePageMeta({ pageTransition: false })
+
 const { data: refuges } = await useAsyncData(() => {
   return queryContent('/refuges').where({ _type: 'markdown' }).find()
 })
