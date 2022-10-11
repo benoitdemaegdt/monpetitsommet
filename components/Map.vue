@@ -65,6 +65,16 @@ onMounted(() => {
       filter: ['==', '$type', 'LineString'],
     })
     map.addLayer({
+      id: 'start-end',
+      type: 'circle',
+      source: 'data',
+      paint: {
+        'circle-radius': 6,
+        'circle-color': ['get', 'color'],
+      },
+      filter: ['==', '$type', 'Point'],
+    })
+    map.addLayer({
       id: 'poi',
       type: 'symbol',
       source: 'data',
