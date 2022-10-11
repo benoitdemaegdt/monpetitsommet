@@ -8,6 +8,8 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 const config = useRuntimeConfig()
 const ignApiKey = config.public.ignApiKey
 
+const { geojson } = defineProps({ geojson: Object })
+
 onMounted(() => {
   const map = new maplibregl.Map({
     container: 'map',
@@ -26,12 +28,35 @@ onMounted(() => {
       },
       layers: [{ id: 'ign', type: 'raster', source: 'ign', minzoom: 0, maxzoom: 22 }],
     },
-    center: [4.8312188, 45.757198],
-    zoom: 13,
+    center: [5.71667, 45.166672],
+    zoom: 9,
     attributionControl: false,
   })
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left')
   map.addControl(new maplibregl.FullscreenControl(), 'top-right')
   map.addControl(new maplibregl.AttributionControl({ compact: true }))
+
+  // add geojson layer
+  map.on('load', () => {
+    map.addSource('refuges', {
+      type: 'geojson',
+      data: geojson,
+    })
+    map.addLayer({
+      id: 'refuges',
+      type: 'circle',
+      source: 'refuges',
+      paint: {
+        'circle-radius': 6,
+        'circle-color': '#B42222',
+      },
+      filter: ['==', '$type', 'Point'],
+    })
+
+    const allCoordinates = geojson.features.map((feature) => feature.geometry.coordinates)
+    const bounds = new maplibregl.LngLatBounds(allCoordinates[0], allCoordinates[0])
+    allCoordinates.map((coord) => bounds.extend(coord))
+    map.fitBounds(bounds, { padding: 20 })
+  })
 })
 </script>
