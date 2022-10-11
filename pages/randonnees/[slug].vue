@@ -15,6 +15,9 @@
 const { path } = useRoute()
 const { withoutTrailingSlash } = useUrl()
 
+// https://github.com/nuxt/framework/issues/3587
+definePageMeta({ pageTransition: false })
+
 const { data: trek } = await useAsyncData(`trek-${path}`, () => {
   return queryContent()
     .where({ _path: `${withoutTrailingSlash(path)}`, _type: 'markdown' })
