@@ -9,5 +9,5 @@ Website with mountain related stuff.
 - Nuxt 3
 - Nuxt Content V2
 - Tailwind CSS & Tailwind UI
-- Leaflet
+- Maplibre
 - Highcharts

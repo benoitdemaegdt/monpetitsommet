@@ -72,7 +72,7 @@ onMounted(() => {
         'circle-radius': 6,
         'circle-color': ['get', 'color'],
       },
-      filter: ['==', '$type', 'Point'],
+      filter: ['==', 'marker', 'circle'],
     })
     map.addLayer({
       id: 'poi',
@@ -82,7 +82,7 @@ onMounted(() => {
         'icon-image': ['get', 'icon'],
         'icon-size': 0.5,
       },
-      filter: ['==', '$type', 'Point'],
+      filter: ['has', 'icon'],
     })
 
     if (allCoordinates.length > 1) {
