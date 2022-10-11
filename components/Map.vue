@@ -63,6 +63,15 @@ onMounted(() => {
       allCoordinates.map((coord) => bounds.extend(coord))
       map.fitBounds(bounds, { padding: 20 })
     }
+
+    map.on('click', 'refuges', (e) => {
+      new maplibregl.Popup({ closeButton: false, closeOnClick: true })
+        .setLngLat(e.lngLat)
+        .setHTML(`<div class="text-sm text-gray-800">${e.features[0].properties.name}</div>`)
+        .addTo(map)
+    })
+    map.on('mouseenter', 'refuges', () => (map.getCanvas().style.cursor = 'pointer'))
+    map.on('mouseleave', 'refuges', () => (map.getCanvas().style.cursor = ''))
   })
 })
 </script>
