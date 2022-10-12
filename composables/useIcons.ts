@@ -1,39 +1,40 @@
-import bedIcon from 'assets/icons/bed.png'
-import blanketIcon from 'assets/icons/blanket.png'
-import distanceIcon from 'assets/icons/distance.png'
-import emailIcon from 'assets/icons/email.png'
-import hookIcon from 'assets/icons/hook.png'
-import mattressIcon from 'assets/icons/mattress.png'
-import mountainIcon from 'assets/icons/mountain.png'
-import phoneIcon from 'assets/icons/phone.png'
-import pinIcon from 'assets/icons/pin.png'
-import refugeIcon from 'assets/icons/refuge.png'
-import stoveIcon from 'assets/icons/stove.png'
-import tempsIcon from 'assets/icons/temps.png'
-import tentIcon from 'assets/icons/tent.png'
-import toiletIcon from 'assets/icons/toilet.png'
-import waterIcon from 'assets/icons/water.png'
-import woodIcon from 'assets/icons/wood.png'
-import flagIcon from 'assets/icons/flag.png'
-
 export const useIcons = () => {
   return {
-    bedIcon,
-    blanketIcon,
-    distanceIcon,
-    emailIcon,
-    hookIcon,
-    mattressIcon,
-    mountainIcon,
-    phoneIcon,
-    pinIcon,
-    refugeIcon,
-    stoveIcon,
-    tempsIcon,
-    tentIcon,
-    toiletIcon,
-    waterIcon,
-    woodIcon,
-    flagIcon,
+    barrageIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/barrage_old54s.png',
+    bedIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/bed_gbkprt.png',
+    blanketIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/blanket_vlp6oz.png',
+    distanceIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/distance_hyregn.png',
+    emailIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/email_gpmafg.png',
+    hookIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/hook_n67d8c.png',
+    mattressIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/mattress_gikynk.png',
+    mountainIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/mountain_p7z3lb.png',
+    phoneIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/phone_ebaxin.png',
+    pinIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/pin_u53zhi.png',
+    refugeIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470878/icons/refuge_mhyesd.png',
+    stoveIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/stove_js3bab.png',
+    tempsIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/temps_arpdqm.png',
+    tentIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/tent_cczprl.png',
+    toiletIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/toilet_zn9kpp.png',
+    waterIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/water_uv1oer.png',
+    woodIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470879/icons/wood_n5xypv.png',
+    flagIcon:
+      'https://res.cloudinary.com/monpetitsommet/image/upload/v1665470877/icons/flag_bdfkd1.png',
   }
 }

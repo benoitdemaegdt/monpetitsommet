@@ -14,6 +14,9 @@
 <script setup>
 const { path } = useRoute()
 
+// https://github.com/nuxt/framework/issues/3587
+definePageMeta({ pageTransition: false })
+
 const { data: canoeTrek } = await useAsyncData(`canoe-trek-${path}`, () => {
   return queryContent().where({ _type: 'markdown', _path: path }).findOne()
 })

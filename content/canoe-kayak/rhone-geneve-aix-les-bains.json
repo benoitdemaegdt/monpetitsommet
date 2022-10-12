@@ -13,8 +13,7 @@
       "properties": {
         "name": "Départ",
         "marker": "circle",
-        "color": "#334155",
-        "fillColor": "#10b981"
+        "color": "#10b981"
       }
     },
     {
@@ -141,8 +140,7 @@
       "properties": {
         "name": "Arrivée",
         "marker": "circle",
-        "color": "#334155",
-        "fillColor": "#ef4444"
+        "color": "#ef4444"
       }
     },
     {

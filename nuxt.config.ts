@@ -70,11 +70,7 @@ export default defineNuxtConfig({
     transpile: ['lite-youtube-embed', '@headlessui/vue'],
   },
   plugins: ['~/plugins/youtube.client.js'],
-  css: [
-    'lite-youtube-embed/src/lite-yt-embed.css',
-    'leaflet/dist/leaflet.css',
-    '~/assets/fullscreen/leaflet.fullscreen.css',
-  ],
+  css: ['lite-youtube-embed/src/lite-yt-embed.css'],
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['lite-youtube'].includes(tag),
