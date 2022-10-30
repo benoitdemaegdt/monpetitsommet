@@ -27,7 +27,7 @@
       },
       "properties": {
         "name": "Barrage de Verbois",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
@@ -41,7 +41,7 @@
       },
       "properties": {
         "name": "Barrage de Chancy",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
@@ -55,7 +55,7 @@
       },
       "properties": {
         "name": "Bivouac 1",
-        "icon": "/assets/icons/tent.png"
+        "icon": "/icons/tent.png"
       }
     },
     {
@@ -69,7 +69,7 @@
       },
       "properties": {
         "name": "Barrage de Génissiat",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
@@ -83,7 +83,7 @@
       },
       "properties": {
         "name": "Barrage de Seyssel",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
@@ -97,7 +97,7 @@
       },
       "properties": {
         "name": "Barrage de Chautagne",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
@@ -111,7 +111,7 @@
       },
       "properties": {
         "name": "Bivouac 2",
-        "icon": "/assets/icons/tent.png"
+        "icon": "/icons/tent.png"
       }
     },
     {
@@ -125,7 +125,7 @@
       },
       "properties": {
         "name": "Écluse de Chanaz",
-        "icon": "/assets/icons/barrage.png"
+        "icon": "/icons/barrage.png"
       }
     },
     {
