@@ -15,7 +15,7 @@ export default {
   async setup(props) {
     const { getTrekData } = useTrekData()
     const { altitudeData, pointsOfInterest } = getTrekData(props.geojson)
-
+    const position = useState('position')
     return {
       chartOptions: {
         chart: {
@@ -71,6 +71,23 @@ export default {
             threshold: null,
           },
         ],
+        plotOptions: {
+          series: {
+            point: {
+              events: {
+                mouseOver: (event) => {
+                  const { x, y } = event.target
+                  position.value = { x, y }
+                },
+              },
+            },
+            events: {
+              mouseOut: () => {
+                position.value = { x: undefined, y: undefined }
+              },
+            },
+          },
+        },
       },
     }
   },

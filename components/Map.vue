@@ -10,6 +10,7 @@ const ignApiKey = config.public.ignApiKey
 
 const { loadImages } = useMap()
 const { geojson } = defineProps({ geojson: Object })
+
 const allPointsCoordinates = geojson.features
   .filter((feature) => feature.geometry.type === 'Point')
   .map((feature) => feature.geometry.coordinates.slice(0, 2))
@@ -19,6 +20,10 @@ const allLinesCoordinates = geojson.features
   .reduce((prev, current) => [...prev, ...current.map((coord) => coord.slice(0, 2))], [])
 const allCoordinates = [...allPointsCoordinates, ...allLinesCoordinates]
 const firstCoordinate = allCoordinates[0]
+
+const position = useState('position')
+// main line string (one that = elevationProfile) must be 1st in geojson file
+const mainLineString = geojson.features.find((feature) => feature.geometry.type === 'LineString')
 
 onMounted(() => {
   const map = new maplibregl.Map({
@@ -99,6 +104,22 @@ onMounted(() => {
     })
     map.on('mouseenter', 'poi', () => (map.getCanvas().style.cursor = 'pointer'))
     map.on('mouseleave', 'poi', () => (map.getCanvas().style.cursor = ''))
+  })
+
+  const el = document.createElement('div')
+  el.className = 'rounded-full h-4 w-4 bg-[#D81B60]'
+  let marker = new maplibregl.Marker(el)
+  watch(position, (newPosition) => {
+    const { x, y } = newPosition
+    if (x === undefined && y === undefined) {
+      marker.remove()
+    } else {
+      const coordinates = mainLineString?.geometry?.coordinates
+      const [long, lat] = coordinates.find(
+        ([_long, _lat, alt, dist]) => x === dist && Math.round(alt) === y
+      )
+      marker.setLngLat([long, lat]).addTo(map)
+    }
   })
 })
 </script>
