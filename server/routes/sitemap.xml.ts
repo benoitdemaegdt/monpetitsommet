@@ -34,6 +34,9 @@ function getStaticEndpoints(): string[] {
     })
 }
 
+/**
+ * recursively get all files from /pages folder
+ */
 function getFiles(dir: string): string[] {
   const dirents = fs.readdirSync(dir, { withFileTypes: true })
   const files = dirents.map((dirent) => {
