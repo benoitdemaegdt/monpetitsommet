@@ -6,6 +6,22 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          5.85543394089,
+          45.30872225761,
+          1993.12137918949,
+          14
+        ]
+      },
+      "properties": {
+        "name": "Dent de Crolles",
+        "icon": "/icons/mountain.png"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           5.77727,
           45.25977
         ]
