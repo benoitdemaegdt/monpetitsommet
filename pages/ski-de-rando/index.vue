@@ -1,86 +1,35 @@
 <template>
-  <div class="bg-white">
-    <main class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-xl mx-auto py-16 sm:py-24">
-        <div class="text-center">
-          <h1 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
-            Vous êtes en avance.
-          </h1>
-          <p class="mt-2 text-lg text-gray-500">
-            Des topos de ski de rando seront ajoutés très prochainement.
-          </p>
-        </div>
-        <div class="mt-12">
-          <h2 class="text-sm font-semibold text-gray-500 tracking-wide uppercase">
-            Autres catégories
-          </h2>
-          <ul role="list" class="mt-4 border-t border-b border-gray-200 divide-y divide-gray-200">
-            <li
-              v-for="(link, linkIdx) in links"
-              :key="linkIdx"
-              class="relative py-6 flex items-start space-x-4"
-            >
-              <div class="flex-shrink-0">
-                <span class="flex items-center justify-center h-12 w-12 rounded-lg bg-emerald-50">
-                  <Icon
-                    :name="link.icon"
-                    class="h-6 w-6 text-emerald-700"
-                    aria-hidden="true"
-                  ></Icon>
-                </span>
-              </div>
-              <div class="min-w-0 flex-1">
-                <h3 class="text-base font-medium text-gray-900">
-                  <span
-                    class="rounded-sm focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-emerald-500"
-                  >
-                    <NuxtLink :to="link.path" class="focus:outline-none">
-                      <span class="absolute inset-0" aria-hidden="true" />
-                      {{ link.title }}
-                    </NuxtLink>
-                  </span>
-                </h3>
-                <p class="text-base text-gray-500">{{ link.description }}</p>
-              </div>
-              <div class="flex-shrink-0 self-center">
-                <Icon
-                  name="mdi:chevron-right"
-                  class="h-5 w-5 text-gray-400"
-                  aria-hidden="true"
-                ></Icon>
-              </div>
-            </li>
-          </ul>
-          <div class="mt-8">
-            <NuxtLink to="/" class="text-base font-medium text-emerald-600 hover:text-emerald-500"
-              >Retour à l'accueil<span aria-hidden="true"> &rarr;</span></NuxtLink
-            >
-          </div>
+  <div class="relative py-16 sm:py-24 lg:py-32">
+    <div class="relative">
+      <div class="text-center mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+        <h2 class="text-base font-semibold tracking-wider text-emerald-600 uppercase">Chercher la poudreuse</h2>
+        <h1 class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">Ski de rando</h1>
+        <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
+          Retrouvez les topos de sorties ski de rando. À la journée, ou sur plusieurs jours, avec nuit en refuge ou cabane non gardée.
+        </p>
+      </div>
+      <div class="mt-12 mx-auto max-w-md px-4 sm:max-w-lg sm:px-6 lg:px-8 lg:max-w-7xl">
+        <div class="mt-12 grid gap-8 lg:grid-cols-3">
+          <Card
+            v-for="trek in treks"
+            :key="trek.name"
+            :path="trek._path"
+            :imageUrl="trek.imageUrl"
+            :header="trek.massif"
+            :name="trek.name"
+            :items="getTrekItems(trek)"
+            :tags="getTrekTags(trek)"
+          />
         </div>
       </div>
-    </main>
+    </div>
   </div>
 </template>
 
 <script setup>
-const links = [
-  {
-    title: 'Randonnées',
-    description: 'Des topos détaillés de randos de deux ou trois jours.',
-    icon: 'mdi:map-outline',
-    path: '/randonnees',
-  },
-  {
-    title: 'Alpinisme',
-    description: "L'aventure au bout de la corde.",
-    icon: 'mdi:weather-sunny',
-    path: '/alpinisme',
-  },
-  {
-    title: 'Blog',
-    description: 'Découverte de sports, test de matos, bons plans.',
-    icon: 'mdi:rss',
-    path: '/blog',
-  },
-]
+const { data: treks } = await useAsyncData(() => {
+  return queryContent('/ski-de-rando').where({ _type: 'markdown' }).find()
+})
+
+const { getTrekItems, getTrekTags } = useCard()
 </script>
