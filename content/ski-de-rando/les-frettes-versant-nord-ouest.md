@@ -41,14 +41,17 @@ caption: Grande combe menant au col des Frettes.
 ---
 ::
 
-Depuis la ligne des crêtes, on voit le versant Est, probablement très tracé et fréquenté. Porter alors les skis sur 30 mètres vers le Sud-Oues pour passer un pas difficilement négociable avec les skis aux pieds. On rechausse alors sur une pente douce orientée Nord-Nord-Ouest et on rejoint les Frettes en une dizaines de minutes.
+Depuis la ligne des crêtes, on voit le versant Est, probablement très tracé et fréquenté. Porter alors les skis sur 30 mètres vers le Sud-Ouest pour passer un pas difficilement négociable avec les skis aux pieds.
+
 ::image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675287984/ski-de-rando/les-frettes-versant-nord-ouest/frettes-NW-4_gaqixb.png
 alt: Portage des skis.
-caption: 30m de portage après le col des Frettes.
+caption: 30m de portage avant l'ascension finale.
 ---
 ::
+
+On rechausse alors sur une pente douce orientée Nord-Nord-Ouest et on rejoint les Frettes en une dizaines de minutes.
 
 ## Descente
 Lorem Ipsum
