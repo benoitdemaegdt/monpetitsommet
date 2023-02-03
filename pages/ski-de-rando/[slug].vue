@@ -6,7 +6,7 @@
     :imageUrl="trek.imageUrl"
   >
     <h2>Aperçu de l'itinéraire</h2>
-    <TrekOverview :trek="trek" />
+    <TrekOverview :trek="trek" activity="ski" />
     <ContentRenderer :value="trek" />
   </ContentFrame>
 </template>

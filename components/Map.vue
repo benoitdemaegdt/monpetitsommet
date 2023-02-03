@@ -9,7 +9,7 @@ const config = useRuntimeConfig()
 const ignApiKey = config.public.ignApiKey
 
 const { loadImages } = useMap()
-const { geojson } = defineProps({ geojson: Object })
+const { geojson, activity } = defineProps({ geojson: Object, activity: String })
 
 const allPointsCoordinates = geojson.features
   .filter((feature) => feature.geometry.type === 'Point')
@@ -54,6 +54,17 @@ onMounted(() => {
   // add geojson layer
   map.on('load', async () => {
     await loadImages(map, geojson)
+
+    if (activity === 'ski') {
+      map.addSource('calque-pente', {
+        type: 'raster',
+        tiles: [
+          `https://wxs.ign.fr/an7nvfzojv5wa96dsga5nk8w/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.SLOPES.MOUNTAIN&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}`,
+        ],
+        tileSize: 256
+      });
+      map.addLayer({ id: 'calque-pente', type: 'raster', source: 'calque-pente' });
+    }
 
     map.addSource('data', {
       type: 'geojson',
@@ -104,6 +115,52 @@ onMounted(() => {
     })
     map.on('mouseenter', 'poi', () => (map.getCanvas().style.cursor = 'pointer'))
     map.on('mouseleave', 'poi', () => (map.getCanvas().style.cursor = ''))
+
+    // map.on('idle', () => {
+    //   const layerId = 'calque-pente'
+    //   if (!map.getLayer(layerId)) {
+    //     return
+    //   }
+    //   if (document.getElementById(layerId)) {
+    //     return
+    //   }
+    //
+    //   // Create a link.
+    //   const link = document.createElement('a');
+    //   link.id = layerId;
+    //   link.href = '#';
+    //   link.textContent = layerId;
+    //   link.className = 'active';
+    //
+    //   // Show or hide layer when the toggle is clicked.
+    //   link.onclick = function (e) {
+    //     const clickedLayer = this.textContent;
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //
+    //     const visibility = map.getLayoutProperty(
+    //       clickedLayer,
+    //       'visibility'
+    //     );
+    //
+    //     // Toggle layer visibility by changing the layout object's visibility property.
+    //     if (visibility === 'visible') {
+    //       map.setLayoutProperty(clickedLayer, 'visibility', 'none');
+    //       this.className = '';
+    //     } else {
+    //       this.className = 'active';
+    //       map.setLayoutProperty(
+    //         clickedLayer,
+    //         'visibility',
+    //         'visible'
+    //       );
+    //     }
+    //   };
+    //
+    //
+    //   const layers = document.getElementById('menu');
+    //   layers.appendChild(link);
+    // })
   })
 
   const el = document.createElement('div')
