@@ -23,4 +23,18 @@ const { data: trek } = await useAsyncData(`trek-${path}`, () => {
     .where({ _path: `${withoutTrailingSlash(path)}`, _type: 'markdown' })
     .findOne()
 })
+
+const description = `Rando - ${trek.value.name}`
+const coverImage = trek.value.imageUrl
+useHead({
+  meta: [
+    // description
+    { hid: 'description', name: 'description', content: description },
+    { hid: 'og:description', property: 'og:description', content: description },
+    { hid: 'twitter:description', name: 'twitter:description', content: description },
+    // cover image
+    { hid: 'og:image', property: 'og:image', content: coverImage },
+    { hid: 'twitter:image', name: 'twitter:image', content: coverImage }
+  ]
+})
 </script>
