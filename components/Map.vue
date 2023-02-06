@@ -5,6 +5,7 @@
 <script setup>
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
+import SlopeControl from '~/maplibre/SlopeControl'
 const config = useRuntimeConfig()
 const ignApiKey = config.public.ignApiKey
 
@@ -61,9 +62,26 @@ onMounted(() => {
         tiles: [
           `https://wxs.ign.fr/an7nvfzojv5wa96dsga5nk8w/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.SLOPES.MOUNTAIN&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}`,
         ],
-        tileSize: 256
+        tileSize: 256,
       });
-      map.addLayer({ id: 'calque-pente', type: 'raster', source: 'calque-pente' });
+      map.addLayer({
+        id: 'calque-pente',
+        type: 'raster',
+        source: 'calque-pente',
+        paint: { 'raster-opacity': 0.7 }
+      });
+
+      const slopeControl = new SlopeControl({
+        onClick: () => {
+          const visibility = map.getLayoutProperty('calque-pente', 'visibility')
+          if (visibility === 'none') {
+            map.setLayoutProperty('calque-pente', 'visibility', 'visible');
+          } else {
+            map.setLayoutProperty('calque-pente', 'visibility', 'none');
+          }
+        }
+      })
+      map.addControl(slopeControl, 'bottom-left')
     }
 
     map.addSource('data', {
@@ -76,7 +94,7 @@ onMounted(() => {
       source: 'data',
       paint: {
         'line-width': 3,
-        'line-color': '#D81B60',
+        'line-color': activity === 'ski' ? '#1d4ed8' : '#D81B60',
       },
       filter: ['==', '$type', 'LineString'],
     })
@@ -115,56 +133,15 @@ onMounted(() => {
     })
     map.on('mouseenter', 'poi', () => (map.getCanvas().style.cursor = 'pointer'))
     map.on('mouseleave', 'poi', () => (map.getCanvas().style.cursor = ''))
-
-    // map.on('idle', () => {
-    //   const layerId = 'calque-pente'
-    //   if (!map.getLayer(layerId)) {
-    //     return
-    //   }
-    //   if (document.getElementById(layerId)) {
-    //     return
-    //   }
-    //
-    //   // Create a link.
-    //   const link = document.createElement('a');
-    //   link.id = layerId;
-    //   link.href = '#';
-    //   link.textContent = layerId;
-    //   link.className = 'active';
-    //
-    //   // Show or hide layer when the toggle is clicked.
-    //   link.onclick = function (e) {
-    //     const clickedLayer = this.textContent;
-    //     e.preventDefault();
-    //     e.stopPropagation();
-    //
-    //     const visibility = map.getLayoutProperty(
-    //       clickedLayer,
-    //       'visibility'
-    //     );
-    //
-    //     // Toggle layer visibility by changing the layout object's visibility property.
-    //     if (visibility === 'visible') {
-    //       map.setLayoutProperty(clickedLayer, 'visibility', 'none');
-    //       this.className = '';
-    //     } else {
-    //       this.className = 'active';
-    //       map.setLayoutProperty(
-    //         clickedLayer,
-    //         'visibility',
-    //         'visible'
-    //       );
-    //     }
-    //   };
-    //
-    //
-    //   const layers = document.getElementById('menu');
-    //   layers.appendChild(link);
-    // })
   })
 
   const el = document.createElement('div')
-  el.className = 'rounded-full h-4 w-4 bg-[#D81B60]'
+  if (activity === 'ski') {
+    el.className = 'rounded-full h-4 w-4 bg-[#1d4ed8]'
+  } else {
+    el.className = 'rounded-full h-4 w-4 bg-[#D81B60]'
+  }
+
   let marker = new maplibregl.Marker(el)
   watch(position, (newPosition) => {
     const { x, y } = newPosition
@@ -180,3 +157,12 @@ onMounted(() => {
   })
 })
 </script>
+
+<style>
+.maplibregl-draw-line {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url('~/maplibre/slopeControl.svg');
+}
+</style>
