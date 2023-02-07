@@ -81,7 +81,7 @@ onMounted(() => {
           }
         }
       })
-      map.addControl(slopeControl, 'bottom-left')
+      map.addControl(slopeControl, 'top-right')
     }
 
     map.addSource('data', {
@@ -93,7 +93,7 @@ onMounted(() => {
       type: 'line',
       source: 'data',
       paint: {
-        'line-width': 3,
+        'line-width': 4,
         'line-color': activity === 'ski' ? '#1d4ed8' : '#D81B60',
       },
       filter: ['==', '$type', 'LineString'],
