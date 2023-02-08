@@ -130,7 +130,7 @@ import { Popover, PopoverButton, PopoverGroup, PopoverPanel } from '@headlessui/
 
 const navItems = [
   { name: 'Rando', path: '/randonnees', icon: 'mdi:map-outline' },
-  { name: 'Ski de rando', path: '/ski-de-rando', icon: 'mdi:weather-sunny' },
+  { name: 'Ski de rando', path: '/ski-de-rando', icon: 'mdi:ski' },
   { name: 'Alpinisme', path: '/alpinisme', icon: 'mdi:image-outline' },
   { name: 'Refuges', path: '/refuges', icon: 'mdi:home-outline' },
   { name: 'Canoë Kayak', path: '/canoe-kayak', icon: 'mdi:kayaking' },
