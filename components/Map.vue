@@ -1,11 +1,15 @@
 <template>
-  <div id="map" class="rounded-lg" style="height: 40vh"></div>
+  <div>
+    <SlopeLegend v-if="activity === 'ski'"/>
+    <div id="map" class="rounded-lg shadow" style="height: 40vh"></div>
+  </div>
 </template>
 
 <script setup>
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import SlopeControl from '~/maplibre/SlopeControl'
+import SlopeLegend from '~/components/trek/SlopeLegend.vue'
 const config = useRuntimeConfig()
 const ignApiKey = config.public.ignApiKey
 
