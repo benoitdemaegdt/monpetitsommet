@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <SlopeLegend v-if="activity === 'ski'"/>
-    <div id="map" class="rounded-lg shadow" style="height: 40vh"></div>
+  <div class="relative">
+    <div id="map" class="rounded-lg shadow" style="height: 42vh"></div>
+    <SlopeLegend v-if="activity === 'ski'" id="legend" class="absolute mx-2.5 my-2.5 p-2 bottom-0 left-0"/>
   </div>
 </template>
 
@@ -163,10 +163,18 @@ onMounted(() => {
 </script>
 
 <style>
-.maplibregl-draw-line {
+.maplibregl-slope {
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: auto;
   background-image: url('~/maplibre/slopeControl.svg');
+}
+
+.maplibregl-slope-info {
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: auto;
+  background-image: url('~/maplibre/slopeInfo.svg');
+  background-size: 85%;
 }
 </style>

@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-wrap gap-2">
+  <div class="bg-white rounded-md">
     <div
       v-for="legendItem of legendItems"
       :key="legendItem.title"
-      class='flex justify-center items-center'>
-      <div class='h-4 w-4' :class="legendItem.color"></div>
-      <div class="ml-1">{{ legendItem.title }}</div>
+      class='flex items-center'>
+      <div class='h-3 w-3' :class="legendItem.color"></div>
+      <div class="ml-1 text-base">{{ legendItem.title }}</div>
     </div>
   </div>
 </template>
