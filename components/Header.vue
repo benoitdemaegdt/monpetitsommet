@@ -11,6 +11,7 @@
               alt="logo mon petit sommet"
             />
           </NuxtLink>
+          <span class="ml-2 text-2xl sm:hidden font-bold text-gray-700">Mon petit sommet</span>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
