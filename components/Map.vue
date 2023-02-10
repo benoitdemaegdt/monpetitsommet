@@ -64,7 +64,7 @@ onMounted(() => {
       map.addSource('calque-pente', {
         type: 'raster',
         tiles: [
-          `https://wxs.ign.fr/an7nvfzojv5wa96dsga5nk8w/geoportail/wmts?layer=GEOGRAPHICALGRIDSYSTEMS.SLOPES.MOUNTAIN&style=normal&tilematrixset=PM&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image/png&TILECOL={x}&TILEROW={y}&TILEMATRIX={z}`,
+          'https://wxs.ign.fr/altimetrie/geoportail/wmts?SERVICE=WMTS&VERSION=1.0.0&REQUEST=GetTile&LAYER=GEOGRAPHICALGRIDSYSTEMS.SLOPES.MOUNTAIN&STYLE=normal&FORMAT=image/png&TILEMATRIXSET=PM&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}.png'
         ],
         tileSize: 256,
       });
