@@ -54,4 +54,10 @@ caption: 30m de portage avant l'ascension finale.
 On rechausse alors sur une pente douce orientée Nord-Nord-Ouest et on rejoint les Frettes en une dizaines de minutes.
 
 ## Descente
-Lorem Ipsum
+Le plus prudent est proibablement de refaire le chemin inverse, de redescendre le pas de portage à pied puis de mettre les skis et de descendre dans la combe.
+
+Les conditions étant excellentes, et le risque d'avalanche faible, nous avons mis les skis au sommet et nous sommes descendu direct en face Nord-Ouest des Frettes. Attention il y a de la pente (45°).
+
+C'est ensuite un régal de descendre cette combe peu tracée. On s'arrête sous le Chalet du Vénitier, ou il faut remettre les peaux pour remonter jusqu'à l'entrée de la forêt (max 10min de montée).
+
+Descendre alors dans la forêt, rejoindre le parking d'été, et remonter finalement jusqu'au village.
