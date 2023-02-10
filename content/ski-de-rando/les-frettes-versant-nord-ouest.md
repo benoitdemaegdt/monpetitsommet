@@ -16,6 +16,9 @@ to: Montsapey
 ## Approche
 Prendre la route de la Maurienne jusqu'à Aiguebelle. Puis Montsapey avant de rejoindre le village de Le Coter. La route permettant de rejoindre le parking indiquée sur la carte IGN n'est pas déneigée en hiver. Se garer dans le village.
 
+## Conditions
+Course réalisée le 28 janvier 2023. La dernière chute de neige (au moins 30-40cm) remonte à environ 10 jours. Entre temps, il a fait froid. La neige est donc encore poudreuse même au départ de la course à Montsapey. Il faut dire que nous sommes encore en janvier, et que le soleil n'est jamais bien haut dans le ciel. La partie de cet itinéraire dans la forêt ne voit pas encore le soleil du fait de son exposition. En haut ça reste bon, voir excellent à la descente. Quelques centaines de mètres de neige dure sous la côte aux chamois. ça reste anecdotique.
+
 ## Jusqu'au Chalet du Vénitier
 Depuis le village, il faut descendre vers le parking d'été. À noter que ça doit pouvoir se faire avec les peaux si il y a de la neige pas trop dur. Sinon descendre à pied ou à ski.
 
