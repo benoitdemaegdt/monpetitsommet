@@ -65,6 +65,9 @@
     },
     {
       "type": "Feature",
+      "properties": {
+        "color": "#D81B60"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [

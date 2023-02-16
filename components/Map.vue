@@ -98,7 +98,7 @@ onMounted(() => {
       source: 'data',
       paint: {
         'line-width': 4,
-        'line-color': activity === 'ski' ? '#1d4ed8' : '#D81B60',
+        'line-color': ['get', 'color'],
       },
       filter: ['==', '$type', 'LineString'],
     })

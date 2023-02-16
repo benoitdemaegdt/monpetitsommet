@@ -49,6 +49,9 @@
     },
     {
       "type": "Feature",
+      "properties": {
+        "color": "#1d4ed8"
+      },
       "geometry": {
         "type": "LineString",
         "coordinates": [

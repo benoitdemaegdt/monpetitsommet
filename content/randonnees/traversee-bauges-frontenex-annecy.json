@@ -35,6 +35,9 @@
       "type": "Feature",
       "geometry": {
         "type": "LineString",
+        "properties": {
+          "color": "#D81B60"
+        },
         "coordinates": [
           [
             6.31358,
