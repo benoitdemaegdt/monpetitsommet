@@ -3,7 +3,7 @@
     <Stats :stats="getTrekStats(trek)" />
     <Map class="mt-8" :geojson="geojson" :activity="activity" />
     <ClientOnly>
-      <TrekElevationProfile class="mt-8 rounded-lg shadow" :geojson="geojson" />
+      <TrekElevationProfile v-if="lineStrings.length === 1" class="mt-8 rounded-lg shadow" :geojson="geojson" />
     </ClientOnly>
     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
       <a
@@ -39,12 +39,12 @@ const { path } = useRoute()
 const { withoutTrailingSlash } = useUrl()
 
 const { trek, activity } = defineProps({ trek: Object, activity: String })
-
 const { data: geojson } = await useAsyncData(`geojson-${path}`, () => {
   return queryContent()
     .where({ _type: 'json', _path: { $contains: withoutTrailingSlash(path) } })
     .findOne()
 })
+const lineStrings = geojson.value.features.filter(({ geometry }) => geometry.type === 'LineString')
 
 const { getTrekStats } = useStats()
 
