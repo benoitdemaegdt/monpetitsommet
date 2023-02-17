@@ -43,9 +43,10 @@ const geojson = {
   ],
 }
 
-const description = `Refuge - ${refuge.value.name}`
+const description = refuge.value.description
 const coverImage = refuge.value.imageUrl
 useHead({
+  title: refuge.value.name,
   meta: [
     // description
     { hid: 'description', name: 'description', content: description },

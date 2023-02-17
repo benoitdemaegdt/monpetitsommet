@@ -1,6 +1,6 @@
 ---
 massif: cerces
-name: Refuges des Drayères
+name: Refuge des Drayères
 type: refuge gardé
 description: Très beau refuge situé en haut de la vallée de la Clarée dans le massif des Cerces. Sa localisation à la croisée des chemins est idéale pour quelques jours de ski de randonnée. L'ambiance y est familiale, et l'accueil excellent.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1676619311/refuges/drayeres_unasgk.png
