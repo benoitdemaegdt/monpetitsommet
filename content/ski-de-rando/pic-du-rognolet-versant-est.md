@@ -1,7 +1,7 @@
 ---
 massif: lauzière
 name: Pic du Rognolet, versant Est
-description: Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+description: Un classique toujours agréable du massif de la Lauzière. Lorsque les conditions sont bonnes, cette course offre du très bon ski dans des vallons larges et dégagés. 
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-2_xe6iay.png
 ignUrl: https://livre.fnac.com/a10487723/Collectif-Saint-Jean-de-Maurienne
 caption: montée au pic du rognolet par la combe bridan

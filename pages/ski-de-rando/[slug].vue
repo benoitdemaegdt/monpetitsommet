@@ -24,9 +24,10 @@ const { data: trek } = await useAsyncData(`ski-${path}`, () => {
     .findOne()
 })
 
-const description = `Ski de rando - ${trek.value.name}`
+const description = trek.value.description
 const coverImage = trek.value.imageUrl
 useHead({
+  title: `Ski de rando - ${trek.value.name}`,
   meta: [
     // description
     { hid: 'description', name: 'description', content: description },
