@@ -83,7 +83,7 @@
           {{ description }}
         </p>
       </div>
-      <div class="mt-6 prose prose-emerald prose-lg text-gray-500 mx-auto">
+      <div class="mt-6 prose prose-emerald prose-lg text-gray-500 mx-auto text-justify">
         <img class="w-full rounded-lg" :src="imageUrl" width="1310" height="873" />
         <slot></slot>
       </div>
