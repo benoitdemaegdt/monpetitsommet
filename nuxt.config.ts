@@ -40,15 +40,10 @@ export default defineNuxtConfig({
         { hid: 'canonical', rel: 'canonical', href: BASE_URL },
       ],
       script: [
-        // GTM
         {
-          hid: 'gtm',
-          children: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-K948G5R');`,
-          type: 'text/javascript',
+          src: 'https://beamanalytics.b-cdn.net/beam.min.js',
+          'data-token': 'a2aab44b-048b-4696-9171-c8b470bc8ba5',
+          async: true
         },
       ],
     },
