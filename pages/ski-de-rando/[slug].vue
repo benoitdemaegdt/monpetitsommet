@@ -35,7 +35,9 @@ useHead({
     { hid: 'twitter:description', name: 'twitter:description', content: description },
     // cover image
     { hid: 'og:image', property: 'og:image', content: coverImage },
-    { hid: 'twitter:image', name: 'twitter:image', content: coverImage }
+    { hid: 'twitter:image', name: 'twitter:image', content: coverImage },
+    // other
+    { hid: 'og:type', property: 'og:type', content: 'website' }
   ]
 })
 </script>
