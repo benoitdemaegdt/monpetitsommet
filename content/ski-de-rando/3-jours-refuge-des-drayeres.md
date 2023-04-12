@@ -23,13 +23,13 @@ Sur les faces sud, le manque de neige est assez évident avec de grandes zones d
 
 BERA 1/2 limite 2000m.
 
-### Jour 1 : De Bonnenuit au refuge des Drayères (trace en bleu)
+### Jour 1 : De Bonnenuit au refuge des Drayères
 
-::elevation
+::overview
 ---
-path: 3-jours-refuge-des-drayeres
-title: jour 1
-index: 0
+id: overview-jour-1
+trek: { distance: 20.89, elevation: 1639, duration: 1 jour, difficulty: 2.2 E1 }
+filter: (features) => features.filter((feature) => feature.properties.key === 'j1' || feature.properties.icon)
 ---
 ::
 
@@ -50,13 +50,13 @@ Garder les peaux et traverser les lacs gelés. Puis descendre en tenant la gauch
 Étant donné que c'est un peu court pour une journée, on peut poser les affaires au refuge et faire un aller-retour à la Cabane de L'Ours (Nord-Est du refuge) pour rajouter un peu plus de 250m de D+ et s'offrir une belle descente en fin de journée.
 
 
-### Jour 2 : Boucle par Roche Château et le col de l'Aiguille Noire (trace verte)
+### Jour 2 : Boucle par Roche Château et le col de l'Aiguille Noire
 
-::elevation
+::overview
 ---
-path: 3-jours-refuge-des-drayeres
-title: jour 2
-index: 1
+id: overview-jour-2
+trek: { distance: 20.89, elevation: 1639, duration: 1 jour, difficulty: 2.2 E1 }
+filter: (features) => features.filter((feature) => feature.properties.key === 'j2' || feature.properties.icon)
 ---
 ::
 
@@ -76,13 +76,13 @@ On aperçoit rapidement sur la gauche un col au sommet d'une pente qui semble ra
 
 Une fois au col, descendre jusqu'au refuge. Très bon ski sur une face exposée sud. Si les conditions sont bonnes, la face a eu le temps de dégeler depuis le départ de la course. 
 
-### Jour 3 : Aller-retour au col des Muandes et retour à Bonnenuit (trace rose)
+### Jour 3 : Aller-retour au col des Muandes et retour à Bonnenuit
 
-::elevation
+::overview
 ---
-path: 3-jours-refuge-des-drayeres
-title: jour 3
-index: 2
+id: overview-jour-3
+trek: { distance: 20.89, elevation: 1639, duration: 1 jour, difficulty: 2.2 E1 }
+filter: (features) => features.filter((feature) => feature.properties.key === 'j3' || feature.properties.icon)
 ---
 ::
 
@@ -100,5 +100,5 @@ Descendre par le même itinéraire qu'à la montée. Encore des pentes qui offre
 
 Au refuge, reprendre les affaires qu'on aura laissé en début de journée, puis remonter au seuil des Rochilles.
 
-Entre les 2 lacs (Lac Rond et Lac du Grand Ban), prendre la montée plein sud jusqu'à un col évident. Redescendre en tenant bien la droite (pour éviter de devoir remettre les peaux !). Après une descente "débrouille", on retrouve le groupe de 3-4 chalets avant les lacets de la montée du premier jour. Continuer en descendant la route qui emmène directement à Bonnenuit.
+Entre les 2 lacs (Lac Rond et Lac du Grand Ban), prendre la montée plein sud jusqu'à un col évident. Redescendre en tenant bien la droite (pour éviter de devoir remettre les peaux !). Après une descente "débrouille", on retrouve le groupe de 3-4 chalets avant les lacets de la montée du premier jour. Continuer en descendant la route qui mène directement à Bonnenuit.
 

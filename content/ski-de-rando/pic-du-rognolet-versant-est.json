@@ -39,7 +39,7 @@
     {
       "type": "Feature",
       "properties": {
-        "color": "#1d4ed8"
+        "color": "#e11d48"
       },
       "geometry": {
         "type": "LineString",

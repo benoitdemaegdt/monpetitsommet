@@ -1,7 +1,7 @@
 <template>
   <div class="relative">
-    <div id="map" class="rounded-lg shadow" style="height: 42vh"></div>
-    <SlopeLegend v-if="activity === 'ski'" id="legend" class="absolute mx-2.5 my-2.5 p-2 bottom-0 left-0"/>
+    <div :id="mapId" class="rounded-lg shadow" style="height: 42vh"></div>
+    <SlopeLegend v-if="isSki" id="legend" class="absolute mx-2.5 my-2.5 p-2 bottom-0 left-0"/>
   </div>
 </template>
 
@@ -13,8 +13,11 @@ import SlopeLegend from '~/components/trek/SlopeLegend.vue'
 const config = useRuntimeConfig()
 const ignApiKey = config.public.ignApiKey
 
+const { path } = useRoute()
 const { loadImages } = useMap()
-const { geojson, activity } = defineProps({ geojson: Object, activity: String })
+const { id, geojson } = defineProps({ id: String, geojson: Object })
+const mapId = id || 'map'
+const isSki = path.includes('/ski-de-rando/')
 
 const allPointsCoordinates = geojson.features
   .filter((feature) => feature.geometry.type === 'Point')
@@ -32,7 +35,7 @@ const mainLineString = geojson.features.find((feature) => feature.geometry.type 
 
 onMounted(() => {
   const map = new maplibregl.Map({
-    container: 'map',
+    container: `${mapId}`,
     style: {
       version: 8,
       sources: {
@@ -60,7 +63,7 @@ onMounted(() => {
   map.on('load', async () => {
     await loadImages(map, geojson)
 
-    if (activity === 'ski') {
+    if (isSki) {
       map.addSource('calque-pente', {
         type: 'raster',
         tiles: [
@@ -140,15 +143,12 @@ onMounted(() => {
   })
 
   const el = document.createElement('div')
-  if (activity === 'ski') {
-    el.className = 'rounded-full h-4 w-4 bg-[#1d4ed8]'
-  } else {
-    el.className = 'rounded-full h-4 w-4 bg-[#D81B60]'
-  }
+  el.className = 'rounded-full h-4 w-4 bg-[#e11d48]'
 
   let marker = new maplibregl.Marker(el)
   watch(position, (newPosition) => {
-    const { x, y } = newPosition
+    const { id, x, y } = newPosition
+    if (!!id && id !== mapId) return
     if (x === undefined && y === undefined) {
       marker.remove()
     } else {

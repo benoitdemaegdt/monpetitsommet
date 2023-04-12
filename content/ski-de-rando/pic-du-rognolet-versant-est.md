@@ -3,7 +3,6 @@ massif: lauzière
 name: Pic du Rognolet, versant Est
 description: Un classique toujours agréable du massif de la Lauzière. Lorsque les conditions sont bonnes, cette course offre du très bon ski dans des vallons larges et dégagés. 
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-2_xe6iay.png
-ignUrl: https://livre.fnac.com/a10487723/Collectif-Saint-Jean-de-Maurienne
 caption: montée au pic du rognolet par la combe bridan
 distance: 11.8
 elevation: 1200
@@ -12,6 +11,16 @@ difficulty: 2.3 E1
 from: Celliers
 to: Celliers
 ---
+
+## Aperçu de l'itinéraire
+::overview
+---
+trek: { distance: 11.8, elevation: 1200, duration: 1 jour, difficulty: 2.3 E1 }
+cta: {
+  ignUrl: https://livre.fnac.com/a10487723/Collectif-Saint-Jean-de-Maurienne
+}
+---
+::
 
 ## Approche
 Depuis Albertville, s'engager dans la vallée de la Tarentaise sur la N90. Quitter cette route à Feissonnet pour prendre la D213 jusqu'à Celliers dessus. La route est déneigée jusqu'au village. On peut encore monter en voiture (avec pneus neige) d'une épingle, grand parking et départ ski au pied de l'itinéraire.

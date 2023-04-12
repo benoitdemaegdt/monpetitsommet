@@ -7,6 +7,7 @@
   >
     <h2>Aperçu de la rando</h2>
     <TrekOverview :trek="trek" />
+    <Cta v-if="trek?.ignUrl" :ign-url="trek.ignUrl" />
     <ContentRenderer :value="trek" />
   </ContentFrame>
 </template>

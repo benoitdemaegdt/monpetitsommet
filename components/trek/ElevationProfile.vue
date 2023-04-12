@@ -11,7 +11,7 @@ if (process.client) {
 
 export default {
   name: 'TrekElevationProfile',
-  props: ['geojson'],
+  props: ['geojson', 'id'],
   async setup(props) {
     const { getTrekData } = useTrekData()
     const { altitudeData, pointsOfInterest } = getTrekData(props.geojson)
@@ -77,13 +77,13 @@ export default {
               events: {
                 mouseOver: (event) => {
                   const { x, y } = event.target
-                  position.value = { x, y }
+                  position.value = { id: props.id, x, y }
                 },
               },
             },
             events: {
               mouseOut: () => {
-                position.value = { x: undefined, y: undefined }
+                position.value = { id: props.id, x: undefined, y: undefined }
               },
             },
           },

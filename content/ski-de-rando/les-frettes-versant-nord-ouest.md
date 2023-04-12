@@ -3,7 +3,6 @@ massif: lauzière
 name: Les Frettes, versant Nord Ouest
 description: Le col des Frettes est un classique très fréquenté par sa face Est. Cet itinéraire propose plutôt de l'attaquer par sa face Nord Ouest. On y gagne de la neige de meilleure qualité (face moins exposée au soleil, surtout en plein hiver) et beaucoup de calme (cette face n'est que très peu fréquentée) en contrepartie d'une moitiée de parcours dans la forêt.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675287985/ski-de-rando/les-frettes-versant-nord-ouest/frettes-NW-3_v6pyz2.png
-ignUrl: https://livre.fnac.com/a10487723/Collectif-Saint-Jean-de-Maurienne
 caption: Vers les frettes après le Chalet de la Vénitier.
 distance: 20.89
 elevation: 1639
@@ -12,6 +11,16 @@ difficulty: 2.2 E1
 from: Montsapey
 to: Montsapey
 ---
+
+## Aperçu de l'itinéraire
+::overview
+---
+trek: { distance: 20.89, elevation: 1639, duration: 1 jour, difficulty: 2.2 E1 }
+cta: {
+  ignUrl: https://livre.fnac.com/a10487723/Collectif-Saint-Jean-de-Maurienne-Valloire
+}
+---
+::
 
 ## Approche
 Prendre la route de la Maurienne jusqu'à Aiguebelle. Puis Montsapey avant de rejoindre le village de Le Coter. La route permettant de rejoindre le parking indiquée sur la carte IGN n'est pas déneigée en hiver. Se garer dans le village.

@@ -8,6 +8,7 @@
         "coordinates": [6.079474836587906, 45.277134384959936]
       },
       "properties": {
+        "key": "j1",
         "name": "Départ",
         "marker": "circle",
         "color": "#10b981"
@@ -20,6 +21,7 @@
         "coordinates": [6.076253671199083, 45.28142315335572]
       },
       "properties": {
+        "key": "j2",
         "name": "Arrivée",
         "marker": "circle",
         "color": "#ef4444"
@@ -50,8 +52,9 @@
     {
       "type": "Feature",
       "properties": {
+        "key": "j1",
         "name": "Jour 1",
-        "color": "#1d4ed8"
+        "color": "#e11d48"
       },
       "geometry": {
         "type": "LineString",
@@ -170,8 +173,9 @@
     {
       "type": "Feature",
       "properties": {
+        "key": "j2",
         "name": "Jour 2",
-        "color": "#059669"
+        "color": "#e11d48"
       },
       "geometry": {
         "type": "LineString",
