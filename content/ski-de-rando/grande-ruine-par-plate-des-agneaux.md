@@ -70,7 +70,7 @@ caption: Descente de la Grande Ruine.
 ---
 ::
 
-Il est encore tôt, on décide donc de descendre quelques centaines de mètres puis de de remonter au pied de la paroie rocheuse qui surplombe le refuge, avant de le rejoindre à ski. Arrivée au refuge vers 14h.
+Il est encore tôt, on décide donc de descendre quelques centaines de mètres puis de de remonter au pied de la paroie rocheuse qui surplombe le refuge, avant de le rejoindre à ski. Arrivée [au refuge](/refuges/refuge-adele-planchard) vers 14h.
 
 ### Jour 3 : Col des neiges et glacier de Tombe Murée
 ::overview
