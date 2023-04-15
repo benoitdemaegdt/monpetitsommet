@@ -3,8 +3,7 @@ massif: cerces
 name: 3 jours au refuge des Drayères
 description: Avec ses grands espaces, ses lacs gelés et ses cols accessibles, le haut de la vallée de la Clarée offre de très belles opportunités pour le ski de rando. C'est encore plus vrai dès la mi-février avec l'ouverture de la période de gardiennage des refuges qui permettent de profiter de ce massif dans un cadre familial et confortable le temps d'un long week end.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1676465308/ski-de-rando/3-jours-refuge-des-drayeres/cover_mt8enw.jpg
-ignUrl: https://livre.fnac.com/a12860676/Collectif-Nevache-Mont-Thabor
-caption: Lorem ipsum.
+caption: Ski de rando au Seuil des Rochilles.
 distance: 52.85
 elevation: 3183
 duration: 3 jours
