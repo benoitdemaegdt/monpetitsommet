@@ -17,7 +17,7 @@
     "sitemap": "^7.1.1"
   },
   "dependencies": {
-    "highcharts-vue": "^1.4.3",
+    "highcharts-vue": "^2.0.0",
     "lite-youtube-embed": "^0.2.0",
     "maplibre-gl": "^3.5.2"
   }
