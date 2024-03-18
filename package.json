@@ -19,6 +19,6 @@
   "dependencies": {
     "highcharts-vue": "^1.4.3",
     "lite-youtube-embed": "^0.2.0",
-    "maplibre-gl": "^3.5.2"
+    "maplibre-gl": "^4.1.1"
   }
 }
