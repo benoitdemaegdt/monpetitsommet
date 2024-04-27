@@ -37,7 +37,7 @@ Arrivée vers 9h du parking d'été du Pont d'Arsine. La perturbation aperçue s
 
 Le début du sentier est presque entièrement sec. Le départ se fera donc avec les skis sur le dos. On chausse peu après le croisement avec le ruisseau du colombier pour rejoindre rapidement le (superbe) refuge de Chamoissière.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681470522/ski-de-rando/grande-ruine/montee-chamoissiere_klj8jg.png
 alt: Montée au Pic de Chamoissière, ressaut final.
@@ -62,7 +62,7 @@ On met ensuite les peaux pour rejoindre le plan de Valfourche puis l'extrémité
 
 On laisse le refuge sur notre droite, et on continue vers la Grande Ruine, jusqu'à un col côté 3668m sur la carte IGN.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681470544/ski-de-rando/grande-ruine/descente-grande-ruine_rdlqvd.png
 alt: Descente de la Grande Ruine.
@@ -85,7 +85,7 @@ Réveil 6h pour un départ à 7h. Direction le Col des Neiges qu'on passe facile
 
 Vers l'altitude 2560, on prend plein sud pour monter sur le glacier de Tombe Murée. Neige vierge et poudreuse dans une ambiance "face nord" inoubliable. Excellent ski à la descente, pour retrouver le glacier de la plate des Agneaux. S'ensuit une très longue descente sur un faux plat descendant pour rejoindre le parking d'été.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681470524/ski-de-rando/grande-ruine/montee-tombe-muree_rgbn9z.png
 alt: Montée sur le glacier de Tombe Murée.
@@ -93,7 +93,7 @@ caption: Montée sur le glacier de Tombe Murée.
 ---
 ::
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681470537/ski-de-rando/grande-ruine/descente-tombe-muree_aigstc.png
 alt: Descente du glacier, belle ambiance et neige excellente.

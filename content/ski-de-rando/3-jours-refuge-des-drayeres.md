@@ -13,7 +13,7 @@ to: Bonnenuit
 ---
 
 ### Approche
-Le départ de cette sortie de 3 jours se fait depuis le hameau de Bonnenuit. Depuis Chambéry, prendre l'autoroute de la Maurienne, sortir à Saint-Michel-de-Maurienne et monter vers Valloire. Traverser la station de ski et suivre la route jusqu'à Bonnenuit. Une barrière bloque alors la route du col du Galibier (qui n'est d'ailleurs pas déneigée). Grand parking juste avant la barrière. 
+Le départ de cette sortie de 3 jours se fait depuis le hameau de Bonnenuit. Depuis Chambéry, prendre l'autoroute de la Maurienne, sortir à Saint-Michel-de-Maurienne et monter vers Valloire. Traverser la station de ski et suivre la route jusqu'à Bonnenuit. Une barrière bloque alors la route du col du Galibier (qui n'est d'ailleurs pas déneigée). Grand parking juste avant la barrière.
 
 ### Conditions
 Sortie réalisée le 11-12-13 février 2023. Il n'a pas neigé depuis plus de 3 semaines, mais les températures sont restées assez basses. La neige était donc très variable avec une alternance de neige parfois presque poudreuse, parfois plaquée, souvent croutée. Neige humide dans l'après-midi.
@@ -36,7 +36,7 @@ Au départ du hameau de Bonnenuit, suivre la route enneigée qui monte doucement
 
 La route continue de monter doucement jusqu'à atteindre un petit groupe de 3-4 chalets. Elle devient alors plus raide et monte en lacets jusqu'au camp des Rochilles (camp militaire). On atteint alors rapidement le col des Rochilles, point culminant de la journée.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1676669931/ski-de-rando/3-jours-refuge-des-drayeres/jour-1_ffgqiv.png
 alt: Sur les lacets qui montent au camp des Rochilles.
@@ -61,7 +61,7 @@ filter: (features) => features.filter((feature) => feature.properties.key === 'j
 
 À la sortie du refuge des Drayères, remonter la première pente plein Est, puis prendre plein Nord. Passer devant la Cabane de l'Ours puis rejoindre Roche Château. En fonction des conditions, les couteaux peuvent être nécessaires pour atteindre le sommet. Vue magnifique sur la Barre des Écrins, la Meije et les Aiguilles d'Arves.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1676669928/ski-de-rando/3-jours-refuge-des-drayeres/jour-2_bzztkj.png
 alt: Montée vers Roche Château.
@@ -73,7 +73,7 @@ Descendre ensuite plein Ouest dans le vallon dit "La Valette". Ski facile et agr
 
 On aperçoit rapidement sur la gauche un col au sommet d'une pente qui semble raide : c'est le col de l'Aiguille Noire. Bien suivre la trace "ski de rando" IGN pour éviter les pentes trop raides. Les couteaux peuvent être nécessaires, notamment à la fin de l'ascension.
 
-Une fois au col, descendre jusqu'au refuge. Très bon ski sur une face exposée sud. Si les conditions sont bonnes, la face a eu le temps de dégeler depuis le départ de la course. 
+Une fois au col, descendre jusqu'au refuge. Très bon ski sur une face exposée sud. Si les conditions sont bonnes, la face a eu le temps de dégeler depuis le départ de la course.
 
 ### Jour 3 : Aller-retour au col des Muandes et retour à Bonnenuit
 
@@ -87,7 +87,7 @@ filter: (features) => features.filter((feature) => feature.properties.key === 'j
 
 Comme au début de la course de la veille, remonter la première pente plein Est à la sortie du refuge. Continuer plein Est, puis Nord-Est pour rejoindre le col des Muandes. Belle vue sur le Mont Thabor.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1676669931/ski-de-rando/3-jours-refuge-des-drayeres/jour-3_yf4hzx.png
 alt: Sous le col des Muandes.

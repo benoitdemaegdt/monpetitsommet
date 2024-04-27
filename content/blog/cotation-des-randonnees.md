@@ -17,7 +17,7 @@ Rien de bien compliqué pour ce premier niveau de cotation. On se parle ici d'un
 \
 **En Bref :** Vous pouvez emmener papi et mamie avec vous.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618946098/articles/cotation-randonnees/t1_m48lnl.jpg
 alt: Randonnée de cotation T1
@@ -32,7 +32,7 @@ Ce deuxième niveau de cotation du CAS reste encore très accessible. Il décrit
 \
 **En Bref :** Un sentier de rando classique. Pas bien technique, mais on évitera les tongs.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618946286/articles/cotation-randonnees/t2_wjhjme.jpg
 alt: Randonnée de cotation T2
@@ -55,7 +55,7 @@ il faut parfois "poser les mains" (comme on dit dans le jargon) pour avancer. C'
 \
 **En Bref :** Un GR difficile, type GR 20.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618946463/articles/cotation-randonnees/t4_d7nicv.jpg
 alt: Randonnée de cotation T4
@@ -77,7 +77,7 @@ Les randonnées cotées en T6 sont à la limite de l'alpinisme. Il n'y a habitue
 \
 **En Bref :** Du costaud. On se demande quelle est la véritable différence avec l'alpinisme.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1619285749/articles/cotation-randonnees/t6_u28hgm.jpg
 alt: Randonnée de cotation T6

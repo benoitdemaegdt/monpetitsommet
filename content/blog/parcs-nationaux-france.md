@@ -13,7 +13,7 @@ Situé dans les Alpes française et sur la massif du même nom, le parc national
 \
 **Idées d'aventure** : [la traversée du parc national de la Vanoise par le GR 55](https://www.mongr.fr/trouver-prochaine-randonnee/parcours/gr-55-de-tignes-le-lac-a-polset-modane) ; [le tour des glaciers de la Vanoise](https://www.lesothers.com/guide-glaciers-vanoise)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618161430/articles/parcs-nationaux-france/vanoise_eovga7.jpg
 alt: parc national de la Vanoise
@@ -28,7 +28,7 @@ On quitte la haute montagne et on se dirige vers la mer Méditerranée pour déc
 \
 **Idées d'aventure** : [Tour de l'île de Port-Cros](https://www.altituderando.com/Port-Cros-199m-Tour-de-l-ile) ; Snorkeling dans les calanques
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618162389/articles/parcs-nationaux-france/port-cros_cmkicb.jpg
 alt: parc national de Port-Cros
@@ -43,7 +43,7 @@ Retour en montagne et direction la frontière espagnole pour découvrir le parc 
 \
 **Idées d'aventure** : [Haute Route Pyrénéenne](http://www.randozone.com/fiche/10159/hrp-haute-route-pyreneenne.html) ; [Tour des lacs du Néouvielle](https://www.altituderando.com/Tour-des-lacs-du-Neouvielle-sur-3-jours)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618164086/articles/parcs-nationaux-france/pyrennees_rjn9bs.png
 alt: Lacs du Néouvielle dans le Parc national des Pyrénées
@@ -58,7 +58,7 @@ Voici ensuite le seul parc national qui soit situé en moyenne montagne : le par
 \
 **Idées d'aventure** : [le chemin de Stevenson - GR70](https://www.chemin-stevenson.org/decouvrez-le-chemin-de-stevenson-gr70/) ; [Les gorges du Tarn](http://www.carnetsderando.net/la-corniche-des-gorges-du-tarn/)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618211443/articles/parcs-nationaux-france/cevennes_fwgurc.jpg
 alt: parc national des Cévennes
@@ -73,7 +73,7 @@ Le prochain parc de la liste est bien connu des alpinistes, skieurs de randonné
 \
 **Idées d'aventure** : [Tour de la meije en ski de rando](https://www.montagnes-magazine.com/topos-ski-rando-tour-meije) ; [Dôme de neige des écrins en ski de rando](https://www.altituderando.com/Dome-de-Neige-des-Ecrins-4015m-a-ski) ; [Tour des Écrins - GR 54](http://www.grand-tour-ecrins.fr/informations/le-gr-54/)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618164080/articles/parcs-nationaux-france/ecrins_rlmch9.png
 alt: Lac du Lauvitel dans le Parc national des Écrins
@@ -88,7 +88,7 @@ Le paradis des amoureux de la nature. Situé au nord de la ville de Nice et "col
 \
 **Idées d'aventure** : [Grande Traversée du Mercantour - GR52](https://www.mongr.fr/sinspirer/mon-gr-prefere-saison-3/gr-52-grande-traversee-du-mercantour) ; [Tour de l'Ubaye - GR56](https://www.mongr.fr/trouver-prochaine-randonnee/parcours/gr-56-tour-de-l-ubaye)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618171924/articles/parcs-nationaux-france/mercantour_ilraz8.jpg
 alt: parc national du Mercantour
@@ -103,7 +103,7 @@ Direction les caraïbes pour découvrir le premier parc national français d'out
 \
 **Idée d'aventure** : [Traversée de la Basse-Terre](https://www2.ffrandonnee.fr/idees-rando/rando.aspx?id=2656)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618171502/articles/parcs-nationaux-france/guadeloupe_pcuoio.jpg
 alt: parc national de la Guadeloupe
@@ -118,7 +118,7 @@ Deuxième île et deuxième parc national d'outremer : celui de l'île de la Ré
 \
 **Idée d'aventure** : [la grande traversée de l'Île de la Réunion - GR R2](https://www.mongr.fr/trouver-prochaine-randonnee/itineraire/gr-r2-la-grande-traversee-de-l-ile-de-la-reunion)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618171924/articles/parcs-nationaux-france/reunion_lzkozi.jpg
 alt: parc national de la Réunion
@@ -130,7 +130,7 @@ caption: Parc national de la Réunion
 
 C'est en amérique du sud et dans la forêt amazonienne que se situe le méconnu parc national de Guyane. Il faut dire que cet immense parc n'est pas facile d'accès : on ne peut y accéder que par avion ou par pirogue ! Pas grand chose d'autre à dire sur ce parc par manque d'information. À noter qu'il ne semble pas y avoir de randonnée "classique" faisable en autonomie.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618171502/articles/parcs-nationaux-france/guyane_ylgsfh.jpg
 alt: parc national de Guyane
@@ -145,7 +145,7 @@ Retour en france métropolitaine près de Marseille pour découvir les criques d
 \
 **Idée d'aventure** : [Traversée des calanques - GR 98](https://fr-fr.gps-viewer.com/tracks/625/Marseille-Cassis-par-le-GR-98/)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618211601/articles/parcs-nationaux-france/calanques_qp0yuu.jpg
 alt: parc national des Calanques
@@ -160,7 +160,7 @@ C'est le petit nouveau de la liste. Créé en novembre 2019, le parc national de
 \
 **Idée d'aventure** : [Le début du GR 7](https://www.mongr.fr/trouver-prochaine-randonnee/itineraire/gr-7-sentier-de-grande-randonnee-des-vosges-aux-pyrenees)
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1618171502/articles/parcs-nationaux-france/foret_vk81av.jpg
 alt: parc national de forêts

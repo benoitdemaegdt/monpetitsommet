@@ -59,7 +59,7 @@ Parmi les spots de snowkite les plus connus, il y a :
 
 Il y a également tout un tas d'autres spots moins connus dans les monts du Forez, en Ardèche, dans l'Aubrac ...
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019505/snowkite/snowkite-lautaret_st0ia9.jpg
 alt: Snowkite au col du Lautaret
@@ -79,7 +79,7 @@ Le snowkite est un sport exigeant en terme de conditions météos. Il faut en ef
 
 Ces 3 conditions sont rarement réunies, il faut saisir les occasions !
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642019506/snowkite/snowkite-vercors_hmbpfs.jpg
 alt: "15 noeuds, neige fraiche et grand soleil : conditions de rêve pour une session de snowkite dans le Vercors"

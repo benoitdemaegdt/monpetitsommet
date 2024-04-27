@@ -33,7 +33,7 @@ Le principe du vol de pente est similaire à celui du parapente ou du speedridin
 
 Ci-dessous un schéma rapide qui explique le fonctionnement du vol de pente. À noter : le bord d'attaque de l'aile qui pointe vers l'avant, dans le sens de la pente.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642422537/articles/snowkite-vol-de-pente/vol-de-pente_last1b.png
 alt: Schéma explicatif du vol de pente
@@ -47,7 +47,7 @@ Il va donc falloir de la pente et de la vitesse pour permettre à un snowkiter d
 \
 \
 Pourquoi est-il mieux d'avoir une inclinaison modérée ? Si la pente est très faiblement inclinée, il va être difficile de créer un décalage entre la portance de la voile et la diminution de l'altitude du sol, et donc de décoller. À l'inverse, si l'inclinaison est très forte, le snowkiter peut monter très très haut. Le matériel n'est déjà pas conçu pour le vol de pente, il n'est alors probablement pas souhaitable de se retrouver trop haut !
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642798911/articles/snowkite-vol-de-pente/vol-pente-inclinaison_jnzi7b.png
 alt: Une forte inclinaison risque de faire monter le snowkiter très haut
@@ -57,7 +57,7 @@ caption: Une forte inclinaison risque de faire monter le snowkiter très haut
 \
 \
 Pourquoi est-il mieux d'avoir le vent qui remonte la pente ? Déjà parce que c'est plus facile de remonter la pente pour se placer et préparer son vol de descente. Ensuite parce qu'il faut une certaine vitesse pour pouvoir décoller. On obtient cette vitesse en descendant la pente à ski. L'avantage d'avoir le vent de face, c'est que ça augmente la vitesse relative. Le snowkiter aura donc besoin d'aller moins vite dans la pente, c'est le vent de face qui va créer le surplus d'énergie nécessaire au décollage.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642425006/articles/snowkite-vol-de-pente/orientation-vent-pente_uflcrd.png
 alt: Choix de la pente et orientation du vent
@@ -82,7 +82,7 @@ label: vol de pente en snowkite
 
 La partie de cette vidéo qui nous intéresse le plus se situe entre la 10ème et la 15ème seconde. Il termine de monter, engage un demi tour, décolle et commence un vol de pente.
 Quand il est en train de monter, il tient la partie orange de la barre dans sa main gauche. Au moment où la voile passe à midi au dessus de lui et que le bord d'attaque pointe dans le sens de la descente, il commence à "changer de main" et à passer la partie orange de sa barre dans sa main droite. Une fois qu'il a pleinement changé de main et qu'il a pris un peu de vitesse, il tire sur la barre pour décoller.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1642424770/articles/snowkite-vol-de-pente/changement-barre_uvddli.png
 alt: Changement de main de la barre

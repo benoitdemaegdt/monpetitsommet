@@ -1,7 +1,7 @@
 ---
 massif: belledonne
-name: Rocher Blanc par la Combe Madame 
-description: Le Rocher Blanc par la Combe Madame est un grand classique de ski de randonnée dans le massif de Belledonne. La montée est douce et régulière, le ski très agréable. Prévoir de passer une nuit au Refuge de la Combe Madame (non gardé) pour un week end montagne inoubliable.  
+name: Rocher Blanc par la Combe Madame
+description: Le Rocher Blanc par la Combe Madame est un grand classique de ski de randonnée dans le massif de Belledonne. La montée est douce et régulière, le ski très agréable. Prévoir de passer une nuit au Refuge de la Combe Madame (non gardé) pour un week end montagne inoubliable.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1678457296/ski-de-rando/rocher-blanc-par-combe-madame/rocher-blanc-1_dqbfnf.png
 caption:
 distance: 26.7
@@ -31,7 +31,7 @@ filter: (features) => features.filter((feature) => feature.properties.key === 'j
 
 Avec un départ à 1000m d'altitude, il fallait s'y attendre : le départ se fera à pied, skis sur le dos. Cet itinéraire étant un grand classique de Belledonne, il n'y a pas de risque de se perdre, il faut simplement suivre les traces. On retrouve une neige exploitable en montée vers 1200-1300m d'altitude. Suivre le vallon évident. On passe sous le Premier Chalet de la Combe Madame (on peut également y dormir, à vérifier). Puis on arrive à 1784m au [Refuge de la Combe Madame](/refuges/refuge-de-la-combe-madame).
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1678457296/ski-de-rando/rocher-blanc-par-combe-madame/rocher-blanc-2_ilfcff.png
 alt: Départ peu enneigé de la Martinette
@@ -40,7 +40,7 @@ caption: Départ peu enneigé de la Martinette
 ::
 
 On peut tout à fait s'arrêter là, y passer la nuit et repartir le lendemain pour le Rocher Blanc.
-Pour tout de même faire une descente dans la journée, nous repartons (après avoir déposé les sacs au refuge) vers le Col de la Croix. Même itinéraire que le début du Rocher Blanc. On se rend vite compte que l'accès au col est gelé et nécessite des crampons et un piolet que nous n'avons pas. On bifurque finalement vers le Nord-Est dans une combe qui semble plus accessible et mieux enneigée. Retour au refuge à ski. Neige pas terrible.  
+Pour tout de même faire une descente dans la journée, nous repartons (après avoir déposé les sacs au refuge) vers le Col de la Croix. Même itinéraire que le début du Rocher Blanc. On se rend vite compte que l'accès au col est gelé et nécessite des crampons et un piolet que nous n'avons pas. On bifurque finalement vers le Nord-Est dans une combe qui semble plus accessible et mieux enneigée. Retour au refuge à ski. Neige pas terrible.
 
 
 ### Jour 2 : montée au Rocher Blanc
@@ -53,7 +53,7 @@ filter: (features) => features.filter((feature) => feature.properties.key === 'j
 ::
 
 Après une nuit dans un Refuge de la Combe Madame bondé (et une excellente ambiance !), nous repartons vers le Rocher Blanc. Superbe montée, douce et régulière. Panorama splendide sur une bonne partie des Alpes au sommet. Descente par le même itinéraire : très bon ski dans des pentes faciles, larges et bien enneigées jusqu'au refuge.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1678457296/ski-de-rando/rocher-blanc-par-combe-madame/rocher-blanc-3_ujdcxu.png
 alt: Très bon ski entre le refuge de la Combe Madame et le Rocher Blanc

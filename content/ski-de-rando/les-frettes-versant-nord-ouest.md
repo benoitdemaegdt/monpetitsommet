@@ -33,7 +33,7 @@ Depuis le village, il faut descendre vers le parking d'été. À noter que ça d
 
 Dans tous les cas, la montée commence au niveau de ce parking enneigé. Suivre la piste forestière très évidente qui monde doucement mais surement. En fonction des conditions, on peut parfois couper les lacets.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675287985/ski-de-rando/les-frettes-versant-nord-ouest/frettes-NW-1_jzkh2l.png
 alt: Départ de Montsapey.
@@ -45,7 +45,7 @@ On quitte la forêt au niveau d'un replat de 200m qui arriveà sur la Chalet du 
 
 ## Jusqu'au sommet des Frettes
 Monter sur la croupe au Sud-Est du Chalet pour rejoindre la grande combe qui monte vers le col des Frettes. Faire alors un grand arc de cercle qui monte progressivement et passer sous la côte aux chamois et le col des Frettes. Remonter alors la dernière pente NO évidente et assez raide (j'ai du porter les skis sur les 30 derniers mètres, mais ça passe pour un pro des conversions) qui permet de rejoindre la ligne de crête.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675287985/ski-de-rando/les-frettes-versant-nord-ouest/frettes-NW-2_myxkep.png
 alt: Grande combe menant au col des Frettes.
@@ -55,7 +55,7 @@ caption: Grande combe menant au col des Frettes.
 
 Depuis la ligne des crêtes, on voit le versant Est, probablement très tracé et fréquenté. Porter alors les skis sur 30 mètres vers le Sud-Ouest pour passer un pas difficilement négociable avec les skis aux pieds.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675287984/ski-de-rando/les-frettes-versant-nord-ouest/frettes-NW-4_gaqixb.png
 alt: Portage des skis.

@@ -24,7 +24,7 @@ Départ de Lyon un vendredi soir d'août 2022 à 20h. 2h30 de route plus tard, n
 ## Première journée
 Réveil tranquille vers 7h. Le temps d'avaler un petit dej' et on se dirige vers le Lac de Roche Noire. Il y avait ici de quoi poser un beau bivouac, mais il aurait fallu rajouter 1h la veille ...
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1660560409/randonnees/tour-mont-thabor/lac-roche-noire_cpjwv8.png
 alt: Lac de Roche Noire
@@ -34,7 +34,7 @@ caption: Lac de Roche Noire, avec en arrière plan les Aiguilles d'Arves et la M
 
 On atteint rapidement le col, puis on redescend vers le refuge des Marches. On continue vers le lac des bataillères qui offre un beau spot pour une pause. On décide de ne pas enquiller le mont Thabor et ses 3178m le jour même. On posera la tente un peu avant pour y monter tôt le dimanche. On est donc large sur notre timing. Pause dej' au lac.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1660560410/randonnees/tour-mont-thabor/col-battalieres_bzvtj1.png
 alt: Col des Battalières
@@ -51,7 +51,7 @@ On se réveille vers 6h dans un brouillard assez dense. Ça s'annonce mal pour l
 
 On marche ensuite dans un énorme pierrier plus ou moins stable pour rejoindre le col de Valmeinier (2857m), puis le col des Muandes (2828m) sur une crête facile et très agréable. On descend 150m de dénivelé avant de remonter vers le col de Névache. À partir de cette montée, il s'agit d'un itinéraire de ski de randonnée. Il n'y a plus vraiment de trace de rando mis à part quelques cairns. On galère à se repérer et on avance au feeling en fonction du terrain (conseil, tirer vers la droite pour rejoindre le sentier rose visible sur l'IGN). C'est peu concluant, et on est bien content d'arriver au refuge de Terre Rouge au niveau duquel on retrouve un véritable chemin.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1660560414/randonnees/tour-mont-thabor/sous-col-nevache_rbwdlh.png
 alt: Sous le col de Névache

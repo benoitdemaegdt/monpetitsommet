@@ -2,7 +2,7 @@
 massif: cerces
 name: Refuge de Terre Rouge
 type: refuge gardé
-description: Construit en 2017, le refuge de Terre Rouge est un refuge tout confort situé entre la station de Valmeinier et le Mont Thabor. Sa position idéale en fait une très belle escale pour un itinaire type tour du Mont Thabor, ou simplement pour explorer l'immense zone au nord du massif des Cerces.  
+description: Construit en 2017, le refuge de Terre Rouge est un refuge tout confort situé entre la station de Valmeinier et le Mont Thabor. Sa position idéale en fait une très belle escale pour un itinaire type tour du Mont Thabor, ou simplement pour explorer l'immense zone au nord du massif des Cerces.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1680517876/refuges/terre-rouge/refuge_it2ihc.png
 beds: 35
 altitude: 2182
@@ -32,7 +32,7 @@ Sur place, la pinte de bière coutait 8€. Compter 7€ pour 1/2L de rouge.
 Le refuge de Terre Rouge comporte 1 étage.
 
 Au rez de chaussé, on trouve l'entrée, le séchoir, la salle commune et des sanitaires.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1680517882/refuges/terre-rouge/entree_yrdqqu.png
 alt: L'entrée du refuge et ses sièges de cinéma. Tout confort !
@@ -40,7 +40,7 @@ caption: L'entrée du refuge et ses sièges de cinéma. Tout confort !
 ---
 ::
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1680517872/refuges/terre-rouge/salle-commune_m2aftv.png
 alt: La grande salle commune.
@@ -50,7 +50,7 @@ caption: La grande salle commune.
 
 
 Les dortoirs et d'autres sanitaires se trouvent à l'étage.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1680517870/refuges/terre-rouge/dortoir_g5ufq8.png
 alt: Un dortoir du refuge.

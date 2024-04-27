@@ -38,7 +38,7 @@ Depuis les goudes, prendre un bout de route puis s'engager rapidement sur le sen
 
 Après quelques montées et descentes, il retrouve le niveau de la mer au niveau de la calanque de Morgiou. S'ensuit alors la plus grosse montée de la journée pour rejoindre le col de la Candelle. Passé ce col, on change de côté : on ne verra plus Marseille, mais on distinguera au loin le cap canaille, signe qu'on approche de Cassis.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1667751819/randonnees/traversee-calanques/calanques-2_qjyfk5.png
 alt: Vue sur la mer depuis l'itinéraire de rando
@@ -48,7 +48,7 @@ caption: Vue sur la mer depuis l'itinéraire de rando
 
 Continuer sur le GR jusqu'à la calanque d'En-Vau et ne pas manquer d'aller la voir (le sentier n'y passe pas, il faut faire un petit détour qui vaut le coup !). En fontion de l'hébergement de la nuit, il faut ensuite soit remonter vers l'auberge de la fontasse (emplacement et ambiance unique, digne d'un refuge de montagne), soit continuer sur le sentier des 3 calanques pour rejoindre rapidement (mais après une belle montée) la calanque de Port-Pin puis celle de Port-Miou pour ensuite retrouver Cassis.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1667753660/randonnees/traversee-calanques/calanques-3_fn7p96.png
 alt: La calanque d'En-vau
@@ -60,7 +60,7 @@ caption: La calanque d'En-vau
 Changement de décor pour cette 2ème journée de randonnée avec le passage du calcaire gris des calanques à l'ocre rouge du cap canaille.
 Depuis Cassis, prendre l'avenue du revestel qui monte de manière soutenue sur les hauteurs au sud de Cassis. On débouche sur le route des crêtes, peu agréable lorsqu'on est à pied car les voitures et autres motos y roulent vite. Heureusement on la quitte rapidement après un virage en épingle et on rejoint l'itinéraire piéton de la route des crêtes. Il suffit ensuite de suivre cet itinéraire qui longe la falaise jusqu'au centre de la Ciotat.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1667753660/randonnees/traversee-calanques/calanques-4_gz3egk.png
 alt: Sur la route des crêtes entre Cassis et la Ciotat

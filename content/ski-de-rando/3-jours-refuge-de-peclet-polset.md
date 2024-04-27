@@ -17,7 +17,7 @@ Départ du parking du [Télécabine d'Orelle](https://goo.gl/maps/AET5CV5XvQMpVt
 
 Il s'agit de rejoindre le Col de Rosaël en s'appuyant sur les remontée mécaniques. En fonction des années, il y a un forfait randonneur ... ou pas ! En avril 2022, il y avait un forfait piéton à 18€ (22€ en 2023) qui permettait de prendre le télécabine d'Orelle et de rejoindre plan Bouchet (2300m). De là, voir avec les perchistes pour prendre le télésiège de Rosaël et ainsi rejoindre le col du même nom.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1682762539/ski-de-rando/3-jours-refuge-de-peclet-polset/orelle_kphcov.png
 alt: description de l'approche sur le plan des pistes.
@@ -72,7 +72,7 @@ Départ vers le Sud-Est en direction du glacier la Masse. En montant, repérer l
 
 Depuis l'autre côté de la brèche, mettre les skis et profiter d'une belle descente dans la vallon d'Aussois. Ne pas trop descendre, et remonter direction le Col d'Aussois. Petit passage obligé à la Pointe de l'Observatoire (3015m).
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1682784298/ski-de-rando/3-jours-refuge-de-peclet-polset/pointe-observatoire_jcs2r4.png
 alt: Vue vers le sud depuis le sommet de la Pointe de l'Observatoire
@@ -106,4 +106,4 @@ Viser alors le col Pierre Lory au Nord-Est. Passer le col à ski, puis descendre
 ### Conclusion
 Idéal au printemps. Nous étions presque seuls dans ce secteur ce week end là (dernier week end d'ouverture du refuge).
 
-De très belles descentes malgré le peu de neige dans les alpes à ce moment. 
+De très belles descentes malgré le peu de neige dans les alpes à ce moment.

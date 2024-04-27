@@ -32,7 +32,7 @@ Autant s'y préparer : cette randonnée attaque directement dans le dur avec une
 
 Prendre à gauche juste après le chalet d'Orisan pour monter vers Le Grand Roc (1804m). Vue saisissante sur la Réserve nationale de chasse et de faune sauvage des Bauges, l'Arcalod, le Mont de la Coche, la pointe de la Chaurionde... Tourner ensuite à droite pour suivre la crête (bivouac possible sur la crête qui est très large) jusqu'au Col du Haut du Four (1520m). Continuer tout droit en empruntant un chemin en balcon qui monte doucement vers le Col des Drizons (1762m). Ravitaillement en eau possible en faisant un aller/retour au refuge des Drizons (1640m) en contrebas du col. Poursuivre sur la crête, par un chemin qui devient de plus en plus raide, pour finalement atteindre la pointe de la Chaurionde (2173m). Depuis ce sommet, point culminant de la randonnée, on profite d'un panorama à 360° sur la réserve des Bauges avec au loin le lac d'Annecy.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218021/bauges/randonnees/traversee-bauges-frontenex-annecy/step_2_oossdd.jpg
 alt: La crête au dessus du chalet d'Orisan. Au fond à gauche l'Arcalod, à droite la pointe de la chaurionde
@@ -48,7 +48,7 @@ Enfin un peu de descente ! Continuer sur la crête par un sentier bien marqué q
 
 Remonter le chemin forestier vers la droite. Il fait de grands lacets avant de croiser un sentier de randonnée que l'on empruntera vers la droite. On débouche rapidement sur un alpage (troupeau de vaches) que l'on va traverser par un sentier en balcon. Poursuivre jusqu'au chalet du Charbon (1650m). Ravitaillement possible en eau à la source au dessus du chalet. Détour possible à la Croix du Roy (1740m) en suivant le sentier qui part à droite du charbon pour découvrir un point de vue exceptionnel sur le lac d'Annecy. Sinon, prendre à gauche vers Les Platières (1700m) puis descendre le large sentier vers le Refuge de la Combe (1573m).
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218024/bauges/randonnees/traversee-bauges-frontenex-annecy/step_4_ojbgbh.jpg
 alt: Vue sur le lac d'Annecy depuis la croix du Roy
@@ -68,7 +68,7 @@ Traverser la ferme et descendre tout droit sur le chemin de tracteur vers le vil
 
 Dernière étape de la randonnée : rejoindre Annecy. Pour cela, descendre du Crêt du Chatillon et prendre le chemin qui passe à gauche du restaurant en contrebas (ravitaillement possible en eau en demandant gentiment à un serveur). Traverser la route et s'engager dans la forêt sur un sentier que l'on suivra jusqu'à la destination finale. Bien suivre les panneaux d'indication car il y a plein de chemins différents qui se croisent. Rejoindre le sentier de la crête qui offre régulièrement de splendides panoramas sur le lac d'Annecy et les montagnes environnantes. Ce sentier se termine au niveau de la plage des marquisats à Annecy. On peut alors profiter d'une baignade bien méritée avant de rejoindre la gare d'Annecy située un peu plus loin dans le centre de la ville.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1603218023/bauges/randonnees/traversee-bauges-frontenex-annecy/step_7_iostyt.jpg
 alt: Le lac d'Annecy, depuis le sentier de la crête

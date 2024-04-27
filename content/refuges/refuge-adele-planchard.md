@@ -2,7 +2,7 @@
 massif: Écrins
 name: Refuge Adèle Planchard
 type: refuge gardé
-description: Refuge de haute altitude situé à proximité de la Grande Ruine dans le massif des écrins. Une très belle halte avec vue sur la Barre des Écrins. 
+description: Refuge de haute altitude situé à proximité de la Grande Ruine dans le massif des écrins. Une très belle halte avec vue sur la Barre des Écrins.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681471725/refuges/adele-planchard/refuge_ptaean.png
 beds: 50
 altitude: 3169
@@ -32,7 +32,7 @@ Sur place, la pinte de bière coute 8€.
 ## Intérieur
 Il est composé d'un sas d'entrée (assez étroit pour la capacité du refuge), d'une salle commune et de 4 grands dortoirs.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681471725/refuges/adele-planchard/dortoir_nb0r28.png
 alt: Le quart d'un dortoir du refuge Adèle Planchard.

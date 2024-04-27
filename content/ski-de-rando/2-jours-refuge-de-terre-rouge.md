@@ -63,7 +63,7 @@ Pour s'exposer le moins possibles aux pentes de plus de 30°, on essaye de tirer
 
 [Voir le topo skitour](https://skitour.fr/topos/5659){target="_blank"}
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681488925/ski-de-rando/2-jours-refuge-de-terre-rouge/montee-pied_wyrsdk.png
 alt: À l'approche du col, on met les skis sur le dos.
@@ -73,7 +73,7 @@ caption: À l'approche du col, on met les skis sur le dos.
 
 Comme espéré, les conditions sont excellentes pour la descente vers le refuge de Terre Rouge.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1681488921/ski-de-rando/2-jours-refuge-de-terre-rouge/descente_ty1ylt.png
 alt: Descente vers le refuge de Terre Rouge, 20cm de poudreuse.

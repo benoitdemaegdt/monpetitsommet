@@ -1,7 +1,7 @@
 ---
 massif: lauzière
 name: Pic du Rognolet, versant Est
-description: Un classique toujours agréable du massif de la Lauzière. Lorsque les conditions sont bonnes, cette course offre du très bon ski dans des vallons larges et dégagés. 
+description: Un classique toujours agréable du massif de la Lauzière. Lorsque les conditions sont bonnes, cette course offre du très bon ski dans des vallons larges et dégagés.
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-2_xe6iay.png
 caption: montée au pic du rognolet par la combe bridan
 distance: 11.8
@@ -38,7 +38,7 @@ Cette boucle est un combiné de 2 courses : [la combe des plans](https://www.cam
 Depuis le parking, suivre les lacets de la route enneigée qui remonte dans la combe. On quitte cette route en rive gauche du ruisseau (donc on le laisse à gauche).
 
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-1_ae8exb.png
 alt: Départ de Celliers.
@@ -48,7 +48,7 @@ caption: Le tout début de la combe de Bridan 20min après le départ de Cellier
 
 Identifier les traces qui montent sur la gauche. Les suivre pour traverser le ruisseau dès que possible. La pente devient plus raide et permet de rejoindre la croupe qui sépare les 2 combes (bridan et des plans).
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-3_xh8ltc.png
 alt: Départ de Montsapey.
@@ -62,7 +62,7 @@ Il est néanmoins possible de continuer jusqu'au pic du Rognolet moyennant quelq
 ## Descente par la combe des Plans
 
 Très belle descente évidente dans la combe des Plans. Partir plutôt vers la droite pour éviter toute difficulté. Dans tous les cas, ça se fait bien.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1675755243/ski-de-rando/rognolet-versant-est/rognolet-4_aakcmx.png
 alt: Départ de Montsapey.
@@ -70,4 +70,4 @@ caption: Descente facile et agréable dans le combe des Plans.
 ---
 ::
 
-Rejoindre alors la route enneigée en bas de la combe, et la skier pour rejoindre le parking. 
+Rejoindre alors la route enneigée en bas de la combe, et la skier pour rejoindre le parking.

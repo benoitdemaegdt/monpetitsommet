@@ -20,7 +20,7 @@ Aller à Genève en train et revenir à Lyon en canoë kayak gonflable ? En voil
 Pour des raisons logistiques, il est beaucoup plus simple de partir avec un canoë gonflable. Il rentre facilement dans un (gros) sac à dos qu'il est possible de prendre dans le train, ce qui évite de devoir faire une manipulation de voiture à Genève.
 On s'est donc très rapidement tourné vers les canoës kayaks de Decathlon. À ce moment là, Decathlon lançait un service de location : 22€/j pour un canoë + 1 pompe + 2 gilets de sauvetage + 2 paires de pagaies. Tarif Imbattable. La qualité est également au rendez-vous : belle glisse et aucun problème de matériel. Prévoir tout de même d'acheter un kit de réparation au cas où ...
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658785523/canoe-kayak/rhone-geneve-aix-les-bains/Capture_d_e%CC%81cran_2022-07-25_a%CC%80_23_40_21_fszbdh.png
 alt: Location d'un canoë kayak chez Decathlon
@@ -56,7 +56,7 @@ Il y a en tout 6 barrages, et donc 6 portages sur l'itinéraire Genève - Aix-Le
 ### Premier jour
 Départ un samedi matin de juillet à 6h35 de la gare de Lyon Part-Dieu direction Genève. Une aventure comme ça, ça représente mine de rien beaucoup d'équipement : un sac de 17kg contennat le canoë-kayak, 2 paires de pagaies, 2 gilets de sauvetage, une tente, des sacs de couchage, de la nourriture pour être autonome sur 3 jours ... Bref on est bien chargé et on a un sacré look de touristes en arrivant à Genève 8h35. On attend une trentaine de minutes nos 2 compères d'aventure, puis on se dirige vers le [départ de la descente du rhône](https://www.google.com/maps/place/D%C3%A9part+descente+du+Rh%C3%B4ne/@46.2034917,6.132766,15z/data=!4m5!3m4!1s0x0:0x4ad45d10d8971388!8m2!3d46.2034917!4d6.132766). L'endroit est particulièrement spacieux et bien aménagé pour pouvoir gonfler son kayak et préparer tout le matériel. 20 minutes plus tard nous voilà enfin sur l'eau !
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258759/canoe-kayak/rhone-geneve-aix-les-bains/geneve_t28knz.png
 alt: arrivée à la gare de Genève
@@ -75,7 +75,7 @@ Vers 19h nous sommes en approche de Bellegarde-sur-Valserine. On a déjà avalé
 Au réveil, on range le campement et on s'apprête à partir. C'est à ce moment précis qu'on se rend compte que le niveau de l'eau a baissé de presque 2 mètres pendant la nuit, certainement suite à un lâcher d'eau du barrage. On ne peut tout simplement pas embarquer simplement : on surplombe l'eau de 2 mètres, et le "mur" est plein de vase glissante. On va finalement s'en sortir grâce à une cordelette qui va nous permettre de faire descendre les canoës kayaks en "rappel".
 
 La suite de la journée est ponctuée par 4 barrages et donc 4 portages. Ce sont finalement des pauses bienvenues après de longues heures à pagayer. D'autant plus qu'après chaque barrage on retrouve souvent du courant qui nous porte sans trop d'effort sur quelques kilomètres.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258765/canoe-kayak/rhone-geneve-aix-les-bains/portage_lldncn.png
 alt: portage du barrage de Génissiat
@@ -88,7 +88,7 @@ Vers 19h noius approchons de Chanaz, la porte d'entrée du canal de Savières qu
 
 ### Troisième et dernier jour
 Ce dernier tronçon débute par le superbe et verdoyant canal de Savières. Après une bonne heure à pagayer, nous voilà sur le lac du bourget.
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258761/canoe-kayak/rhone-geneve-aix-les-bains/chanaz_x6hzkq.png
 alt: canal de Savières
@@ -98,7 +98,7 @@ caption: le superbe canal de Savières
 
 La traversée du lac du bourget est superbe : l'eau est claire, la montagne est sauvage. C'est cependant loin d'être la section la plus facile. Sur le Rhône, le courant nous porte toujours un petit peu (parfois beaucoup). Sur le lac, il n'y a que nos bras pour nous faire avancer sur la vingtaine de kilomètres à parcourir !
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1658258761/canoe-kayak/rhone-geneve-aix-les-bains/lac-bourget_svozvn.png
 alt: plage sauvage du lac du bourget

@@ -23,7 +23,7 @@ Le point de départ de cette randonnée est donc la commune du Sappey-en-Chartre
 
 Cette rando commence avec une belle montée de 500m de dénivelé entre les champs puis dans la forêt. Le sentier débouche sur une petite cabane juste au dessous de la Chamechaude qui avec ses 2082m est le plus haut sommet du massif de la Chartreuse. On continue sur le GR 9 pour passer par le col de l'Emeindras (1372m) avant de rejoindre le col du Coq (1434m). Commence alors l'ascension de la massive Dent de Crolles. Quelques passages d'escalade facile équipés de chaines. Prendre alors à droite (on quitte temporairement le GR 9) pour rejoindre le sommet de la Dent de Crolles (2062m). Superbe vue sur la vallée du Grésivaudan, le massif de Belledonne et des Écrins. Possibilité de poser sa tente et de passer la nuit au sommet.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/step_1_hbdzct.jpg
 alt: La Chamechaude, point culminant du massif de la Chartreuse.
@@ -38,7 +38,7 @@ Longer la falaise de la Dent de Crolles vers le nord sur un superbe sentier bien
 \
 Remarque : le randonneur qui n'est pas du tout à l'aise en escalade préférera probablement rejoindre directement le GR 9 plutôt que de longer la falaise de la Dent de Crolles.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/step_2_qa35vw.jpg
 alt: La crête qui sépare la chartreuse de la vallée du Grésivaudan depuis le chemin de la cheminée du paradis
@@ -50,7 +50,7 @@ caption: La crête qui sépare la chartreuse de la vallée du Grésivaudan depui
 
 Derrière le Col de Bellefont, on descend dans la réserve naturelle des Hauts de Chartreuse. Attention, la zone située entre le Col de Bellefont et l'Alpette de la Dame est une zone privée. Le randonneur a un droit de passage, mais il doit impérativement rester sur les sentiers balisés. Point d'eau potable entre les quelques cabanes situées à proximité du chemin. Une fois au bout de cette vallée, une belle montée permet de rejoindre le pas de l'échelle et un bel alpage d'altitude. Il y a une source d'eau un peu en hauteur du sentier sur la droite. On découvre plus loin après une traversée en forêt la cabane de l'Alpette et la source du même nom.
 
-::image
+::content-image
 ---
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/f_auto,q_auto/v1619895441/chartreuse/randonnees/petite-traversee-chartreuse/step_3_qpcxwh.jpg
 alt: Vue sur la réserve naturelle des Hauts de Chartreuse depuis le col de Bellefont
