@@ -3681,6 +3681,19 @@
           ]
         ]
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [6.462890999391675, 44.97739417478442]
+      },
+      "properties": {
+        "key": "j3",
+        "name": "Arrivée",
+        "marker": "circle",
+        "color": "#ef4444"
+      }
     }
   ]
 }

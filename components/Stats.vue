@@ -8,7 +8,7 @@
       <dt class="text-sm font-medium text-gray-500 truncate">
         {{ item.name }}
       </dt>
-      <dd class="mt-1 text-3xl font-semibold text-gray-900">
+      <dd class="pl-0 mt-1 text-3xl font-semibold text-gray-900">
         {{ item.stat }}
       </dd>
     </div>
