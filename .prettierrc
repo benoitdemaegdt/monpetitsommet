@@ -1,5 +1,22 @@
 {
-  "semi": false,
+  "printWidth": 100,
+  " bracketSpacing": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "proseWrap": "never",
   "singleQuote": true,
-  "printWidth": 100
+  "overrides": [
+    {
+      "files": "**/*.json",
+      "options": {
+        "printWidth": 100,
+        " bracketSpacing": true,
+        "trailingComma": "all",
+        "arrowParens": "always",
+        "proseWrap": "never",
+        "singleQuote": true,
+        "arrayPragmaLines": 1
+      }
+    }
+  ]
 }
