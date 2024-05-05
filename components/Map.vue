@@ -142,10 +142,7 @@ onMounted(() => {
     map.on('mouseleave', 'poi', () => (map.getCanvas().style.cursor = ''));
   });
 
-  const el = document.createElement('div');
-  el.className = 'rounded-full h-4 w-4 bg-[#e11d48]';
-
-  let marker = new maplibregl.Marker(el);
+  let marker = new maplibregl.Marker({ color: '#e11d48' });
   watch(position, (newPosition) => {
     const { id, x, y } = newPosition;
     if (!!id && id !== mapId) return;
