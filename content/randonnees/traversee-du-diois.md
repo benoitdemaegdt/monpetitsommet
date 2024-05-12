@@ -1,7 +1,7 @@
 ---
 massif: vercors
 name: Traversée du Diois par les 3 becs
-description: "Chamonix à sont Mont-Blanc, les Écrins ont la Meije, le Diois a les 3 becs ! Cet itinéraire propose une traversée de cette région bien moins connue que le majestueux Vercors qui la surplombe. Une randonnée entre forêts, rivières et villages, à réaliser au printemps."
+description: "Chamonix a son Mont-Blanc, les Écrins ont la Meije, le Diois a les 3 becs ! Cet itinéraire propose une traversée de cette région bien moins connue que le majestueux Vercors qui la surplombe. Une randonnée entre forêts, rivières et villages, à réaliser au printemps."
 imageUrl: https://res.cloudinary.com/monpetitsommet/image/upload/v1715521148/randonnees/traversee-du-diois/le-signal_xk4bmu.png
 ignUrl: https://boutique.ign.fr/cartes-de-randonnees-3137ot-die-crest-9782758551447-6.html
 caption: Vue sur le Diois depuis le sommet des 3 becs
