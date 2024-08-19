@@ -1,5 +1,5 @@
-const TITLE = 'Mon Petit Sommet'
-const BASE_URL = 'https://monpetitsommet.fr'
+const TITLE = 'Micro Expédition'
+const BASE_URL = 'https://microexpedition.fr'
 const DESCRIPTION =
   "Découvrez les topos détaillés d'aventures sportives en montagne. Parfois engagées. Souvent loin des foules. Toujours mémorables."
 const COVER_IMAGE_URL = `https://res.cloudinary.com/monpetitsommet/image/upload/v1604305406/vercors/randonnees/traversee-vercors-balcon-est/intro_xhbx3y.png`

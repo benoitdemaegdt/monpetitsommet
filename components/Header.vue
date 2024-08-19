@@ -4,14 +4,14 @@
       <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
           <NuxtLink to="/">
-            <span class="sr-only">Mon Petit Sommet</span>
+            <span class="sr-only">Micro Expédition</span>
             <img
               class="h-8 w-auto sm:h-10"
               src="~/assets/img/logo.png"
-              alt="logo mon petit sommet"
+              alt="logo micro expédition"
             />
           </NuxtLink>
-          <span class="ml-2 text-2xl sm:hidden font-bold text-gray-700">Mon petit sommet</span>
+          <span class="ml-2 text-2xl sm:hidden font-bold text-gray-700">Micro Expédition</span>
         </div>
         <div class="-mr-2 -my-2 md:hidden">
           <PopoverButton
@@ -67,7 +67,7 @@
           <div class="pt-5 pb-6 px-5">
             <div class="flex items-center justify-between">
               <div>
-                <img class="h-8 w-auto" src="~/assets/img/logo.png" alt="logo mon petit sommet" />
+                <img class="h-8 w-auto" src="~/assets/img/logo.png" alt="logo micro expédition" />
               </div>
               <div class="-mr-2">
                 <PopoverButton

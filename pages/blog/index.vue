@@ -15,7 +15,7 @@
           Derniers articles
         </p>
         <p class="mt-5 mx-auto max-w-prose text-xl text-gray-500">
-          Les articles 100% aventure de Mon Petit Sommet
+          Les articles 100% aventure de Micro Expédition
         </p>
       </div>
       <div

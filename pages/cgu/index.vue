@@ -139,14 +139,14 @@
         </ul>
         <h2>Limitation de responsabilité</h2>
         <p>
-          Mon Petit Sommet fait son maximum pour fournir les informations les
+          Micro Expédition fait son maximum pour fournir les informations les
           plus exactes, complètes et récentes possibles. Cependant, le site et
           toute information, textes, noms, images, photos, logos, liens, etc.
           sont fournis « en l’état » et sans garantie expresse ou implicite. En
-          particulier, Mon Petit Sommet ne garantit pas l'exactitude ou l'état
+          particulier, Micro Expédition ne garantit pas l'exactitude ou l'état
           complet des informations présentées sur ce site web ni ne garantit que
           l'accès à ce site web sera ininterrompue et sans erreur. En aucun cas
-          Mon Petit Sommet ne pourra être tenu responsable pour tout dommage ou
+          Micro Expédition ne pourra être tenu responsable pour tout dommage ou
           perte résultant de l'utilisation de toute information contenue sur le
           site web, y compris, sans limitation, les dommages indirects ou tout
           autre dommage suite ou en rapport avec l'utilisation du site web.
