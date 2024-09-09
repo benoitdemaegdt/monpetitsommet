@@ -3,6 +3,5 @@
     <HomeHeroSection />
     <HomeTrekSection />
     <HomeRefugeSection />
-    <HomeNewsletterSection />
   </div>
 </template>

@@ -52,7 +52,6 @@
         </NuxtLink>
       </div>
     </div>
-    <HomeNewsletterSection />
   </div>
 </template>
 
