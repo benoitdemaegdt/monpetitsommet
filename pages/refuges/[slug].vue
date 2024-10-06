@@ -7,7 +7,7 @@
   >
     <h2>Localisation</h2>
     <Stats :stats="getRefugeStats(refuge)" />
-    <Map :geojson="geojson" class="mt-8 rounded-lg shadow" />
+    <Map :geojson="geojson" class="mt-8 rounded-lg shadow" style="height: 42vh" />
     <h2>Équipements</h2>
     <RefugeEquipment :refuge="refuge" />
     <ContentRenderer :value="refuge" />

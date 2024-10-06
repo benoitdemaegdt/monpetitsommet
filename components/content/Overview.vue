@@ -1,7 +1,7 @@
 <template>
   <div>
     <Stats :stats="getTrekStats(trek)" />
-    <Map class="mt-8" :id="id" :geojson="geojson" />
+    <Map class="mt-8" :id="id" :geojson="geojson" style="height: 42vh" />
     <ClientOnly>
       <TrekElevationProfile
         v-if="lineStrings.length === 1"

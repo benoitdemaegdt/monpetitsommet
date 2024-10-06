@@ -65,41 +65,12 @@
               montagne. Parfois engagées. Souvent loin des foules. Toujours
               mémorables.
             </p>
-            <div
-              class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0"
-            >
-              <p class="text-base font-medium text-gray-900">
-                Inscrivez-vous pour recevoir nos prochaines aventures
-              </p>
-              <form
-                name="newsletter"
-                method="POST"
-                netlify
-                class="mt-3 sm:flex"
-                @submit.prevent="handleSubmit()"
-              >
-                <label for="email" class="sr-only">Email</label>
-                <input
-                  v-model="email"
-                  id="email"
-                  name="email"
-                  type="email"
-                  autocomplete="email"
-                  required
-                  class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-emerald-500 focus:border-emerald-500 sm:flex-1 border-gray-300"
-                  placeholder="Entrez votre email"
-                />
-                <button
-                  type="submit"
-                  class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
-                >
-                  M'inscrire
-                </button>
-              </form>
-              <p class="mt-3 text-sm text-gray-500">
-                0% pub | 0% spam | 100% aventure
-              </p>
-            </div>
+            <NuxtLink
+            to="/carte-ign"
+            class="mt-4 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-emerald-600 hover:bg-emerald-700"
+          >
+            Carte IGN en ligne
+          </NuxtLink>
           </div>
           <div
             class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
