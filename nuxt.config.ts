@@ -51,6 +51,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       ignApiKey: process.env.NUXT_IGN_API_KEY,
+      maptilerKey: process.env.MAPTILER_KEY
     },
   },
   nitro: {

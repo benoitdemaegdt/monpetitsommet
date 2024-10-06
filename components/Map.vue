@@ -20,8 +20,9 @@ const { id, geojson, options } = defineProps<{
   id?: string;
   geojson?: any;
   options?: {
-    location: string[];
-    zoom: number;
+    tile?: string;
+    location?: string[];
+    zoom?: number;
   };
 }>();
 const mapId = id || 'map';
@@ -30,7 +31,7 @@ const isSki = path.includes('/ski-de-rando/');
 onMounted(() => {
   const map = new maplibregl.Map({
     container: `${mapId}`,
-    style: {
+    style: (options && options.tile) || {
       version: 8,
       sources: {
         ign: {
