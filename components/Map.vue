@@ -17,9 +17,9 @@ const { path } = useRoute();
 const { loadImages, addSlopeLayer, addGeojsonLayers, setInitialView } = useMap();
 
 const { id, geojson, options } = defineProps<{
-  id: string;
-  geojson: any;
-  options: {
+  id?: string;
+  geojson?: any;
+  options?: {
     location: string[];
     zoom: number;
   };
