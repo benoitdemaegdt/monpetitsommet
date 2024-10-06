@@ -35,6 +35,7 @@ const navigation = {
     { name: 'Contact', path: '/contact' },
     { name: 'Blog', path: '/blog' },
     { name: 'CGU', path: '/cgu' },
+    { name: 'Carte IGN', path: '/carte-ign' },
   ],
   social: [
     {
