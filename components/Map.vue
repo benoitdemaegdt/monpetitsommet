@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
@@ -16,7 +16,14 @@ const ignApiKey = config.public.ignApiKey;
 const { path } = useRoute();
 const { loadImages, addSlopeLayer, addGeojsonLayers, setInitialView } = useMap();
 
-const { id, geojson } = defineProps({ id: String, geojson: Object });
+const { id, geojson, options } = defineProps<{
+  id: string;
+  geojson: any;
+  options: {
+    location: string[];
+    zoom: number;
+  };
+}>();
 const mapId = id || 'map';
 const isSki = path.includes('/ski-de-rando/');
 
@@ -38,8 +45,8 @@ onMounted(() => {
       },
       layers: [{ id: 'ign', type: 'raster', source: 'ign', minzoom: 0, maxzoom: 22 }],
     },
-    center: [5.7245, 45.1885],
-    zoom: 11,
+    center: (options && options.location) || [5.7245, 45.1885],
+    zoom: (options && options.zoom) || 11,
     attributionControl: false,
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-left');
