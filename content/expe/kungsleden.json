@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ordre": 1,
+        "name": "Abiskojaure",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.591137, 68.286147]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 2, "name": "Alesjaure", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.414793, 68.136673]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 3, "name": "Tjäktja", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.241082, 68.051648]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 4, "name": "Sälka", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.281701, 67.946376]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 6, "name": "Nallo", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.394042, 68.017092]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 8, "name": "Vistas", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.595465, 68.031263]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 10, "name": "Singi", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.31606, 67.851109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 11, "name": "Kaitumjaure", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.295671, 67.746527]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 12, "name": "Teusajaure", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.155433, 67.694756]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 13, "name": "Vakkotavare", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.100371, 67.58169]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 15, "name": "Saltoluokta", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.5207608, 67.3940893]
+      }
+    }
+  ]
+}
