@@ -3,6 +3,9 @@
 </template>
 
 <script setup lang="ts">
+const { path } = useRoute()
+const { withoutTrailingSlash } = useUrl()
+
 definePageMeta({
   pageTransition: false,
   layout: 'fullscreen',
@@ -16,9 +19,9 @@ const options = {
   zoom: 6,
 }
 
-const { data: geojson } = await useAsyncData('kungsleden', () => {
-  return queryContent('expe')
-    .where({ _path: '/expe/kungsleden' })
+const { data: geojson } = await useAsyncData(`expe-${path}`, () => {
+  return queryContent()
+    .where({ _path: withoutTrailingSlash(path) })
     .findOne()
 })
 

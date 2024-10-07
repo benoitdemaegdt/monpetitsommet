@@ -48,30 +48,40 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   runtimeConfig: {
     public: {
       ignApiKey: process.env.NUXT_IGN_API_KEY,
       maptilerKey: process.env.MAPTILER_KEY
     },
   },
+
   nitro: {
     prerender: { routes: ['/sitemap.xml'] },
   },
+
   modules: ['@nuxtjs/tailwindcss', '@nuxt/content', 'nuxt-icon'],
+
   content: {
     markdown: {
       tags: { h1: 'h1', h2: 'h2', h3: 'h3', h4: 'h4', h5: 'h5', h6: 'h6' },
     },
   },
+
   tailwindcss: { viewer: false },
+
   build: {
     transpile: ['lite-youtube-embed', '@headlessui/vue'],
   },
+
   plugins: ['~/plugins/youtube.client.js'],
   css: ['lite-youtube-embed/src/lite-yt-embed.css'],
+
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => ['lite-youtube'].includes(tag),
     },
   },
+
+  compatibilityDate: '2024-10-07',
 })
