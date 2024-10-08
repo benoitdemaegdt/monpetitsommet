@@ -6,6 +6,7 @@
 const { path } = useRoute()
 const { withoutTrailingSlash } = useUrl()
 
+// https://github.com/nuxt/framework/issues/3587
 definePageMeta({
   pageTransition: false,
   layout: 'fullscreen',
@@ -18,6 +19,14 @@ const options = {
   location: [18.8333, 68.3500],
   zoom: 6,
 }
+
+condole.log(' ')
+condole.log(' ')
+console.log('path >>', path)
+console.log('withoutTrailingSlash(path) >>', withoutTrailingSlash(path))
+condole.log(' ')
+condole.log(' ')
+
 
 const { data: geojson } = await useAsyncData(`expe-${path}`, () => {
   return queryContent()
