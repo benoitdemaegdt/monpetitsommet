@@ -20,12 +20,12 @@ const options = {
   zoom: 6,
 }
 
-condole.log(' ')
-condole.log(' ')
+console.log(' ')
+console.log(' ')
 console.log('path >>', path)
 console.log('withoutTrailingSlash(path) >>', withoutTrailingSlash(path))
-condole.log(' ')
-condole.log(' ')
+console.log(' ')
+console.log(' ')
 
 
 const { data: geojson } = await useAsyncData(`expe-${path}`, () => {
