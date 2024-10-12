@@ -277,7 +277,7 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Duottar Fjallstuga",
+        "name": "Tuottar Fjallstuga",
         "location": "Sarek",
         "link": "https://www.expemag.com/carnet/ski-pulka-dans-le-parc-national-du-sarek/14",
         "icon": "/icons/refuge.png"
@@ -298,6 +298,68 @@
       "geometry": {
         "type": "Point",
         "coordinates": [16.697518139129045, 67.31810208952706]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Låddejåkkå Fjallstuga",
+        "location": "Padjelantaleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.90191391590156, 67.4635498782458]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arasluokta Fjallstuga",
+        "location": "Padjelantaleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.800638750330734, 67.37372119517639]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tarraluoppal Fjallstuga",
+        "location": "Padjelantaleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.122091418937003, 67.19287520284442]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Såmmarlappa Fjallstuga",
+        "type": "refuge gardé",
+        "location": "Padjelantaleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.15814123075299, 67.06796776340403]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Njunjes Fjallstuga",
+        "type": "refuge gardé",
+        "location": "Padjelantaleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.41137204778306, 66.960292976702]
       }
     }
   ]
