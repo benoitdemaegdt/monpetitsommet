@@ -92,6 +92,70 @@
         "type": "Point",
         "coordinates": [18.5207608, 67.3940893]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Sitojaure", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.440723, 67.232681]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Aktse", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.305904, 67.148672]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Pårte", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.942996, 67.042306]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Kvikkjokk", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.71952, 66.953702]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Ammarnäs", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.211898, 65.960426]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Serve", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.764218, 65.972338]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Tärnasjö", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.4973, 65.988814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "ordre": 16, "name": "Hemavan", "icon": "/icons/refuge.png" },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.090988, 65.817627]
+      }
     }
   ]
 }

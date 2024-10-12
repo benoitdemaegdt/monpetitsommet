@@ -20,14 +20,6 @@ const options = {
   zoom: 6,
 }
 
-console.log(' ')
-console.log(' ')
-console.log('path >>', path)
-console.log('withoutTrailingSlash(path) >>', withoutTrailingSlash(path))
-console.log(' ')
-console.log(' ')
-
-
 const { data: geojson } = await useAsyncData(`expe-${path}`, () => {
   return queryContent()
     .where({ _path: withoutTrailingSlash(path) })
