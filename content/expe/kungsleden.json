@@ -361,6 +361,30 @@
         "type": "Point",
         "coordinates": [17.41137204778306, 66.960292976702]
       }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fauske train station",
+        "type": "gare",
+        "icon": "/icons/train.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [15.399228754105508, 67.26412540922584]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gällivare train station",
+        "type": "gare",
+        "icon": "/icons/train.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [20.65131429026809, 67.13360998993858]
+      }
     }
   ]
 }
