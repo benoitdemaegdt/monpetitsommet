@@ -563,6 +563,30 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Abisko train station",
+        "type": "train",
+        "icon": "/icons/train.png"
+      },
+      "geometry": {
+        "coordinates": [18.82857433242387, 68.34900207986803],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ritsem bus station",
+        "type": "bus",
+        "icon": "/icons/bus.png"
+      },
+      "geometry": {
+        "coordinates": [17.468487010932193, 67.72255791540945],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "track",
         "color": "#e11d48"
       },
