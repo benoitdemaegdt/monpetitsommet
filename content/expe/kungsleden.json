@@ -17,6 +17,42 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Cunojávrihytta",
+        "link": "https://hyttebestilling.dnt.no/hytte/10395?map=true&shareable=true",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.08426268154963, 68.19773772010481]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cáihnavággihytta",
+        "link": "https://hyttebestilling.dnt.no/hytte/10967?map=true&shareable=true",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.947716663048055, 68.11893505534255]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gautelishytta",
+        "link": "https://hyttebestilling.dnt.no/hytte/10396?map=true&shareable=true",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.837743445345325, 68.03893008410608]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ordre": 2,
         "name": "Alesjaure",
         "location": "Kungsleden",
@@ -90,6 +126,58 @@
       "geometry": {
         "type": "Point",
         "coordinates": [18.31606, 67.851109]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ordre": 10,
+        "name": "Tarfala",
+        "location": "Kungsleden",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [18.599489, 67.919086]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hukejaure",
+        "location": "Kungsleden",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-hukejaure-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.967496, 67.935432]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sitasjaure",
+        "location": "Kungsleden",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-sitasjaure-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.614517, 67.858564]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ritsem",
+        "location": "Kungsleden",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-ritsem/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.469185, 67.722504]
       }
     },
     {
@@ -199,6 +287,19 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Tarrekaise",
+        "location": "Kungsleden",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-tarrekaise-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.291026, 66.989827]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "ordre": 16,
         "name": "Ammarnäs",
         "location": "Kungsleden",
@@ -233,6 +334,67 @@
       "geometry": {
         "type": "Point",
         "coordinates": [15.4973, 65.988814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vaimok",
+        "location": "Kungsleden",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-vaimok-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.884537, 67.047048]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sårjåsjaure",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-sarjasjaure-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.478519, 67.232582]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pieskehaure",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-pieskehaure-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.529731, 67.031712]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kutjaure",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-kutjaure-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.032923, 67.585362]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vaisaluokta",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-vaisaluokta-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.250766, 67.688236]
       }
     },
     {
@@ -384,6 +546,18 @@
       "geometry": {
         "type": "Point",
         "coordinates": [20.65131429026809, 67.13360998993858]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nikkaluokta bus station",
+        "type": "bus",
+        "icon": "/icons/bus.png"
+      },
+      "geometry": {
+        "coordinates": [19.016354659536375, 67.85084356568098],
+        "type": "Point"
       }
     }
   ]
