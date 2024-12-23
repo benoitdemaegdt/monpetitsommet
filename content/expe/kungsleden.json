@@ -426,6 +426,19 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Akka",
+        "location": "Sarek",
+        "link": "https://www.swedishtouristassociation.com/facilities/stf-akka-mountain-cabin/",
+        "icon": "/icons/refuge.png"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.360402, 67.634363]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "reindeer herder hut",
         "location": "Sarek",
         "link": "https://www.expemag.com/carnet/ski-pulka-dans-le-parc-national-du-sarek/4",
