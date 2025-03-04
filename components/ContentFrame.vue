@@ -84,7 +84,7 @@
         </p>
       </div>
       <div class="mt-6 prose prose-emerald prose-lg text-gray-500 mx-auto text-justify">
-        <img class="w-full rounded-lg" :src="imageUrl" width="1310" height="873" />
+        <img v-if="imageUrl" class="w-full rounded-lg" :src="imageUrl" width="1310" height="873" />
         <slot></slot>
       </div>
     </div>
@@ -96,6 +96,6 @@ defineProps({
   header: { type: String, required: true },
   title: { type: String, required: true },
   description: { type: String, required: true },
-  imageUrl: { type: String, required: true },
+  imageUrl: { type: String, required: false },
 })
 </script>

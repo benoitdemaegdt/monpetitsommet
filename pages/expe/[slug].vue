@@ -1,5 +1,13 @@
 <template>
-  <Map class="h-full w-full" :geojson="geojson" :options="options" />
+  <ContentFrame
+    header="Expedition"
+    :title="expe.name"
+    :description="expe.description"
+    :imageUrl="expe.imageUrl"
+  >
+    <Map style="height: 42vh" :geojson="geojson" :options="options" />
+    <ContentRenderer :value="expe" />
+  </ContentFrame>
 </template>
 
 <script setup lang="ts">
@@ -7,10 +15,7 @@ const { path } = useRoute()
 const { withoutTrailingSlash } = useUrl()
 
 // https://github.com/nuxt/framework/issues/3587
-definePageMeta({
-  pageTransition: false,
-  layout: 'fullscreen',
-});
+definePageMeta({ pageTransition: false });
 
 const config = useRuntimeConfig();
 const maptilerKey = config.public.maptilerKey;
@@ -20,9 +25,15 @@ const options = {
   zoom: 6,
 }
 
-const { data: geojson } = await useAsyncData(`expe-${path}`, () => {
+const { data: geojson } = await useAsyncData(`expe-json-${path}`, () => {
   return queryContent()
-    .where({ _path: withoutTrailingSlash(path) })
+    .where({ _type: 'json', _path: withoutTrailingSlash(path) })
+    .findOne()
+})
+
+const { data: expe } = await useAsyncData(`expe-${path}`, () => {
+  return queryContent()
+    .where({ _path: `${withoutTrailingSlash(path)}`, _type: 'markdown' })
     .findOne()
 })
 
